@@ -18,7 +18,7 @@ Welcome to **TrendTrove**, an e-commerce platform designed to offer the latest t
 ## Get Started
 
 1. Clone the repository:
-   bash
+   ```bash
    git clone https://github.com/Tejashri-Taral/TrendTrove-Ecommerce.git
 
 2. Open `index.html` in your browser to explore the site.
