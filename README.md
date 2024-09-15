@@ -29,7 +29,7 @@ Feel free to fork the repository and make changes. You can also raise issues or 
 
 ## Show Your Support
 
-If you like this project, please consider giving it a ⭐️ on [GitHub](https://github.com/Tejashri-Taral).
+If you like this project, please consider giving it a ⭐️ on [GitHub](https://github.com/Tejashri-Taral/TrendTrove-Ecommerce).
 
 ## Connect with Me
 
