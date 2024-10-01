@@ -534,6 +534,15 @@
     font-size: 14px;
 }
 
+.sub .btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 
 input 
 {
