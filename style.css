@@ -511,10 +511,29 @@
     color: black;
 }
 
-.sub 
-{
-    margin-top: 30px;
+.sub {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.sub input {
+    height: 40px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.sub .btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
 
 input 
 {
@@ -522,7 +541,6 @@ input
     width: 60%;
     border-radius: 30px;
     border: 1px solid lightgray;
-
 }
 
 .menu 
@@ -694,6 +712,10 @@ input
     {
         width: 100%;
         
+    }
+
+    .sub input {
+        max-width: 100%;
     }
 
 }
