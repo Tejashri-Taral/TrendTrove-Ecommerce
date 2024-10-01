@@ -39,16 +39,19 @@
 
         <nav class="utils">
             <ul class="nav-links">
-                <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-user"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </li>
-            </ul>
+            <li class="nav-link cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a class="text">Add to Cart</a>
+            </li>
+            <li class="nav-link profile">
+                <i class="fa-solid fa-user"></i>
+                <a class="text">Profile</a>
+            </li>
+            <li class="nav-link search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a class="text">Search</a>
+            </li>
+        </ul>
         </nav>
     </header>
 
@@ -467,7 +470,7 @@
 
             if(headerVisible===false)
             {
-                document.getElementById("header").style.height="270px";
+                document.getElementById("header").style.height="500px";
                 headerVisible=true;
             }
             else 
