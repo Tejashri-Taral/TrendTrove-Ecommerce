@@ -51,6 +51,65 @@
             </ul>
         </nav>
     </header>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Search Bar -->
+    <div id="search-bar" style="display: none;">
+        <input type="text" id="search" placeholder="Search..." />
+        <button type="submit">Go</button>
+    </div>
+    // JavaScript for Modal and Search Bar Functionality
+    
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    // Login Modal
+    const loginBtn = document.getElementById("login-btn");
+    const loginModal = document.getElementById("loginModal");
+    const closeBtn = document.querySelector(".close");
+
+    loginBtn.onclick = function() {
+        loginModal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        loginModal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target === loginModal) {
+            loginModal.style.display = "none";
+        }
+    }
+
+    // Search Bar Toggle
+    const searchBtn = document.getElementById("search-btn");
+    const searchBar = document.getElementById("search-bar");
+
+    searchBtn.onclick = function() {
+        if (searchBar.style.display === "none" || searchBar.style.display === "") {
+            searchBar.style.display = "block";
+            searchBar.querySelector('input').focus(); // Automatically focus the input
+        } else {
+            searchBar.style.display = "none";
+        }
+    }
+});
+
+</script>
 
     <!-- banner area  -->
     <section class="banner">
