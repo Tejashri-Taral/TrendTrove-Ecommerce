@@ -19,7 +19,7 @@
    height: 70px;
    width: 100%;
    /* background-color: red; */
-   padding: 0px 8%;
+   padding: 0px 4%;
    display: flex;
    justify-content: space-between;
    
@@ -27,7 +27,7 @@
 
 .logo 
 {
-    width: 10%;
+    width: 12%;
     height: 70px;
     /* background-color: yellow; */
     display: flex;
@@ -37,11 +37,22 @@
     font-weight: bold;
     font-size: 25px;
 }
+.border{
+    font-size: 0.85rem;
+}
+
+.border:hover{
+    text-decoration: underline;
+    font-weight: 500;
+}
 
 .navigation
 {
     width: 30%;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: blue; */
 }
 
@@ -53,17 +64,24 @@
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-family: 'futura';
     /* font-weight: bold; */
     font-size: 17px;
     color: #1d1d1d;
+    margin-right: 50px;
 }
 
 .nav-links > .nav-link > a 
 {
     color: #1d1d1d;
     text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
 }
 
 .nav-links > .nav-link > i 
@@ -95,6 +113,7 @@
     width: 100%;
     height: 100%;
     background-image: url('./images/h1-slide-show-1_1_1.webp'); 
+    background-size: cover;
     display: flex;
     align-items: center;
     padding-left: 20%;
