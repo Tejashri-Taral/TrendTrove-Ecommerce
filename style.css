@@ -515,25 +515,19 @@
 .socials a:hover{
     color: white;
     transform: scale(1.2);
-}
-#github:hover{
     padding: 2px 4px;
     border-radius: 4px;
+}
+#github:hover{
     background-color:#3a383c ;
 }
 #linkedin:hover{
-    padding: 2px 4px;
-    border-radius: 4px;
     background-color:#0a66c2 ;
 }
 #instagram:hover{
-    padding: 2px 4px;
-    border-radius: 4px;
     background-color: #e1306c;
 }
 #twitter:hover{
-    padding: 2px 4px;
-    border-radius: 4px;
     background-color: #14171A;
 }
 .sub {
