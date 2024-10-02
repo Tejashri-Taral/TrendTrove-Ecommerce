@@ -511,10 +511,38 @@
     color: black;
 }
 
-.sub 
-{
-    margin-top: 30px;
+.sub {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.sub input {
+    height: 40px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.sub .btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.sub .btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 
 input 
 {
@@ -522,7 +550,6 @@ input
     width: 60%;
     border-radius: 30px;
     border: 1px solid lightgray;
-
 }
 
 .menu 
@@ -582,9 +609,27 @@ input
 
     .navigation > .nav-links{
         flex-direction: column;
-        align-items: flex-start;
-        row-gap: 15px;
+        align-items: center;
+        row-gap: 5px;
         height: auto;
+    }
+    .nav-links > .nav-link{
+        padding: 3px;
+    }
+
+    .nav-links > .nav-link:hover{
+        background: rgb(215, 214, 214);
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    .nav-link:hover{
+        cursor: pointer;
+    }
+
+    .utils {
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .banner{
@@ -695,9 +740,17 @@ input
         width: 100%;
         
     }
-
 }
 
+#search-bar button:hover {
+    background-color: black; /* Darker black on hover */
+}
+
+.sub input {
+    max-width: 100%;
+}
+
+/* Modal Styles */
 .modal {
     position: fixed;
     z-index: 1000;
@@ -734,7 +787,7 @@ input
 /* Styles for buttons */
 button {
     padding: 10px 15px; /* Padding around the button text */
-    background-color:black; /* Button background color */
+    background-color: black; /* Button background color */
     color: white; /* Button text color */
     border: none; /* No border */
     border-radius: 2px; /* Rounded corners */
@@ -761,7 +814,7 @@ button:hover {
 
 #search-bar button {
     padding: 10px 15px; /* Padding around the button text */
-    background-color: black; /* Green button background color */
+    background-color: black; /* Button background color */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
@@ -769,5 +822,105 @@ button:hover {
 }
 
 #search-bar button:hover {
-    background-color:black; /* Darker green on hover */
+    background-color: black; /* Darker black on hover */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'futura';
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'futura';
+}
+
+.contact-email {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.contact-form {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'futura';
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'futura';
+}
+
+.form-textarea {
+    height: 120px;
+}
+
+.btn-submit {
+    padding: 12px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: 'futura';
+}
+
+.btn-submit:hover {
+    background-color: #d35400;
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-top: 30px;
+    font-family: 'futura';
+}
+
+.info-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'futura';
+}
+
+.info-detail {
+    font-size: 1rem;
+    font-family: 'futura';
+    color: #555;
+    margin: 5px 0;
 }
