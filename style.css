@@ -489,6 +489,7 @@
 .footer-list li a {
     color:black;
     text-decoration: none;
+    
 }
 
 .border-list 
@@ -508,9 +509,33 @@
     
 }
 .socials a {
+    transition: all .38s ease;
     color: black;
 }
-
+.socials a:hover{
+    color: white;
+    transform: scale(1.2);
+}
+#github:hover{
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color:#3a383c ;
+}
+#linkedin:hover{
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color:#0a66c2 ;
+}
+#instagram:hover{
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: #e1306c;
+}
+#twitter:hover{
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: #14171A;
+}
 .sub {
     margin-top: 2px;
     display: flex;
