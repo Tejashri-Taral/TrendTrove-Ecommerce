@@ -456,78 +456,90 @@
     z-index: 20;
 }
 
-.footer 
-{
-    width: 100%;
-    padding: 30px 20%;
-    background-color: #f6f5fa;
-    font-family: 'futura';
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 0;
     display: flex;
-    justify-content: space-between;
-    color: #1d1d1d;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Arial', sans-serif;
+    color: #333;
 }
 
-.footer-section
-{
-    /* background-color: red; */
-    width: 32%;
+.footer-section {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer h1 {
+    font-size: 1.5em;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.footer .socials a {
+    font-size: 1.2em;
+    margin-right: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color: #007bff;
+}
+
+.footer .newsletter-section p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.newsletter-subscribe {
     display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-
+    align-items: center;
 }
 
-
-.footer-list
-{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
+.newsletter-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
-.footer-list li a {
-    color:black;
-    text-decoration: none;
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
-.border-list 
-{
-    margin-top: 20px;
-    border-top: 1px solid lightgray;
-    width: 70%;
+.btn:hover {
+    background-color: #555;
 }
 
-.socials
-{
-  
-    margin-top: 20px;
-    display: flex;
-    font-size: 20px;
-    column-gap: 30px;
-    
-}
-.socials a {
-    color: black;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.sub 
-{
-    margin-top: 30px;
-}
-
-input 
-{
-    height: 40px;
-    width: 60%;
-    border-radius: 30px;
-    border: 1px solid lightgray;
-
-}
-
-.menu 
-{
-    display: none;
+    .footer-section {
+        width: 80%;
+    }
 }
 
 
@@ -688,6 +700,8 @@ input
         padding: 30px 5%;
         flex-direction: column;
         row-gap:20px;
+        font-family: 'futura';
+
     }
 
     .footer-section 
