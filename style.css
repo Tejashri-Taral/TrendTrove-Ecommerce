@@ -716,3 +716,105 @@ input
     }
 
 }
+
+
+/* Contact Section Styles */
+.contact-section {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'futura';
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'futura';
+}
+
+.contact-email {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+.contact-form {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+.form-label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'futura';
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'futura';
+}
+
+.form-textarea {
+    height: 120px;
+}
+
+.btn-submit {
+    padding: 12px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: 'futura';
+}
+
+.btn-submit:hover {
+    background-color: #d35400;
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-top: 30px;
+    font-family: 'futura';
+}
+
+.info-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'futura';
+}
+
+.info-detail {
+    font-size: 1rem;
+    font-family: 'futura';
+    color: #555;
+    margin: 5px 0;
+}
