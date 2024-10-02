@@ -59,13 +59,14 @@
 
 .nav-links
 {
-    width: 125%;
+    width: 150%;
     height: 70px;
     /* background-color: yellow; */
     display: flex;
     list-style-type: none;
     align-items: center;
     justify-content: space-evenly;
+    white-space: nowrap;
     font-family: 'futura';
     font-size: 17px;
     color: #1d1d1d;
@@ -97,7 +98,7 @@
 
 .utils 
 {
-    width: 12%;
+    width: 8%;
     height: 70px;
     margin-right: 45px;
     /* background-color: purple; */
