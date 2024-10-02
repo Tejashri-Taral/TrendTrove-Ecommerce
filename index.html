@@ -303,7 +303,7 @@
                     </div>
                     <div class="overlay-image">
                         <button class="btn btn-white">
-                            Add To Wishlist
+                               Add To Wishlist
                         </button>
                     </div>
                 </div>
@@ -459,9 +459,10 @@
         <div class="footer-section">
             <h1>Subscribe to Newsletter</h1>
             <ul class="footer-list">
-                <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
+                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+                <li>Join our fashion community today!</li>
                 <li class="sub">
-                    <input type="text" placeholder="Enter your email">
+                    <input type="email" placeholder="Enter your email here">
                     <button class="btn">Subscribe</button>
                 </li>
             </ul>
@@ -475,9 +476,11 @@
         let headerVisible = false;
         document.getElementById("menu").addEventListener("click", function () {
 
-            if (headerVisible === false) {
-                document.getElementById("header").style.height = "270px";
-                headerVisible = true;
+            if(headerVisible===false)
+            {
+                document.getElementById("header").style.height="290px";
+                headerVisible=true;
+
             }
             else {
                 document.getElementById("header").style.height = "50px";
