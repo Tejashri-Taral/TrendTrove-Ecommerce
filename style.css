@@ -609,9 +609,27 @@ input
 
     .navigation > .nav-links{
         flex-direction: column;
-        align-items: flex-start;
-        row-gap: 15px;
+        align-items: center;
+        row-gap: 5px;
         height: auto;
+    }
+    .nav-links > .nav-link{
+        padding: 3px;
+    }
+
+    .nav-links > .nav-link:hover{
+        background: rgb(215, 214, 214);
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    .nav-link:hover{
+        cursor: pointer;
+    }
+
+    .utils {
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .banner{
