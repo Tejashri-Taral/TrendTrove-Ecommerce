@@ -19,7 +19,7 @@
    height: 70px;
    width: 100%;
    /* background-color: red; */
-   padding: 0px 8%;
+   padding: 0px 2%;
    display: flex;
    justify-content: space-between;
    
@@ -27,7 +27,7 @@
 
 .logo 
 {
-    width: 10%;
+    width: 12%;
     height: 70px;
     /* background-color: yellow; */
     display: flex;
@@ -37,33 +37,56 @@
     font-weight: bold;
     font-size: 25px;
 }
+.border{
+    font-size: 0.85rem;
+}
+
+.border:hover{
+    text-decoration: underline;
+    font-weight: 500;
+}
 
 .navigation
 {
     width: 30%;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
     /* background-color: blue; */
 }
 
 .nav-links
 {
-    width: 100%;
+    width: 150%;
     height: 70px;
     /* background-color: yellow; */
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    white-space: nowrap;
     font-family: 'futura';
-    /* font-weight: bold; */
     font-size: 17px;
     color: #1d1d1d;
+}
+.nav-links> .nav-link{
+    width: 150px;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links > .nav-link > a 
 {
     color: #1d1d1d;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85px;
 }
 
 .nav-links > .nav-link > i 
@@ -75,8 +98,9 @@
 
 .utils 
 {
-    width: 12%;
+    width: 8%;
     height: 70px;
+    margin-right: 45px;
     /* background-color: purple; */
 }
 
@@ -95,6 +119,7 @@
     width: 100%;
     height: 100%;
     background-image: url('./images/h1-slide-show-1_1_1.webp'); 
+    background-size: cover;
     display: flex;
     align-items: center;
     padding-left: 20%;
@@ -489,6 +514,7 @@
 .footer-list li a {
     color:black;
     text-decoration: none;
+    
 }
 
 .border-list 
@@ -508,9 +534,27 @@
     
 }
 .socials a {
+    transition: all .38s ease;
     color: black;
 }
-
+.socials a:hover{
+    color: white;
+    transform: scale(1.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+#github:hover{
+    background-color:#3a383c ;
+}
+#linkedin:hover{
+    background-color:#0a66c2 ;
+}
+#instagram:hover{
+    background-color: #e1306c;
+}
+#twitter:hover{
+    background-color: #14171A;
+}
 .sub {
     margin-top: 2px;
     display: flex;
