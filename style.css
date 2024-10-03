@@ -14,39 +14,6 @@
 
 /* header css  */
 
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  nav {
-    background-color: #333;
-    padding: 15px 0;
-  }
-
-/*logo css */
-  
-  .brand-name {
-    flex-grow: 1;
-  }
-  
-  .brand-name a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* search bar css */
-
-  .search-bar {
-    flex-grow: 4;
     display: flex;
     justify-content: center;
   }
@@ -129,21 +96,24 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: Arial, sans-serif;
+.border{
+    font-size: 0.85rem;
 }
 
-/* Navbar Container */
-nav {
-  background-color: #333;
-  padding: 15px 20px;
+.border:hover{
+    text-decoration: underline;
+    font-weight: 500;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+}
+.nav-links> .nav-link{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+
 }
 
 /* Brand Name */
@@ -176,31 +146,6 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   color: #555;
-}
-
-.search-bar .search-icon i {
-  font-size: 18px;
-}
-
-/* Navigation Items */
-.nav-items {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-items li {
-  margin-left: 20px; /* Less spacing between items */
-}
-
-.nav-items a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 7px 10px;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
 /* Hover Underline Effect */
@@ -295,6 +240,7 @@ nav {
     width: 100%;
     height: 100%;
     background-image: url('./images/h1-slide-show-1_1_1.webp'); 
+    background-size: cover;
     display: flex;
     align-items: center;
     padding-left: 20%;
@@ -689,6 +635,7 @@ nav {
 .footer-list li a {
     color:black;
     text-decoration: none;
+    
 }
 
 .border-list 
@@ -708,9 +655,27 @@ nav {
     
 }
 .socials a {
+    transition: all .38s ease;
     color: black;
 }
-
+.socials a:hover{
+    color: white;
+    transform: scale(1.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+#github:hover{
+    background-color:#3a383c ;
+}
+#linkedin:hover{
+    background-color:#0a66c2 ;
+}
+#instagram:hover{
+    background-color: #e1306c;
+}
+#twitter:hover{
+    background-color: #14171A;
+}
 .sub {
     margin-top: 2px;
     display: flex;
