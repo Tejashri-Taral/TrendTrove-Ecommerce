@@ -827,6 +827,35 @@ input
     text-decoration: underline;
 }
 
+/* About Section Styles */
+.about-section {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'futura';
+}
+
+.about-img {
+    width: 200px;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'futura';
+}
+
 /* Form Styles */
 .contact-form {
     margin-bottom: 40px;
