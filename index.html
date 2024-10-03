@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <!-- header section  -->
@@ -56,7 +58,7 @@
     <section class="banner">
 
         <div class="slide">
-            
+
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
                 <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
                 <p>
@@ -64,14 +66,14 @@
                 </p>
                 <button class="btn">
                     Explore More
-                </button>   
+                </button>
             </div>
         </div>
     </section>
 
 
     <!-- featured section  -->
-     
+
     <section class="featured">
         <div class="featured-box-1">
             <div class="overlay">
@@ -93,7 +95,7 @@
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-glasses.webp" alt="product">
-                </div> 
+                </div>
             </div>
             <div class="featured-box-2-box-2">
                 <div class="overlay">
@@ -103,7 +105,7 @@
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-bags.webp" alt="product">
-                </div> 
+                </div>
             </div>
 
             <div class="featured-box-2-box-3">
@@ -114,7 +116,7 @@
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-sandals.webp" alt="product">
-                </div> 
+                </div>
             </div>
         </div>
 
@@ -139,7 +141,7 @@
 
         <div class="products-list">
 
-            <div class="product"  data-aos="fade-up" data-aos-delay="200">
+            <div class="product" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-image">
                     <div class="main-image">
                         <img src="./images/product1-effect.jpg" alt="product">
@@ -256,7 +258,7 @@
                 <p class="product-name">Night Suits</p>
             </div>
 
-        </div>  
+        </div>
 
         <div class="category" data-aos="zoom-in" data-aos-delay="200">
 
@@ -267,7 +269,7 @@
             <div class="product-details">
                 <p class="product-name">Hand Bags</p>
             </div>
-        </div>  
+        </div>
 
         <div class="category" data-aos="zoom-in" data-aos-delay="200">
             <div class="cat-img">
@@ -276,7 +278,7 @@
             <div class="product-details">
                 <p class="product-name">Funky Tops</p>
             </div>
-        </div>  
+        </div>
     </section>
 
 
@@ -306,7 +308,6 @@
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
                     <p class="product-price">- $100</p> 
-
                 </div>
             </div>
 
@@ -469,27 +470,30 @@
                 </li>
             </ul>
         </div>
+
     </footer>
+    <div class="footer-copyright">
+        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+    </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
         let headerVisible = false;
-        document.getElementById("menu").addEventListener("click",function(){
+        document.getElementById("menu").addEventListener("click", function () {
 
-            if(headerVisible===false)
-            {
-                document.getElementById("header").style.height="280px";
-                headerVisible=true;
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "280px";
+                headerVisible = true;
             }
-            else 
-            {
-                document.getElementById("header").style.height="50px";
-                headerVisible=false;
+            else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
             }
 
         })
     </script>
 
 </body>
+
 </html>
