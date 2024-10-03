@@ -14,73 +14,273 @@
 
 /* header css  */
 
-.header
-{
-   height: 70px;
-   width: 100%;
-   /* background-color: red; */
-   padding: 0px 8%;
-   display: flex;
-   justify-content: space-between;
-   
-}
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  nav {
+    background-color: #333;
+    padding: 15px 0;
+  }
 
-.logo 
-{
-    width: 10%;
-    height: 70px;
-    /* background-color: yellow; */
+/*logo css */
+  
+  .brand-name {
+    flex-grow: 1;
+  }
+  
+  .brand-name a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* search bar css */
+
+  .search-bar {
+    flex-grow: 4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: 'futura';
-    font-weight: bold;
-    font-size: 25px;
-}
+  }
+  
+  .search-bar input {
+    width: 90%;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Navbar items css */
 
-.navigation
-{
-    width: 30%;
-    height: 70px;
-    /* background-color: blue; */
-}
-
-.nav-links
-{
-    width: 100%;
-    height: 70px;
-    /* background-color: yellow; */
-    display: flex;
+  .nav-items {
     list-style-type: none;
-    align-items: center;
-    justify-content: space-between;
-    font-family: 'futura';
-    /* font-weight: bold; */
-    font-size: 17px;
-    color: #1d1d1d;
-}
-
-.nav-links > .nav-link > a 
-{
-    color: #1d1d1d;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  
+  .nav-items li {
+    margin-left: 10px;
+  }
+  
+  .nav-items a {
+    color: white;
     text-decoration: none;
+    font-size: 16px;
+    padding: 7px 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-items a:hover {
+    color: white;
+  }
+  
+  .nav-items a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: gray;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-items a:hover::after {
+    width: 100%;
+  }
+  
+  .nav-items i {
+    font-size: 18px;
+  }
+  
+  /* Responsive behaviour css */
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .search-bar {
+      margin: 10px 0;
+    }
+  
+    .nav-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-items li {
+      margin: 10px 0;
+ /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-links > .nav-link > i 
-{
-    font-size: 20px;
+body {
+  font-family: Arial, sans-serif;
 }
 
-
-
-.utils 
-{
-    width: 12%;
-    height: 70px;
-    /* background-color: purple; */
+/* Navbar Container */
+nav {
+  background-color: #333;
+  padding: 15px 20px;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Brand Name */
+.brand-name a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  position: relative;
+  flex-grow: 4; /* Allow search bar to grow */
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 8px 40px 8px 15px; /* Extra padding for the icon */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  right: 26%; /* Adjust to position the icon inside the input */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.search-bar .search-icon i {
+  font-size: 18px;
+}
+
+/* Navigation Items */
+.nav-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-items li {
+  margin-left: 20px; /* Less spacing between items */
+}
+
+.nav-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 7px 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover Underline Effect */
+.nav-items a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-items a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: gray;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Icons */
+.nav-items i {
+  font-size: 18px;
+  color: white;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .search-bar {
+    margin: 10px 0;
+    width: 100%; /* Full width for search bar */
+  }
+
+  .nav-items {
+    flex-direction: column;
+    width: 100%; /* Full width for mobile */
+    display: none; /* Hide by default */
+    background-color: #333; /* Background for dropdown */
+    position: absolute; /* Position absolute for dropdown */
+    top: 100%; /* Below the navbar */
+    left: 0;
+    z-index: 1000; /* Ensure it is above other content */
+  }
+
+  .nav-items.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-items li {
+    margin: 10px 0; /* Spacing for vertical layout */
+    text-align: center; /* Center align items */
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Show toggle button */
+  }
+}
+   }
+  }
+ 
 /* banner css  */
 
 .banner 
