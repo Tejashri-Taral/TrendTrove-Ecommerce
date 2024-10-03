@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    margin: 0 10px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-link a:hover {
+    color: #007BFF;
+}
+
+.utils {
+    display: flex;
+}
+
+.utils .nav-link {
+    margin: 0 10px;
+}
+
+.utils .nav-link i {
+    font-size: 24px;
+    color: #333;
+}
+
+.sneakers-section {
+    padding: 20px;
+}
+
+.sneakers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Specify 3 equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.sneaker-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sneaker-image img {
+    width: 100%;
+    height: auto;
+}
+
+.sneaker-info {
+    padding: 15px;
+}
+
+.sneaker-info h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sneaker-info .price {
+    font-size: 16px;
+    color: #007BFF;
+    margin: 5px 0;
+}
+
+.sneaker-info .rating {
+    margin: 5px 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+.buy-now {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-now:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.buy-now:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+.sneaker-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sneaker-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
