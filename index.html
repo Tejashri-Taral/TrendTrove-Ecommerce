@@ -21,7 +21,8 @@
         </div>
 
         <nav class="navigation">
-            <ul class="nav-links">
+            <!-- <ul class="nav-links">
+
                 <li class="nav-link border">
                     <a href="index.html">Home</a>
                 </li>
@@ -37,7 +38,17 @@
                 <li class="nav-link border" style="margin-left: 15px;">
                     <a href="contact.html">Contact Us</a>
                 </li>
+            </ul> -->
+            <ul id="tabs">
+                <li class="tab nav-link">Home</li>
+                <li class="tab"><a href="scholarships.html">Scholarships</a></li>
+                <li class="tab"><a href="jobs.html">Jobs</a></li>
+                <li class="tab"><a href="forum.html">Forum</a></li>
+                <li class="tab"><a href="#faqs">FAQs</a></li>
+                <li class="tab"><a href="blog.html">Blog</a></li>
             </ul>
+            <div class="cursor"></div>
+
         </nav>
 
         <nav class="utils">
@@ -496,6 +507,92 @@
 
         })
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.from("#header", {
+            duration: 1.5,
+            y: -100,
+            opacity: 0,
+            ease: "power4.out",
+            stagger: 1,
+        });
+    
+        gsap.from(".nav-link", {
+            duration: 1,
+            opacity: 0,
+            y: 20,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+    
+        gsap.from("h1", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 0.7,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+    
+        gsap.from("p", {
+            duration: 1.5,
+            opacity: 0,
+            y: 30,
+            delay: 0.9,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
+    
+        gsap.from(".btn", {
+            duration: 1,
+            scale: 0.8,
+            opacity: 0,
+            delay: 1.2,
+            ease: "back.out(1.7)",
+            stagger: 0.2
+        });
+    
+        gsap.from("img", {
+            duration: 1.5,
+            opacity: 0,
+            scale: 0.9,
+            delay: 1.5,
+            stagger: 0.3,
+            ease: "elastic.out(1, 0.3)"
+        });
+    
+        gsap.from(".overlay", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.7,
+            stagger: 0.3,
+            ease: "power3.out"
+        });
+    
+        gsap.from(".footer-section", {
+            scrollTrigger: ".footer",
+            duration: 1.5,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out",
+            stagger: 0.3,
+        });
+    
+        
+        gsap.from(".socials i", {
+            scrollTrigger: ".footer",
+            duration: 1,
+            opacity: 0,
+            scale: 0.5,
+            ease: "bounce.out",
+            stagger: 0.2,
+            delay: 0.5
+        });
+    </script>
+    
+    
 
 </body>
 
