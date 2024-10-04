@@ -20,7 +20,7 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-        <nav class="navigation">
+        <!-- <nav class="navigation"> -->
             <!-- <ul class="nav-links">
 
                 <li class="nav-link border">
@@ -39,7 +39,7 @@
                     <a href="contact.html">Contact Us</a>
                 </li>
             </ul> -->
-            <ul id="tabs">
+            <!-- <ul id="tabs">
                 <li class="tab nav-link">Home</li>
                 <li class="tab"><a href="scholarships.html">Scholarships</a></li>
                 <li class="tab"><a href="jobs.html">Jobs</a></li>
@@ -49,7 +49,19 @@
             </ul>
             <div class="cursor"></div>
 
-        </nav>
+        </nav> -->
+        <div class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+              <ul id="tabs" class="tabs">
+                <li class="tab">Home</li>
+                <li class="tab">Pricing</li>
+                <li class="tab">Features</li>
+                <li class="tab">Docs</li>
+                <li class="tab">Blog</li>
+                <li id="cursor" class="cursor"></li>
+              </ul>
+            </div>
+          </div>
 
         <nav class="utils">
             <ul class="nav-links">
@@ -592,7 +604,28 @@
         });
     </script>
     
-    
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        const tabs = document.querySelectorAll(".tab");
+        const cursor = document.getElementById("cursor");
+        const tabsContainer = document.getElementById("tabs");
+      
+        tabs.forEach((tab) => {
+          tab.addEventListener("mouseenter", () => {
+            const tabRect = tab.getBoundingClientRect();
+            const tabOffsetLeft = tab.offsetLeft;
+            const tabWidth = tabRect.width;
+      
+            cursor.style.left = `${tabOffsetLeft}px`;
+            cursor.style.width = `${tabWidth}px`;
+            cursor.style.opacity = 1;
+          });
+        });
+      
+        tabsContainer.addEventListener("mouseleave", () => {
+          cursor.style.opacity = 0;
+        });
+      });
+      </script>
 
 </body>
 
