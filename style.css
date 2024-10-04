@@ -148,6 +148,9 @@
     text-transform: uppercase;
     border-radius: 30px;
 }
+.btn:hover{
+    background-color: #555;
+}
 
 
 /* featured section css  */
