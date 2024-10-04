@@ -17,30 +17,32 @@
 .header
 {
    height: 70px;
-   width: 100%;
-   /* background-color: red; */
+   width:100%;
+   background-color: black;
    padding: 0px 8%;
    display: flex;
    justify-content: space-between;
-   
+   position: fixed;
+   z-index: 70;
 }
 
 .logo 
 {
     width: 10%;
     height: 70px;
-    /* background-color: yellow; */
+    /* background-color: ; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'futura';
     font-weight: bold;
     font-size: 25px;
+    color: #ffd0a6;
 }
 
 .navigation
 {
-    width: 30%;
+    width: 40%;
     height: 70px;
     /* background-color: blue; */
 }
@@ -56,13 +58,28 @@
     justify-content: space-between;
     font-family: 'futura';
     /* font-weight: bold; */
-    font-size: 17px;
-    color: #1d1d1d;
+    
+    color: wheat;
+    cursor: pointer;
+    
 }
+
+.nav-links li{
+    font-size: 17px;
+    transition: transform 0.3s ease-out ;
+    
+}
+
+.nav-links li:hover{
+    transform: scale(1.5);
+    text-decoration: underline;
+}
+
+
 
 .nav-links > .nav-link > a 
 {
-    color: #1d1d1d;
+    color: wheat;
     text-decoration: none;
 }
 
@@ -78,6 +95,7 @@
     width: 12%;
     height: 70px;
     /* background-color: purple; */
+    color: wheat;
 }
 
 
@@ -99,6 +117,7 @@
     align-items: center;
     padding-left: 20%;
 }
+
 
 .slide-details 
 {
