@@ -34,6 +34,10 @@
     font-weight: bold;
     font-size: 25px;
 }
+.logo img{
+    height: 65px;
+    width: 80px;
+}
 
 .border {
     font-size: 0.85rem;
