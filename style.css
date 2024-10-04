@@ -879,3 +879,16 @@ input {
 #copyright {
     margin-bottom: 5px;
 }
+ #wishlist-count {
+    position: absolute;
+    padding-right: 2px;
+    top: opx;
+    right: 100px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 11px;
+    display: none;
+
+ } 

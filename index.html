@@ -39,11 +39,17 @@
             </ul>
         </nav>
 
+        
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
+                <li class="nav-link" id="wishlist-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="wishlist-count">0</span>
+                </li>
+
                 <li class="nav-link">
                     <i class="fa-solid fa-user"></i>
                 </li>
@@ -77,7 +83,7 @@
     <section class="featured">
         <div class="featured-box-1">
             <div class="overlay">
-                <button class="btn btn-white">
+                <button >
                     Shop Clothing
                 </button>
             </div>
@@ -89,7 +95,7 @@
         <div class="featured-box-2">
             <div class="featured-box-2-box-1">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <button >
                         Shop Sunglasses
                     </button>
                 </div>
@@ -99,7 +105,7 @@
             </div>
             <div class="featured-box-2-box-2">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <button >
                         Shop Bags
                     </button>
                 </div>
@@ -110,7 +116,7 @@
 
             <div class="featured-box-2-box-3">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <button >
                         Shop Sandals
                     </button>
                 </div>
@@ -122,7 +128,7 @@
 
         <div class="featured-box-3">
             <div class="overlay">
-                <a href="sneaker.html" class="btn btn-white">
+                <a href="sneaker.html" >
                     Shop Sneakers
                 </a>
                 
@@ -150,7 +156,7 @@
                         <img src="./images/product1.webp" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="1">
                             Add To Wishlist
                         </button>
                     </div>
@@ -175,7 +181,7 @@
                         <img src="./images/product2-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="2">
                             Add To Wishlist
                         </button>
                     </div>
@@ -202,7 +208,7 @@
                         <img src="./images/product3.webp" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="3">
                             Add To Wishlist
                         </button>
                     </div>
@@ -228,7 +234,7 @@
                         <img src="./images/product4-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="4">
                             Add To Wishlist
                         </button>
                     </div>
@@ -299,7 +305,7 @@
                         <img src="./images/product5-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="5">
                             Add To Wishlist
                         </button>
                     </div>
@@ -322,7 +328,7 @@
                         <img src="./images/product6-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="6">
                             Add To Wishlist
                         </button>
                     </div>
@@ -345,7 +351,7 @@
                         <img src="./images/product7-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="7">
                             Add To Wishlist
                         </button>
                     </div>
@@ -367,7 +373,7 @@
                         <img src="./images/product8-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white">
+                        <button  class="btn btn-white-wishlist" data-id="8">
                             Add To Wishlist
                         </button>
                     </div>
@@ -480,6 +486,8 @@
     <script>
         AOS.init();
         let headerVisible = false;
+        let count=0;
+        let wishlist={};
         document.getElementById("menu").addEventListener("click", function () {
 
             if (headerVisible === false) {
@@ -490,8 +498,29 @@
                 document.getElementById("header").style.height = "50px";
                 headerVisible = false;
             }
-
         })
+    let element=    document.querySelectorAll('.btn-white-wishlist')
+        element.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.getAttribute('data-id');
+            let countElement = document.getElementById('wishlist-count'); 
+            if(wishlist[productId]){
+                delete wishlist[productId];
+                count--;
+                this.innerText="Add To Wishlist";
+            }
+            else{
+                wishlist[productId]=true;
+            count++; 
+            this.innerText="wishlisted";
+            }
+            console.log("Wishlist button clicked");
+           
+                countElement.innerText = count;
+           
+            countElement.style.display = 'inline' 
+        });
+    });
     </script>
 
 </body>
