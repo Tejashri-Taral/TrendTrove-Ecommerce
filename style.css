@@ -45,6 +45,7 @@
 }
 
 .navigation {
+    text-decoration:wavy;
     width: 30%;
     height: 70px;
     display: flex;
@@ -55,6 +56,7 @@
 }
 
 .nav-links {
+    text-decoration:solid;
     width: 150%;
     height: 70px;
     /* background-color: yellow; */
@@ -76,7 +78,6 @@
 
 .nav-links>.nav-link>a {
     color: #1d1d1d;
-    text-decoration: none;
     font-size: 20px;
     font-weight: 500;
     display: flex;
@@ -84,10 +85,15 @@
     align-items: center;
     width: 85px;
 }
+.nav-links>.nav-link>a:hover{
+    color: #f50b0b;
+    cursor: grab;
+}
 
 .nav-links>.nav-link>i {
     font-size: 20px;
 }
+
 
 
 
@@ -140,6 +146,12 @@
     color: white;
     text-transform: uppercase;
     border-radius: 30px;
+}
+.btn:hover{
+    cursor: pointer;
+    color: #690bf5;
+    text-decoration: none;
+    background-color: #ec4c0c;
 }
 
 
