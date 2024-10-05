@@ -10,6 +10,25 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .scroll-top-btn {
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from the bottom of the viewport */
+            right: 20px; /* Distance from the right of the viewport */
+            background-color: #1d1d1d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+
+        .scroll-top-btn:hover {
+            background-color: #1d1d1d;
+        }
+    </style>
 </head>
 
 <body>
