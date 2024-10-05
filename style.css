@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    /* font-size: 16px; */
     box-sizing: border-box;
 }
 
@@ -472,9 +473,29 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    font-size: 12px;
 
 }
 
+.footer-section h1{
+    color: #e1306c;
+    font-weight: 800;
+    /* font-size: 30px; */
+}
+
+.footer-section h1:hover{
+    color: black; /* Initial color */
+    transition: color 0.3s ease;
+}
+
+.footer-list{
+    color: black;
+    font-size: 17px;
+}
+
+.footer-list:hover{
+    color: rgb(129, 18, 18);
+}
 
 .footer-list {
     list-style-type: none;
@@ -493,6 +514,17 @@
     margin-top: 20px;
     border-top: 1px solid lightgray;
     width: 70%;
+}
+
+.quick-list li a{
+    list-style: none;
+    color:black;
+
+}
+
+.quick-list li a:hover{
+    list-style: none;
+    color: rgb(129, 18, 18);
 }
 
 .socials {
@@ -542,10 +574,10 @@
 .sub input {
     height: 40px;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 30px;
     border: 1px solid lightgray;
-    padding: 0 15px;
+    padding: 0 50px;
     margin-bottom: 10px;
 }
 
@@ -553,6 +585,7 @@
     width: auto;
     padding: 10px 20px;
     font-size: 14px;
+    margin-left: 55px;
 }
 
 .sub .btn:hover {
