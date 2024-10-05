@@ -458,7 +458,7 @@
 
 .footer {
     width: 100%;
-    padding: 30px 20%;
+    padding: 15px 20%;
     background-color: #f6f5fa;
     font-family: 'futura';
     display: flex;
@@ -471,7 +471,8 @@
     width: 32%;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 20px;
+    
 
 }
 
@@ -480,14 +481,18 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap: 15px;
 }
 
 .footer-list li a {
     color: black;
     text-decoration: none;
+    color: blue;
 
 }
+
+    
+
 
 .border-list {
     margin-top: 20px;
