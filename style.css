@@ -13,43 +13,39 @@
 
 /* header css  */
 
-.header {
-    height: 70px;
-    width: 100%;
-    /* background-color: red; */
-    padding: 0px 2%;
-    display: flex;
-    justify-content: space-between;
-
+.header
+{
+   height: 70px;
+   width:100%;
+   background-color: black;
+   padding: 0px 8%;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   z-index: 70;
 }
 
 .logo {
     width: 12%;
     height: 70px;
-    /* background-color: yellow; */
+    /* background-color: ; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'futura';
     font-weight: bold;
     font-size: 25px;
+    color: #ffd0a6;
 }
 .logo img{
     height: 65px;
     width: 80px;
 }
 
-.border {
-    font-size: 0.85rem;
-}
+.navigation
+{
+    width: 40%;
 
-.border:hover {
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.navigation {
-    width: 30%;
     height: 70px;
     display: flex;
     align-items: center;
@@ -68,18 +64,32 @@
     justify-content: space-evenly;
     white-space: nowrap;
     font-family: 'futura';
+    /* font-weight: bold; */
+    
+    color: wheat;
+    cursor: pointer;
+    
+}
+
+.nav-links li{
+
     font-size: 17px;
-    color: #1d1d1d;
+    transition: transform 0.3s ease-out ;
+    
 }
 
-.nav-links>.nav-link {
-    width: 150px;
-    display: flex;
-    justify-content: center;
+.nav-links li:hover{
+    transform: scale(1.5);
+    text-decoration: underline;
 }
 
-.nav-links>.nav-link>a {
-    color: #1d1d1d;
+
+
+
+.nav-links > .nav-link > a 
+{
+    color: wheat;
+
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
@@ -100,6 +110,7 @@
     height: 70px;
     margin-right: 45px;
     /* background-color: purple; */
+    color: wheat;
 }
 
 
@@ -121,7 +132,11 @@
     padding-left: 20%;
 }
 
-.slide-details {
+
+
+.slide-details 
+{
+
     width: 27%;
     padding: 40px;
     /* background-color: red; */
