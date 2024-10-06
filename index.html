@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
     <title>TrendTrove - Ecommerce</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -16,7 +17,7 @@
     <!-- header section  -->
     <header class="header" id="header">
         <div class="logo">
-            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
@@ -34,15 +35,15 @@
                 <li class="dropdown">
                     <a href="#">Products</a>
                     <ul class="dropdown-content">
-                      <li><a href="mens.html">Mens</a></li>
-                      <li><a href="womens.html">Womens</a></li>
+                        <li><a href="mens.html">Mens</a></li>
+                        <li><a href="womens.html">Womens</a></li>
                     </ul>
                 </li>
                 <li class="nav-link border" style="margin-left: 15px;">
                     <a href="contact.html">Contact Us</a>
                 </li>
-                
-                
+
+
             </ul>
         </nav>
 
@@ -134,7 +135,7 @@
                 <a href="sneaker.html" class="btn btn-white">
                     Shop Sneakers
                 </a>
-                
+
             </div>
             <div class="bg-image">
                 <img src="./images/shop-sneakers.webp" alt="product">
@@ -168,7 +169,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Striped Top</p>
-                    <p class="product-price">- $199</p> 
+                    <p class="product-price">- $199</p>
                 </div>
 
             </div>
@@ -194,7 +195,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $99</p> 
+                    <p class="product-price">- $99</p>
                 </div>
 
             </div>
@@ -221,7 +222,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Olive Green Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
 
             </div>
@@ -247,7 +248,7 @@
 
                 <div class="product-details">
                     <p class="product-name">White Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
             </div>
         </div>
@@ -316,7 +317,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
             </div>
 
@@ -339,7 +340,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Red Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
 
             </div>
@@ -362,7 +363,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Light Teal Top</p>
-                    <p class="product-price">- $199</p> 
+                    <p class="product-price">- $199</p>
                 </div>
             </div>
 
@@ -383,7 +384,7 @@
                 </div>
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $399</p> 
+                    <p class="product-price">- $399</p>
                 </div>
             </div>
         </div>
@@ -489,13 +490,12 @@
     <script>
         AOS.init();
         let headerVisible = false;
-        document.getElementById("menu").addEventListener("click", function () {
+        document.getElementById("menu").addEventListener("click", function() {
 
             if (headerVisible === false) {
                 document.getElementById("header").style.height = "280px";
                 headerVisible = true;
-            }
-            else {
+            } else {
                 document.getElementById("header").style.height = "50px";
                 headerVisible = false;
             }
