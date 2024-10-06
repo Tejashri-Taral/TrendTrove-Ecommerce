@@ -953,3 +953,35 @@ main{
     width: 240px;
     height: 300px;
 }
+/* dropdown for products nav-item */
+/* dropdown styling  */
+.dropdown a{
+    color: #1d1d1d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content li {
+    float: none;
+  }
+  
+  .dropdown-content li a {
+    padding: 12px 16px;
+    text-align: left;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
