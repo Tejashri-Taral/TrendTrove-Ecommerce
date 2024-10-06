@@ -907,7 +907,6 @@ input {
     background-color: #f9f9f9;
     padding: 50px 0;
     text-align: center; 
-    
 }
 
 .testimonials-container {
@@ -928,8 +927,9 @@ input {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .testimonial:hover .customer-img {
-    border-color: #e2707f
+    border-color: #e2707f;
 }
 
 .testimonials h1.section-title {
@@ -942,10 +942,12 @@ input {
     font-style: italic;
     color: #555;
 }
+
 .testimonial:hover {
     transform: translateY(-30px); 
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); 
 }
+
 .customer-info {
     display: flex;
     align-items: center;
@@ -960,7 +962,101 @@ input {
     border: 3px solid #ddd;
     transition: border-color 0.3s ease;
 }
+
 .customer-name {
     font-weight: bold;
     color: #333;
+}
+
+/* Men's section styling */
+main {
+    background-color: #f0efef; 
+}
+
+.slider {
+    background: url(shoppingimage.jpg);
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.my2 {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-items {
+    height: 350px;
+    width: 230px;
+    margin: 40px;
+}
+
+.cardimage {
+    width: 200px;
+    height: 290px;
+}
+
+.lines {
+    text-align: center;
+    font-family: 'futura';
+}
+
+.cardimage:hover {
+    width: 220px;
+    height: 310px;
+}
+
+.footwear-items {
+    height: 280px;
+    width: 230px;
+    margin: 40px;
+}
+
+.footwear {
+    width: 230px;
+    height: 250px;
+}
+
+.footwear:hover {
+    width: 240px;
+    height: 300px;
+}
+
+/* Dropdown for products nav-item */
+.dropdown a {
+    color: #1d1d1d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content li a {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
