@@ -4,11 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TrendTrove</title>
+    <title>About Us - TrendTrove</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
+    <style>
+        /* General Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #98ae99;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        /* About Us Section */
+        .about-section {
+            width: 100%;
+            padding: 40px 0;
+            background: #c0d6b7;
+        }
+
+        .about-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* First part: Image left, text right */
+        .about-content-first {
+            display: flex;
+            align-items: center; /* Adjusted to center the image and text */
+            justify-content: space-between;
+            margin-bottom: 50px;
+            gap: 30px; /* Added consistent gap between text and image */
+        }
+
+        .about-text {
+            flex: 1;
+            font-size: 2em;
+            line-height: 1.8;
+            margin-right: 20px; /* Ensure a margin between text and image */
+        }
+
+        .about-images img {
+           width: 500px;
+           border-radius: 20%;
+           aspect-ratio: 3/2;
+           opacity: 50%;
+        }
+
+        /* Second part: Image right, text left */
+        .about-content-second {
+            display: flex;
+            align-items: center; /* Adjusted to center the image and text */
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            gap: 30px; /* Consistent gap for the second part */
+        }
+
+        .about-container {
+            padding: 0 40px; /* Increased padding for a more spacious layout */
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #a1b1a3;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-list li {
+            margin-bottom: 10px;
+        }
+
+        .footer-list a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .socials a {
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .sub input {
+            padding: 10px;
+            margin-right: 10px;
+            width: 70%;
+        }
+
+        .sub .btn {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sub .btn:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header class="header" id="header">
         <div class="logo">
             <p>TrendTrove</p>
@@ -50,20 +175,42 @@
         </nav>
     </header>
 
+    <!-- About Us Section -->
     <section class="about-section">
         <h2 class="about-title">About Us</h2>
-        <p class="about-description">Welcome to TrendTrove, your ultimate destination for fashion-forward apparel, accessories, and lifestyle products. 
-            At TrendTrove, we believe in celebrating individuality and empowering every customer to express their unique style with confidence.  Whether you're looking for everyday essentials or 
-            statement pieces, we source high-quality, sustainable, and stylish items to elevate your wardrobe.<br><br>
-            At the heart of TrendTrove is a passion for style and a commitment to customer satisfaction. Our mission is to offer a seamless shopping experience with exceptional service, fast shipping, and an easy return process. 
-            We stay ahead of the fashion curve so you can step out feeling your best, whatever the occasion.
-        <br><br>Discover your style with TrendTrove — where fashion meets confidence!</p>
-        
+
+        <div class="about-container">
+
+            <!-- First part: Image left, text right -->
+            <div class="about-content-first">
+                <div class="about-text">
+                    <p>Welcome to TrendTrove, your ultimate destination for fashion-forward apparel, accessories, and lifestyle products. 
+                    We believe in celebrating individuality and empowering every customer to express their unique style with confidence. Whether you're looking for everyday essentials or statement pieces, 
+                    we source high-quality, sustainable, and stylish items to elevate your wardrobe.</p>
+                </div>
+                <div class="about-images">
+                    <img src="images/about1.jpg" alt="Fashion Collection">
+                </div>
+            </div>
+
+            <!-- Second part: Image right, text left -->
+            <div class="about-content-second">
+                <div class="about-text">
+                    <p>At the heart of TrendTrove is a passion for style and a commitment to customer satisfaction. Our mission is to offer a seamless shopping experience with exceptional service, fast shipping, 
+                    and an easy return process. We stay ahead of the fashion curve so you can step out feeling your best, whatever the occasion.</p>
+                    <p>Discover your style with TrendTrove — where fashion meets confidence!</p>
+                </div>
+                <div class="about-images">
+                    <img src="images/about2.jpg" alt="Accessories Collection">
+                </div>
+            </div>
+
+        </div>
 
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer">
-
         <div class="footer-section">
             <h1>Contact Us</h1>
             <ul class="footer-list">
@@ -111,7 +258,6 @@
         </div>
     </footer>
 
-    
 </body>
 
 </html>
