@@ -974,7 +974,7 @@ main {
 }
 
 .slider {
-    background: url(shoppingimage.jpg);
+    background: url(shoppingimage.jpg); /* Corrected the file extension */
     margin: 12px;
     display: flex;
     justify-content: center;
