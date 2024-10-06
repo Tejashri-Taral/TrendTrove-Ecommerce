@@ -6,29 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TrendTrove</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
-    <style>
-        .scroll-top-btn {
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Distance from the bottom of the viewport */
-            right: 20px; /* Distance from the right of the viewport */
-            background-color: #1d1d1d;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            display: none; /* Initially hidden */
-            z-index: 1000; /* Ensure it appears above other content */
-        }
-
-        .scroll-top-btn:hover {
-            background-color: #1d1d1d;
-        }
-    </style>
+    
+    
 </head>
 
 <body>
-    <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
+    
     <header class="header" id="header">
         <div class="logo">
             <p>TrendTrove</p>
@@ -153,29 +136,7 @@
             </ul>
         </div>
     </footer>
-    <script>
-        // script.js
-window.onscroll = function() {
-    toggleScrollTopButton();
-};
-
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-function toggleScrollTopButton() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopBtn.style.display = "block"; // Show button after scrolling down
-    } else {
-        scrollTopBtn.style.display = "none"; // Hide button when at the top
-    }
-}
-
-scrollTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
-};
-
-    </script>
-
-
+  
     
 </body>
 

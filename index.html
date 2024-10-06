@@ -10,29 +10,12 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .scroll-top-btn {
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Distance from the bottom of the viewport */
-            right: 20px; /* Distance from the right of the viewport */
-            background-color: #1d1d1d;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            display: none; /* Initially hidden */
-            z-index: 1000; /* Ensure it appears above other content */
-        }
-
-        .scroll-top-btn:hover {
-            background-color: #1d1d1d;
-        }
-    </style>
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    
 </head>
 
 <body>
-    <button id="scrollTopBtn" class="scroll-top-btn">↑ Scroll to Top</button>
+    
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -490,47 +473,36 @@
     </footer>
 
 
+    
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
+<script>
+    AOS.init();
+
+    (function() {
         let headerVisible = false;
         document.getElementById("menu").addEventListener("click", function () {
-
-            if(headerVisible===false)
-            {
-                document.getElementById("header").style.height="290px";
-                headerVisible=true;
-
-            }
-            else {
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+            } else {
                 document.getElementById("header").style.height = "50px";
                 headerVisible = false;
             }
+        });
 
-        })
-    </script>
-    <script>
-        // script.js
-window.onscroll = function() {
-    toggleScrollTopButton();
-};
+        // Show "Go to Top" button after scrolling down
+        const goTopBtn = document.querySelector(".gotopbtn");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
 
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-function toggleScrollTopButton() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopBtn.style.display = "block"; // Show button after scrolling down
-    } else {
-        scrollTopBtn.style.display = "none"; // Hide button when at the top
-    }
-}
-
-scrollTopBtn.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
-};
-
-    </script>
-
+    })();  // IIFE to avoid polluting global scope
+</script>
 </body>
 
 </html>
