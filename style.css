@@ -49,13 +49,13 @@
 }
 
 .navigation {
-    width: 30%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    /* background-color: blue; */
+        width: 45%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        /* background-color: blue; */
 }
 
 .nav-links {
@@ -961,3 +961,5 @@ input {
         align-items: center;
     }
 }
+=======
+
