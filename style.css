@@ -900,6 +900,7 @@ input {
 
 #copyright {
     margin-bottom: 5px;
+
 }.terms-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -936,6 +937,7 @@ input {
     line-height: 1.6; 
     text-align: left; 
 }
+
 /* mens section styling */
 main{
     background-color: #f0efef; 
