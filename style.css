@@ -995,23 +995,51 @@ main{
     align-items: center;
     width: 85px;
 }
+/* Add a down arrow after the Products link */
+.dropdown a.products-link::after {
+    content: "▼"; 
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: 3px; 
+    transition: transform 0.3s ease;
+}
+/* Change to an up arrow on hover for Products link */
+.dropdown:hover a.products-link::after {
+    content: "▲"; 
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
     min-width: 160px;
     z-index: 1;
-  }
-  
-  .dropdown-content li {
-    float: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px;
+    list-style-type: none;
   }
   
   .dropdown-content li a {
     padding: 12px 16px;
-    text-align: left;
-  }
-  
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-content {
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #1d1d1d;
+    border-radius: 5px; 
+    width: 100%;
     display: block;
-  }
+    margin-bottom: 10px; /* Space between boxes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for Men's and Women's links */
+.dropdown-content li a:hover {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
