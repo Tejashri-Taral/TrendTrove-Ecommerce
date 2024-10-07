@@ -57,69 +57,86 @@
                     </a>
                 </li>
                 <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                 </li>
             </ul>
         </nav>
     </header>
-    
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br>
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-    
     <!-- Search Bar -->
-    <div id="search-bar" style="display: none;">
+    <div id="search-bar">
         <input type="text" id="search" placeholder="Search..." />
-        <button type="submit">Go</button>
+        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
     </div>
-    
+    <style>
+    /* Style for the search bar, initially hidden */
+    #search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust this to position the search bar just below the icon */
+        right: 20px; /* Align with the icon */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling the input box and button */
+    #search-bar input {
+        padding: 5px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    #search-bar button {
+        padding: 5px 10px;
+        background-color:black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #search-bar button:hover {
+        background-color:black;
+    }
+</style>
+
 <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-    const loginBtn = document.getElementById("login-btn");
-    const loginModal = document.getElementById("loginModal");
-    const closeBtn = document.querySelector(".close");
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon"); 
+        const searchBar = document.getElementById("search-bar");
 
-    loginBtn.onclick = function() {
-        loginModal.style.display = "block";
-    }
-
-    closeBtn.onclick = function() {
-        loginModal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-        if (event.target === loginModal) {
-            loginModal.style.display = "none";
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function() {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";  // Show the search bar
+                searchBar.querySelector('input').focus(); // Automatically focus on the input field
+            } else {
+                searchBar.style.display = "none";  // Hide the search bar
+            }
         }
-    }
 
-    const searchBtn = document.getElementById("search-btn");
-    const searchBar = document.getElementById("search-bar");
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function() {
+            var query = document.getElementById('search').value;
+            if(query) {
+                console.log("Search query:", query);
+                // Implement your search logic here, such as a redirect or an API call
+                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
 
-    searchBtn.onclick = function() {
-        if (searchBar.style.display === "none" || searchBar.style.display === "") {
-            searchBar.style.display = "block";
-            searchBar.querySelector('input').focus(); // Automatically focus the input
-        } else {
-            searchBar.style.display = "none";
+                // Hide the search bar after clicking "Go"
+                searchBar.style.display = "none";
+            } else {
+                console.log("No search query entered");
+            }
         }
-    }
-});
-
+    });
 </script>
-
-    <!-- banner area  -->
+ <!-- banner area  -->
     <section class="banner">
 
         <div class="slide">
