@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Fashion Clothing and Accessories</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }    
+
+    .faq-content {
+      flex: 2;
+    }
+
+    .faq-header {
+      text-align: center;
+      font-size: 2em;
+      color: #f2eef174;
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      background-color: #fef6f6;
+      border-left: 5px solid #c0bcc0;
+      
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      background-color:rgba(128, 128, 128, 0); 
+      color: #1f1d1d;
+      padding: 15px;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background-color: whitesmoke;
+    }
+
+    .faq-question:after {
+      content: '\002B';
+      font-size: 1.5em;
+    }
+
+    .faq-item.active .faq-question:after {
+      content: '\2212';
+    }
+
+    .faq-answer {
+      padding: 0 15px;
+      max-height: 0;
+      overflow: hidden;
+      font-size: 1em;
+      color: #333;
+      background-color: #fff;
+      transition: max-height 0.5s ease;
+    }
+
+    .faq-answer p {
+      padding: 15px 0;
+      line-height: 1.6;
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      .faq-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .faq-question {
+        font-size: 1em;
+      }
+
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="faq-container">
+    
+
+    <div class="faq-content">
+      <h1 class="faq-header" style="color: rgba(12, 11, 12, 0.735);">Frequently Asked Questions</h1>
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <div class="faq-question">1. What is the return policy for clothing items?</div>
+        <div class="faq-answer">
+          <p>We accept returns within 30 days of purchase, provided the clothing items are in their original condition with tags intact. Simply initiate a return request through our website and follow the instructions.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <div class="faq-question">2. Do you offer free shipping for accessories?</div>
+        <div class="faq-answer">
+          <p>Yes, we offer free standard shipping for all accessories within the country. For international shipping, additional charges may apply depending on the location.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <div class="faq-question">3. How do I know which size to order?</div>
+        <div class="faq-answer">
+          <p>Our size guide is available on every product page. Please refer to it before placing an order to ensure the perfect fit. If you are between sizes, we recommend sizing up for comfort.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <div class="faq-question">4. Are there any ongoing promotions or discounts?</div>
+        <div class="faq-answer">
+          <p>We frequently have sales and exclusive promotions for our loyal customers. Make sure to subscribe to our newsletter to stay updated on the latest offers and discounts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle dropdown functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Toggle the active class on clicked FAQ
+        item.classList.toggle('active');
+
+        // Expand or collapse the answer
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
