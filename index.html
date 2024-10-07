@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    
+    <!-- ProgressBar -->
+    <div id="progress-bar"></div>
+    <!-- ProgressBar Ends -->
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -51,13 +55,86 @@
                     </a>
                 </li>
                 <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
                 </li>
             </ul>
         </nav>
     </header>
+    <!-- Search Bar -->
+    <div id="search-bar">
+        <input type="text" id="search" placeholder="Search..." />
+        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
+    </div>
+    <style>
+    /* Style for the search bar, initially hidden */
+    #search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust this to position the search bar just below the icon */
+        right: 20px; /* Align with the icon */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-    <!-- banner area  -->
+    /* Styling the input box and button */
+    #search-bar input {
+        padding: 5px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    #search-bar button {
+        padding: 5px 10px;
+        background-color:black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #search-bar button:hover {
+        background-color:black;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon"); 
+        const searchBar = document.getElementById("search-bar");
+
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function() {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";  // Show the search bar
+                searchBar.querySelector('input').focus(); // Automatically focus on the input field
+            } else {
+                searchBar.style.display = "none";  // Hide the search bar
+            }
+        }
+
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function() {
+            var query = document.getElementById('search').value;
+            if(query) {
+                console.log("Search query:", query);
+                // Implement your search logic here, such as a redirect or an API call
+                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+                // Hide the search bar after clicking "Go"
+                searchBar.style.display = "none";
+            } else {
+                console.log("No search query entered");
+            }
+        }
+    });
+</script>
+ <!-- banner area  -->
     <section class="banner">
 
         <div class="slide">
@@ -480,6 +557,21 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- ProgressBar Functionality -->
+    <script>
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+        function updateProgressBar() {
+            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (windowScroll / documentHeight) * 100;
+            document.getElementById("progress-bar").style.width = scrollPercent + "%";
+        }
+
+    </script>
+    <!-- ProgressBar Functionality Ends-->
     <script>
         AOS.init();
         let headerVisible = false;
