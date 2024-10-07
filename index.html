@@ -12,6 +12,10 @@
 </head>
 
 <body>
+    
+    <!-- ProgressBar -->
+    <div id="progress-bar"></div>
+    <!-- ProgressBar Ends -->
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -559,6 +563,21 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- ProgressBar Functionality -->
+    <script>
+        window.onscroll = function () {
+            updateProgressBar();
+        };
+        function updateProgressBar() {
+            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (windowScroll / documentHeight) * 100;
+            document.getElementById("progress-bar").style.width = scrollPercent + "%";
+        }
+
+    </script>
+    <!-- ProgressBar Functionality Ends-->
     <script>
         AOS.init();
         let headerVisible = false;
