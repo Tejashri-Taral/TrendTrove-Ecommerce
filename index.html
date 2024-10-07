@@ -579,27 +579,36 @@
         });
     </script>
     
-    <script>document.addEventListener("DOMContentLoaded", () => {
-        const tabs = document.querySelectorAll(".tab");
-        const cursor = document.getElementById("cursor");
-        const tabsContainer = document.getElementById("tabs");
-      
-        tabs.forEach((tab) => {
-          tab.addEventListener("mouseenter", () => {
-            const tabRect = tab.getBoundingClientRect();
-            const tabOffsetLeft = tab.offsetLeft;
-            const tabWidth = tabRect.width;
-      
-            cursor.style.left = `${tabOffsetLeft}px`;
-            cursor.style.width = `${tabWidth}px`;
-            cursor.style.opacity = 1;
-          });
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const cursor = document.querySelector('.cursor');
+        const tabsContainer = document.querySelector('.tabs');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('mouseover', function () {
+                // Get the tab's bounding box
+                const tabRect = tab.getBoundingClientRect();
+                const containerRect = tabsContainer.getBoundingClientRect();
+    
+                // Move the cursor to the hovered tab
+                cursor.style.width = `${tabRect.width}px`;
+                cursor.style.left = `${tabRect.left - containerRect.left}px`;
+                cursor.style.opacity = 1; // Show the cursor
+    
+                // Change tab text to white while the cursor is over it
+                tab.style.color = 'white';
+            });
+    
+            tab.addEventListener('mouseleave', function () {
+                // Hide the cursor after hover ends
+                cursor.style.opacity = 0;
+    
+                // Reset the tab text color to black
+                tab.style.color = 'black';
+            });
         });
-      
-        tabsContainer.addEventListener("mouseleave", () => {
-          cursor.style.opacity = 0;
-        });
-      });
+    });
+    
       </script>
 
 </body>

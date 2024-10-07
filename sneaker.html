@@ -244,6 +244,36 @@
     <footer class="footer">
         <p>&copy; 2024 TrendTrove. All rights reserved.</p>
     </footer>
-
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const cursor = document.querySelector('.cursor');
+        const tabsContainer = document.querySelector('.tabs');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('mouseover', function () {
+                // Get the tab's bounding box
+                const tabRect = tab.getBoundingClientRect();
+                const containerRect = tabsContainer.getBoundingClientRect();
+    
+                // Move the cursor to the hovered tab
+                cursor.style.width = `${tabRect.width}px`;
+                cursor.style.left = `${tabRect.left - containerRect.left}px`;
+                cursor.style.opacity = 1; // Show the cursor
+    
+                // Change tab text to white while the cursor is over it
+                tab.style.color = 'white';
+            });
+    
+            tab.addEventListener('mouseleave', function () {
+                // Hide the cursor after hover ends
+                cursor.style.opacity = 0;
+    
+                // Reset the tab text color to black
+                tab.style.color = 'black';
+            });
+        });
+    });
+    
+      </script>
 </body>
 </html>

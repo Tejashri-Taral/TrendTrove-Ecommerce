@@ -928,37 +928,30 @@ input {
 .tabs {
     position: relative;
     display: flex;
-   
+    list-style-type: none;
     border: 2px solid black !important;
     border-radius: 999px;
     background-color: white;
-    list-style-type: none;
-    color: #14171A;
+    padding: 0; /* Ensures there's no padding around the list */
 }
-a{
-    text-decoration: none;
-    color:black;
-    list-style-type: none;
 
-}
-a:hover{color:white}
-.tab {
-    cursor: pointer;
+.tab a {
+    text-decoration: none;
+    color: black; /* Default color */
     padding: 1rem 2rem;
     text-transform: uppercase;
     font-size: 16px;
-    color: black !important; /* Changed from white */
+    display: block; /* Make the anchor tag fill the li element */
+    transition: color 0.3s ease; /* Smooth transition for text color */
     position: relative;
-    z-index: 10;
-    mix-blend-mode: normal; /* Changed from difference */
-    text-decoration: none !important;
+    z-index: 10; /* Make sure it sits on top of the cursor */
 }
 
-.tab:hover {
-    color: white !important;
+.tab a:hover {
+    color: white !important; /* Change text color to white on hover */
 }
 
- .cursor {
+.cursor {
     position: absolute;
     background-color: black;
     height: 40px;
@@ -969,4 +962,4 @@ a:hover{color:white}
     z-index: 0;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-  }
+}

@@ -123,7 +123,37 @@
             </ul>
         </div>
     </footer>
-
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const cursor = document.querySelector('.cursor');
+        const tabsContainer = document.querySelector('.tabs');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('mouseover', function () {
+              
+                const tabRect = tab.getBoundingClientRect();
+                const containerRect = tabsContainer.getBoundingClientRect();
+    
+               
+                cursor.style.width = `${tabRect.width}px`;
+                cursor.style.left = `${tabRect.left - containerRect.left}px`;
+                cursor.style.opacity = 1; // Show the cursor
+    
+               
+                tab.style.color = 'white';
+            });
+    
+            tab.addEventListener('mouseleave', function () {
+          
+                cursor.style.opacity = 0;
+    
+                
+                tab.style.color = 'black';
+            });
+        });
+    });
+    
+      </script>
     
 </body>
 
