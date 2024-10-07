@@ -24,31 +24,39 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-        <nav class="navigation">
-            <ul class="nav-links">
-                <li class="nav-link border">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="nav-link">
-                    <a href="about.html">About</a>
-                </li>
-                <li class="nav-link border">
-                    <a href="features.html">Features</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Products</a>
-                    <ul class="dropdown-content">
-                      <li><a href="mens.html">Mens</a></li>
-                      <li><a href="womens.html">Womens</a></li>
-                    </ul>
-                </li>
-                <li class="nav-link border" style="margin-left: 15px;">
-                    <a href="contact.html">Contact Us</a>
-                </li>
-                
-                
-            </ul>
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a href="#">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Mens</a>
+                            </li>
+                            <li><a href="womens.html">Womens</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
         </nav>
+        
+       
 
         <nav class="utils">
             <ul class="nav-links">
@@ -594,7 +602,106 @@
 
         })
     </script>
+<script>
+    gsap.from("#header", {
+        duration: 1.5,
+        y: -100,
+        opacity: 0,
+        ease: "power4.out",
+        stagger: 1,
+    });
 
+    gsap.from(".nav-link", {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        delay: 0.5,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+
+    gsap.from("h1", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        delay: 0.7,
+        stagger: 0.2,
+        ease: "power3.out"
+    });
+
+    gsap.from("p", {
+        duration: 1.5,
+        opacity: 0,
+        y: 30,
+        delay: 0.9,
+        stagger: 0.3,
+        ease: "power2.out"
+    });
+
+    gsap.from(".btn", {
+        duration: 1,
+        scale: 0.8,
+        opacity: 0,
+        delay: 1.2,
+        ease: "back.out(1.7)",
+        stagger: 0.2
+    });
+
+    gsap.from("img", {
+        duration: 1.5,
+        opacity: 0,
+        scale: 0.9,
+        delay: 1.5,
+        stagger: 0.3,
+        ease: "elastic.out(1, 0.3)"
+    });
+
+    gsap.from(".overlay", {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        delay: 1.7,
+        stagger: 0.3,
+        ease: "power3.out"
+    });
+
+    gsap.from(".footer-section", {
+        scrollTrigger: ".footer",
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+        stagger: 0.3,
+    });
+
+    
+    gsap.from(".socials i", {
+        scrollTrigger: ".footer",
+        duration: 1,
+        opacity: 0,
+        scale: 0.5,
+        ease: "bounce.out",
+        stagger: 0.2,
+        delay: 0.5
+    });
+</script>
+
+<script>const tabs = document.querySelectorAll('.tab');
+    const cursor = document.getElementById('cursor');
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('mouseenter', () => {
+            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
+            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+            cursor.style.opacity = 1; 
+        });
+    
+        tab.addEventListener('mouseleave', () => {
+            cursor.style.opacity = 0; 
+        });
+    });
+    
+  </script>
 </body>
 
 </html>

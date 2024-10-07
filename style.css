@@ -996,7 +996,7 @@ main{
 }
 /* dropdown for products nav-item */
 /* dropdown styling  */
-.dropdown a{
+/* .dropdown a{
     color: #1d1d1d;
     text-decoration: none;
     font-size: 20px;
@@ -1005,7 +1005,7 @@ main{
     justify-content: space-evenly;
     align-items: center;
     width: 85px;
-}
+} */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -1025,4 +1025,96 @@ main{
   /* Show dropdown on hover */
   .dropdown:hover .dropdown-content {
     display: block;
+   
   }
+  
+  .bg-neutral-100 {
+    margin-top: 10px;
+    height: 50px;
+    padding: 0 0;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    border: 2px solid black !important;
+    border-radius: 999px;
+    background-color: white;
+    padding: 0;
+}
+
+.tab {
+    position: relative;
+}
+
+.tab a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.tab a:hover {
+    color: white !important;
+}
+
+.cursor {
+    position: absolute;
+    background-color: black;
+    height: 40px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab:hover .cursor {
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
