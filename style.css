@@ -1029,3 +1029,87 @@ main{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .navigation {
+    background-color: #f8f9fa; /* Background color for navigation */
+    padding: 10px 20px; /* Padding for the navigation */
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Align items in a row */
+}
+
+.nav-link {
+    position: relative; /* Position for dropdown */
+    margin: 0 15px; /* Spacing between links */
+}
+
+.nav-link a {
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Padding for links */
+    color: #333; /* Link color */
+    transition: color 0.3s; /* Transition for color change */
+}
+
+.nav-link a:hover {
+    color: #007bff; /* Color change on hover */
+}
+
+/* Dropdown styling */
+.dropdown {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown relative to parent */
+    background-color: rgb(142, 225, 241); /* Background color for dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+    z-index: 1; /* Ensure it appears above other elements */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100px; 
+    padding: 5px 0;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+/* Square box for links */
+.dropdown-content li {
+    border: 1px solid #100c0c; /* Border around items */
+    /* margin: 5px 0; Margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    max-width:400px;
+}
+
+.dropdown-content li a {
+    display: block; 
+    padding: 10px; 
+    color: #333; 
+    text-align: center; 
+}
+
+/* Arrow indicator */
+.dropdown a:after {
+    content: " ▼"; 
+    font-size: 12px; 
+    margin-left: 5px; 
+    transition: transform 0.3s; 
+}
+.dropdown:hover a:after {
+    transform: rotate(180deg); 
+}
+.dropdown-content::-webkit-scrollbar {
+    width: 9px; 
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 4px; 
+}
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+    background-color: #282626;
+}
