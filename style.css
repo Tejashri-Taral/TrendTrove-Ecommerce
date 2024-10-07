@@ -11,6 +11,17 @@
     src: url('./fonts/futura/futura\ medium\ bt.ttf');
 }
 
+/* Scroll Progress Bar*/
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0.4rem;
+    background-color: #3a383cc7; /* Customize the color as needed */
+    z-index: 9999;
+}
+
 /* header css  */
 
 .header {
