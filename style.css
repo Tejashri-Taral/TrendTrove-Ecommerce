@@ -746,11 +746,6 @@ input {
         width: 100%;
 
     }
-
-    .sub input {
-        max-width: 100%;
-    }
-
 }
 
 
@@ -826,7 +821,6 @@ input {
 .form-group {
     margin-bottom: 20px;
     text-align: left;
-
 }
 
 .form-label {
