@@ -130,6 +130,7 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 25px;
+    text-shadow: 2px 2px 8px#780e0e;
 
 }
 
@@ -458,8 +459,8 @@
 
 .footer {
     width: 100%;
-    padding: 30px 20%;
-    background-color: #f6f5fa;
+    padding: 30px 5%;
+    background-color: #f6f5faf0;
     font-family: 'futura';
     display: flex;
     justify-content: space-between;
@@ -553,6 +554,7 @@
     width: auto;
     padding: 10px 20px;
     font-size: 14px;
+    margin: auto;
 }
 
 .sub .btn:hover {
@@ -732,9 +734,12 @@ input {
     }
 
     .post-image {
-        width: 49%;
+       
+        margin:10%;
+        
 
     }
+    
 
     .footer {
         padding: 30px 5%;
@@ -1002,9 +1007,12 @@ main{
     width: 85px;
 }
 .dropdown-content {
+    
     display: none;
     position: absolute;
+    background-color:#f1f1f1;
     min-width: 160px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0,2);
     z-index: 1;
   }
   

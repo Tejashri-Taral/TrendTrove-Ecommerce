@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Search Results</h1>
+    </header>
+
+    <section id="results"></section>
+
+    <script>
+        // Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get('query');
+
+        // Display the query
+        document.getElementById('results').innerText = `You searched for: ${query}`;
+        // Here you can implement the logic to fetch and display actual search results
+        console.log(window.location.search)
+    </script>
+</body>
+</html>

@@ -34,8 +34,8 @@
                 <li class="dropdown">
                     <a href="#">Products</a>
                     <ul class="dropdown-content">
-                      <li><a href="mens.html">Mens</a></li>
-                      <li><a href="womens.html">Womens</a></li>
+                      <li><a href="mens.html">Men</a></li>
+                      <li><a href="womens.html">Women</a></li>
                     </ul>
                 </li>
                 <li class="nav-link border" style="margin-left: 15px;">
@@ -57,10 +57,31 @@
                     </a>
                 </li>
                 <li class="nav-link">
+                    
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search" />
+                    <button id="search-button" class="btn">
+                        <a href="search.html" class="btn" id="search-button"> 
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                       
+                
+            </button>
+            
                 </li>
             </ul>
         </nav>
+        <script>
+            document.getElementById("search-button").addEventListener("click", function() {
+                const query = document.getElementById("search-input").value.trim();
+                if (query) {
+                    // Redirect to a search results page with the query as a parameter
+                    window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+                } else {
+                    alert("Please enter a search term.");
+                }
+            });
+        </script>
+        
     </header>
 
     <!-- banner area  -->
@@ -69,7 +90,7 @@
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
+                <h1>Discover Tomorrow's Trends Today with TrendTrove!</h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
