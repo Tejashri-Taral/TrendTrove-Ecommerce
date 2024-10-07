@@ -104,15 +104,12 @@
     font-size: 20px;
 }
 
-
-
 .utils {
     width: 8%;
     height: 70px;
     margin-right: 45px;
     /* background-color: purple; */
 }
-
 
 /* banner css  */
 
@@ -155,8 +152,13 @@
     color: white;
     text-transform: uppercase;
     border-radius: 30px;
+    transition: 0.3s ease;
 }
-
+.btn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
 
 /* featured section css  */
 
@@ -249,6 +251,15 @@
     color: #1d1d1d;
     box-shadow: 0 0 3px lightgray;
     z-index: 20;
+    transition: 0.3s ease;
+}
+.btn-white:hover{
+    background-color: black;
+    color: white;
+}
+.btn-white{
+    text-decoration: none;
+    
 }
 
 .featured-box-1:hover img,
