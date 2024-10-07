@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link rel="stylesheet" href="Style/sneaker.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .navigation .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navigation .nav-links li a:hover {
+            color: #007BFF;
+        }
+
+        .utils .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .utils .nav-links li {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .utils .nav-links li:hover {
+            color: #007BFF;
+        }
+
+        /* Main Content Styling */
+        .sneakers-container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Filters Sidebar Styling */
+        .filters {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .filters h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .filters .filter-group {
+            margin-bottom: 25px;
+        }
+
+        .filters .filter-group h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .filters label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .filters input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .filters .price-filter {
+            width: 100%;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Sneakers Grid Styling */
+        .sneakers-section {
+            flex: 1;
+        }
+
+        .sneakers-section h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        .sneakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .sneaker-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sneaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .sneaker-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .sneaker-info {
+            padding: 15px;
+        }
+
+        .sneaker-info h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .sneaker-info .price {
+            font-size: 18px;
+            color: #007BFF;
+            margin-bottom: 5px;
+        }
+
+        .sneaker-info .rating {
+            font-size: 14px;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .sneaker-info .description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .sneaker-info .size,
+        .sneaker-info .reviews {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .buy-now {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #fff;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .filters {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sneakers-container {
+                flex-direction: column;
+            }
+            .filters {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+            .header .menu {
+                display: block;
+            }
+            .navigation .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                border-radius: 4px;
+            }
+            .navigation .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="logo">
+            <p>TrendTrove</p>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
+
+        <nav class="navigation">
+            <ul class="nav-links" id="nav-links">
+                <li class="nav-link border">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-link border">
+                    <a href="#">About</a>
+                </li>
+                <li class="nav-link border">
+                    <a href="#">Features</a>
+                </li>
+                <li class="nav-link border">
+                    <a href="#">Products</a>
+                </li>
+                <li class="nav-link border">
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="sneakers-container">
+        <!-- Filters Sidebar -->
+        <aside class="filters">
+            <h3>Filters</h3>
+
+            <!-- Brand Filter -->
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label><input type="checkbox" class="brand-filter" value="Nike"> Nike</label>
+                <label><input type="checkbox" class="brand-filter" value="Adidas"> Adidas</label>
+                <label><input type="checkbox" class="brand-filter" value="Puma"> Puma</label>
+                <label><input type="checkbox" class="brand-filter" value="Reebok"> Reebok</label>
+                <label><input type="checkbox" class="brand-filter" value="New Balance"> New Balance</label>
+                <label><input type="checkbox" class="brand-filter" value="Converse"> Converse</label>
+                <label><input type="checkbox" class="brand-filter" value="Jordan"> Jordan</label>
+               
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <label for="price-min">Min: $</label>
+                <input type="number" id="price-min" class="price-filter" placeholder="50">
+                <label for="price-max">Max: $</label>
+                <input type="number" id="price-max" class="price-filter" placeholder="200">
+                <button id="clear-filters" style="margin-top:10px; padding:5px 10px; background-color:#dc3545; color:#fff; border:none; border-radius:4px; cursor:pointer;">Clear Filters</button>
+            </div>
+
+            <!-- Size Filter -->
+            <div class="filter-group">
+                <h4>Size</h4>
+                <label><input type="checkbox" class="size-filter" value="5"> 5</label>
+                <label><input type="checkbox" class="size-filter" value="6"> 6</label>
+                <label><input type="checkbox" class="size-filter" value="7"> 7</label>
+                <label><input type="checkbox" class="size-filter" value="8"> 8</label>
+                <label><input type="checkbox" class="size-filter" value="9"> 9</label>
+                <label><input type="checkbox" class="size-filter" value="10"> 10</label>
+                <label><input type="checkbox" class="size-filter" value="11"> 11</label>
+                <label><input type="checkbox" class="size-filter" value="12"> 12</label>
+            </div>
+
+            <!-- Rating Filter -->
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label><input type="checkbox" class="rating-filter" value="4"> 4 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="3"> 3 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="2"> 2 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="1"> 1 star & up</label>
+            </div>
+        </aside>
+
+        <!-- Sneakers Page -->
+        <section class="sneakers-section">
+            <h1>Shop Sneakers</h1>
+            <div class="sneakers-grid" id="sneakers-grid">
+                
+                <div class="sneaker-card" data-brand="Nike" data-price="120" data-size="5-11" data-rating="4.5">
+                    <div class="sneaker-image">
+                        <img src="images/img1.jpg" alt="Air Max Infinity">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Air Max Infinity</h2>
+                        <p class="price">$120.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">A modern take on a classic design, the Air Max Infinity offers maximum comfort and style.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 120</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Adidas" data-price="140" data-size="5-10" data-rating="4.7">
+                    <div class="sneaker-image">
+                        <img src="images/img2.jpg" alt="Adidas Ultraboost">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Adidas Ultraboost</h2>
+                        <p class="price">$140.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.7)</p>
+                        <p class="description">The Ultraboost delivers incredible performance with a sleek design for everyday wear.</p>
+                        <p class="size">Sizes: 5-10</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Nike" data-price="110" data-size="5-12" data-rating="5.0">
+                    <div class="sneaker-image">
+                        <img src="images/img3.jpg" alt="Nike Air Force 1">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Nike Air Force 1</h2>
+                        <p class="price">$110.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (5.0)</p>
+                        <p class="description">An iconic silhouette with timeless style, perfect for any outfit.</p>
+                        <p class="size">Sizes: 5-12</p>
+                        <p class="reviews">Reviews: 200</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Puma" data-price="130" data-size="5-10" data-rating="4.6">
+                    <div class="sneaker-image">
+                        <img src="images/img4.jpg" alt="Puma RS-X">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Puma RS-X</h2>
+                        <p class="price">$130.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">Retro style meets modern technology in the RS-X.</p>
+                        <p class="size">Sizes: 5-10</p>
+                        <p class="reviews">Reviews: 60</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="New Balance" data-price="160" data-size="6-11" data-rating="4.9">
+                    <div class="sneaker-image">
+                        <img src="images/img5.jpg" alt="New Balance 990">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>New Balance 990</h2>
+                        <p class="price">$160.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p class="description">The 990 is a perfect blend of cushioning and support.</p>
+                        <p class="size">Sizes: 6-11</p>
+                        <p class="reviews">Reviews: 85</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Reebok" data-price="90" data-size="5-12" data-rating="4.4">
+                    <div class="sneaker-image">
+                        <img src="images/img6.jpg" alt="Reebok Classic">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Reebok Classic</h2>
+                        <p class="price">$90.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.4)</p>
+                        <p class="description">A timeless classic, perfect for everyday wear.</p>
+                        <p class="size">Sizes: 5-12</p>
+                        <p class="reviews">Reviews: 75</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Asics" data-price="110" data-size="5-11" data-rating="5.0">
+                    <div class="sneaker-image">
+                        <img src="images/img7.jpg" alt="Asics Gel-Lyte III">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Asics Gel-Lyte III</h2>
+                        <p class="price">$110.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (5.0)</p>
+                        <p class="description">Comfort and style combined in the Gel-Lyte III.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 90</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="sneaker-card" data-brand="Vans" data-price="70" data-size="5-12" data-rating="4.6">
+                    <div class="sneaker-image">
+                        <img src="images/img8.jpg" alt="Vans Old Skool">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Vans Old Skool</h2>
+                        <p class="price">$70.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">The classic skate shoe that never goes out of style.</p>
+                        <p class="size">Sizes: 5-12</p>
+                        <p class="reviews">Reviews: 120</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="On" data-price="160" data-size="5-12" data-rating="4.5">
+                    <div class="sneaker-image">
+                        <img src="images/img9.jpg" alt="On Cloudstratus">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>On Cloudstratus</h2>
+                        <p class="price">$160.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Cloud-like comfort and responsive cushioning for runners.</p>
+                        <p class="size">Sizes: 5-12</p>
+                        <p class="reviews">Reviews: 80</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="sneaker-card" data-brand="Hoka One One" data-price="145" data-size="5-11" data-rating="4.8">
+                    <div class="sneaker-image">
+                        <img src="images/img10.jpg" alt="Hoka One One Bondi">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Hoka One One Bondi</h2>
+                        <p class="price">$145.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p class="description">Maximum cushioning for ultimate comfort.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 65</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Under Armour" data-price="140" data-size="6-12" data-rating="4.9">
+                    <div class="sneaker-image">
+                        <img src="images/img11.jpg" alt="Under Armour HOVR Phantom">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Under Armour HOVR Phantom</h2>
+                        <p class="price">$140.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p class="description">Smart technology that tracks your running metrics.</p>
+                        <p class="size">Sizes: 6-12</p>
+                        <p class="reviews">Reviews: 50</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Fila" data-price="80" data-size="5-11" data-rating="3.8">
+                    <div class="sneaker-image">
+                        <img src="images/img12.jpg" alt="Fila Disruptor II">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Fila Disruptor II</h2>
+                        <p class="price">$80.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐ (3.8)</p>
+                        <p class="description">A chunky sneaker that is making a comeback.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 40</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Converse" data-price="75" data-size="5-11" data-rating="4.2">
+                    <div class="sneaker-image">
+                        <img src="images/img13.jpg" alt="Converse Chuck Taylor">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Converse Chuck Taylor</h2>
+                        <p class="price">$75.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.2)</p>
+                        <p class="description">A timeless classic that pairs well with any casual outfit.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 150</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Jordan" data-price="160" data-size="6-12" data-rating="4.8">
+                    <div class="sneaker-image">
+                        <img src="images/img14.jpg" alt="Jordan Air 1">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Jordan Air 1</h2>
+                        <p class="price">$160.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p class="description">Iconic basketball shoe with premium materials and unmatched style.</p>
+                        <p class="size">Sizes: 6-12</p>
+                        <p class="reviews">Reviews: 210</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="sneaker-card" data-brand="New Balance" data-price="130" data-size="5-10" data-rating="4.5">
+                    <div class="sneaker-image">
+                        <img src="images/img15.jpg" alt="New Balance Fresh Foam">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>New Balance Fresh Foam</h2>
+                        <p class="price">$130.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Engineered for comfort and performance, perfect for daily runs.</p>
+                        <p class="size">Sizes: 5-10</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="sneaker-card" data-brand="Timberland" data-price="110" data-size="5-11" data-rating="4.3">
+                    <div class="sneaker-image">
+                        <img src="images/img16.jpg" alt="Timberland Classic">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Timberland Classic</h2>
+                        <p class="price">$110.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.3)</p>
+                        <p class="description">Durable and stylish, perfect for both outdoor adventures and urban settings.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 85</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="sneaker-card" data-brand="Saucony" data-price="100" data-size="5-10" data-rating="4.6">
+                    <div class="sneaker-image">
+                        <img src="images/img17.jpg" alt="Saucony Ride">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Saucony Ride</h2>
+                        <p class="price">$100.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">Lightweight and responsive, ideal for both training and long-distance runs.</p>
+                        <p class="size">Sizes: 5-10</p>
+                        <p class="reviews">Reviews: 70</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="sneaker-card" data-brand="Brooks" data-price="120" data-size="5-11" data-rating="4.7">
+                    <div class="sneaker-image">
+                        <img src="images/img18.jpg" alt="Brooks Ghost">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Brooks Ghost</h2>
+                        <p class="price">$120.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.7)</p>
+                        <p class="description">Smooth transitions and excellent cushioning for an effortless run.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 130</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+              
+                <div class="sneaker-card" data-brand="Asics" data-price="115" data-size="5-12" data-rating="4.4">
+                    <div class="sneaker-image">
+                        <img src="images/img19.jpg" alt="ASICS Turbo">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>ASICS Turbo</h2>
+                        <p class="price">$115.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.4)</p>
+                        <p class="description">Enhanced stability and support for runners seeking reliable performance.</p>
+                        <p class="size">Sizes: 5-12</p>
+                        <p class="reviews">Reviews: 88</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+              
+                <div class="sneaker-card" data-brand="Merrell" data-price="130" data-size="5-11" data-rating="4.5">
+                    <div class="sneaker-image">
+                        <img src="images/img20.jpg" alt="Merrell Trail">
+                    </div>
+                    <div class="sneaker-info">
+                        <h2>Merrell Trail</h2>
+                        <p class="price">$130.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Designed for rugged terrains, offering durability and comfort for outdoor enthusiasts.</p>
+                        <p class="size">Sizes: 5-11</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 TrendTrove. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const menu = document.getElementById('menu');
+            const navLinks = document.getElementById('nav-links');
+
+            menu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+           
+            const brandFilters = document.querySelectorAll('.brand-filter');
+            const priceMin = document.getElementById('price-min');
+            const priceMax = document.getElementById('price-max');
+            const sizeFilters = document.querySelectorAll('.size-filter');
+            const ratingFilters = document.querySelectorAll('.rating-filter');
+            const clearFiltersButton = document.getElementById('clear-filters');
+
+          
+            const sneakerCards = document.querySelectorAll('.sneaker-card');
+
+           
+            function filterSneakers() {
+                
+                const selectedBrands = Array.from(brandFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+
+                
+                const minPrice = parseFloat(priceMin.value) || 0;
+                const maxPrice = parseFloat(priceMax.value) || Infinity;
+
+               
+                const selectedSizes = Array.from(sizeFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseInt(checkbox.value));
+
+                
+                const selectedRatings = Array.from(ratingFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseFloat(checkbox.value));
+
+                
+                sneakerCards.forEach(card => {
+                    const brand = card.getAttribute('data-brand');
+                    const price = parseFloat(card.getAttribute('data-price'));
+                    const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    const rating = parseFloat(card.getAttribute('data-rating'));
+
+                   
+                    const brandMatch = selectedBrands.length ? selectedBrands.includes(brand) : true;
+
+                    
+                    const priceMatch = price >= minPrice && price <= maxPrice;
+
+                   
+                    let sizeMatch = true;
+                    if (selectedSizes.length) {
+                        
+                        const sneakerSizes = [];
+                        for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
+                            sneakerSizes.push(size);
+                        }
+                        
+                        sizeMatch = selectedSizes.some(size => sneakerSizes.includes(size));
+                    }
+
+                   
+                    let ratingMatch = true;
+                    if (selectedRatings.length) {
+                        ratingMatch = selectedRatings.some(r => rating >= r);
+                    }
+
+                    
+                    if (brandMatch && priceMatch && sizeMatch && ratingMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            
+            brandFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterSneakers);
+            });
+
+            priceMin.addEventListener('input', filterSneakers);
+            priceMax.addEventListener('input', filterSneakers);
+
+            sizeFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterSneakers);
+            });
+
+            ratingFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterSneakers);
+            });
+
+          
+            clearFiltersButton.addEventListener('click', () => {
+                
+                brandFilters.forEach(cb => cb.checked = false);
+                sizeFilters.forEach(cb => cb.checked = false);
+                ratingFilters.forEach(cb => cb.checked = false);
+               
+                priceMin.value = '';
+                priceMax.value = '';   
+                filterSneakers();
+            });
+        });
+    </script>
+
+</body>
+</html>
