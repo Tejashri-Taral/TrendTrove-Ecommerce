@@ -15,7 +15,7 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-        <nav class="navigation">
+        <!-- <nav class="navigation">
             <ul class="nav-links">
                 <li class="nav-link">
                     <a href="index.html">Home</a>
@@ -37,7 +37,20 @@
                     <a href="contact.html">Contact Us</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
+        <div class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab"><a href="index.html">Home</a></li>
+                    <li class="tab"><a href="about.html">About</a></li>
+                    <li class="tab"><a href="#">Features</a></li>
+                    <li class="tab"><a href="#">Products</a></li>
+                    <li class="tab"><a href="contact.html">Contact Us</a></li>
+        
+                    <li id="cursor" class="cursor"></li>
+                </ul>
+            </div> 
+        </div>
 
         <nav class="utils">
             <ul class="nav-links">
@@ -137,7 +150,37 @@
             </ul>
         </div>
     </footer>
-
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tab');
+        const cursor = document.querySelector('.cursor');
+        const tabsContainer = document.querySelector('.tabs');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('mouseover', function () {
+                // Get the tab's bounding box
+                const tabRect = tab.getBoundingClientRect();
+                const containerRect = tabsContainer.getBoundingClientRect();
+    
+                // Move the cursor to the hovered tab
+                cursor.style.width = `${tabRect.width}px`;
+                cursor.style.left = `${tabRect.left - containerRect.left}px`;
+                cursor.style.opacity = 1; // Show the cursor
+    
+                // Change tab text to white while the cursor is over it
+                tab.style.color = 'white';
+            });
+    
+            tab.addEventListener('mouseleave', function () {
+                // Hide the cursor after hover ends
+                cursor.style.opacity = 0;
+    
+                // Reset the tab text color to black
+                tab.style.color = 'black';
+            });
+        });
+    });
+    
+      </script>
     
 </body>
 

@@ -89,7 +89,7 @@
     justify-content: center;
 }
 
-.nav-links>.nav-link>a {
+/* .nav-links>.nav-link>a {
     color: #1d1d1d;
     text-decoration: none;
     font-size: 20px;
@@ -98,13 +98,15 @@
     justify-content: space-evenly;
     align-items: center;
     width: 85px;
-}
-
+} */
+/* 
 .nav-links>.nav-link>i {
     font-size: 20px;
+} */
+
+a{
+
 }
-
-
 
 .utils {
     width: 8%;
@@ -130,10 +132,12 @@
     display: flex;
     align-items: center;
     padding-left: 20%;
+    
+   
 }
 
 .slide-details {
-    width: 27%;
+    width: 45%;
     padding: 40px;
     /* background-color: red; */
     font-family: 'futura';
@@ -141,6 +145,7 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 25px;
+    overflow: hidden;
 
 }
 
@@ -155,6 +160,9 @@
     color: white;
     text-transform: uppercase;
     border-radius: 30px;
+}
+.btn:hover{
+    background-color: #555;
 }
 
 
@@ -906,6 +914,63 @@ input {
 #copyright {
     margin-bottom: 5px;
 
+}
+
+  
+
+  
+.bg-neutral-100 {
+    margin-top: 10px;
+    height: 50px;
+    padding: 0 0;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    border: 2px solid black !important;
+    border-radius: 999px;
+    background-color: white;
+    padding: 0; /* Ensures there's no padding around the list */
+}
+
+.tab a {
+    text-decoration: none;
+    color: black; /* Default color */
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block; /* Make the anchor tag fill the li element */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+    position: relative;
+    z-index: 10; /* Make sure it sits on top of the cursor */
+}
+
+.tab a:hover {
+    color: white !important; /* Change text color to white on hover */
+}
+
+.cursor {
+    position: absolute;
+    background-color: black;
+    height: 40px;
+    width: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+
 }.terms-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -1026,3 +1091,4 @@ main{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
