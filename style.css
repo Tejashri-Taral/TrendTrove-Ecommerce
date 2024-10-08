@@ -907,6 +907,44 @@ input {
     margin-bottom: 5px;
 }
 
+
+.terms-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+
+.terms-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.terms-description {
+    color: #2c3e50;
+    font-size: 1.4em;
+    line-height: 1.8; 
+    margin-bottom: 25px; 
+    text-align: center; 
+    font-weight: 600; 
+}
+
+.terms-details, .terms-thanks {
+    font-size: 1rem;
+    font-family: 'futura'; 
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.6; 
+    text-align: left;
+}
+
 /* mens section styling */
 main{
     background-color: #f0efef; 
