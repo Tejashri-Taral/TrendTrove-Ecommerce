@@ -916,8 +916,10 @@ input {
 
 #copyright {
     margin-bottom: 5px;
+}
 
-}.terms-section {
+
+.terms-section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
@@ -951,7 +953,7 @@ input {
     color: #555;
     margin: 5px 0;
     line-height: 1.6; 
-    text-align: left; 
+    text-align: left;
 }
 
 /* mens section styling */
