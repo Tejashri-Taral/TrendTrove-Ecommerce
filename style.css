@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* creating font face  */
@@ -1116,6 +1117,10 @@ main{
 
 .tab:hover .cursor {
     opacity: 1;
+}
+.tab:hover .dropdown-parent {
+    color: white;
+    cursor: pointer;
 }
 
 .dropdown-content {
