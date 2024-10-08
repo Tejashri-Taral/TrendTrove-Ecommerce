@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
 </head>
 </head>
 <body>
@@ -323,5 +325,34 @@
     <div class="footer-copyright">
         <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
     </div>
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    (function() {
+        let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+            } else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+        });
+
+        // Show "Go to Top" button after scrolling down
+        const goTopBtn = document.querySelector(".gotopbtn");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+
+    })();  // IIFE to avoid polluting global scope
+</script>
 </body>
 </html>
