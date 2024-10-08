@@ -11,6 +11,35 @@
     src: url('./fonts/futura/futura\ medium\ bt.ttf');
 }
 
+/* Scroll Progress Bar*/
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0.4rem;
+    background-color: #3a383cc7; /* Customize the color as needed */
+    z-index: 9999;
+}
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    bottom: 40px;
+    right:50px;
+    text-decoration: none;
+    text-align:center;
+    line-height: 50px;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
 /* header css  */
 
 .header {
@@ -49,13 +78,13 @@
 }
 
 .navigation {
-    width: 30%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    /* background-color: blue; */
+        width: 45%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        /* background-color: blue; */
 }
 
 .nav-links {
@@ -93,15 +122,12 @@
     font-size: 20px;
 }
 
-
-
 .utils {
     width: 8%;
     height: 70px;
     margin-right: 45px;
     /* background-color: purple; */
 }
-
 
 /* banner css  */
 
@@ -144,8 +170,13 @@
     color: white;
     text-transform: uppercase;
     border-radius: 30px;
+    transition: 0.3s ease;
 }
-
+.btn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
 
 /* featured section css  */
 
@@ -238,6 +269,15 @@
     color: #1d1d1d;
     box-shadow: 0 0 3px lightgray;
     z-index: 20;
+    transition: 0.3s ease;
+}
+.btn-white:hover{
+    background-color: black;
+    color: white;
+}
+.btn-white{
+    text-decoration: none;
+    
 }
 
 .featured-box-1:hover img,
@@ -746,11 +786,6 @@ input {
         width: 100%;
 
     }
-
-    .sub input {
-        max-width: 100%;
-    }
-
 }
 
 
@@ -826,7 +861,6 @@ input {
 .form-group {
     margin-bottom: 20px;
     text-align: left;
-
 }
 
 .form-label {
@@ -901,10 +935,10 @@ input {
 #copyright {
     margin-bottom: 5px;
 }
- #wishlist-count {
+#wishlist-count {
     position: absolute;
     padding-right: 2px;
-    top: opx;
+    top: 0px;
     right: 100px;
     background-color: red;
     color: white;
@@ -912,5 +946,240 @@ input {
     border-radius: 50%;
     font-size: 11px;
     display: none;
+}
 
- } 
+/* Terms Section */
+.terms-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+
+main {
+    background-color: #f0efef; 
+}
+.slider {
+    background: url(shoppingimage.jpg);
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+}
+.my2{
+    text-align: center;
+}
+.cards{
+    display: flex;
+     flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.card-items{
+   height: 350px;
+  width: 230px;
+  margin: 40px;
+  }
+.cardimage{
+    width: 200px;
+    height: 290px;
+    
+}
+.lines{
+    text-align: center;
+    font-family: 'futura';
+}
+.cardimage:hover{
+    width: 220px;
+    height: 310px;
+}
+.footwear-items{
+    height: 280px;
+   width: 230px;
+   margin: 40px;
+   }
+ .footwear{
+     width: 230px;
+     height: 250px;
+     
+ }
+ .footwear:hover{
+    width: 240px;
+    height: 300px;
+}
+/* dropdown for products nav-item */
+/* dropdown styling  */
+/* .dropdown a{
+    color: #1d1d1d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 85px;
+} */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown-content li {
+    float: none;
+  }
+  
+  .dropdown-content li a {
+    padding: 12px 16px;
+    text-align: left;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+   
+  }
+  
+  .bg-neutral-100 {
+    margin-top: 10px;
+    height: 50px;
+    padding: 0 0;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1px;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    border: 2px solid black !important;
+    border-radius: 999px;
+    background-color: white;
+    padding: 0;
+}
+
+.tab {
+    position: relative;
+}
+
+.tab a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.tab a:hover {
+    color: white !important;
+}
+
+.cursor {
+    position: absolute;
+    background-color: black;
+    height: 40px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.tab:hover .cursor {
+    opacity: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: darkgray;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    color: white;
+}
+
+/*return policy page*/
+
+.return-policy-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+
+.return-policy-details ul {
+    margin: 0 0 15px 20px; 
+    padding-left: 20px;
+}
+
+.return-policy-details li {
+    margin-bottom: 5px;
+}
+
+.return-policy-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.return-policy-description {
+    color: #2c3e50;
+    font-size: 1.4em;
+    line-height: 1.8; 
+    margin-bottom: 25px; 
+    text-align: center; 
+    font-weight: 600; 
+}
+
+.return-policy-details,
+.return-policy-thanks {
+    font-size: 1rem;
+    font-family: 'Futura', sans-serif; /* Added fallback font */
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.6; 
+    text-align: left; 
+}
+
