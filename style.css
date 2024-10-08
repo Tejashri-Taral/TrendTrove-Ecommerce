@@ -917,7 +917,8 @@ input {
 #copyright {
     margin-bottom: 5px;
 
-}.terms-section {
+}
+.terms-section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
@@ -1037,3 +1038,61 @@ main{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+/*return policy page*/
+.return-policy-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.return-policy-description {
+    color: #2c3e50;
+    font-size: 1.4em;
+    line-height: 1.8; 
+    margin-bottom: 25px; 
+    text-align: center; 
+    font-weight: 600; 
+}
+
+.return-policy-details, .return-policy-thanks {
+    font-size: 1rem;
+    font-family: 'Futura', sans-serif; 
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.6; 
+    text-align: left; 
+}
+.return-policy-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+.return-policy-details h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.return-policy-details p, .return-policy-details ul {
+    margin-bottom: 15px;
+}
+
+.return-policy-details ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.return-policy-thanks p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+}
