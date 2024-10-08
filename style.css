@@ -21,6 +21,24 @@
     background-color: #3a383cc7; /* Customize the color as needed */
     z-index: 9999;
 }
+.gotopbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: black;
+    bottom: 40px;
+    right:50px;
+    text-decoration: none;
+    text-align:center;
+    line-height: 50px;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
 
 /* header css  */
 
