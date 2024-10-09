@@ -65,7 +65,7 @@
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between ;
     white-space: nowrap;
     font-family: 'futura';
     font-size: 17px;
@@ -86,13 +86,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 4px;
-    padding-left:5px;
+    width: 5px;
 }
 
 .nav-links>.nav-link>i {
     font-size: 20px;
-    padding-left:12px;
+    padding:2px;
 }
 
 
@@ -677,7 +676,7 @@ input {
         font-size: 22px;
     }
 
-    .btn {
+    #btnbanner {
         font-size: 10px;
     }
 
@@ -765,7 +764,7 @@ input {
             justify-content: center;
         }
         
-        .btn-other {
+        .overlay .btn-white {
             background-color: white;
             border: 1px solid white;
             color: #1d1d1d;
@@ -773,11 +772,11 @@ input {
             z-index: 20;
             transition: 0.3s ease;
         }
-        .btn-other:hover{
+        .overlay .btn-white:hover{
             background-color: black;
             color: white;
         }
-        .btn-other{
+        .overlay .btn-white{
             text-decoration: none;
             
         }
@@ -979,7 +978,6 @@ input {
     display: flex;
     margin-top: auto;
     font-size: 18px;
-
     justify-content: center;
     background-color: #f6f5fa;
     font-family: 'futura';
@@ -990,23 +988,11 @@ input {
 #copyright {
     margin-bottom: 5px;
 }
- /* #wishlist-count {
-    position: absolute;
-    padding-right: 2px;
-    top: opx;
-    right: 100px;
-    background-color: red;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 11px;
-    display: none;
 
- }  */
  #wishlist-count {
     position: absolute;
     padding-right: 2px;
-    top: 10px; /* Corrected from opx to 0px */
+    top: 10px; 
     right: 100px;
     background-color: red;
     color: white;
@@ -1017,7 +1003,7 @@ input {
 }
 
 
-.btn-white-wishlist{
+.overlayImage .btn-white-wishlist{
     height:43.6px;
     background-color: white;
     border: 1px solid white;
@@ -1026,11 +1012,7 @@ input {
     z-index: 20;
     transition: 0.3s ease;
 }
-.btn-white-wishlist:hover{
-  
+.overlayImage .btn-white-wishlist:hover{
     background-color: black;
     color:white;
-}
-#heart{
-    color:red;
 }
