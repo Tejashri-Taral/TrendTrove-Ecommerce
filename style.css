@@ -45,11 +45,13 @@ html{
 .header {
     height: 70px;
     width: 100%;
-    /* background-color: red; */
+    background-color: #f1eef1; 
+    position: sticky;
+    top: 0;
     padding: 0px 2%;
     display: flex;
     justify-content: space-between;
-
+    z-index: 99999;
 }
 
 .logo {
