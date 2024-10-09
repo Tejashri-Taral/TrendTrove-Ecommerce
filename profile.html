@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        
+        <div class="profile-pic" onclick="document.getElementById('upload-pic').click();">
+            <img src="./images/default-profile.jpg" id="profile-pic">
+            <div class="upload-text">Upload Photo</div>
+            <input type="file" id="upload-pic" onchange="updateProfilePic()">
+        </div>
+
+        <div class="user-info">
+            <div class="info-item">
+                <label>Full Name:</label>
+                <span id="user-name">John Doe</span>
+                <input type="text" id="edit-name" placeholder="Enter new name">
+            </div>
+            
+            <div class="info-item">
+                <label>Email:</label>
+                <span id="user-email">johndoe@example.com</span>
+                <input type="email" id="edit-email" placeholder="Enter new email">
+            </div>
+            
+            <div class="info-item">
+                <label>Phone:</label>
+                <span id="user-phone">+1234567890</span>
+                <input type="tel" id="edit-phone" placeholder="Enter new phone number">
+            </div>
+        </div>
+        
+        <button id="edit-profile" onclick="editProfile()">Edit Profile</button>
+        <button id="save-profile" onclick="saveProfile()" style="display: none;">Save Changes</button>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
