@@ -1,8 +1,11 @@
 * {
-    margin: 0px;
+    margin: 4px;
     padding: 0px;
     box-sizing: border-box;
     color: #555;
+}
+.color-select{
+    display: flex;
 }
 .color-select span{
     display: inline-block;
