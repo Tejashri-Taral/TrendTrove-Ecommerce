@@ -2,6 +2,27 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: #555;
+}
+.color-select span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.color-1{
+    background-color: red;
+}
+.color-2{
+    background-color: greenyellow;
+}
+.color-3{
+    background-color: black;
+}
+.color-select input{
+    display: none;
 }
 
 /* creating font face  */
@@ -608,8 +629,8 @@ html{
 
 
 input {
-    height: 40px;
-    width: 60%;
+    height: 20px;
+    width: 6%;
     border-radius: 30px;
     border: 1px solid lightgray;
 }
