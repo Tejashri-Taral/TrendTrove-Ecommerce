@@ -572,6 +572,13 @@ html{
     background-color: #14171A;
 }
 
+.footer-list a:hover{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
 .sub {
     margin-top: 2px;
     display: flex;
