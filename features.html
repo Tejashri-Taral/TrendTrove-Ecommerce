@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         .answer {
             display: none;
@@ -33,24 +34,36 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-        <nav class="navigation">
-            <ul class="nav-links">
-                <li class="nav-link border">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="nav-link">
-                    <a href="about.html">About</a>
-                </li>
-                <li class="nav-link border">
-                    <a href="features.html">Features</a>
-                </li>
-                <li class="nav-link border" style="margin-left: 12px;">
-                    <a href="#">Products</a>
-                </li>
-                <li class="nav-link border" style="margin-left: 15px;">
-                    <a href="contact.html">Contact Us</a>
-                </li>
-            </ul>
+         <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a href="#">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Mens</a>
+                            </li>
+                            <li><a href="womens.html">Womens</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <nav class="utils">
@@ -132,8 +145,8 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="/terms-conditions">Terms & Conditions</a></li>
-                <li><a href="/return-policy">Return Policy</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>

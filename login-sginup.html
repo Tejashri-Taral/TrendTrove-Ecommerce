@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -122,6 +123,59 @@
         .form-group .toggle-password:hover {
             color: darkgrey;
         }
+ 
+    .remember-me input[type="checkbox"] {
+    width: 18px; 
+    height: 18px; 
+    margin-right: 10px;
+        }
+
+        .remember-me {  
+            cursor: pointer; 
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me label {
+            font-size: 13px;  
+            color: #333; 
+            
+        }
+        
+        .forgot-password a {
+            color: #ff5722;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #e64a19;
+            text-decoration: underline;
+        }
+
+        .not-member {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .not-member a {
+            color: #3b56cc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .not-member a:hover {
+            color: #293a9d;
+            text-decoration: underline;
+        }
+
         .btn {
             width: 100%;
             padding: 12px;
@@ -165,16 +219,29 @@
             text-decoration: underline;
         }
         .already-have-account {
-            text-align: center;
-            margin-top: 10px;
+            /* text-align: center;
+            margin-top: 10px; */
+         text-align: center;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #666;
+
         }
         .already-have-account a {
+            /* color: #3b56cc;
+            text-decoration: none;
+            font-size: 12px; */
             color: #3b56cc;
             text-decoration: none;
-            font-size: 12px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+
         }
         .already-have-account a:hover {
             text-decoration: underline;
+            color: #293a9d;
+   
+
         }
         .modal {
             display: none;
@@ -236,10 +303,20 @@
                         <i class="fas fa-eye toggle-password" onclick="togglePassword('login-password')"></i>
                         <div class="error" id="login-password-error"></div>
                     </div>
+
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="remember-me" />
+                        <label for="remember-me" >Remember me</label> 
+                    </div>
+
                     <div class="forgot-password">
                         <a href="#" onclick="openModal()">Forgot Password?</a>
                     </div>
                     <button type="submit" class="btn" id="login-btn">Login</button>
+                    <div class="not-member"> 
+                        Not a member? <a href="#" id="signUpLink">Sign up</a>
+                    </div>
+
                     <div class="success" id="login-success">Login successful!</div>
                 </form>
             </div>
@@ -270,7 +347,7 @@
                     <div class="success" id="signup-success">Signup successful!</div>
                 </form>
                 <div class="already-have-account">
-                    <a href="#" onclick="switchToLogin()">Already have an account? Login</a>
+                    Already have an account?<a href="#" onclick="switchToLogin()"> Login</a>
                 </div>
             </div>
         </div>
@@ -323,7 +400,7 @@
             const emailError = document.getElementById('login-email-error');
             const passwordError = document.getElementById('login-password-error');
             const successMessage = document.getElementById('login-success');
-
+            const loginBtn= document.getElementById('login-btn')
             let valid = true;
 
             if (!validateEmail(email)) {
@@ -341,7 +418,7 @@
             }
 
             if (valid) {
-                const loginBtn = document.getElementById('login-btn');
+             
                 loginBtn.disabled = true;
                 loginBtn.textContent = 'Logging in...';
                 console.log('Login submitted');
@@ -459,6 +536,56 @@
                 }, 3000); // Hide success message after 3 seconds
             }
         });
+
+
+        function checkFields() {
+        const emailValue = document.getElementById('login-email').value.trim();
+        const passwordValue = document.getElementById('login-password').value.trim();
+        const loginBtn = document.getElementById('login-btn');
+
+        if (emailValue !== '' && passwordValue !== '') {
+            loginBtn.disabled = false;
+        } else {
+            loginBtn.disabled = true;
+        }
+    }
+
+    
+        document.getElementById('login-email').addEventListener('input', checkFields);
+        document.getElementById('login-password').addEventListener('input', checkFields); 
+        document.getElementById('login-btn').disabled = true;
+
+
+        function checkFieldsSignup() {
+            const name = document.getElementById('signup-name').value.trim();
+            const email = document.getElementById('signup-email').value.trim();
+            const password = document.getElementById('signup-password').value.trim();
+            const confirmPassword = document.getElementById('signup-confirm-password').value.trim();
+            const signupBtn = document.getElementById('signup-btn');
+       
+            if (name !== '' && email !== '' && password !== '' && confirmPassword !== '') {
+                signupBtn.disabled = false;
+            } else {
+                signupBtn.disabled = true;
+            }
+        }
+ 
+        document.getElementById('signup-name').addEventListener('input', checkFieldsSignup);
+        document.getElementById('signup-email').addEventListener('input', checkFieldsSignup);
+        document.getElementById('signup-password').addEventListener('input', checkFieldsSignup);
+        document.getElementById('signup-confirm-password').addEventListener('input', checkFieldsSignup);
+        document.getElementById('signup-btn').disabled = true;
+ 
+        document.getElementById('signUpLink').addEventListener('click', switchToSignUp);
+
+            function switchToSignUp() {
+       
+            document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            document.querySelector('.tab-link[data-tab="signup"]').classList.add('active');
+            document.getElementById('signup').classList.add('active');
+        } 
 
         function switchToLogin() {
             document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
