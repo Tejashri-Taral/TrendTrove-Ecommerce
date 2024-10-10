@@ -1170,3 +1170,69 @@ main{
     line-height: 1.6; 
     text-align: left; 
 }
+
+/* Testimonial section styling */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center; 
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    max-width: 370px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover .customer-img {
+    border-color: #e2707f;
+}
+
+.testimonials h1.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial:hover {
+    transform: translateY(-30px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    flex-direction: column;
+}
+
+.customer-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.customer-name {
+    font-weight: bold;
+    color: #333;
+}
