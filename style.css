@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* creating font face  */
@@ -69,12 +70,25 @@ html{
 }
 
 .border {
+    position: relative;
     font-size: 0.85rem;
+    color: black;
+    border-radius: 50px;
 }
 
 .border:hover {
-    text-decoration: underline;
+    display: flex;
+    /* color: white !important; */
+    /* text-decoration: underline; */
+    border-radius: 50px;
+    transition: color 0.3s ease-in;
+    text-align: center;
+    height: 40px;
+    background-color: #14171A;
     font-weight: 500;
+}
+.border>a:hover{
+    color: white !important;
 }
 
 .navigation {
@@ -86,9 +100,8 @@ html{
         margin-right: 20px;
         /* background-color: blue; */
 }
-
 .nav-links {
-    width: 150%;
+    width: 120%;
     height: 70px;
     /* background-color: yellow; */
     display: flex;
@@ -96,9 +109,10 @@ html{
     align-items: center;
     justify-content: space-evenly;
     white-space: nowrap;
+    padding: 20px;
     font-family: 'futura';
     font-size: 17px;
-    color: #1d1d1d;
+    /* color: #1d1d1d; */
 }
 
 .nav-links>.nav-link {
@@ -110,13 +124,19 @@ html{
 .nav-links>.nav-link>a {
     color: #1d1d1d;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
     font-weight: 500;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 85px;
+    /* width: 85px; */
 }
+
+/* .nav-link>a:hover{
+    color: white;
+} */
 
 .nav-links>.nav-link>i {
     font-size: 20px;
@@ -969,6 +989,28 @@ input {
 main{
     background-color: #f0efef; 
 }
+
+.pro-tabs-container{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border: #14171A 2px solid !important;
+    border-radius: 50px;
+}
+
+.pro-tabs{
+    text-decoration: none;
+    color: black;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 10;
+
+}
 .slider{
     background: url(shoppingimage.jgp);
     margin: 12px;
@@ -1005,7 +1047,7 @@ main{
 .footwear-items{
     height: 280px;
    width: 230px;
-   margin: 40px;
+   margin: 60px;
    }
  .footwear{
      width: 230px;
@@ -1108,6 +1150,10 @@ main{
 .tab:hover .cursor {
     opacity: 1;
 }
+.tab:hover .dropdown-parent {
+    color: white;
+    cursor: pointer;
+}
 
 .dropdown-content {
     display: none;
@@ -1189,3 +1235,4 @@ main{
     line-height: 1.6; 
     text-align: left; 
 }
+
