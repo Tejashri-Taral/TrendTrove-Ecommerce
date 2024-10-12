@@ -139,11 +139,11 @@ html{
 } */
 
 .nav-links>.nav-link>i {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .utils {
-    width: 8%;
+    width: 10%;
     height: 70px;
     margin-right: 45px;
     /* background-color: purple; */
@@ -154,7 +154,7 @@ html{
 .banner {
     width: 100%;
     height: 750px;
-    background-color: gray;
+    background-color: rgb(128, 128, 128);
 }
 
 .slide {
@@ -180,11 +180,11 @@ html{
 }
 
 .slide-details>h1 {
-    font-size: 60px;
+    font-size: 80px;
 }
 
 .btn {
-    padding: 12px 30px;
+    padding: 20px 50px;
     background-color: black;
     border: 1px solid black;
     color: white;
