@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - TrendTrove</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
+    <link rel="stylesheet" href="./styles.css"> <!-- Link to your common CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
         html, body {
@@ -164,13 +169,13 @@
             margin-bottom: 10px;
         }
 
-        .footer-list a {
+        .footer-list a{
             text-decoration: none;
             color: #333;
         }
 
-        .socials a {
-            margin-right: 10px;
+        .socials a{
+          margin-right: 10px;
             color: #333;
         }
 
@@ -356,54 +361,58 @@
 
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-section">
-            <h1>Contact Us</h1>
-            <ul class="footer-list">
-                <li><a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a></li>
-                <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-                <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-                <li class="border-list"></li>
-                <li class="socials">
-                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Tejashri-Taral" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/your_instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-section">
+        <h1>Contact Us</h1>
+        <ul class="footer-list">
+            <li><a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a></li>
+            <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
+            <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
+            <li class="border-list"></li>
+            <li class="socials">
+                <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Tejashri-Taral" id="github" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-        <div class="footer-section">
-            <h1>Quick Links</h1>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
+    <div class="footer-section">
+        <h1>Quick Links</h1>
+        <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="return-policy.html">Return Policy</a></li>
+            <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank" rel="noopener noreferrer">Star Us</a></li>
 
-        <div class="footer-section">
-            <h1>Subscribe to Newsletter</h1>
-            <ul class="footer-list">
-                <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
-                <li class="sub">
-                    <input type="text" placeholder="Enter your email">
-                    <button class="btn">Subscribe</button>
-                </li>
-            </ul>
-        </div>
-    </footer>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h1>Subscribe to Newsletter</h1>
+        <ul class="footer-list">
+            <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
+            <li class="sub">
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button class="btn" type="submit">Subscribe</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</footer>
+
 
 </body>
 
