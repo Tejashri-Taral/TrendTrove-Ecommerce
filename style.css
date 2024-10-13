@@ -1142,10 +1142,12 @@ main{
 }
 
 .tabs {
-    position: relative;
+   
     display: flex;
     list-style-type: none;
     border: 2px solid black !important;
+    justify-content: center;
+    align-items: center;
     border-radius: 999px;
     background-color: white;
     padding: 0;
