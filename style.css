@@ -1445,3 +1445,17 @@ ul {
     padding: 0;
     margin: 0;
 }
+
+.feedback-sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-sub a{
+    font-size:medium;
+    font-weight: 500;
+    padding: 5px;
+  
+    
+}
