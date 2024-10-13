@@ -1216,4 +1216,41 @@ main{
     line-height: 1.6; 
     text-align: left; 
 }
+#wishlist-count {
+    position: absolute;
+    padding-right: 2px;
+    top: 10px; 
+    right: 100px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 11px;
+    display: none;
+}
+.overlay-image .btn-white-wishlist{
+    background-color: white;
+    border: 1px solid white;
+    color: #1d1d1d;
+    box-shadow: 0 0 3px lightgray;
+    z-index: 20;
+    height:45px;
+   
+}
+
+.overlay-image .btn-white-wishlist:hover{
+    background-color: black;
+    color: white;
+}
+#heart {
+    color: red;        
+    padding: 0;         
+    margin: 0;         
+    background: none;   
+    border: none;       
+    line-height: 1;     
+    display: inline-flex; 
+    align-items: center; 
+    font-size:40px;
+}
 
