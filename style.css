@@ -4,14 +4,38 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+body {
+    overflow-x: hidden;
+}
 /* creating font face  */
 
 @font-face {
     font-family: 'futura';
     src: url('./fonts/futura/futura\ medium\ bt.ttf');
 }
+@media (max-width: 768px) {
+    .navigation, .nav-links, .utils {
+        flex-direction: column; 
+        justify-content: center;
+        padding: 10px;
+    }
 
+    .nav-links {
+        width: 100%; 
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .utils {
+        width: 100%; 
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    #search-bar {
+        width: 100px; 
+    }
+}
 /* Scroll Progress Bar*/
 #progress-bar {
     position: fixed;
@@ -19,7 +43,7 @@
     left: 0;
     width: 0%;
     height: 0.4rem;
-    background-color: #3a383cc7; /* Customize the color as needed */
+    background-color: #3a383cc7; 
     z-index: 9999;
 }
 .gotopbtn{
@@ -92,33 +116,32 @@ html{
 }
 
 .navigation {
-        width: 45%;
+        width: auto;
         height: 70px;
+        padding-left: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         margin-right: 20px;
-        /* background-color: blue; */
+        flex-wrap: wrap;
 }
 .nav-links {
-    width: 120%;
+    width: auto; 
     height: 70px;
-    /* background-color: yellow; */
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between; 
     white-space: nowrap;
-    padding: 20px;
+    padding: 0 20px; 
     font-family: 'futura';
     font-size: 17px;
-    /* color: #1d1d1d; */
 }
 
 .nav-links>.nav-link {
-    width: 150px;
     display: flex;
     justify-content: center;
+    padding: 0 10px;
 }
 
 .nav-links>.nav-link>a {
@@ -127,16 +150,15 @@ html{
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 500;
-    padding: 1rem 2rem;
+    padding: 10px 15px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* width: 85px; */
 }
 
-/* .nav-link>a:hover{
-    color: white;
-} */
+.nav-links>.nav-link>a:hover {
+    color: #555; 
+}
 
 .nav-links>.nav-link>i {
     font-size: 20px;
@@ -150,11 +172,12 @@ html{
  
 #search-bar {
     padding: 8px;
-    width: 150px;
+    width: 120px;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-left: 10px; 
+    
 }
 .utils .nav-link {
     display: flex;
@@ -167,10 +190,12 @@ html{
 }
 .utils 
 {
-    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: auto; 
     height: 70px;
-    margin-right: 45px;
-    /* background-color: purple; */
+    padding-right: 45px; 
 }
 
 /* banner css  */
@@ -352,7 +377,6 @@ html{
 .products-list {
     width: 100%;
     padding: 20px 0px;
-    /* background-color: yellow; */
     display: flex;
     justify-content: space-between;
 }
@@ -361,7 +385,6 @@ html{
 .product {
     width: 24.5%;
     height: 420px;
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -850,7 +873,7 @@ h1 {
 }
 
 .hidden {
-    display: none; /* Adjust as necessary */
+    display: none;
 }
     
 
