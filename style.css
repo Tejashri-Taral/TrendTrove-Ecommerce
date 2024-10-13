@@ -253,6 +253,136 @@ html{
     color: black;
     transform: scale(1.1);
 }
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  .add-to-cart:hover ,.share-icon:hover,.save-icon:hover{
+    background-color: #333;
+  }
+  
+  /* Save Icon */
+  .save-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .save-icon.active{
+    color: rgb(240, 56, 56);
+  }
+  
+  /* Share Icon */
+  .share-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+  }
+/* Initially hidden */
+.share-options {
+    position: absolute;
+    top: 55%;
+    left:70%;
+    width: 110px;
+    height: 145px;
+    transform-origin: bottom left;
+    background: rgba(15, 15, 15, 0.5);
+    color: white;
+    padding: 15px;
+    font-family: 'roboto';
+    transition: .5s ease-in-out;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    opacity: 0; /* Hide it initially */
+    pointer-events: none; /* Disable interaction when invisible */
+    visibility: hidden; /* Hide from view */
+    transform: scale(0); /* Optionally scale down for effect */
+}
+
+/* When active (visible) */
+.share-options.active {
+    opacity: 1; /* Show it */
+    pointer-events: auto; /* Enable interaction */
+    visibility: visible; /* Make it visible */
+    transform: scale(1); /* Restore size */
+    transition-delay: 0s; /* No delay on activation */
+}
+
+
+/*adding quick share socials */
+    .whatsapp-icon,.facebook-icon ,.instagram-icon,.twitter-icon{
+    font-size: 22px;
+    cursor: pointer;
+    margin:1px 5px;
+    border-radius: 40px;
+  }
+  .whatsapp-icon:hover {
+    color: #128C7E;
+  }
+  .facebook-icon:hover {
+    color: #365899;
+  }
+  .instagram-icon:hover {
+    color: #e1306c;
+  }
+  /* Container for the link and copy button */
+.link-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 10px 0;
+  }
+  /* Link text styling */
+  .link {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* Copy button styling */
+  .copy-btn {
+    background-color: #bfc0c1;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .copy-btn:hover {
+    background-color: #4f4f50;
+  }
+
 
 /* featured section css  */
 
