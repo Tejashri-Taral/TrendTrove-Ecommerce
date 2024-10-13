@@ -65,6 +65,11 @@
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
+                 <li class="nav-link" id="wishlist-icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <span id="wishlist-count">0</span>
+                </li>
+
                 <li class="nav-link">
                     <a href="login-sginup.html">
                         <i class="fa-solid fa-user"></i>
@@ -271,6 +276,13 @@
                         <img src="./images/product2-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
+                         <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
+<!--                         <button class="btn btn-white-heart" >
+                            &#10084;
+                        </button>
+ -->
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -298,6 +310,9 @@
                         <img src="./images/product3.webp" alt="product">
                     </div>
                     <div class="overlay-image">
+                          <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -324,6 +339,9 @@
                         <img src="./images/product4-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
+                          <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -395,6 +413,9 @@
                         <img src="./images/product5-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
+                          <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -441,6 +462,9 @@
                         <img src="./images/product7-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
+                          <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -463,6 +487,9 @@
                         <img src="./images/product8-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
+                          <button class="btn btn-white-wishlist" data-id="1">
+                            Add To Wishlist
+                        </button>
                         <button class="btn btn-white" id="heart">
                             &#10084;
                         </button>
@@ -736,6 +763,35 @@
               goTopBtn.style.display = "none";
           }
       });
+
+       let count=0;
+        let wishlist={};
+
+       let element=document.querySelectorAll( '.btn-white-wishlist')
+       console.log(element)
+       // Convert HTMLCollection to an array and add event listeners
+       element.forEach(button => {
+        console.log('button is clicked ')
+        button.addEventListener('click', function () {
+            const productId = this.getAttribute('data-id');
+            let countElement = document.getElementById('wishlist-count'); 
+            if (wishlist[productId]) {
+                delete wishlist[productId];
+                count--;
+                this.innerText = "Add To Wishlist";
+            } else {
+                wishlist[productId] = true;
+                count++; 
+                this.innerText = "wishlisted";
+            }
+            console.log("Wishlist button clicked");
+            if (count > 0) {
+                countElement.innerText = count;
+                countElement.style.display = 'inline';
+            } else {
+                countElement.style.display = 'none'; 
+            }
+        });
 
   })();  // IIFE to avoid polluting global scope
 </script>
