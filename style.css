@@ -572,11 +572,11 @@ html{
     background-color: #14171A;
 }
 
-.footer-list a {
+.quick-links .footer-list a {
     position: relative; 
 }
 
-.footer-list a::after {
+.quick-links .footer-list a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -587,7 +587,7 @@ html{
     transition: width 0.3s ease; 
 }
 
-.footer-list a:hover::after {
+.quick-links .footer-list a:hover::after {
     width: 100%;
 }
 
