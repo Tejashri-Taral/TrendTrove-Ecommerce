@@ -8,7 +8,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+        .testimonal__card {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            height: 450px;
+        }
 
+        .testimonal__card:hover {
+            transform: translateY(-10px);
+            background-color: #c5bebd;
+        }
+
+
+
+        /* Testimonial Title */
+        .testimonal__title {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Testimonial Description */
+        .testimonal__description {
+
+            font-size: 1.2rem;
+            padding: 0.75rem 1rem;
+        }
+
+
+        .testimonal__swiper {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Cards Wrapper */
+        .cards {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .my2 {
+            background-color: black;
+            color: white;
+            padding: 5px 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+       
+    </style>
 </head>
 </head>
 <body>
@@ -67,229 +122,559 @@
             </div>
             <h2 class="my2" id="Topwear">Topwear & Kurta's</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="images/boy printed tshirt.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Printed T-shirt</p>
-                        <p class="mytext">Price - $40 </p>
-                        <!-- <p class="mytext">Rating : 4.3</p> -->
+
+
+                <div class="testimonal__swiper">
+                    <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img  src="images/boy printed tshirt.jpg" alt=""
+                                style=" width: 280px;
+                                height: 345px;
+                                object-fit: cover;
+                                padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Printed T-shirt
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $40
+                            </p>
+
+                        </article>
+                        <button class="add-to-cart-btn" >Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/check shirt.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Cotton check Shirt</p>
-                        <p class="mytext">Price - $29 </p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
+                
+                
+                <div class="testimonal__swiper">
+                    <!-- 2 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img  src="images/check shirt.webp" alt=""
+                                style=" width: 280px;
+                              height: 345px;
+                              object-fit: cover;
+                              padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Cotton check Shirt
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
                 </div>
-                <div class="card-items">
-                    <img src="images/boys round neck tshirt.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Boy Round Neck shirt</p>
-                        <p class="mytext">Price - $19</p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 3 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/boys round neck tshirt.webp " alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Boy Round Neck shirt
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/full sleeve shirt.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Printed Full Sleeves</p>
-                        <p class="mytext">Price - $30</p>
-                        <!-- <p class="mytext">Rating : 3.9</p> -->
+
+
+                <div class="testimonal__swiper">
+                    <!-- 4 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/full sleeve shirt.webp" alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Printed Full Sleeves
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $30
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/kurta set.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Kurta Set</p>
-                        <p class="mytext">Price - $75</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+               
+                <div class="testimonal__swiper">
+                    <!-- 5 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/kurta set.jpg" alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Kurta Set
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $75
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/green colour jacquard silk kurta.jpeg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Green colour Jacquard Silk kurta</p>
-                        <p class="mytext">Price - $80</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
+               
+                <div class="testimonal__swiper">
+                    <!-- 6 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/green colour jacquard silk kurta.jpeg" alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Green colour Jacquard Silk kurta
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $80
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/sifli sikvans boy kurta.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Sifli Sikvans boy kurta </p>
-                        <p class="mytext">Price - $79</p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
+
+                
+                <div class="testimonal__swiper">
+                    <!-- 7 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/sifli sikvans boy kurta.webp" alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Sifli Sikvans boy kurta
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $79
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/embroided straigh kurta.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Embroided Straight Kurta</p>
-                        <p class="mytext">Price - $87</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 8 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/embroided straigh kurta.webp" alt=""
+                                style="padding: 5px; 
+                                width: 280px;
+                                height: 345px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Embroided Straight Kurta
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $87
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
+               
                 
             </div>
             <h2 class="my2" id="Bottomwear">Bottomwear</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="images/Elastic Waist Jeans.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Elastic Waist Jeans</p>
-                        <p class="mytext">Price - $49</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Elastic Waist Jeans.jpg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Elastic Waist Jeans
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Casual Camouflage Jogger.jpeg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Casual Camouflage Jogger</p>
-                        <p class="mytext">Price - $29</p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Casual Camouflage Jogger.jpeg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Casual Camouflage Jogger
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Bottom Wear.jpeg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Bottom Wear</p>
-                        <p class="mytext">Price - $50</p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Bottom Wear.jpeg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Bottom Wear
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $50
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Trouser for Boys.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Trouser for Boys</p>
-                        <p class="mytext">Price - $45</p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Trouser for Boys.webp" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Trouser for Boys
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $45
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Black Denim Joggers.webp" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Black Denim Joggers</p>
-                        <p class="mytext">Price - $60</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Black Denim Joggers.webp"  alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Black Denim Joggers
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $60
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Trendy Bottoms.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Trendy Bottoms</p>
-                        <p class="mytext">Price - $69</p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Trendy Bottoms.jpg"alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Trendy Bottoms
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $69
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/shortboys.png" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Shorts</p>
-                        <p class="mytext">Price - $45</p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/shortboys.png" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Shorts
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $45
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="card-items">
-                    <img src="images/Pamper pants.jpeg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Pamper Pants</p>
-                        <p class="mytext">Price - $40</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Pamper pants.jpeg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Pamper Pants
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $40
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
+               
             </div>
             <h2 class="my2" id="Footwear">Footwear</h2>
             <div class="cards">
-                <div class="footwear-items">
-                    <img src="images/Boys Loafer.webp" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Boys Loafer Navy Blue</p>
-                        <p class="mytext">Price - $70</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 1-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Boys Loafer.webp" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Boys Loafer Navy Blue
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $70
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Black Formal Shoes.webp" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Black Formal Shoes</p>
-                        <p class="mytext">Price - $87</p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img  src="images/Black Formal Shoes.webp" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Black Formal Shoes
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $87
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Boy Sneakers.jpeg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Boy Sneakers</p>
-                        <p class="mytext">Price - $89</p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Boy Sneakers.jpeg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Boy Sneakers
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $89
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Casual Shoes.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Casual Shoes</p>
-                        <p class="mytext">Price - $23</p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img  src="images/Casual Shoes.jpg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Casual Shoes
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $23
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Light Weight boys slippers.webp" alt="" class="footwear">
-                    <div class="lines">
-                    <p class="mytext">Light Weight Boys Slippers</p>
-                        <p class="mytext">Price - $55</p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Light Weight boys slippers.webp" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Light Weight Boys Slippers
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $55
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/fancy boy slipper.avif" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Fancy Slipper</p>
-                        <p class="mytext">Price - $64</p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/fancy boy slipper.avif" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Fancy Slipper
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $64
+                            </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Leather Shoes.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Leather Shoes</p>
-                        <p class="mytext">Price - $100</p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Leather Shoes.jpg" alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Leather Shoes
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $100 </p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
-                <div class="footwear-items">
-                    <img src="images/Stylish Shoes.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Stylish Shoes</p>
-                        <p class="mytext">Price - $89</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+                
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/Stylish Shoes.jpg"  alt=""
+                                style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Stylish Shoes
+                            </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $89</p>
+                        </article>
+                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
+
                 </div>
+                
             </div>
         </div>
     </main> 
