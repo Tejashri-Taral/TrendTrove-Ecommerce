@@ -2,6 +2,10 @@
     window.onload = function() {
         document.getElementById('popup').style.display = 'flex';
       };
+      menu.onclick =()=>{
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
   
       // Close the pop-up when the user clicks the close button
       document.querySelector('.close-btn').addEventListener('click', function() {
