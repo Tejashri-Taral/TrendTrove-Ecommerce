@@ -1,252 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - TrendTrove</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your common CSS file -->
     <style>
-        /* General Styles */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
+      /* General Styles */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      /* About Us Section */
+      .leftabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .leftabout h3 {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .leftabout p {
+        text-align: center;
+      }
+
+      .about-section {
+        width: 100%;
+        padding: 40px 0;
+        background: #ffffff;
+      }
+
+      .about-title {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      /* Second part content css */
+      #div2 {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 7px;
+      }
+
+      #div3 {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 7px;
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+
+      /* First part: Image left, text right */
+      .about-content-first {
+        display: flex;
+        align-items: center; /* Adjusted to center the image and text */
+        justify-content: space-between;
+        margin-bottom: 50px;
+        gap: 30px; /* Added consistent gap between text and image */
+      }
+
+      .about-text {
+        flex: 1;
+        font-size: 2em;
+        line-height: 1.8;
+        margin-right: 20px; /* Ensure a margin between text and image */
+      }
+
+      .rightabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .about-images img {
+        width: 500px;
+        height: 520px;
+        border-radius: 5%;
+        aspect-ratio: 3/2;
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+
+      /* First image on about us page */
+      .about3 {
+        margin-right: 50px;
+      }
+
+      /* Second image on about us page */
+      .about4 {
+        margin-top: 50px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+
+      .aboutus-body {
+        font-size: 21px;
+      }
+
+      .slogan {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      /* Second part: Image right, text left */
+      .about-content-second {
+        display: flex;
+        align-items: center; /* Adjusted to center the image and text */
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 30px; /* Consistent gap for the second part */
+      }
+
+      .about-container {
+        padding: 0 40px; /* Increased padding for a more spacious layout */
+      }
+
+      /* Footer Section */
+      .footer {
+        background-color: #bec1c55c;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer-section {
+        margin-bottom: 20px;
+      }
+
+      .footer h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-list li {
+        margin-bottom: 10px;
+      }
+
+      .footer-list a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .socials a {
+        margin-right: 10px;
+        color: #333;
+      }
+
+      .sub input {
+        padding: 10px;
+        margin-right: 10px;
+        width: 70%;
+      }
+
+      .sub .btn {
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .sub .btn:hover {
+        background-color: #555;
+      }
+
+      /* Adding media Queries  */
+      @media (min-width: 1980px) {
+        .leftabout {
+          margin-left: 250px;
+          margin-right: 250px;
         }
 
-        body {
-            background-color: #f7f7f7;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
+        .about3 {
+          margin-right: 230px;
         }
 
-        h1, h2 {
-            color: #333;
+        .about4 {
+          margin-left: 180px;
         }
 
-        /* About Us Section */
-        .about-section {
-            width: 100%;
-            padding: 40px 0;
-            background:#ffffff;
+        .rightabout {
+          margin-left: 250px;
+          margin-right: 250px;
         }
 
-        .about-title {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
+        .aboutus-body {
+          font-size: 25px;
         }
 
-        /* First part: Image left, text right */
-        .about-content-first {
-            display: flex;
-            align-items: center; /* Adjusted to center the image and text */
-            justify-content: space-between;
-            margin-bottom: 50px;
-            gap: 30px; /* Added consistent gap between text and image */
+        #div2 {
+          font-size: 27px;
         }
 
-        .about-text {
-            flex: 1;
-            font-size: 2em;
-            line-height: 1.8;
-            margin-right: 20px; /* Ensure a margin between text and image */
+        #div3 {
+          font-size: 23px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        h3 {
+          font-size: 20px;
+        }
+        .leftabout p {
+          font-size: 15px;
         }
 
+        .rightabout p {
+          font-size: 15px;
+        }
+
+        /* sorry for using id and div2 div3 but something was 
+            getting overwritten and this was easy way out */
+        #div2 {
+          font-size: 16px;
+        }
+
+        #div3 {
+          font-size: 16px;
+        }
         .about-images img {
-           width: 500px;
-           border-radius: 5%;
-           aspect-ratio: 3/2;
-           opacity: 90%;
-           box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+          width: 300px;
+          height: 320px;
+          border-radius: 5%;
+          aspect-ratio: 3/2;
+          opacity: 90%;
+          box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
         }
-
-        /* Second part: Image right, text left */
-        .about-content-second {
-            display: flex;
-            align-items: center; /* Adjusted to center the image and text */
-            justify-content: space-between;
-            flex-direction: row-reverse;
-            gap: 30px; /* Consistent gap for the second part */
-        }
-
-        .about-container {
-            padding: 0 40px; /* Increased padding for a more spacious layout */
-        }
-
-        /* Footer Section */
-        .footer {
-            background-color: #bec1c55c;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .footer-section {
-            margin-bottom: 20px;
-        }
-
-        .footer h1 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .footer-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-list li {
-            margin-bottom: 10px;
-        }
-
-        .footer-list a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .socials a {
-            margin-right: 10px;
-            color: #333;
-        }
-
-        .sub input {
-            padding: 10px;
-            margin-right: 10px;
-            width: 70%;
-        }
-
-        .sub .btn {
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        .sub .btn:hover {
-            background-color: #555;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header Section -->
     <header class="header" id="header">
-          <div class="logo">
-            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
+      <div class="logo">
+        <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
+        <i class="fa-solid fa-bars menu" id="menu"></i>
+      </div>
+
+      <nav class="bg-neutral-100 py-20">
+        <div class="tabs-container">
+          <ul id="tabs" class="tabs">
+            <li class="tab">
+              <a href="index.html">Home</a>
+              <div class="cursor"></div>
+            </li>
+            <li class="tab">
+              <a href="about.html">About</a>
+              <div class="cursor"></div>
+            </li>
+            <li class="tab">
+              <a href="features.html">Features</a>
+              <div class="cursor"></div>
+            </li>
+            <li class="dropdown tab">
+              <a class="dropdown-parent">Products</a>
+              <div class="cursor"></div>
+              <ul class="dropdown-content">
+                <li><a href="mens.html" class="priye">Men</a></li>
+                <li><a href="womens.html">Women</a></li>
+              </ul>
+            </li>
+            <li class="tab" style="margin-left: 15px">
+              <a href="contact.html">Contact Us</a>
+              <div class="cursor"></div>
+            </li>
+          </ul>
         </div>
+      </nav>
 
-        <nav class="bg-neutral-100 py-20">
-            <div class="tabs-container">
-                <ul id="tabs" class="tabs">
-                    <li class="tab">
-                        <a href="index.html">Home</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="about.html">About</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="features.html">Features</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="dropdown tab">
-                        <a class="dropdown-parent">Products</a>
-                        <div class="cursor"></div>
-                        <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Men</a>
-                            </li>
-                            <li><a href="womens.html">Women</a></li>
-                        </ul>
-                    </li>
-                    <li class="tab" style="margin-left: 15px;">
-                        <a href="contact.html">Contact Us</a>
-                        <div class="cursor"></div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <nav class="utils">
-            <ul class="nav-links">
-                <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-user"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </li>
-            </ul>
-        </nav>
+      <nav class="utils">
+        <ul class="nav-links">
+          <li class="nav-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-user"></i>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- About Us Section -->
     <section class="about-section">
-        <h2 class="about-title">About Us</h2>
+      <h2 class="about-title">About Us</h2>
 
-        <div class="about-container">
-
-            <!-- First part: Image left, text right -->
-            <div class="about-content-first">
-                <div class="about-text">
-                    <p>Welcome to TrendTrove, your ultimate destination for fashion-forward apparel, accessories, and lifestyle products. 
-                    We believe in celebrating individuality and empowering every customer to express their unique style with confidence. Whether you're looking for everyday essentials or statement pieces, 
-                    we source high-quality, sustainable, and stylish items to elevate your wardrobe.</p>
-                </div>
-                <div class="about-images">
-                    <img src="images/about1.jpg" alt="Fashion Collection">
-                </div>
+      <div class="about-container">
+        <!-- First part: Image left, text right -->
+        <div class="about-content-first">
+          <div class="about-text">
+            <div class="leftabout">
+              <h3>Welcome to TrendTrove</h3>
+              <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
+              <p class="aboutus-body">
+                Your Ultimate Destination for fashion-forward apparel,
+                accessories, and lifestyle products. We believe in celebrating
+                individuality and empowering every customer to express their
+                unique style with confidence. Whether you're looking for
+                everyday essentials or statement pieces, we source high-quality,
+                sustainable, and stylish items to elevate your wardrobe.
+              </p>
             </div>
-
-            <!-- Second part: Image right, text left -->
-            <div class="about-content-second">
-                <div class="about-text">
-                    <p>At the heart of TrendTrove is a passion for style and a commitment to customer satisfaction. Our mission is to offer a seamless shopping experience with exceptional service, fast shipping, 
-                    and an easy return process. We stay ahead of the fashion curve so you can step out feeling your best, whatever the occasion.</p>
-                    <p>Discover your style with TrendTrove — where fashion meets confidence!</p>
-                </div>
-                <div class="about-images">
-                    <img src="images/about2.jpg" alt="Accessories Collection">
-                </div>
-            </div>
-
+          </div>
+          <div class="about-images">
+            <img
+              class="about3"
+              src="images/about3.jpg"
+              alt="Fashion Collection"
+            />
+          </div>
         </div>
 
+        <!-- Second part: Image right, text left -->
+        <div class="about-content-second">
+          <div class="about-text">
+            <div class="rightabout">
+              <p class="aboutus-body" id="div2">
+                Our Mission is to empower individuals
+              </p>
+              <p class="aboutus-body">
+                At the heart of TrendTrove is a passion for style and a
+                commitment to customer satisfaction. Our mission is to offer a
+                seamless shopping experience with exceptional service, fast
+                shipping, and an easy return process. We stay ahead of the
+                fashion curve so you can step out feeling your best, whatever
+                the occasion.
+              </p>
+              <p class="aboutus-body" id="div3">
+                Discover your style with TrendTrove — where fashion meets
+                confidence!
+              </p>
+            </div>
+          </div>
+          <div class="about-images">
+            <img
+              class="about4"
+              src="images/about4.jpg"
+              alt="Accessories Collection"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-section">
-            <h1>Contact Us</h1>
-            <ul class="footer-list">
-                <li><a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a></li>
-                <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-                <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-                <li class="border-list"></li>
-                <li class="socials">
-                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Tejashri-Taral" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/your_instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="footer-section">
+        <h1>Contact Us</h1>
+        <ul class="footer-list">
+          <li>
+            <a href="mailto:trendtrove1004@gmail.com"
+              >trendtrove1004@gmail.com</a
+            >
+          </li>
+          <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
+          <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
+          <li class="border-list"></li>
+          <li class="socials">
+            <a
+              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Tejashri-Taral" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
+              target="_blank"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/your_instagram" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h1>Quick Links</h1>
+        <ul class="footer-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li><a href="return-policy.html">Return Policy</a></li>
+          <li>
+            <a
+              href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce"
+              target="_blank"
+              >Star Us</a
+            >
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h1>Subscribe to Newsletter</h1>
+        <ul class="footer-list">
+          <li>
+            Be the first to know about exclusive deals and new arrivals straight
+            to your inbox.
+          </li>
+          <li>Join our fashion community today!</li>
+          <li class="sub">
+            <input
+              type="email"
+              placeholder="Enter your email here"
+              id="email-input"
+            />
+            <button class="btn" id="open-btn">Subscribe</button>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
 
         <div class="footer-section quick-links">
             <h1>Quick Links</h1>
@@ -257,20 +457,89 @@
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
+
+    <div class="footer-copyright">
+      <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+    </div>
+
+    <div class="modal-box" id="modalbox" style="display: none">
+      <div class="modal" id="modal">
+        <div id="close-btn">&times;</div>
+        <div class="modal-content">
+          <img src="images\confirmation.png" alt="" height="100px" />
+          <h2>Subscription Successful!</h2>
+          <p>Thank you for subscribing.</p>
+          <p>You will receive notifications & updates via email.</p>
+
         </div>
-
-        <div class="footer-section">
-            <h1>Subscribe to Newsletter</h1>
-            <ul class="footer-list">
-                <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
-                <li class="sub">
-                    <input type="text" placeholder="Enter your email">
-                    <button class="btn">Subscribe</button>
-                </li>
-            </ul>
+        <div class="social">
+          <li class="socials">
+            <a
+              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
+              id="linkedin"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Tejashri-Taral"
+              id="github"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
+              id="twitter"
+              target="_blank"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/your_instagram"
+              id="instagram"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
         </div>
-    </footer>
+      </div>
+    </div>
 
-</body>
+    <script>
+      let openbtn = document.getElementById("open-btn");
+      let modalbox = document.getElementById("modalbox");
+      let closebtn = document.getElementById("close-btn");
+      let emailInput = document.getElementById("email-input");
 
+      // Email validation function
+      function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+
+      openbtn.addEventListener("click", function () {
+        // Validate email
+        if (emailInput.value === "") {
+          alert("Please enter your email address.");
+        } else if (!isValidEmail(emailInput.value)) {
+          alert("Please enter a valid email address.");
+        } else {
+          modalbox.style.display = "block"; // Show the modal
+        }
+      });
+
+      closebtn.addEventListener("click", function () {
+        modalbox.style.display = "none"; // Hide the modal
+      });
+      // Close modal when clicking outside of it
+      modalbox.addEventListener("click", function (event) {
+        if (event.target === modalbox) {
+          modalbox.style.display = "none"; // Hide modal if the background is clicked
+        }
+      });
+    </script>
+  </body>
 </html>

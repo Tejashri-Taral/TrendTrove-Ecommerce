@@ -40,6 +40,62 @@ html{
     scroll-behavior: smooth;
 }
 
+.modal-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it appears on top */
+}
+.modal {
+    height: 460px;
+    width: 370px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation-name: animatemodal;
+    animation-duration: .5s;
+    box-shadow: 8px 8px 25px black;
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 15px 20px;
+}
+.modal-content p{
+    align-self: center;
+}
+#close-btn {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+@keyframes animatemodal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
 
 /* header css  */
 
@@ -197,6 +253,136 @@ html{
     color: black;
     transform: scale(1.1);
 }
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  .add-to-cart:hover ,.share-icon:hover,.save-icon:hover{
+    background-color: #333;
+  }
+  
+  /* Save Icon */
+  .save-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .save-icon.active{
+    color: rgb(240, 56, 56);
+  }
+  
+  /* Share Icon */
+  .share-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+  }
+/* Initially hidden */
+.share-options {
+    position: absolute;
+    top: 55%;
+    left:70%;
+    width: 110px;
+    height: 145px;
+    transform-origin: bottom left;
+    background: rgba(15, 15, 15, 0.5);
+    color: white;
+    padding: 15px;
+    font-family: 'roboto';
+    transition: .5s ease-in-out;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    opacity: 0; /* Hide it initially */
+    pointer-events: none; /* Disable interaction when invisible */
+    visibility: hidden; /* Hide from view */
+    transform: scale(0); /* Optionally scale down for effect */
+}
+
+/* When active (visible) */
+.share-options.active {
+    opacity: 1; /* Show it */
+    pointer-events: auto; /* Enable interaction */
+    visibility: visible; /* Make it visible */
+    transform: scale(1); /* Restore size */
+    transition-delay: 0s; /* No delay on activation */
+}
+
+
+/*adding quick share socials */
+    .whatsapp-icon,.facebook-icon ,.instagram-icon,.twitter-icon{
+    font-size: 22px;
+    cursor: pointer;
+    margin:1px 5px;
+    border-radius: 40px;
+  }
+  .whatsapp-icon:hover {
+    color: #128C7E;
+  }
+  .facebook-icon:hover {
+    color: #365899;
+  }
+  .instagram-icon:hover {
+    color: #e1306c;
+  }
+  /* Container for the link and copy button */
+.link-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 10px 0;
+  }
+  /* Link text styling */
+  .link {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* Copy button styling */
+  .copy-btn {
+    background-color: #bfc0c1;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .copy-btn:hover {
+    background-color: #4f4f50;
+  }
+
 
 /* featured section css  */
 
@@ -1236,3 +1422,175 @@ main{
     text-align: left; 
 }
 
+/* Contact Section*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section {
+    padding: 50px 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Contact Information Styles */
+.contact-info-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.contact-info-box {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-info-box:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info-box h3 {
+    font-size: 24px;
+    color: #2d80d8;
+    margin-bottom: 15px;
+}
+
+.contact-info-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Icon Styles */
+.contact-info-box i {
+    font-size: 40px;
+    color: #2d80d8;
+    margin-bottom: 10px;
+}
+
+/* Google Maps Embed */
+.contact-map {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width:1450px;
+}
+
+.contact-form {
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 45%;
+    padding: 30px;
+    margin: 10px;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    color: #2d80d8;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color:#2d80d8;
+    outline: none;
+}
+
+.contact-form .btn-submit {
+    background-color: #2d80d8;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #2d80d8;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 992px) {
+    .contact-info-box {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+    
+    .contact-info-container,
+    .contact-form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-info-box {
+        width: 90%;
+    }
+}
+
+ul {
+    list-style-type: square; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}

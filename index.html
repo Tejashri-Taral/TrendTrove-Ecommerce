@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./Style/popup.css">
 
 </head>
 
@@ -48,6 +49,7 @@
                             <li><a href="mens.html" class="priye">Men</a>
                             </li>
                             <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -166,6 +168,29 @@
             </div>
         </div>
     </section>
+
+    <!-- Pop up Html  -->
+         <!-- Pop-up for email registration -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/popup1.jpg" alt="Fashion Image">
+            </div>
+            <div class="popup-right">
+                <a href="#" class="no-thanks"><img class="popuplogo" src="images/logo.png" alt="Logo" srcset=""></a>
+                <h1>Join TrendTrove!</h1>
+
+                <h2 class="popuph2">Unlock Your Fashion</h2>
+                <p>Sign up now to enjoy <strong> 20% off </strong> your first order and exclusive updates on the latest trends.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Continue</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks, I’ll shop full price</a>
+                <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
 
 
     <!-- featured section  -->
@@ -564,19 +589,83 @@
                 <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
                 <li>Join our fashion community today!</li>
                 <li class="sub">
-                    <input type="email" placeholder="Enter your email here">
-                    <button class="btn">Subscribe</button>
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
                 </li>
             </ul>
         </div>
-       
-              
-        
 
     </footer>
-    <div class="footer-copyright">
-        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+        </div>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications, updates via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        
+    
+    <script>
+        let openbtn = document.getElementById('open-btn');
+let modalbox = document.getElementById('modalbox');
+let closebtn = document.getElementById('close-btn');
+let emailInput = document.getElementById('email-input');
+
+// Email validation function
+function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    openbtn.addEventListener('click', function () {
+        // Validate email
+        if (emailInput.value === '') {
+            alert('Please enter your email address.');
+        } else if (!isValidEmail(emailInput.value)) {
+            alert('Please enter a valid email address.');
+        } else {
+            modalbox.style.display = 'block'; // Show the modal
+        }
+    });
+
+    closebtn.addEventListener('click', function () {
+        modalbox.style.display = 'none'; // Hide the modal
+    });
+     // Close modal when clicking outside of it
+     modalbox.addEventListener('click', function(event) {
+        if (event.target === modalbox) {
+            modalbox.style.display = 'none'; // Hide modal if the background is clicked
+        }
+    });
+
+    </script>
+    
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -739,6 +828,8 @@
 
   })();  // IIFE to avoid polluting global scope
 </script>
+
+<script src="./script/popup.js"></script>
 
 </body>
 

@@ -63,40 +63,52 @@
         </nav>
     </header>
 
-    <section class="contact-section">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="contact-description">Have any questions or feedback? We'd love to hear from you! Feel free to reach
-            out to us using the form below or email us at <a href="mailto:support@trendtrove.com"
-                class="contact-email">support@trendtrove.com</a>.</p>
-
-        <form class="contact-form" action="/submit-form" method="POST">
-            <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Get in Touch</p>
+        <div class="contact-info-container">
+            <div class="contact-info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <ul>
+                    <li><span>Head Office: 123 TrendTrove Blvd, Fashion City, USA</span></li><br>
+                    <li><span>Branch Office:2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</span></li><br>
+                    <li><span>Development Center: 789 E-Commerce Hub, Pune, MH 411001.</span></li>
+                </ul>
             </div>
-
-            <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+            <div class="contact-info-box">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+1234567890<br>+91 9876543211<br>+91 9876543212</p>
             </div>
-
-            <div class="form-group">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Enter your message" rows="6"
-                    required></textarea>
+            <div class="contact-info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <ul>
+                    <li><span>support@trendtrove.com</span></li><br>
+                    <li><span>trendtrove1004@gmail<br>.com</span></li>
+                </ul>
             </div>
-
-            <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-            <h3 class="info-title">Other Ways to Reach Us</h3>
-            <p class="info-detail">Email: <a href="mailto:support@trendtrove.com"
-                    class="contact-email">support@trendtrove.com</a></p>
-            <p class="info-detail">Phone: +1 234 567 890</p>
-            <p class="info-detail">Address: 123 TrendTrove Blvd, Fashion City, USA</p>
         </div>
-    </section>
+    
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+        </div>
+    
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <p>Having any questions or feedback? We'd love to hear from you!<br>
+                    Feel free to reach us using the form below.
+                </p>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Message" required></textarea>
+                <button class="btn-submit">Send Message</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
 
