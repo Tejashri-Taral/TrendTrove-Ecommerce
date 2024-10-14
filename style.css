@@ -599,6 +599,21 @@ html{
     border: none;
 }
 
+.heartbtn {
+    background-color: white;
+    border: 1px solid white;
+    color: #1d1d1d;
+    box-shadow: 0 0 3px lightgray;
+    z-index: 20;
+    transition: 0.3s ease;
+}
+
+.heartbtn:hover {
+    background-color: black;
+    color: rgb(255, 84, 84);
+    transform: scale(1.1);
+}
+
 .product-details
 {
     padding: 0px 5px 5px ;
