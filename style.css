@@ -998,8 +998,9 @@ input {
 
 /* Contact Section Styles */
 .contact-section {
-    max-width: 700px;
-    margin: 50px auto;
+    max-width: 1700px;
+    margin: 100px;
+    gap: 50px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -1435,17 +1436,25 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap:23px;
     margin-bottom: 40px;
+    margin-top: 50px;
+
+}
+ul{
+    list-style-type: none;
 }
 
+
 .contact-info-box {
+    margin-top: 200px;
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);    border-radius: 8px;
     width: 30%;
     padding: 20px;
     margin: 10px;
     text-align: center;
+    border-radius: 18px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -1474,14 +1483,18 @@ body {
 
 /* Google Maps Embed */
 .contact-map {
-    width: 100%;
-    max-width: 700px;
+    width: 50%;
+    height: 400px;
     margin: 0 auto;
+    position: relative;
 }
 
 .contact-map iframe {
-    width: 100%;
-    height: 350px;
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    width: 900px;
+    height: 550px;
     border: none;
     border-radius: 8px;
 }
@@ -1497,8 +1510,8 @@ body {
 
 .contact-form {
     background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 18px;
     width: 45%;
     padding: 30px;
     margin: 10px;
@@ -1571,7 +1584,7 @@ body {
 }
 
 ul {
-    list-style-type: square; /* Remove default bullet points */
+    list-style-type: none; /* Remove default bullet points */
     padding: 0;
     margin: 0;
 }
