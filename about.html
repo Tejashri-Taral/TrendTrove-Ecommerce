@@ -30,20 +30,6 @@
       }
 
       /* About Us Section */
-      .leftabout {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      .leftabout h3 {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .leftabout p {
-        text-align: center;
-      }
-
       .about-section {
         width: 100%;
         padding: 40px 0;
@@ -54,6 +40,52 @@
         font-size: 2.5em;
         text-align: center;
         margin-bottom: 35px;
+      }
+
+      .about-container {
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-content-first,
+      .about-content-second {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        gap: 30px;
+      }
+
+      .about-text {
+        flex: 1;
+        font-size: 1.5em;
+        line-height: 1.8;
+      }
+
+      .about-images img {
+        width: 500px;
+        height: 520px;
+        border-radius: 5%;
+        aspect-ratio: 3/2;
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+
+      .leftabout,
+      .rightabout {
+        margin: 20px;
+      }
+
+      .leftabout h3,
+      .rightabout h3 {
+        text-align: center;
+      }
+
+      .leftabout p,
+      .rightabout p {
+        text-align: center;
       }
 
       /* Second part content css */
@@ -73,159 +105,12 @@
         margin-right: 22px;
       }
 
-      /* First part: Image left, text right */
-      .about-content-first {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        margin-bottom: 50px;
-        gap: 30px; /* Added consistent gap between text and image */
-      }
-
-      .about-text {
-        flex: 1;
-        font-size: 2em;
-        line-height: 1.8;
-        margin-right: 20px; /* Ensure a margin between text and image */
-      }
-
-      .rightabout {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      .about-images img {
-        width: 500px;
-        height: 520px;
-        border-radius: 5%;
-        aspect-ratio: 3/2;
-        opacity: 90%;
-        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
-      }
-
-      /* First image on about us page */
-      .about3 {
-        margin-right: 50px;
-      }
-
-      /* Second image on about us page */
-      .about4 {
-        margin-top: 50px;
-        margin-left: 25px;
-        margin-bottom: 20px;
-      }
-
-      .aboutus-body {
-        font-size: 21px;
-      }
-
-      .slogan {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
-
-      /* Second part: Image right, text left */
-      .about-content-second {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        gap: 30px; /* Consistent gap for the second part */
-      }
-
-      .about-container {
-        padding: 0 40px; /* Increased padding for a more spacious layout */
-      }
-
-      /* Footer Section */
-      .footer {
-        background-color: #bec1c55c;
-        padding: 20px;
-        text-align: center;
-        width: 100%;
-      }
-
-      .footer-section {
-        margin-bottom: 20px;
-      }
-
-      .footer h1 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-
-      .footer-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .footer-list li {
-        margin-bottom: 10px;
-      }
-
-      .footer-list a {
-        text-decoration: none;
-        color: #333;
-      }
-
-      .socials a {
-        margin-right: 10px;
-        color: #333;
-      }
-
-      .sub input {
-        padding: 10px;
-        margin-right: 10px;
-        width: 70%;
-      }
-
-      .sub .btn {
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-
-      .sub .btn:hover {
-        background-color: #555;
-      }
-
-      /* Adding media Queries  */
-      @media (min-width: 1980px) {
-        .leftabout {
-          margin-left: 250px;
-          margin-right: 250px;
-        }
-
-        .about3 {
-          margin-right: 230px;
-        }
-
-        .about4 {
-          margin-left: 180px;
-        }
-
-        .rightabout {
-          margin-left: 250px;
-          margin-right: 250px;
-        }
-
-        .aboutus-body {
-          font-size: 25px;
-        }
-
-        #div2 {
-          font-size: 27px;
-        }
-
-        #div3 {
-          font-size: 23px;
-        }
-      }
-
+      /* Media Queries */
       @media (max-width: 1200px) {
+        .about-images img {
+          width: 300px;
+          height: 320px;
+        }
         h3 {
           font-size: 20px;
         }
@@ -246,18 +131,20 @@
         #div3 {
           font-size: 16px;
         }
-        .about-images img {
-          width: 300px;
-          height: 320px;
-          border-radius: 5%;
-          aspect-ratio: 3/2;
-          opacity: 90%;
-          box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .about-content-first,
+        .about-content-second {
+          flex-direction: column;
+        }
+
+        .about-text {
+          margin-bottom: 20px;
         }
       }
     </style>
   </head>
-
   <body>
     <!-- Header Section -->
     <header class="header" id="header">
