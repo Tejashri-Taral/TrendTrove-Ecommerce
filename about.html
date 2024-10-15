@@ -279,6 +279,7 @@
 </div>
     <!-- Header Section -->
     <header class="header" id="header">
+      <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
       <div class="logo">
         <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
         <i class="fa-solid fa-bars menu" id="menu"></i>
@@ -511,6 +512,17 @@
       </div>
     </div>
     <script src="preloader.js"></script>
+
+    <script>
+      const goTopBtn = document.querySelector(".gotopbtn");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+            goTopBtn.style.display = "block";
+        } else {
+            goTopBtn.style.display = "none";
+        }
+    });
+  </script>
 
     <script>
       let openbtn = document.getElementById("open-btn");

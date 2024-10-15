@@ -35,6 +35,7 @@
     color: white;
     border-radius: 50%;
     font-size: 22px;
+    z-index: 1000;
 }
 html{
     scroll-behavior: smooth;
