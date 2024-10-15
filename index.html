@@ -10,54 +10,48 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        <!-- ProgressBar -->
+        <div id="progress-bar"></div>
 
         <!-- header section  -->
-        <header class="header" id="header">
+        <header class="header">
             <div class="logo">
+                <img src="images/logo.png" alt="Logo">
                 <p>TrendTrove</p>
                 <i class="fa-solid fa-bars menu" id="menu"></i>
             </div>
 
             <nav class="navigation">
                 <ul class="nav-links">
-                    <li class="nav-link">
-                        <a href="#">Home</a>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link"><a href="features.html">Features</a></li>
+                    <li class="nav-link dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content">
+                            <li><a href="mens.html" class="priye">Men</a></li>
+                            <li><a href="womens.html">Women</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Features</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Products</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Contact Us</a>
-                    </li>
+                    <li class="nav-link"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
             <nav class="utils">
                 <ul class="nav-links">
                     <li class="nav-link">
-                        <a href="cart.html">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
-                    
-                    <li class="nav-link" onclick="window.location.href='profile.html'">
-                        <i class="fa-solid fa-user"></i>
+                    <li class="nav-link">
+                        <a href="login-signup.html"><i class="fa-solid fa-user"></i></a>
                     </li>
-                    
                     <li class="nav-link search">
-                        <input type="text" placeholder="Search..." id="search-bar" />
-                        <i class="fa-solid  " onclick="performSearch()"></i>
+                        <input type="text" placeholder="Search..." id="search-bar">
+                        <i class="fa-solid fa-magnifying-glass" onclick="performSearch()"></i>
                     </li>
                 </ul>
             </nav>
-            
-            
         </header>
 
         <div id="notification" class="notification hidden">
@@ -575,6 +569,13 @@
             if (window.location.pathname.includes("cart.html")) {
                 window.onload = displayCart; // Display cart items when the page loads
             }
+            document.querySelectorAll('.dropdown-parent').forEach(item => {
+                item.addEventListener('click', function() {
+                let dropdownContent = this.nextElementSibling;
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
         </script>
     </body>
     </html>
