@@ -1,745 +1,582 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
-    <title>TrendTrove - Ecommerce</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TrendTrove - Ecommerce</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!-- ProgressBar -->
+        <div id="progress-bar"></div>
 
-</head>
+        <!-- header section  -->
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <p>TrendTrove</p>
+                <i class="fa-solid fa-bars menu" id="menu"></i>
+            </div>
 
-<body>
-    
-    <!-- ProgressBar -->
-    <div id="progress-bar"></div>
-    <!-- ProgressBar Ends -->
-
-    <!-- header section  -->
-    <header class="header" id="header">
-        <div class="logo">
-            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
-        </div>
-
-        <nav class="bg-neutral-100 py-20">
-            <div class="tabs-container">
-                <ul id="tabs" class="tabs">
-                    <li class="tab">
-                        <a href="index.html">Home</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="about.html">About</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="features.html">Features</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="dropdown tab">
+            <nav class="navigation">
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link"><a href="features.html">Features</a></li>
+                    <li class="nav-link dropdown tab">
                         <a class="dropdown-parent">Products</a>
                         <div class="cursor"></div>
-                        <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Men</a>
-                            </li>
+                        <ul class="dropdown-content">
+                            <li><a href="mens.html" class="priye">Men</a></li>
                             <li><a href="womens.html">Women</a></li>
                         </ul>
                     </li>
-                    <li class="tab" style="margin-left: 15px;">
-                        <a href="contact.html">Contact Us</a>
-                        <div class="cursor"></div>
+                    <li class="nav-link"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <nav class="utils">
+                <ul class="nav-links">
+                    <li class="nav-link">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="login-signup.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-link search">
+                        <input type="text" placeholder="Search..." id="search-bar">
+                        <i class="fa-solid fa-magnifying-glass" onclick="performSearch()"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="notification" class="notification hidden">
+            <p id="notification-message"></p>
+        </div>
+        
+        
+        <!-- banner area  -->
+        <section class="banner">
+
+            <div class="slide">
+                
+                <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
+                    <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
+                    <p>
+                        At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
+                    </p>
+                    <button class="btn">
+                        Explore More
+                    </button>   
+                </div>
+            </div>
+        </section>
+
+        <!-- featured section  -->
+        
+        <section class="featured">
+            <div class="featured-box-1">
+                <div class="overlay">
+                    <button class="btn btn-white">
+                        Shop Clothing
+                    </button>
+                </div>
+                <div class="bg-image">
+                    <img src="./images//shop-clothing.webp" alt="product">
+                </div>
+            </div>
+
+            <div class="featured-box-2">
+                <div class="featured-box-2-box-1">
+                    <div class="overlay">
+                        <button class="btn btn-white">
+                            Shop Sunglasses
+                        </button>
+                    </div>
+                    <div class="bg-image">
+                        <img src="./images/shop-glasses.webp" alt="product">
+                    </div> 
+                </div>
+                <div class="featured-box-2-box-2">
+                    <div class="overlay">
+                        <button class="btn btn-white">
+                            Shop Bags
+                        </button>
+                    </div>
+                    <div class="bg-image">
+                        <img src="./images/shop-bags.webp" alt="product">
+                    </div> 
+                </div>
+
+                <div class="featured-box-2-box-3">
+                    <div class="overlay">
+                        <button class="btn btn-white">
+                            Shop Sandals
+                        </button>
+                    </div>
+                    <div class="bg-image">
+                        <img src="./images/shop-sandals.webp" alt="product">
+                    </div> 
+                </div>
+            </div>
+
+            <div class="featured-box-3">
+                <div class="overlay">
+                    <button class="btn btn-white">
+                        Shop Sneakers
+                    </button>
+                </div>
+                <div class="bg-image">
+                    <img src="./images/shop-sneakers.webp" alt="product">
+                </div>
+            </div>
+        </section>
+
+        <!-- products section  -->
+
+        <section class="products">
+            <h1 class="section-title">Top Products Of The Season!</h1>
+
+            <div class="products-list">
+
+                <div class="product"  data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product1-effect.jpg" alt="Crop Top 1">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product1.webp" alt="Crop Top 1">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Crop Top 1', 199)">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    
+                    <div class="product-details">
+                        <p class="product-name">Black Top</p>
+                        <p>Price - $199</p> 
+                    </div>
+                </div>
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="product-image">
+
+                        <div class="main-image">
+                            <img src="./images/product2.jpg" alt="Black Top">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product2-effect.jpg" alt="Black Top">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Black Top', 199)">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">Black Top</p>
+                        <p>Price - $99</p> 
+                    </div>
+                </div>
+
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product3-effect.jpg" alt="Green">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product3.webp" alt="Green">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Green', 100)">
+                                Add To Cart
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">Green Top</p>
+                        <p>Price - $100</p> 
+                    </div>
+                </div>
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product4.jpg" alt="White Top">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product4-effect.jpg" alt="White Top">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('White Top', 100)">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">White Top</p>
+                        <p>Price - $100</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- category section  -->
+
+        <section class="categories">
+            <div class="category" data-aos="zoom-in" data-aos-delay="200">
+                <div class="cat-img">
+                    <img src="./images/category1.webp" alt="category">
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Night Suits</p>
+                </div>
+            </div>  
+
+            <div class="category" data-aos="zoom-in" data-aos-delay="200">
+                <div class="cat-img">
+                    <img src="./images/category2.webp" alt="category">
+                </div>
+
+                <div class="product-details">
+                    <p class="product-name">Hand Bags</p>
+                </div>
+            </div>  
+
+            <div class="category" data-aos="zoom-in" data-aos-delay="200">
+                <div class="cat-img">
+                    <img src="./images/category3.webp" alt="category">
+                </div>
+                <div class="product-details">
+                    <p class="product-name">Funky Tops</p>
+                </div>
+            </div>  
+        </section>
+
+
+        <!-- products section 2 -->
+        <section class="products">
+            <h1 class="section-title">Most Bought Products Of The Month!</h1>
+            <div class="products-list">
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product5.jpg" alt="Black Top">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product5-effect.jpg" alt="Black Top">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Black Top', 100)">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">Black Top</p>
+                        <p>Price - $100</p> 
+                    </div>
+                </div>
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product6.jpg" alt="Red Top">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product6-effect.jpg" alt="Red Top">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Red Top', 399)">Add To Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">Red Top</p>
+                        <p>Price - $100</p> 
+                    </div>
+
+                </div>
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product7.jpg" alt="Cyan Top">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product7-effect.jpg" alt="Cyan Top">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Cyan Top', 399)">Add To Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-details">
+                        <p class="product-name">Cyan Top</p>
+                        <p>Price - $199</p> 
+                    </div>
+                </div>
+
+                <div class="product" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="product-image">
+                        <div class="main-image">
+                            <img src="./images/product8.jpg" alt="Jeans">
+                        </div>
+                        <div class="effect-image">
+                            <img src="./images/product8-effect.jpg" alt="Jeans">
+                        </div>
+                        <div class="overlay-image">
+                            <!-- <button class="btn btn-white">
+                                Add To Wishlist
+                            </button> -->
+                            <button class="btn btn-white add-to-cart" onclick="addToCart('Jeans', 399)">Add To Cart</button>
+                            
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <p class="product-name">Jeans</p>
+                        <p>Price - $399</p> 
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- shop from insta section  -->
+
+        <section class="insta">
+            <h1 class="section-title">Shop From The Gram</h1>
+
+            <div class="posts">
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta1.webp" alt="insta">
+                </div>
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta2.webp" alt="insta">
+                </div>
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta3.webp" alt="insta">
+                </div>
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta4.webp" alt="insta">
+                </div>
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta5.webp" alt="insta">
+                </div>
+                <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-brands fa-instagram"></i>
+                    <img src="./images/insta6.webp" alt="insta">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer section  -->
+
+        <footer class="footer">
+
+            <div class="footer-section">
+
+                <h1>Contact Us</h1>
+                <ul class="footer-list">
+                    <li>trendtrove1004@gmail.com</li>
+                    <li>
+                        2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
+                    </li>
+                    <li>+91 xxxxxx2020</li>
+
+                    <li class="border-list">
+                    </li>
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"><i class="fa-brands fa-linkedin"></i> </a>
+                        <a href="https://github.com/Tejashri-Taral"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08 "> <i class="fa-brands fa-x-twitter"></i></a>
+                        <i class="fa-brands fa-instagram"></i>
                     </li>
                 </ul>
             </div>
-        </nav>
+
+            <div class="footer-section">
+                <h1>Quick Links</h1>
+                <ul class="footer-list">
+                    <li>About Us</li>
+                    <li>Terms & Conditions</li>
+                    <li>Return Policy</li>
+                    <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce">Star Us</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h1>Subscribe to Newsletter</h1>
+                <ul class="footer-list">
+                    <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
+                    <li class="sub">
+                        <input type="text">
+                        <button class="btn">Subscribe</button>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         
-       
-
-        <nav class="utils">
-            <ul class="nav-links">
-                <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </li>
-                <li class="nav-link">
-                    <a href="login-sginup.html">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Search Bar -->
-    <div id="search-bar">
-        <input type="text" id="search" placeholder="Search..." />
-        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
-    </div>
-    <style>
-    /* Style for the search bar, initially hidden */
-    #search-bar {
-        display: none;
-        position: absolute;
-        top: 60px; /* Adjust this to position the search bar just below the icon */
-        right: 20px; /* Align with the icon */
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Styling the input box and button */
-    #search-bar input {
-        padding: 5px;
-        width: 200px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        outline: none;
-    }
-
-    #search-bar button {
-        padding: 5px 10px;
-        background-color:black;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-    #search-bar button:hover {
-        background-color:black;
-    }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        // Get the search icon and search bar elements
-        const searchIcon = document.getElementById("search-icon"); 
-        const searchBar = document.getElementById("search-bar");
-
-        // Toggle the visibility of the search bar when the icon is clicked
-        searchIcon.onclick = function() {
-            if (searchBar.style.display === "none" || searchBar.style.display === "") {
-                searchBar.style.display = "block";  // Show the search bar
-                searchBar.querySelector('input').focus(); // Automatically focus on the input field
-            } else {
-                searchBar.style.display = "none";  // Hide the search bar
+        <script>
+            // Initialize AOS
+            AOS.init();
+            let headerVisible = false;
+        
+            document.getElementById("menu").addEventListener("click", function() {
+                if (headerVisible === false) {
+                    document.getElementById("header").style.height = "270px";
+                    headerVisible = true;
+                } else {
+                    document.getElementById("header").style.height = "50px";
+                    headerVisible = false;
+                }
+            });
+        
+            function performSearch() {
+                const query = document.getElementById('search-bar').value;
+                if (query) {
+                    window.location.href = `search.html?query=${query}`;
+                } else {
+                    alert("Please enter a search term");
+                }
             }
-        }
-
-        // Search button functionality
-        const searchBtn = document.getElementById("search-btn");
-        searchBtn.onclick = function() {
-            var query = document.getElementById('search').value;
-            if(query) {
-                console.log("Search query:", query);
-                // Implement your search logic here, such as a redirect or an API call
-                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
-
-                // Hide the search bar after clicking "Go"
-                searchBar.style.display = "none";
-            } else {
-                console.log("No search query entered");
+        
+            document.addEventListener("DOMContentLoaded", () => {
+                loadCartItems();
+                document.getElementById("clear-cart").addEventListener("click", clearCart);
+            });
+        
+            // Function to add items to the cart
+            function addToCart(name, price) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let existingItem = cart.find(item => item.name === name);
+        
+                // If item already exists, increase quantity, otherwise add new item
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ name, price, quantity: 1 });
+                }
+        
+                localStorage.setItem("cart", JSON.stringify(cart));
+                displayCart(); // Refresh cart display
+                showNotification(`${name} has been added to your cart!`); // Show notification
             }
-        }
-    });
-</script>
- <!-- banner area  -->
-    <section class="banner">
-
-        <div class="slide">
-
-            <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
-                <p>
-                    At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
-                </p>
-                <button class="btn">
-                    Explore More
-                </button>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- featured section  -->
-
-    <section class="featured">
-        <div class="featured-box-1">
-            <div class="overlay">
-                <button class="btn btn-white">
-                    Shop Clothing
-                </button>
-            </div>
-            <div class="bg-image">
-                <img src="./images//shop-clothing.webp" alt="product">
-            </div>
-        </div>
-
-        <div class="featured-box-2">
-            <div class="featured-box-2-box-1">
-                <div class="overlay">
-                    <a href="./products/sunglasses.html" class="btn btn-white">
-                        Shop Sunglasses
-                    </a>
-                </div>
-                <div class="bg-image">
-                    <img src="./images/shop-glasses.webp" alt="product">
-                </div>
-            </div>
-            <div class="featured-box-2-box-2">
-                <div class="overlay">
-                    <a href="./products/bags.html" class="btn btn-white">
-                        Shop Bags
-                    </a>
-                </div>
-                <div class="bg-image">
-                    <img src="./images/shop-bags.webp" alt="product">
-                </div>
-            </div>
-
-            <div class="featured-box-2-box-3">
-                <div class="overlay">
-                    <a href="./products/sandals.html" class="btn btn-white">
-                        Shop Sandals
-                    </a>
-                </div>
-                <div class="bg-image">
-                    <img src="./images/shop-sandals.webp" alt="product">
-                </div>
-            </div>
-        </div>
-
-        <div class="featured-box-3">
-            <div class="overlay">
-                <a href="sneaker.html" class="btn btn-white">
-                    Shop Sneakers
-                </a>
+        
+            // Function to show notification
+            function showNotification(message) {
+                const notification = document.getElementById("notification");
+                notification.textContent = message;
+                notification.classList.remove("hidden");
+                notification.classList.add("show");
+        
+                // Hide notification after 3 seconds
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                    notification.classList.add("hidden");
+                }, 3000);
+            }
+        
+            // Function to display the cart items on the cart page
+            function displayCart() {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let cartContainer = document.getElementById("cart-items");
                 
-            </div>
-            <div class="bg-image">
-                <img src="./images/shop-sneakers.webp" alt="product">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- products section  -->
-
-    <section class="products">
-        <h1 class="section-title">Top Products Of The Season!</h1>
-
-        <div class="products-list">
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-                <div class="product-image">
-                    <div class="main-image">
-                        <img src="./images/product1-effect.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product1.webp" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Black Striped Top</p>
-                    <p class="product-price">- $199</p> 
-                </div>
-
-            </div>
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-
-                    <div class="main-image">
-                        <img src="./images/product2.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product2-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-
-
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Black Top</p>
-                    <p class="product-price">- $99</p> 
-                </div>
-
-            </div>
-
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-
-                    <div class="main-image">
-                        <img src="./images/product3-effect.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product3.webp" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-
-
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Olive Green Top</p>
-                    <p class="product-price">- $100</p> 
-                </div>
-
-            </div>
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-
-                    <div class="main-image">
-                        <img src="./images/product4.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product4-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-
-
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">White Top</p>
-                    <p class="product-price">- $100</p> 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- category section  -->
-
-    <section class="categories">
-
-        <div class="category" data-aos="zoom-in" data-aos-delay="200">
-
-            <div class="cat-img">
-                <img src="./images/category1.webp" alt="category">
-            </div>
-
-            <div class="product-details">
-                <p class="product-name">Night Suits</p>
-            </div>
-
-        </div>
-
-        <div class="category" data-aos="zoom-in" data-aos-delay="200">
-
-            <div class="cat-img">
-                <img src="./images/category2.webp" alt="category">
-            </div>
-
-            <div class="product-details">
-                <p class="product-name">Hand Bags</p>
-            </div>
-        </div>
-
-        <div class="category" data-aos="zoom-in" data-aos-delay="200">
-            <div class="cat-img">
-                <img src="./images/category3.webp" alt="category">
-            </div>
-            <div class="product-details">
-                <p class="product-name">Funky Tops</p>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- products section 2 -->
-    <section class="products">
-        <h1 class="section-title">Most Bought Products Of The Month!</h1>
-
-        <div class="products-list">
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-
-                    <div class="main-image">
-                        <img src="./images/product5.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product5-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Black Top</p>
-                    <p class="product-price">- $100</p> 
-                </div>
-            </div>
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-
-                    <div class="main-image">
-                        <img src="./images/product6.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product6-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Red Top</p>
-                    <p class="product-price">- $100</p> 
-                </div>
-
-            </div>
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-                    <div class="main-image">
-                        <img src="./images/product7.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product7-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-                </div>
-
-                <div class="product-details">
-                    <p class="product-name">Light Teal Top</p>
-                    <p class="product-price">- $199</p> 
-                </div>
-            </div>
-
-            <div class="product" data-aos="fade-up" data-aos-delay="200">
-
-                <div class="product-image">
-                    <div class="main-image">
-                        <img src="./images/product8.jpg" alt="product">
-                    </div>
-                    <div class="effect-image">
-                        <img src="./images/product8-effect.jpg" alt="product">
-                    </div>
-                    <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
-                            &#10084;
-                        </button>
-                    </div>
-                </div>
-                <div class="product-details">
-                    <p class="product-name">Black Top</p>
-                    <p class="product-price">- $399</p> 
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- shop from insta section  -->
-
-    <section class="insta">
-        <h1 class="section-title">Shop From The Gram</h1>
-
-        <div class="posts">
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta1.webp" alt="insta">
-            </div>
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta2.webp" alt="insta">
-            </div>
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta3.webp" alt="insta">
-            </div>
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta4.webp" alt="insta">
-            </div>
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta5.webp" alt="insta">
-            </div>
-            <div class="post-image" data-aos="zoom-in" data-aos-delay="200">
-                <i class="fa-brands fa-instagram"></i>
-                <img src="./images/insta6.webp" alt="insta">
-            </div>
-        </div>
-        <div class="feedback-container">
+                // Clear previous items
+                cartContainer.innerHTML = "";
         
-            <h2>Have a feedback? &nbsp;&nbsp;<a href="feedback.html" target="_blank">Click here to provide feedback</a></h2>
-        </div>
-    </section>
-    
-    
-    <!-- footer section  -->
-    <footer class="footer">
-
-        <div class="footer-section">
-
-            <h1>Contact Us</h1>
-            <ul class="footer-list">
-                <li>trendtrove1004@gmail.com</li>
-                <li>
-                    2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
-                </li>
-                <li>+91 xxxxxx2020</li>
-
-                <li class="border-list">
-                </li>
-                <li class="socials">
-                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h1>Quick Links</h1>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="faq.html">FAQ's</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h1>Subscribe to Newsletter</h1>
-            <ul class="footer-list">
-                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
-                <li>Join our fashion community today!</li>
-                <li class="sub">
-                    <input type="email" placeholder="Enter your email here">
-                    <button class="btn">Subscribe</button>
-                </li>
-            </ul>
-        </div>
-       
-              
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                    return;
+                }
         
-
-    </footer>
-    <div class="footer-copyright">
-        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!-- ProgressBar Functionality -->
-    <script>
-        window.onscroll = function () {
-            updateProgressBar();
-        };
-        function updateProgressBar() {
-            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById("progress-bar").style.width = scrollPercent + "%";
-        }
-
-    </script>
-    <!-- ProgressBar Functionality Ends-->
-    <script>
-        AOS.init();
-        let headerVisible = false;
-        document.getElementById("menu").addEventListener("click", function () {
-
-            if (headerVisible === false) {
-                document.getElementById("header").style.height = "280px";
-                headerVisible = true;
+                let total = 0;
+                
+                cart.forEach(item => {
+                    let itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+        
+                    cartContainer.innerHTML += `
+                        <div class="cart-item">
+                            <p>${item.name} - $${item.price} x ${item.quantity} = $${itemTotal}</p>
+                            <button onclick="removeFromCart('${item.name}')">Remove</button>
+                        </div>
+                    `;
+                });
+        
+                cartContainer.innerHTML += `<h3>Total: $${total}</h3>`;
             }
-            else {
-                document.getElementById("header").style.height = "50px";
-                headerVisible = false;
+        
+            // Function to remove an item from the cart
+            function removeFromCart(name) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart = cart.filter(item => item.name !== name); // Filter out the item to remove
+                localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+                displayCart(); // Refresh cart display
+                showNotification(`${name} has been removed from your cart!`); // Show notification for removal
             }
-
-        })
-    </script>
-<script>
-    gsap.from("#header", {
-        duration: 1.5,
-        y: -100,
-        opacity: 0,
-        ease: "power4.out",
-        stagger: 1,
-    });
-
-    gsap.from(".nav-link", {
-        duration: 1,
-        opacity: 0,
-        y: 20,
-        delay: 0.5,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("h1", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 0.7,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("p", {
-        duration: 1.5,
-        opacity: 0,
-        y: 30,
-        delay: 0.9,
-        stagger: 0.3,
-        ease: "power2.out"
-    });
-
-    gsap.from(".btn", {
-        duration: 1,
-        scale: 0.8,
-        opacity: 0,
-        delay: 1.2,
-        ease: "back.out(1.7)",
-        stagger: 0.2
-    });
-
-    gsap.from("img", {
-        duration: 1.5,
-        opacity: 0,
-        scale: 0.9,
-        delay: 1.5,
-        stagger: 0.3,
-        ease: "elastic.out(1, 0.3)"
-    });
-
-    gsap.from(".overlay", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 1.7,
-        stagger: 0.3,
-        ease: "power3.out"
-    });
-
-    gsap.from(".footer-section", {
-        scrollTrigger: ".footer",
-        duration: 1.5,
-        opacity: 0,
-        y: 50,
-        ease: "power2.out",
-        stagger: 0.3,
-    });
-
-    
-    gsap.from(".socials i", {
-        scrollTrigger: ".footer",
-        duration: 1,
-        opacity: 0,
-        scale: 0.5,
-        ease: "bounce.out",
-        stagger: 0.2,
-        delay: 0.5
-    });
-</script>
-
-<script>const tabs = document.querySelectorAll('.tab');
-    const cursor = document.getElementById('cursor');
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', () => {
-            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
-            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
-            cursor.style.opacity = 1; 
-        });
-    
-        tab.addEventListener('mouseleave', () => {
-            cursor.style.opacity = 0; 
+        
+            // Call displayCart when the cart page is loaded
+            if (window.location.pathname.includes("cart.html")) {
+                window.onload = displayCart; // Display cart items when the page loads
+            }
+            document.querySelectorAll('.dropdown-parent').forEach(item => {
+                item.addEventListener('click', function() {
+                let dropdownContent = this.nextElementSibling;
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
         });
     });
-    
-  </script>
-  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
 
-  (function() {
-      let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById("header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
-
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
-          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
-
-  })();  // IIFE to avoid polluting global scope
-</script>
-
-</body>
-
-</html>
+        </script>
+    </body>
+    </html>
+ 
