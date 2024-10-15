@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
     <title>TrendTrove - Ecommerce</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
@@ -15,7 +16,19 @@
 </head>
 
 <body>
-    
+     <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
     <!-- ProgressBar -->
     <div id="progress-bar"></div>
     <!-- ProgressBar Ends -->
@@ -83,6 +96,7 @@
         <input type="text" id="search" placeholder="Search..." />
         <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
     </div>
+    <script src="preloader.js"></script>
     <style>
     /* Style for the search bar, initially hidden */
     #search-bar {
@@ -203,7 +217,7 @@
                 </button>
             </div>
             <div class="bg-image">
-                <img src="./images//shop-clothing.webp" alt="product">
+                <img src="./images/youngcouple1.jpg" alt="product">
             </div>
         </div>
 
@@ -265,13 +279,13 @@
             <div class="product" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-image">
                     <div class="main-image">
-                        <img src="./images/product1-effect.jpg" alt="product">
+                        <img src="./images/blackstrippedmaneffectimage.jpg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product1.webp" alt="product">
+                        <img src="./images/blackstrippedmannormal.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -279,7 +293,7 @@
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">Black Striped Top</p>
+                    <p class="product-name">Black Striped Shirt</p>
                     <p class="product-price">- $199</p> 
                 </div>
 
@@ -296,7 +310,7 @@
                         <img src="./images/product2-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -323,7 +337,7 @@
                         <img src="./images/product3.webp" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -343,13 +357,13 @@
                 <div class="product-image">
 
                     <div class="main-image">
-                        <img src="./images/product4.jpg" alt="product">
+                        <img src="./images/whitetshirtmen.jpeg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product4-effect.jpg" alt="product">
+                        <img src="./images/whitetshirtmeneffect.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -358,7 +372,7 @@
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">White Top</p>
+                    <p class="product-name">White T-shirt</p>
                     <p class="product-price">- $100</p> 
                 </div>
             </div>
@@ -420,7 +434,7 @@
                         <img src="./images/product5-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -443,7 +457,7 @@
                         <img src="./images/product6-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -460,20 +474,20 @@
 
                 <div class="product-image">
                     <div class="main-image">
-                        <img src="./images/product7.jpg" alt="product">
+                        <img src="./images/tealimageshirtmen.jpeg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product7-effect.jpg" alt="product">
+                        <img src="./images/tealshirtmeneffect.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">Light Teal Top</p>
+                    <p class="product-name">Light Teal Shirt</p>
                     <p class="product-price">- $199</p> 
                 </div>
             </div>
@@ -488,7 +502,7 @@
                         <img src="./images/product8-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
