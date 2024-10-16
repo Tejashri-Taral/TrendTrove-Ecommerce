@@ -4,28 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove - Ecommerce</title>
-    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+   
 
-</head>
+        .testimonal__card {
+            padding: 10px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    height:fit-content;
+    align-content: center;
+    align-items: center;
+}
+
+.testimonal__card:hover {
+    transform: translateY(-10px);
+    background-color: #c5bebd;
+}
+
+
+
+/* Testimonial Title */
+.testimonal__title {  
+    font-size: 1.2rem; 
+    margin-top: 1rem;
+}
+
+/* Testimonial Description */
+.testimonal__description {
+   
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+}
+
+
+.testimonal__swiper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Cards Wrapper */
+.cards {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.my2{
+background-color: black;
+color: white;
+padding:5px 0px ;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+      </style>
+      
+      
+      
 </head>
 <body>
-       <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
-        </div>
-    </div>
-</div>
     <!-- header section  -->
     <header class="header" id="header">
           <div class="logo">
@@ -35,24 +79,24 @@
 
         <nav class="navigation">
             <div class="pro-tabs-container">
-                <ul id="pro-tabs" class="nav-links" >
-                    <li class="nav-link border">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="nav-link border">
-                        <a href="#Topwear">Topwear</a>
-                    </li>
-                    <li class="nav-link border">
-                        <a href="#Bottomwear">Bottomwear</a>
-                    </li>
-                    <li class="nav-link border">
-                        <a href="#Footwear">Footwear</a>
-                    </li>
-                    <li class="nav-link border" style="margin-left: 15px;">
-                        <a href="contact.html">Contact Us</a>
-                    </li> 
-                </ul>
-        </div>
+                    <ul id="pro-tabs" class="nav-links" >
+                        <li class="nav-link border">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="nav-link border">
+                            <a href="#Topwear">Topwear</a>
+                        </li>
+                        <li class="nav-link border">
+                            <a href="#Bottomwear">Bottomwear</a>
+                        </li>
+                        <li class="nav-link border">
+                            <a href="#Footwear">Footwear</a>
+                        </li>
+                        <li class="nav-link border" style="margin-left: 15px;">
+                            <a href="contact.html">Contact Us</a>
+                        </li> 
+                    </ul>
+            </div>
         </nav>
 
         <nav class="utils">
@@ -74,62 +118,96 @@
      <main>
         <div class="container">
             <div class="slider">
-                <a href="#Bottomwear"><img src="https://i.pinimg.com/originals/02/cf/cf/02cfcffac595c832c514d58704cd82ce.jpg" alt="" height="450px" width="100%vw"></a>      
+                <a href="#Bottomwear"><img src="https://i.pinimg.com/originals/02/cf/cf/02cfcffac595c832c514d58704cd82ce.jpg" alt="" height="500px" width="100%vw"></a>      
             </div>
             <h2 class="my2" id="Topwear">Topwear</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/715-Z-aOIhL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Over-sized T-shirt For Women</p>
-                        <p class="mytext">Price - $39 </p>
-                        <!-- <p class="mytext">Rating : 4.3</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                
+               
+
+                <div class="testimonal__swiper">
+                <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/715-Z-aOIhL._AC_UL480_FMwebp_QL65_.jpg"
+                              alt="" style="
+                              width: 280px;
+                                height: 345px;
+                                object-fit: cover;padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">    Over-sized T-shirt For Women
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $39
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
+                      
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/71zm9RNobYL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Long Sleeve Tunic Tops</p>
-                        <p class="mytext">Price - $49 </p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+
+                
+                <div class="testimonal__swiper">
+                  <!-- 2 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/71zm9RNobYL._AC_UL480_FMwebp_QL65_.jpg"
+                             alt="" style=" width: 280px;
+                             height: 345px;
+                             object-fit: cover;
+                             padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Long Sleeve Tunic Tops
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                    
+
                 <div class="card-items">
                     <img src="https://m.media-amazon.com/images/I/71FnJpw5J2L._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
                     <div class="lines">
@@ -150,571 +228,840 @@
                                 </div>
                                 <div class="link-box">
                                     <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                    <button class="copy-btn">copy</button>
+                                    <button class="copy-btn">copy</button
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
-                   
+
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/91nDqBfjwVL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Printed Straight Cotton Short Kurti</p>
-                        <p class="mytext">Price - $30</p>
-                        <!-- <p class="mytext">Rating : 3.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 4 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="https://m.media-amazon.com/images/I/91nDqBfjwVL._AC_UL480_FMwebp_QL65_.jpg"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 345px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Printed Straight Cotton Short Kurti
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $30
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61moraRbZ-L._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Layered Warm Wearable Flannel Shawl/</p>
-                        <p class="mytext">Price - $45</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+              <div class="testimonal__swiper">
+                    <!--5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="https://m.media-amazon.com/images/I/61moraRbZ-L._AC_UL480_FMwebp_QL65_.jpg"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Layered Warm Wearable Flannel Shawl
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $45
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                      </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/71Wtnv4mdnL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Women's Stylish Jacket</p>
-                        <p class="mytext">Price - $50</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+            
+                <div class="testimonal__swiper">
+                    <!-- 6 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/71Wtnv4mdnL._AC_UL480_FMwebp_QL65_.jpg"
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 345px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Women's Stylish Jacket
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $50
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61tP-UVED7L._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Oversized T-Shirts For Women </p>
-                        <p class="mytext">Price - $20</p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61tP-UVED7L._AC_UL480_FMwebp_QL65_.jpg"
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Oversized T-Shirts For Women
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61qn7raFTLL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Hooded Neck Hoodie for Women's</p>
-                        <p class="mytext">Price - $67</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+               
+                <div class="testimonal__swiper">
+                    <!-- 8 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61qn7raFTLL._AC_UL480_FMwebp_QL65_.jpg"
+                            alt=""style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Hooded Neck Hoodie for Women's
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $67
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/womens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
+              
+                
                 
             </div>
             <h2 class="my2" id="Bottomwear">Bottomwear</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61zfyvFSuBL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Dhoti Patiyala Salwar Harem Bottoms Pants</p>
-                        <p class="mytext">Price - $49</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61zfyvFSuBL._AC_UL480_FMwebp_QL65_.jpg" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Dhoti Patiyala Salwar Harem Bottoms Pants
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61AO6cCgxGL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Women's Cargo Pants Cotton</p>
-                        <p class="mytext">Price - $19</p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61AO6cCgxGL._AC_UL480_FMwebp_QL65_.jpg" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Women's Cargo Pants Cotton
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/415l2ki6nYL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Flared Solid Sharara for Women</p>
-                        <p class="mytext">Price - $20</p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+        
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/415l2ki6nYL._AC_UL480_FMwebp_QL65_.jpg"alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Flared Solid Sharara for Women
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/61fC6cqMyUL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Baggy Jeans for Women</p>
-                        <p class="mytext">Price - $25</p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/71H1e+gUMcL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Cotton Loose-fit Jeans For Women
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/71H1e+gUMcL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Cotton Loose-fit Jeans For Women</p>
-                        <p class="mytext">Price - $20</p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/71S2xGsSyiL._AC_UL480_FMwebp_QL65_.jpg" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Slant Pocket Wide Leg Shorts
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/71S2xGsSyiL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Slant Pocket Wide Leg Shorts</p>
-                        <p class="mytext">Price - $29</p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+               
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/31qvw8EzT2L._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Track pant for Women's
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $15
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/31qvw8EzT2L._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Track pant for Women's</p>
-                        <p class="mytext">Price - $15</p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/617l9J0WJtL._AC_UL480_FMwebp_QL65_.jpg"alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Regular Loose Fit Pyjama
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $10
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://m.media-amazon.com/images/I/617l9J0WJtL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Regular Loose Fit Pyjama</p>
-                        <p class="mytext">Price - $10</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/51ONEZ3ak4L._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Women's GRECIILOOKS Regular Loose Fit
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $36
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-            </div>
+            </div>   
+                
             <h2 class="my2" id="Footwear">Footwear</h2>
             <div class="cards">
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/31L8RnJ4lqL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Cross Flate women's Sandals</p>
-                        <p class="mytext">Price - $19</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 1-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/31L8RnJ4lqL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Cross Flate women's Sandals
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/61mNJeBVnhL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Block Heel Sandal with Ankle Strap</p>
-                        <p class="mytext">Price - $12</p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61mNJeBVnhL._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Block Heel Sandal with Ankle Strap
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $12
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/718UkcvvjgL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Women's Comfortable Slipper Sandals</p>
-                        <p class="mytext">Price - $49</p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/718UkcvvjgL._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Women's Comfortable Slipper Sandals
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/61OELNIRrpL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Sandel's for Women</p>
-                        <p class="mytext">Price - $23</p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61OELNIRrpL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Sandel's for Women
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $23
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/51iRi4BawTL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Liberty Women Mico-3E Casual Shoes</p>
-                        <p class="mytext">Price - $29</p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/51iRi4BawTL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Liberty Women Mico-3E Casual Shoes
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/61bXbbznchL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Women's Cut Slider Sleeper</p>
-                        <p class="mytext">Price - $34</p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/61bXbbznchL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Women's Cut Slider Slipper
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $30
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/71y9khd5IQL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Sports shoe for Womenens</p>
-                        <p class="mytext">Price - $31</p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/71y9khd5IQL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Sports shoe for Women's
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $3                         </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
                     </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://m.media-amazon.com/images/I/516RsrlYhOL._AC_UL480_FMwebp_QL65_.jpg" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Casual Canvas Lace Up Sneakers Shoes</p>
-                        <p class="mytext">Price - $10</p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://m.media-amazon.com/images/I/516RsrlYhOL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 330px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Casual Canvas Lace Up Sneakers Shoes
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $10                         </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
                     </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </main> 
     <br>
-    <footer class="footer">
+    <footer class="footer" style="margin-top: -2%;">
 
         <div class="footer-section">
 
@@ -749,7 +1096,7 @@
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -782,7 +1129,7 @@
                     <img src="images\confirmation.png" alt="" height="100px" >
                     <h2>Subscription Successful!</h2>
                     <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
+                    <p> You will receive notifications via email.</p>
                 </div>
                 <div class="social">
                     <li class="socials">
@@ -802,7 +1149,6 @@
                 </div>
             </div>
         </div>
-        <script src="preloader.js"></script>
         
     
     <script>
@@ -871,7 +1217,7 @@ function isValidEmail(email) {
 
     })();  // IIFE to avoid polluting global scope
 
-    // Select all share buttons and share option containers
+// Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
 const shareOptions = document.querySelectorAll('.share-options');
 
@@ -913,7 +1259,7 @@ saveButtons.forEach((saveBtn) => {
 });
 
 
-</script>
 
+</script>    
 </body>
 </html>
