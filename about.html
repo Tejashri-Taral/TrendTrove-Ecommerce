@@ -441,6 +441,7 @@
             >
           </li>
           <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToTop()">Go To Top</a></li>
         </ul>
       </div>
 
@@ -512,6 +513,15 @@
       </div>
     </div>
     <script src="preloader.js"></script>
+
+    <script>
+      function scrollToTop() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth' // This makes the scroll smooth
+          });
+      }
+  </script>
 
     <script>
       const goTopBtn = document.querySelector(".gotopbtn");

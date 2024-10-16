@@ -1103,7 +1103,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-
+                <li><a href="javascript:void(0);" onclick="scrollToTop()">Go To Top</a></li>
             </ul>
         </div>
 
@@ -1261,9 +1261,14 @@ saveButtons.forEach((saveBtn) => {
         saveBtn.classList.toggle('active'); // Toggle the active class
     });
 });
-
-
-
-</script>    
+</script>  
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // This makes the scroll smooth
+        });
+    }
+</script>  
 </body>
 </html>
