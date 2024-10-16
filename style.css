@@ -1260,11 +1260,12 @@ main {
   border: 2px solid black !important;
   border-radius: 999px;
   background-color: white;
-  padding: 0;
+  padding: 0 0.2rem;
 }
 
 .tab {
   position: relative;
+  margin: 0.2rem 0.4rem;
 }
 
 .tab a {
