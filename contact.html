@@ -27,7 +27,9 @@
         </div>
     </div>
 </div>
+
     <header class="header" id="header">
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
           <div class="logo">
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
@@ -162,6 +164,7 @@
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="javascript:void(0);" onclick="scrollToTop()">Go To Top</a></li>
             </ul>
         </div>
 
@@ -177,7 +180,25 @@
         </div>
     </footer>
     <script src="preloader.js"></script>
+    <script>
+        const goTopBtn = document.querySelector(".gotopbtn");
+      window.addEventListener("scroll", function () {
+          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+              goTopBtn.style.display = "block";
+          } else {
+              goTopBtn.style.display = "none";
+          }
+      });
+    </script>
 
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // This makes the scroll smooth
+        });
+    }
+</script>
     
 </body>
 
