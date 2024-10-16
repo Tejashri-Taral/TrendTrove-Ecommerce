@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove - Ecommerce</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
@@ -20,7 +21,9 @@
     width: 300px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-    height:450px;
+    height:fit-content;
+    align-content: center;
+    align-items: center;
 }
 
 .testimonal__card:hover {
@@ -51,8 +54,8 @@
 
 /* Cards Wrapper */
 .cards {
-    flex: 1;
-    display: flex;
+   margin:  10px 0;
+    
     justify-content: center;
     padding: 1rem;
 }
@@ -62,13 +65,35 @@ color: white;
 padding:5px 0px ;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.button-container {
+    justify-content: center;
+}
+.button-container:hover{
+    background-color: #333;
+    color: #fff; 
+    border-color: #fff; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ }
       </style>
       
+ 
       
-      
-</head>
 </head>
 <body>
+       <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
     <!-- header section  -->
     <header class="header" id="header">
           <div class="logo">
@@ -130,7 +155,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/71kE75JMKjL._AC_UL320_.jpg"
+                            src="https://m.media-amazon.com/images/I/71kE75JMKjL._AC_UL320_.jpg" height="307"
                               alt="Lymio Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt (Rib-Shirt)" style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Casual Shirt for Men
@@ -139,9 +164,28 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $24
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
+                      
                 </div>
 
 
@@ -160,9 +204,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $28
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
   
                    
@@ -170,10 +232,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <!-- 3 -->
                     <div class="cards">
                         <article class="testimonal__card">
-                            <img src="https://m.media-amazon.com/images/I/71-FPuU6pCL._AC_UL480_FMwebp_QL65_.jpg"
-                             alt="" style="padding: 5px; 
-                                width: 280px;
-                                height: 345px;
+                            <img src="https://m.media-amazon.com/images/I/71-FPuU6pCL._AC_UL480_FMwebp_QL65_.jpg" height="329"
+                             alt="" style="padding: 5px;
                                 object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
                               ">
                             <h2 class="testimonal__title"
@@ -183,19 +243,35 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $79
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 
                 <div class="testimonal__swiper">
                     <!-- 4 -->
                     <div class="cards">
                         <article class="testimonal__card">
-                            <img src="https://m.media-amazon.com/images/I/41j1CuQl0HL._AC_UL480_FMwebp_QL65_.jpg" 
-                            alt="" style="padding: 5px;
-                             width: 280px;
-                             height: 345px;">
+                            <img src="https://m.media-amazon.com/images/I/41j1CuQl0HL._AC_UL480_FMwebp_QL65_.jpg" height="329"
+                            alt="" style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Imsa Moda Hoodies 
                                 </h2>
@@ -203,19 +279,35 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
               <div class="testimonal__swiper">
                     <!--5-->
                     <div class="cards">
                         <article class="testimonal__card">
-                            <img src="https://m.media-amazon.com/images/I/61hMZIrJCTL._AC_UL480_FMwebp_QL65_.jpg" 
-                            alt="" style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            <img src="https://m.media-amazon.com/images/I/61hMZIrJCTL._AC_UL480_FMwebp_QL65_.jpg" height="345"
+                            alt="" style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Baggy/Oversized Tshirt
                                 </h2>
@@ -223,9 +315,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                       </article>
-                      <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
             
                 <div class="testimonal__swiper">
@@ -244,9 +354,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $25
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 
@@ -255,10 +383,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/81tuSndPd1L._AC_UL480_FMwebp_QL65_.jpg"
-                             alt="" style="padding: 5px;
-                              width: 280px;
-                              height: 330px;">
+                            src="https://m.media-amazon.com/images/I/81tuSndPd1L._AC_UL480_FMwebp_QL65_.jpg" height="324"
+                             alt="" style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Dragon Oversized<br> T-Shirts 
                                 </h2>
@@ -266,9 +392,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $21
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                
                 <div class="testimonal__swiper">
@@ -276,10 +420,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/61qn7raFTLL._AC_UL480_FMwebp_QL65_.jpg" 
-                            alt=""style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/61qn7raFTLL._AC_UL480_FMwebp_QL65_.jpg" height="346"
+                            alt=""style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Hooded Neck Hoodie-Men's
                                 </h2>
@@ -287,9 +429,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $17
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
               
                 
@@ -303,10 +463,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/51rgGjt-lnL._AC_UL480_FMwebp_QL65_.jpg" alt=""
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/51rgGjt-lnL._AC_UL480_FMwebp_QL65_.jpg" height="307" alt=""
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Track Pant for Men Loose Fit
                                 </h2>
@@ -314,9 +472,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $19
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -335,9 +511,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $23
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
         
@@ -357,9 +551,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 
                 <div class="testimonal__swiper">
@@ -367,10 +579,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/41HZqCh5ECL._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/41HZqCh5ECL._AC_UL480_FMwebp_QL65_.jpg" height="329"  alt="" 
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Men Shorts Casual
                                 </h2>
@@ -378,9 +588,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $10
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -388,10 +616,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/71eAQSyLL6L._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/71eAQSyLL6L._AC_UL480_FMwebp_QL65_.jpg" height="307"  alt="" 
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Cotton Loose-fit Pyjama For Men
                                 </h2>
@@ -399,9 +625,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $26
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                
                 <div class="testimonal__swiper">
@@ -420,9 +664,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $36
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 <div class="testimonal__swiper">
                     <!-- 7-->
@@ -440,19 +702,35 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $35
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 <div class="testimonal__swiper">
                     <!-- 8-->
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/51ONEZ3ak4L._AC_UL480_FMwebp_QL65_.jpg" alt="" 
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/51ONEZ3ak4L._AC_UL480_FMwebp_QL65_.jpg" height="308" alt="" 
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">GRECIILOOKS Regular Loose Fit
                                 </h2>
@@ -460,9 +738,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $36
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
             </div>   
                 
@@ -473,10 +769,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/613jrRXRhKL._AC_UL480_FMwebp_QL65_.jpg" alt="" 
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/613jrRXRhKL._AC_UL480_FMwebp_QL65_.jpg" height="352" alt="" 
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Red Tape Men's Sandals
                                 </h2>
@@ -484,9 +778,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $16
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -505,9 +817,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $23
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 
                 <div class="testimonal__swiper">
@@ -526,9 +856,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $35
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 <div class="testimonal__swiper">
                     <!-- 4-->
@@ -546,19 +894,35 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $99
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
                 <div class="testimonal__swiper">
                     <!-- 5-->
                     <div class="cards">
                         <article class="testimonal__card">
                             <img
-                            src="https://m.media-amazon.com/images/I/91k53U2E+BL._AC_UL480_FMwebp_QL65_.jpg"  alt="" 
-                            style="padding: 5px;
-                             width: 280px;
-                             height: 330px;">
+                            src="https://m.media-amazon.com/images/I/91k53U2E+BL._AC_UL480_FMwebp_QL65_.jpg" height="309"  alt="" 
+                            style="padding: 5px;">
                             <h2 class="testimonal__title"
                                 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">FLITE Men's Fl0330g Slippers
                                 </h2>
@@ -566,9 +930,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $16
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -587,9 +969,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
                             </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -607,9 +1007,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $66                            </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
 
                 <div class="testimonal__swiper">
@@ -627,9 +1045,27 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $27                         </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
                         </article>
-                        <button class="add-to-cart-btn">Add to Cart</button>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -684,15 +1120,85 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                 <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
                 <li>Join our fashion community today!</li>
                 <li class="sub">
-                    <input type="email" placeholder="Enter your email here">
-                    <button class="btn">Subscribe</button>
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
                 </li>
             </ul>
         </div>
+
     </footer>
-    <div class="footer-copyright">
-        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+        </div>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <script src="preloader.js"></script>
+        
+    
+    <script>
+        let openbtn = document.getElementById('open-btn');
+let modalbox = document.getElementById('modalbox');
+let closebtn = document.getElementById('close-btn');
+let emailInput = document.getElementById('email-input');
+
+// Email validation function
+function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    openbtn.addEventListener('click', function () {
+        // Validate email
+        if (emailInput.value === '') {
+            alert('Please enter your email address.');
+        } else if (!isValidEmail(emailInput.value)) {
+            alert('Please enter a valid email address.');
+        } else {
+            modalbox.style.display = 'block'; // Show the modal
+        }
+    });
+
+    closebtn.addEventListener('click', function () {
+        modalbox.style.display = 'none'; // Hide the modal
+    });
+     // Close modal when clicking outside of it
+     modalbox.addEventListener('click', function(event) {
+        if (event.target === modalbox) {
+            modalbox.style.display = 'none'; // Hide modal if the background is clicked
+        }
+    });
+
+    </script>
+    
+
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -721,30 +1227,50 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         });
 
     })();  // IIFE to avoid polluting global scope
-</script>
-<style>
-    .add-to-cart-btn {
-        background-color: black;
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        margin-left: auto; /* Remove this */
-        margin-right: auto; /* Remove this */
-        display: block; /* This makes sure the button is treated as a block element */
-        width: 100%; /* Optional: Set full width */
-        max-width: 150px; /* Adjust the width of the button */
-        text-align: center;
-    }
-    
-    .add-to-cart-btn:hover {
-        background-color: #333;
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    </style>
-    
+
+// Select all share buttons and share option containers
+const shareButtons = document.querySelectorAll('.share-icon');
+const shareOptions = document.querySelectorAll('.share-options');
+
+// Loop through each share button and attach event listener
+shareButtons.forEach((shareBtn, index) => {
+    shareBtn.addEventListener('click', () => {
+        console.log(`Share button ${index + 1} clicked`);
+        shareOptions[index].classList.toggle('active');
+    });
+});
+
+
+const copyBtns = document.querySelectorAll('.copy-btn'); // Get all copy buttons
+const linkTexts = document.querySelectorAll('.link'); // Get all link texts
+
+// Loop through each copy button
+copyBtns.forEach((copyBtn, index) => {
+    copyBtn.addEventListener('click', () => {
+        const textToCopy = linkTexts[index].innerText; // Get the text to copy for the current button
+
+        // Use the Clipboard API to copy the text
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                alert('Link copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+    });
+});
+    // Select all save buttons
+const saveButtons = document.querySelectorAll('.save-icon');
+
+// Loop through each save button and attach event listener
+saveButtons.forEach((saveBtn) => {
+    saveBtn.addEventListener('click', () => {
+        saveBtn.classList.toggle('active'); // Toggle the active class
+    });
+});
+
+
+
+</script>    
 </body>
 </html>
