@@ -612,8 +612,13 @@
     </footer>
         
         <div class="footer-copyright">
-            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+            <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
         </div>
+        
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear;
+        </script>
         
         <div class="modal-box" id="modalbox" style="display: none;">
             <div class="modal" id="modal">
