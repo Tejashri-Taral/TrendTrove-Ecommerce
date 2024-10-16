@@ -40,6 +40,62 @@ html{
     scroll-behavior: smooth;
 }
 
+.modal-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it appears on top */
+}
+.modal {
+    height: 460px;
+    width: 370px;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    animation-name: animatemodal;
+    animation-duration: .5s;
+    box-shadow: 8px 8px 25px black;
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 15px 20px;
+}
+.modal-content p{
+    align-self: center;
+}
+#close-btn {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+@keyframes animatemodal {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
 
 /* header css  */
 
@@ -160,10 +216,10 @@ html{
 .slide {
     width: 100%;
     height: 100%;
-    background-image: url('./images/h1-slide-show-1_1_1.webp');
+    background-image: url('./images/Mainpagebanner.jpg');
     background-size: cover;
     display: flex;
-    align-items: center;
+    align-items: right;
     padding-left: 20%;
 }
 
@@ -197,6 +253,136 @@ html{
     color: black;
     transform: scale(1.1);
 }
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  
+  .add-to-cart:hover ,.share-icon:hover,.save-icon:hover{
+    background-color: #333;
+  }
+  
+  /* Save Icon */
+  .save-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .save-icon.active{
+    color: rgb(240, 56, 56);
+  }
+  
+  /* Share Icon */
+  .share-icon {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 9.2px;
+    cursor: pointer;
+    font-size: 16px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+  }
+/* Initially hidden */
+.share-options {
+    position: absolute;
+    top: 55%;
+    left:70%;
+    width: 110px;
+    height: 145px;
+    transform-origin: bottom left;
+    background: rgba(15, 15, 15, 0.5);
+    color: white;
+    padding: 15px;
+    font-family: 'roboto';
+    transition: .5s ease-in-out;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    opacity: 0; /* Hide it initially */
+    pointer-events: none; /* Disable interaction when invisible */
+    visibility: hidden; /* Hide from view */
+    transform: scale(0); /* Optionally scale down for effect */
+}
+
+/* When active (visible) */
+.share-options.active {
+    opacity: 1; /* Show it */
+    pointer-events: auto; /* Enable interaction */
+    visibility: visible; /* Make it visible */
+    transform: scale(1); /* Restore size */
+    transition-delay: 0s; /* No delay on activation */
+}
+
+
+/*adding quick share socials */
+    .whatsapp-icon,.facebook-icon ,.instagram-icon,.twitter-icon{
+    font-size: 22px;
+    cursor: pointer;
+    margin:1px 5px;
+    border-radius: 40px;
+  }
+  .whatsapp-icon:hover {
+    color: #128C7E;
+  }
+  .facebook-icon:hover {
+    color: #365899;
+  }
+  .instagram-icon:hover {
+    color: #e1306c;
+  }
+  /* Container for the link and copy button */
+.link-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 10px 0;
+  }
+  /* Link text styling */
+  .link {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  /* Copy button styling */
+  .copy-btn {
+    background-color: #bfc0c1;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .copy-btn:hover {
+    background-color: #4f4f50;
+  }
+
 
 /* featured section css  */
 
@@ -411,6 +597,21 @@ html{
     padding: 1.5px;
     background: transparent;
     border: none;
+}
+
+.heartbtn {
+    background-color: white;
+    border: 1px solid white;
+    color: #1d1d1d;
+    box-shadow: 0 0 3px lightgray;
+    z-index: 20;
+    transition: 0.3s ease;
+}
+
+.heartbtn:hover {
+    background-color: black;
+    color: rgb(255, 84, 84);
+    transform: scale(1.1);
 }
 
 .product-details
@@ -812,8 +1013,9 @@ input {
 
 /* Contact Section Styles */
 .contact-section {
-    max-width: 700px;
-    margin: 50px auto;
+    max-width: 1700px;
+    margin: 100px;
+    gap: 50px;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -1249,17 +1451,25 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap:23px;
     margin-bottom: 40px;
+    margin-top: 50px;
+
+}
+ul{
+    list-style-type: none;
 }
 
+
 .contact-info-box {
+    margin-top: 200px;
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);    border-radius: 8px;
     width: 30%;
     padding: 20px;
     margin: 10px;
     text-align: center;
+    border-radius: 18px;
     transition: box-shadow 0.3s ease;
 }
 
@@ -1288,14 +1498,18 @@ body {
 
 /* Google Maps Embed */
 .contact-map {
-    width: 100%;
-    max-width: 700px;
+    width: 50%;
+    height: 400px;
     margin: 0 auto;
+    position: relative;
 }
 
 .contact-map iframe {
-    width: 100%;
-    height: 350px;
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    width: 900px;
+    height: 550px;
     border: none;
     border-radius: 8px;
 }
@@ -1311,8 +1525,8 @@ body {
 
 .contact-form {
     background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    border-radius: 18px;
     width: 45%;
     padding: 30px;
     margin: 10px;
@@ -1385,7 +1599,7 @@ body {
 }
 
 ul {
-    list-style-type: square; /* Remove default bullet points */
+    list-style-type: none; /* Remove default bullet points */
     padding: 0;
     margin: 0;
 }
