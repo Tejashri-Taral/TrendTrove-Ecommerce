@@ -719,12 +719,13 @@ html{
 
 .footer {
     width: 100%;
-    padding: 30px 20%;
+    padding: 30px 10%;
     background-color: #f6f5fa;
     font-family: 'futura';
     display: flex;
     justify-content: space-between;
     color: #1d1d1d;
+    gap:2rem;
 }
 
 .footer-section {
@@ -847,7 +848,7 @@ input {
         /* background-color: red; */
         flex-direction: column;
         display: block;
-        overflow-y: hidden;
+        overflow: hidden;
         transition: .3s;
         position: fixed;
         z-index: 150;
@@ -879,9 +880,9 @@ input {
         margin-top: 20px;
     }
 
-    .utils {
+    /* .utils {
         width: 70%;
-    }
+    } */
 
     .navigation>.nav-links {
         flex-direction: column;
@@ -904,10 +905,10 @@ input {
         cursor: pointer;
     }
 
-    .utils {
+    /* .utils {
         width: 100%;
         justify-content: space-evenly;
-    }
+    } */
 
     .banner {
         height: 250px;
@@ -1291,6 +1292,7 @@ main{
     position: relative;
     display: flex;
     list-style-type: none;
+    align-items:center;
     border: 2px solid black !important;
     border-radius: 999px;
     background-color: white;
