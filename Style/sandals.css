@@ -49,6 +49,8 @@ h1 {
 .sandal-image img {
     width: 100%;
     height: auto;
+    aspect-ratio: 2.5/3;
+    object-fit: cover;
     display: block;
     border-bottom: 1px solid #e0e0e0;
 }

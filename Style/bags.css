@@ -43,8 +43,10 @@ h1 {
 
 /* Bag Image */
 .bag-image img {
-    width: 100%;
+    width:100%;
     height: auto;
+    aspect-ratio: 2.5/3;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
