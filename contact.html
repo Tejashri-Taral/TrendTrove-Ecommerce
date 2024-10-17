@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TrendTrove</title>
     <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./Style/contact.css">
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
 <body>
        <!-- preloader -->
-        <div id="preloader">
-            <div class="wrapper">
-                <div class="box-wrap">
-                    <div class="box one"></div>
-                    <div class="box two"></div>
-                    <div class="box three"></div>
-                    <div class="box four"></div>
-                    <div class="box five"></div>
-                    <div class="box six"></div>
-                </div>
-            </div>
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
         </div>
+    </div>
+</div>
     <header class="header" id="header">
-      <div class="logo">
-        <a href="index.html"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
-        <i class="fa-solid fa-bars menu" id="menu"></i>
-      </div>
+          <div class="logo">
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
 
         
         <nav class="bg-neutral-100 py-20">
@@ -81,125 +81,102 @@
         </nav>
     </header>
 
-    <section class="contact-section">
-        <div class="container">
-          <h1>Contact Us</h1>
-          <p>Get in Touch</p>
+    <div class="contact-section">
+        <h2><b><u>Contact Us</u></b></h2>
+        <p>Get in Touch</p>
     
-          <!-- Contact Form -->
-          <div class="contact-form">
-            <h2>Send Us a Message</h2>
-            <p>Having any questions or feedback? We'd love to hear from you! Feel free to reach us using the form below.</p>
-            <form aria-label="Contact Form">
-              <input type="text" placeholder="Your Name" aria-label="Your Name" required>
-              <input type="email" placeholder="Your Email" aria-label="Your Email" required>
-              <input type="text" placeholder="Subject" aria-label="Subject" required>
-              <textarea placeholder="Message" aria-label="Message" required></textarea>
-              <button type="submit" aria-label="Send Message">Send Message</button>
-            </form>
-          </div>
-    
-          <!-- Google Map -->
-          <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6348502482235!2d106.67822641533455!3d10.76262299233947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef4d8e3d37b%3A0x18b3d8033c7347a2!2sBen%20Thanh%20Market!5e0!3m2!1sen!2s!4v1610013777980!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-    
-          <!-- Contact Info Cards -->
-          <div class="contact-info">
-            <div class="info-card">
-              <span class="icon">&#x1F4CD;</span>
-              <h3>Address</h3>
-              <p>Head Office: 123 TrendTrove Blvd, Fashion City, USA</p>
-              <p>Branch Office: Bandra West, Mumbai, India</p>
-              <p>Development Center: Pune, India</p>
+        <div class="contact-form-container">
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <p>Having any questions or feedback? We'd love to hear from you!<br>
+                    Feel free to reach us using the form below.
+                </p>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Message" required></textarea>
+                <button class="btn-submit">Send Message</button>
             </div>
-    
-            <div class="info-card">
-              <span class="icon">&#x260E;</span>
-              <h3>Call Us</h3>
-              <p>+1234567890</p>
-              <p>+91 9876543211</p>
-            </div>
-    
-            <div class="info-card">
-              <span class="icon">&#x2709;</span>
-              <h3>Email Us</h3>
-              <p>support@trendtrove.com</p>
-              <p>trendtrove1004@gmail.com</p>
-            </div>
-          </div>
+
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
         </div>
-        
-    </section>
+        </div>
+        <div class="contact-info-container">
+            <div class="contact-info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <ul>
+                    <li><span>Head Office: 123 TrendTrove Blvd, Fashion City, USA</span></li><br>
+                    <li><span>Branch Office:2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</span></li><br>
+                    <li><span>Development Center: 789 E-Commerce Hub, Pune, MH 411001.</span></li>
+                </ul>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+1234567890<br>+91 9876543211<br>+91 9876543212</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <ul>
+                    <li><span>support@trendtrove.com</span></li><br>
+                    <li><span>trendtrove1004@gmail<br>.com</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-column">
-            <h3>Contact Us</h3>
-            <p>trendtrove1004@gmail.com</p>
-            <p>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</p>
-            <p>+91 xxxxxx2020</p>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-x-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Return Policy</a></li>
-              <li><a href="#">Star Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+
+        <div class="footer-section">
+            <h1>Contact Us</h1>
+            <ul class="footer-list">
+                <li><a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a></li>
+                <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
+                <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
+                <li class="border-list"></li>
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github"target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter"target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram" id="instagram"target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
             </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Subscribe to Newsletter</h3>
-            <p>Get the latest updates and offers.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-          </div>
+        </div>
+
+        <div class="footer-section">
+            <h1>Quick Links</h1>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="return-policy.html">Return Policy</a></li>
+                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Subscribe to Newsletter</h1>
+            <ul class="footer-list">
+                <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
+                <li class="sub">
+                    <input type="text" placeholder="Enter your email">
+                    <button class="btn">Subscribe</button>
+                </li>
+            </ul>
         </div>
     </footer>
-    
     <script src="preloader.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const form = document.querySelector("form");
-            const nameInput = form.querySelector('input[placeholder="Your Name"]');
-            const emailInput = form.querySelector('input[placeholder="Your Email"]');
-            const subjectInput = form.querySelector('input[placeholder="Subject"]');
-            const messageInput = form.querySelector('textarea[placeholder="Message"]');
-        
-            form.addEventListener("submit", function (event) {
-            event.preventDefault(); 
-        
-            if (validateForm()) {
-                alert("Message sent successfully!");
-                form.reset();
-            } else {
-                alert("Please fill in all fields before submitting.");
-            }
-            });
-        
-            function validateForm() {
-            if (
-                nameInput.value.trim() === "" ||
-                emailInput.value.trim() === "" ||
-                subjectInput.value.trim() === "" ||
-                messageInput.value.trim() === ""
-            ) {
-                return false;
-            }
-            return true;
-            }
-        });
-    </script>
 
     
 </body>
