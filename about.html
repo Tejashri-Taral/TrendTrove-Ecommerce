@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - TrendTrove</title>
@@ -11,103 +11,503 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <style>
-        /* General Styles */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
+      /* General Styles */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
 
-        body {
-            background-color: #f7f7f7;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
 
-        h1, h2 {
-            color: #333;
-        }
+      h1,
+      h2 {
+        color: #333;
+      }
 
-        /* About Us Section */
+      /* About Us Section */
+      .leftabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .leftabout h3 {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .leftabout p {
+        text-align: center;
+      }
+
+      .about-section {
+        width: 100%;
+        padding: 40px 0;
+        background: #ffffff;
+      }
+
+      .about-title {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      /* Second part content css */
+      #div2 {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 7px;
+      }
+
+      #div3 {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 7px;
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+
+      /* First part: Image left, text right */
+      .about-content-first {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        gap: 30px;
+      }
+
+      .about-text {
+        flex: 1;
+        font-size: 2em;
+        line-height: 1.8;
+        margin-right: 20px;
+      }
+
+      .rightabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      .about-images img {
+        width: 500px;
+        height: 520px;
+        border-radius: 5%;
+        aspect-ratio: 3/2;
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+
+      .about3 {
+        margin-right: 50px;
+      }
+
+      .about4 {
+        margin-top: 50px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+
+      .aboutus-body {
+        font-size: 21px;
+      }
+
+      .slogan {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      /* Second part: Image right, text left */
+      .about-content-second {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 30px;
+      }
+
+      .about-container {
+        padding: 0 40px;
+      }
+
+      /* Footer Section */
+      .footer {
+        background-color: #bec1c55c;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer-section {
+        margin-bottom: 20px;
+      }
+
+      .footer h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-list li {
+        margin-bottom: 10px;
+      }
+
+      .footer-list a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .socials a {
+        margin-right: 10px;
+        color: #333;
+      }
+
+      .sub input {
+        padding: 10px;
+        margin-right: 10px;
+        width: 70%;
+      }
+
+      .sub .btn {
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .sub .btn:hover {
+        background-color: #555;
+      }
+
+      /* Adding media Queries */
+      @media (min-width: 1980px) {
         .leftabout {
-            margin-left: 50px;
-            margin-right: 50px;
+          margin-left: 250px;
+          margin-right: 250px;
         }
 
-        .leftabout h3 {
-            justify-content: center;
-            text-align: center;
+        .about3 {
+          margin-right: 230px;
+        }
+
+        .about4 {
+          margin-left: 180px;
+        }
+
+        .rightabout {
+          margin-left: 250px;
+          margin-right: 250px;
+        }
+
+        .aboutus-body {
+          font-size: 25px;
+        }
+
+        #div2 {
+          font-size: 27px;
+        }
+
+        #div3 {
+          font-size: 23px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        h3 {
+          font-size: 20px;
         }
 
         .leftabout p {
-            text-align: center;
+          font-size: 15px;
         }
 
-        .about-section {
-            width: 100%;
-            padding: 40px 0;
-            background: #ffffff;
+        .rightabout p {
+          font-size: 15px;
         }
 
-        .about-title {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 35px;
+        #div2 {
+          font-size: 16px;
         }
 
-        /* Circle Styles for Trail Effect */
-        .circle {
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            background-color: black;
-            position: fixed;
-            pointer-events: none;
-            z-index: 99999999;
-            mix-blend-mode: difference;
+        #div3 {
+          font-size: 16px;
+        }
+
+        .about-images img {
+          width: 300px;
+          height: 320px;
+          border-radius: 5%;
+          aspect-ratio: 3/2;
+          opacity: 90%;
+          box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+        }
+      }
+            .circle {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%; /* Correct border-radius for perfect circles */
+          background-color: black;
+          position: fixed;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          z-index: 99999999; /* To stay on top */
+          mix-blend-mode: difference; /* Allows color blending based on background */
         }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="wrapper">
+        <div class="box-wrap">
+          <div class="box one"></div>
+          <div class="box two"></div>
+          <div class="box three"></div>
+          <div class="box four"></div>
+          <div class="box five"></div>
+          <div class="box six"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Header Section -->
     <header class="header" id="header">
-        <div class="logo">
-            <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
+      <div class="logo">
+        <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
+        <i class="fa-solid fa-bars menu" id="menu"></i>
+      </div>
+
+      <nav class="bg-neutral-100 py-20">
+        <div class="tabs-container">
+          <ul id="tabs" class="tabs">
+            <li class="tab">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="tab">
+              <a href="about.html">About</a>
+            </li>
+            <li class="tab">
+              <a href="features.html">Features</a>
+            </li>
+            <li class="dropdown tab">
+              <a class="dropdown-parent">Products</a>
+              <ul class="dropdown-content">
+                <li><a href="mens.html">Men</a></li>
+                <li><a href="womens.html">Women</a></li>
+              </ul>
+            </li>
+            <li class="tab" style="margin-left: 15px">
+              <a href="contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <nav class="bg-neutral-100 py-20">
-            <div class="tabs-container">
-                <ul id="tabs" class="tabs">
-                    <li class="tab"><a href="index.html">Home</a></li>
-                    <li class="tab"><a href="about.html">About</a></li>
-                    <li class="tab"><a href="features.html">Features</a></li>
-                    <li class="dropdown tab">
-                        <a class="dropdown-parent">Products</a>
-                        <ul class="dropdown-content">
-                            <li><a href="mens.html">Men</a></li>
-                            <li><a href="womens.html">Women</a></li>
-                        </ul>
-                    </li>
-                    <li class="tab" style="margin-left: 15px"><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
+      </nav>
+
+      <nav class="utils">
+        <ul class="nav-links">
+          <li class="nav-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-user"></i>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- About Us Section -->
     <section class="about-section">
-        <h2 class="about-title">About Us</h2>
-        <div class="about-container">
-            <!-- First part: Image left, text right -->
-            <div class="about-content-first" data-aos="fade-up">
-                <div class="about-text leftabout">
-                    <p>
-                        Welcome to TrendTrove, where style meets affordability. We aim to provide the latest in fashion trends at prices that won't break the bank. From chic to casual, our diverse range of products ensures that everyone can find something they love.
-                    </p>
-                </div>
-                <div class="about-images about3">
-                    <img src="images/about-img.jpg"
+      <h2 class="about-title">About Us</h2>
+
+      <div class="about-container">
+        <!-- First part: Image left, text right -->
+        <div class="about-content-first" data-aos="fade-up">
+          <div class="about-text leftabout">
+            <p>
+              Welcome to TrendTrove, where style meets affordability. We aim to
+              provide the latest in fashion trends at prices that won't break the
+              bank. From chic to casual, our diverse range of products ensures that
+              everyone can find something they love.
+            </p>
+          </div>
+
+          <div class="about-images about3">
+            <img src="images/about-img.jpg" alt="About TrendTrove" />
+          </div>
+        </div>
+
+        <!-- Second part: Image right, text left -->
+        <div class="about-content-second" data-aos="fade-up">
+          <div class="about-images about4">
+            <img src="images/about-img-2.jpg" alt="TrendTrove Collection" />
+          </div>
+
+          <div class="about-text rightabout">
+            <p>
+              Our mission is to make fashion accessible to everyone. We believe in
+              empowering individuals to express their unique style through our
+              curated selection of clothing, accessories, and more.
+            </p>
+          </div>
+        </div>
+
+        <!-- Slogan or additional content -->
+        <div class="slogan" id="div2">
+          "Discover Your Style with TrendTrove!"
+        </div>
+        <div class="aboutus-body" id="div3">
+          Whether you're looking for something bold or subtle, we’ve got you
+          covered. Join us on a fashion journey and redefine your wardrobe today!
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-section socials">
+        <h1>Follow Us</h1>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+
+      <div class="footer-section links">
+        <ul class="footer-list">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section sub">
+        <h1>Subscribe</h1>
+        <input type="email" placeholder="Enter your email..." />
+        <button class="btn">Submit</button>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      let openbtn = document.getElementById("open-btn");
+      let modalbox = document.getElementById("modalbox");
+      let closebtn = document.getElementById("close-btn");
+      let emailInput = document.getElementById("email-input");
+
+      // Email validation function
+      function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+      }
+
+      openbtn.addEventListener("click", function () {
+        // Validate email
+        if (emailInput.value === "") {
+          alert("Please enter your email address.");
+        } else if (!isValidEmail(emailInput.value)) {
+          alert("Please enter a valid email address.");
+        } else {
+          modalbox.style.display = "block"; // Show the modal
+        }
+      });
+
+      closebtn.addEventListener("click", function () {
+        modalbox.style.display = "none"; // Hide the modal
+      });
+      // Close modal when clicking outside of it
+      modalbox.addEventListener("click", function (event) {
+        if (event.target === modalbox) {
+          modalbox.style.display = "none"; // Hide modal if the background is clicked
+        }
+      });
+      
+    </script>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+   
+   <script>
+      const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+
+  const colors = [
+   "#f5fffa", "#ced6d2", "#a8afac", "#848987", "#626563", "#414342", "#232424", "#000000"
+
+  ];
+
+  circles.forEach(function (circle, index) {
+    circle.x = 0;
+    circle.y = 0;
+    circle.style.backgroundColor = colors[index % colors.length];
+  });
+
+  window.addEventListener("mousemove", function(e) {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+  });
+
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
+
+    circles.forEach(function (circle, index) {
+      circle.style.left = x - 12 + "px";
+      circle.style.top = y - 12 + "px";
+      circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+      
+      circle.x = x;
+      circle.y = y;
+
+      const nextCircle = circles[index + 1] || circles[0];
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
+    });
+
+    requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+    </script>
+
+</body>
+</html>
