@@ -63,6 +63,7 @@
                             </li>
                             <li><a href="womens.html">Women</a></li>
                             <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -212,7 +213,7 @@
     <section class="featured">
         <div class="featured-box-1">
             <div class="overlay">
-                <button class="btn btn-white">
+                <a href="./shopclothing.html" class="btn btn-white">
                     Shop Clothing
                 </button>
             </div>
@@ -612,8 +613,13 @@
     </footer>
         
         <div class="footer-copyright">
-            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+            <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
         </div>
+        
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear;
+        </script>
         
         <div class="modal-box" id="modalbox" style="display: none;">
             <div class="modal" id="modal">
