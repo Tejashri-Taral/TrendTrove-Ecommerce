@@ -9,74 +9,52 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
 <body>
-       <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
         </div>
     </div>
-</div>
+
     <header class="header" id="header">
-          <div class="logo">
-            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
+        <div class="logo">
+            <a href="/"> 
+                <img src="images/logo.png" alt="TrendTrove Logo"> 
+            </a>
+            <i class="fa-solid fa-bars menu" id="menu" aria-label="Toggle Menu"></i>
         </div>
 
-        
-        <nav class="bg-neutral-100 py-20">
-            <div class="tabs-container">
-                <ul id="tabs" class="tabs">
-                    <li class="tab">
-                        <a href="index.html">Home</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="about.html">About</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="features.html">Features</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="dropdown tab">
-                        <a class="dropdown-parent">Products</a>
-                        <div class="cursor"></div>
-                        <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Men</a>
-                            </li>
-                            <li><a href="womens.html">Women</a></li>
-                        </ul>
-                    </li>
-                    <li class="tab" style="margin-left: 15px;">
-                        <a href="contact.html">Contact Us</a>
-                        <div class="cursor"></div>
-                    </li>
-                </ul>
-            </div>
+        <nav>
+            <ul id="tabs" class="tabs">
+                <li class="tab"><a href="index.html">Home</a></li>
+                <li class="tab"><a href="about.html">About</a></li>
+                <li class="tab"><a href="features.html">Features</a></li>
+                <li class="dropdown tab">
+                    <a class="dropdown-parent">Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="mens.html">Men</a></li>
+                        <li><a href="womens.html">Women</a></li>
+                    </ul>
+                </li>
+                <li class="tab"><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
 
         <nav class="utils">
             <ul class="nav-links">
-                <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-user"></i>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </li>
+                <li class="nav-link"><i class="fa-solid fa-cart-shopping" aria-label="Shopping Cart"></i></li>
+                <li class="nav-link"><i class="fa-solid fa-user" aria-label="User Profile"></i></li>
+                <li class="nav-link"><i class="fa-solid fa-magnifying-glass" aria-label="Search"></i></li>
             </ul>
         </nav>
     </header>
@@ -91,45 +69,49 @@
                 <p>Having any questions or feedback? We'd love to hear from you!<br>
                     Feel free to reach us using the form below.
                 </p>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Message" required></textarea>
-                <button class="btn-submit">Send Message</button>
+                <form action="/submit" method="POST" onsubmit="return validateForm()">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
+                    <textarea placeholder="Message" name="message" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
             </div>
 
-        <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
-        </div>
+
         <div class="contact-info-container">
             <div class="contact-info-box">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Address</h3>
                 <ul>
-                    <li><span>Head Office: 123 TrendTrove Blvd, Fashion City, USA</span></li><br>
-                    <li><span>Branch Office:2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</span></li><br>
+                    <li><span>Head Office: 123 TrendTrove Blvd, Fashion City, USA</span></li>
+                    <li><span>Branch Office: 2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</span></li>
                     <li><span>Development Center: 789 E-Commerce Hub, Pune, MH 411001.</span></li>
                 </ul>
             </div>
+
             <div class="contact-info-box">
                 <i class="fas fa-phone"></i>
                 <h3>Call Us</h3>
                 <p>+1234567890<br>+91 9876543211<br>+91 9876543212</p>
             </div>
+
             <div class="contact-info-box">
                 <i class="fas fa-envelope"></i>
                 <h3>Email Us</h3>
                 <ul>
-                    <li><span>support@trendtrove.com</span></li><br>
-                    <li><span>trendtrove1004@gmail<br>.com</span></li>
+                    <li><span>support@trendtrove.com</span></li>
+                    <li><span>trendtrove1004@gmail.com</span></li> <!-- Fixed email formatting -->
                 </ul>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-
         <div class="footer-section">
             <h1>Contact Us</h1>
             <ul class="footer-list">
@@ -138,18 +120,10 @@
                 <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
                 <li class="border-list"></li>
                 <li class="socials">
-                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/Tejashri-Taral" id="github"target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter"target="_blank">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/your_instagram" id="instagram"target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Tejashri-Taral" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/your_instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </li>
             </ul>
         </div>
@@ -168,17 +142,30 @@
         <div class="footer-section">
             <h1>Subscribe to Newsletter</h1>
             <ul class="footer-list">
-                <li>Maxime quae inventore sunt odio perspiciatis vitae saepe officia dolorem.</li>
+                <li>Stay updated with our latest trends and offers.</li>
                 <li class="sub">
-                    <input type="text" placeholder="Enter your email">
+                    <input type="email" placeholder="Enter your email" aria-label="Email Address">
                     <button class="btn">Subscribe</button>
                 </li>
             </ul>
         </div>
     </footer>
-    <script src="preloader.js"></script>
 
-    
+    <script src="preloader.js"></script>
+    <script>
+        function validateForm() {
+            // Simple form validation before submission
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const subject = document.querySelector('input[name="subject"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+            if (!name || !email || !subject || !message) {
+                alert("Please fill all the fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>
