@@ -29,7 +29,7 @@
   background: black;
   bottom: 40px;
   right: 50px;
-  text-decoration: none;
+  text-decoration: none; 
   text-align: center;
   line-height: 50px;
   color: white;
@@ -704,14 +704,25 @@ html {
 }
 
 .footer {
-  width: 100%;
+
+    width: 100%;
+    padding: 30px 10%;
+    background-color: #f6f5fa;
+    font-family: 'futura';
+    display: flex;
+    justify-content: space-between;
+    color: #1d1d1d;
+    gap:2rem;
+
+  
   margin-top: 60px;
-  padding: 30px 20%;
-  background-color: #f6f5fa;
-  font-family: "futura";
-  display: flex;
-  justify-content: space-between;
-  color: #1d1d1d;
+
+  
+  
+
+  
+
+
 }
 
 .footer-section {
@@ -835,6 +846,81 @@ input {
     /* align-items: flex-start; */
   }
 
+
+@media (max-width:560px) {
+    .header {
+
+        height: 50px;
+        /* background-color: red; */
+        flex-direction: column;
+        display: block;
+        overflow: hidden;
+        transition: .3s;
+        position: fixed;
+        z-index: 150;
+        top: 0;
+        background-color: white;
+        /* align-items: flex-start; */
+
+    }
+
+    .logo {
+        height: 50px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: yellow; */
+    }
+
+
+
+
+
+    .menu {
+        display: block;
+    }
+
+    .navigation {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    /* .utils {
+        width: 70%;
+    } */
+
+    .navigation>.nav-links {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+        height: auto;
+    }
+
+    .nav-links>.nav-link {
+        padding: 3px;
+    }
+
+    .nav-links>.nav-link:hover {
+        background: rgb(215, 214, 214);
+        padding: 3px;
+        border-radius: 10px;
+    }
+
+    .nav-link:hover {
+        cursor: pointer;
+    }
+
+    /* .utils {
+        width: 100%;
+        justify-content: space-evenly;
+    } */
+
+    .banner {
+        height: 250px;
+        margin-top: 50px;
+    }
+
   .logo {
     height: 50px;
     width: 100%;
@@ -842,6 +928,7 @@ input {
     align-items: center;
     /* background-color: yellow; */
   }
+
 
   .menu {
     display: block;
@@ -1254,13 +1341,24 @@ main {
 }
 
 .tabs {
-  position: relative;
-  display: flex;
-  list-style-type: none;
-  border: 2px solid black !important;
-  border-radius: 999px;
-  background-color: white;
-  padding: 0;
+
+    position: relative;
+    display: flex;
+    list-style-type: none;
+
+    border: 2px solid black !important;
+    border-radius: 999px;
+    background-color: white;
+    padding: 0;
+
+
+
+
+
+
+
+
+
 }
 
 .tab {
@@ -1568,3 +1666,4 @@ ul {
   padding: 0;
   margin: 0;
 }
+  

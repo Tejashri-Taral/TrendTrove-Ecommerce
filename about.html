@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - TrendTrove</title>
-    <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="preloaderStyle.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    />
     <!-- Link to your common CSS file -->
     <style>
       /* General Styles */
@@ -25,8 +34,8 @@
         background-color: #f7f7f7;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         min-height: 100vh;
+        max-width: 100vw;
       }
 
       h1,
@@ -229,8 +238,57 @@
           font-size: 23px;
         }
       }
+      .utils.active,
+      .navbar.active,
+      .nav-links.active{
+        display: block;
+      }
+      .nav-links.active .nav-link{
+        padding: 5px 2px;
+      }
+      .tabs.active {
+        display: block;
+        border:none !important;
+      }
+      #search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust this to position the search bar just below the icon */
+        right: 20px; /* Align with the icon */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
+      /* Styling the input box and button */
+      #search-bar input {
+        padding: 5px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+      }
+
+      #search-bar button {
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      #search-bar button:hover {
+        background-color: black;
+      }
       @media (max-width: 1200px) {
+        .bg-neutral-100 {
+          margin-top: 5px;
+        }
+        .tab a {
+          padding: 1rem 1rem;
+        }
         h3 {
           font-size: 20px;
         }
@@ -240,7 +298,8 @@
 
         .rightabout p {
           font-size: 15px;
-        } */
+        }
+        */
 
         /* sorry for using id and div2 div3 but something was 
             getting overwritten and this was easy way out */
@@ -260,23 +319,93 @@
           box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
         }
       }
+      @media (max-width: 770px) {
+        .about-content-first,
+        .about-content-second {
+          flex-direction: column;
+        }
+        .leftabout,
+        .rightabout {
+          margin: 0 10px;
+        }
+        .about-text,
+        .about3 {
+          margin-right: 0;
+        }
+        .about-images img {
+          width: 80vw;
+          aspect-ratio: 2/3;
+        }
+        .about4 {
+          margin: 0;
+        }
+        .menu {
+          display: block;
+        }
+        .tabs {
+          display: none;
+        }
+        .logo {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1rem;
+        }
+        .nav-links.active{
+          display: inline-flex;
+        }
+        .tabs.active {
+        display: block;
+        border:none !important;
+        position:absolute;
+        border-radius: 0;
+        left:0;
+        background-color: #fff;
+        width:100%;
+        top:70px;
+      }
+      }
+      @media (max-width: 560px) {
+        .header {
+          height: auto;
+          padding: 1rem 0px;
+        }
+        .logo {
+          padding: 1rem 1rem;
+        }
+        .utils.active,
+        .nav-links.active{
+          display: block;
+          position: absolute;
+          right:10%;
+        }
+        .navbar ,
+        .utils,
+        .nav-links,
+        .tabs {
+          display: none;
+        }
+        .about-section {
+          padding-top:5rem;
+        }
+      }
     </style>
   </head>
 
   <body>
-       <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="wrapper">
         <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
+          <div class="box one"></div>
+          <div class="box two"></div>
+          <div class="box three"></div>
+          <div class="box four"></div>
+          <div class="box five"></div>
+          <div class="box six"></div>
         </div>
+      </div>
     </div>
-</div>
     <!-- Header Section -->
     <header class="header" id="header">
       <div class="logo">
@@ -284,8 +413,8 @@
         <i class="fa-solid fa-bars menu" id="menu"></i>
       </div>
 
-      <nav class="bg-neutral-100 py-20">
-        <div class="tabs-container">
+      <nav class="bg-neutral-100 py-20 navbar" id="navbar">
+        <div class="tabs-container" id="tabs-container">
           <ul id="tabs" class="tabs">
             <li class="tab">
               <a href="index.html">Home</a>
@@ -307,7 +436,7 @@
                 <li><a href="womens.html">Women</a></li>
               </ul>
             </li>
-            <li class="tab" style="margin-left: 15px">
+            <li class="tab">
               <a href="contact.html">Contact Us</a>
               <div class="cursor"></div>
             </li>
@@ -315,8 +444,8 @@
         </div>
       </nav>
 
-      <nav class="utils">
-        <ul class="nav-links">
+      <nav class="utils" id="utils">
+        <ul class="nav-links" id="nav-links">
           <li class="nav-link">
             <i class="fa-solid fa-cart-shopping"></i>
           </li>
@@ -324,12 +453,16 @@
             <i class="fa-solid fa-user"></i>
           </li>
           <li class="nav-link">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
           </li>
         </ul>
       </nav>
     </header>
-
+    <div id="search-bar">
+      <input type="text" id="search" placeholder="Search..." />
+      <button type="submit" id="search-btn">Go</button>
+      <!-- Add ID to the button -->
+    </div>
     <!-- About Us Section -->
     <section class="about-section">
       <h2 class="about-title">About Us</h2>
@@ -407,19 +540,31 @@
           <li class="border-list"></li>
           <li class="socials">
             <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin"target="_blank"
+              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
+              id="linkedin"
+              target="_blank"
             >
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+            <a
+              href="https://github.com/Tejashri-Taral"
+              id="github"
+              target="_blank"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
             <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank"
+              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
+              id="twitter"
+              target="_blank"
             >
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+            <a
+              href="https://www.instagram.com/your_instagram"
+              id="instagram"
+              target="_blank"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
@@ -513,10 +658,64 @@
     <script src="preloader.js"></script>
 
     <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon");
+        const searchBar = document.getElementById("search-bar");
+
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function () {
+          if (
+            searchBar.style.display === "none" ||
+            searchBar.style.display === ""
+          ) {
+            searchBar.style.display = "block"; // Show the search bar
+            searchBar.querySelector("input").focus(); // Automatically focus on the input field
+          } else {
+            searchBar.style.display = "none"; // Hide the search bar
+          }
+        };
+
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function () {
+          var query = document.getElementById("search").value;
+          if (query) {
+            console.log("Search query:", query);
+            // Implement your search logic here, such as a redirect or an API call
+            // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+            // Hide the search bar after clicking "Go"
+            searchBar.style.display = "none";
+          } else {
+            console.log("No search query entered");
+          }
+        };
+      });
       let openbtn = document.getElementById("open-btn");
       let modalbox = document.getElementById("modalbox");
       let closebtn = document.getElementById("close-btn");
       let emailInput = document.getElementById("email-input");
+      let navbar = document.getElementById("navbar");
+      let tabs= document.getElementById("tabs");
+      let utils = document.getElementById("nav-links");
+      let headerVisible = false;
+      document.getElementById("menu").addEventListener("click", function () {
+        tabs.classList.toggle('active');
+        utils.classList.toggle('active');
+        navbar.classList.toggle('active')
+        utils.parentElement.classList.toggle('active')
+        if (headerVisible === false) {
+          document.getElementById("header").style.height = "350px";
+          headerVisible = true;
+          
+        } else {
+          document.getElementById("header").style.height = "80px";
+          headerVisible = false;
+          
+        }
+      });
+      
 
       // Email validation function
       function isValidEmail(email) {
