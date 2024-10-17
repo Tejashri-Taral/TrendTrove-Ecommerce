@@ -145,6 +145,23 @@ html {
 .border > a:hover {
   color: white !important;
 }
+/* General styles for navigation icons */
+.nav-link i {
+  font-size: 24px; /* Adjust the size of the icons */
+  color: #ffffff; /* Default color for icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect */
+.nav-link i:hover {
+  color: gray; /* Change to blue on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* Optional: If you want to add a hover effect to the anchor link */
+.nav-link a:hover i {
+  color: gray;
+}
 
 .navigation {
   width: 45%;
