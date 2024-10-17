@@ -42,7 +42,6 @@
 
     <!-- header section  -->
     <header class="header" id="header">
-
       <div class="logo">
         <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
         <i class="fa-solid fa-bars menu" id="menu"></i>
@@ -95,64 +94,6 @@
           </li>
         </ul>
       </nav>
-
-        <div class="logo">
-            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
-        </div>
-
-        <nav class="bg-neutral-100 py-20">
-            <div class="tabs-container">
-                <ul id="tabs" class="tabs">
-                    <li class="tab">
-                        <a href="index.html">Home</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="about.html">About</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="tab">
-                        <a href="features.html">Features</a>
-                        <div class="cursor"></div>
-                    </li>
-                    <li class="dropdown tab">
-                        <a class="dropdown-parent">Products</a>
-                        <div class="cursor"></div>
-                        <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Men</a>
-                            </li>
-                            <li><a href="womens.html">Women</a></li>
-                            <li><a href="child.html">Kid Section</a></li>
-                            <li><a href="accessories.html">Accessories</a></li>
-                        </ul>
-                    </li>
-                    <li class="tab" style="margin-left: 15px;">
-                        <a href="contact.html">Contact Us</a>
-                        <div class="cursor"></div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-       
-
-        <nav class="utils">
-            <ul class="nav-links">
-                <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </li>
-                <li class="nav-link">
-                    <a href="login-sginup.html">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                </li>
-                <li class="nav-link">
-                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                </li>
-            </ul>
-        </nav>
-
     </header>
     <!-- Search Bar -->
     <div id="search-bar">
@@ -670,7 +611,6 @@
       <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
     </div>
 
-
     <div class="modal-box" id="modalbox" style="display: none">
       <div class="modal" id="modal">
         <div id="close-btn">&times;</div>
@@ -679,45 +619,6 @@
           <h2>Subscription Successful!</h2>
           <p>Thank you for subscribing.</p>
           <p>You will receive notifications, updates via email.</p>
-
-    </footer>
-        
-        <div class="footer-copyright">
-            <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
-        </div>
-        
-        <script>
-            const currentYear = new Date().getFullYear();
-            document.getElementById('year').textContent = currentYear;
-        </script>
-        
-        <div class="modal-box" id="modalbox" style="display: none;">
-            <div class="modal" id="modal">
-                <div id="close-btn">&times;</div>
-                <div class="modal-content">
-                    <img src="images\confirmation.png" alt="" height="100px" >
-                    <h2>Subscription Successful!</h2>
-                    <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
-                </div>
-                <div class="social">
-                    <li class="socials">
-                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                </div>
-            </div>
-
         </div>
         <div class="social">
           <li class="socials">
@@ -808,19 +709,7 @@
       }
     </script>
     <!-- ProgressBar Functionality Ends-->
-    <script>
-      AOS.init();
-      let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
-        if (headerVisible === false) {
-          document.getElementById("header").style.height = "280px";
-          headerVisible = true;
-        } else {
-          document.getElementById("header").style.height = "50px";
-          headerVisible = false;
-        }
-      });
-    </script>
+
     <script>
       gsap.from("#header", {
         duration: 1.5,
@@ -950,9 +839,6 @@
       })(); // IIFE to avoid polluting global scope
     </script>
 
-
     <script src="./script/popup.js"></script>
   </body>
-
-
 </html>
