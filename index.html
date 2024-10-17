@@ -17,7 +17,13 @@
 
 <body>
      <!-- preloader -->
-  <div id="preloader">
+     <div id="preloader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <!-- Add more .circle elements as needed -->
+      </div>
+     <div id="preloader">
     <div class="wrapper">
         <div class="box-wrap">
             <div class="box one"></div>
@@ -132,6 +138,18 @@
     #search-bar button:hover {
         background-color:black;
     }
+    .circle {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%; /* Correct border-radius for perfect circles */
+          background-color: black;
+          position: fixed;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          z-index: 99999999; /* To stay on top */
+          mix-blend-mode: difference; /* Allows color blending based on background */
+        }
 </style>
 
 <script>
@@ -850,7 +868,25 @@ function isValidEmail(email) {
 </script>
 
 <script src="./script/popup.js"></script>
-
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
 </body>
 
 </html>

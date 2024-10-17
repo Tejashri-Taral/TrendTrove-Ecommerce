@@ -9,9 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<style>
+     .circle {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%; /* Correct border-radius for perfect circles */
+          background-color: black;
+          position: fixed;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          z-index: 99999999; /* To stay on top */
+          mix-blend-mode: difference; /* Allows color blending based on background */
+        }
+</style>
+</head>
 
-</head>
-</head>
 <body>
        <!-- preloader -->
   <div id="preloader">
@@ -818,9 +831,71 @@
             </div>
         </div>
         <script src="preloader.js"></script>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
         
+   <script>
+const coords = { x: 0, y: 0 };
+  const circles = document.querySelectorAll(".circle");
+
+  const colors = [
+   "#f5fffa", "#ced6d2", "#a8afac", "#848987", "#626563", "#414342", "#232424", "#000000"
+
+  ];
+
+  circles.forEach(function (circle, index) {
+    circle.x = 0;
+    circle.y = 0;
+    circle.style.backgroundColor = colors[index % colors.length];
+  });
+
+  window.addEventListener("mousemove", function(e) {
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+  });
+
+  function animateCircles() {
+    let x = coords.x;
+    let y = coords.y;
+
+    circles.forEach(function (circle, index) {
+      circle.style.left = x - 12 + "px";
+      circle.style.top = y - 12 + "px";
+      circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+      
+      circle.x = x;
+      circle.y = y;
+
+      const nextCircle = circles[index + 1] || circles[0];
+      x += (nextCircle.x - x) * 0.3;
+      y += (nextCircle.y - y) * 0.3;
+    });
+
+    requestAnimationFrame(animateCircles);
+  }
+
+  animateCircles();
+   </script>     
     
-    <script>
+   
+   <script>
         let openbtn = document.getElementById('open-btn');
 let modalbox = document.getElementById('modalbox');
 let closebtn = document.getElementById('close-btn');
