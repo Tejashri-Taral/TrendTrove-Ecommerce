@@ -13,189 +13,118 @@
     <!-- Link to your common CSS file -->
     <style>
       /* General Styles */
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: Arial, sans-serif;
-      }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
+            color: #333;
+        }
 
-      body {
-        background-color: #f7f7f7;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-      }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
 
-      h1,
-      h2 {
-        color: #333;
-      }
+        h1, h2 {
+            color: #333;
+        }
 
-      /* About Us Section */
-      .leftabout {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
+        /* About Us Section */
+        .leftabout {
+            margin: 0 50px;
+        }
 
-      .leftabout h3 {
-        justify-content: center;
-        text-align: center;
-      }
+        .leftabout h3, .leftabout p {
+            text-align: center;
+        }
 
-      .leftabout p {
-        text-align: center;
-      }
+        .about-section {
+            width: 100%;
+            padding: 40px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-      .about-section {
-        width: 100%;
-        padding: 40px 0;
-        background: #ffffff;
-      }
+        .about-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
 
-      .about-title {
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 35px;
-      }
+        /* Second part content css */
+        #div2, #div3 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin: 7px 22px;
+        }
 
-      /* Second part content css */
-      #div2 {
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 7px;
-      }
+        /* First part: Image left, text right */
+        .about-content-first, .about-content-second {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            gap: 30px;
+        }
 
-      #div3 {
-        font-size: 19px;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 7px;
-        margin-left: 22px;
-        margin-right: 22px;
-      }
+        .about-content-second {
+            flex-direction: row-reverse;
+        }
 
-      /* First part: Image left, text right */
-      .about-content-first {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        margin-bottom: 50px;
-        gap: 30px; /* Added consistent gap between text and image */
-      }
+        .about-text {
+            flex: 1;
+            font-size: 1.5em;
+            line-height: 1.8;
+            margin-right: 20px;
+        }
 
-      .about-text {
-        flex: 1;
-        font-size: 2em;
-        line-height: 1.8;
-        margin-right: 20px; /* Ensure a margin between text and image */
-      }
+        .rightabout {
+            margin: 0 50px;
+        }
 
-      .rightabout {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
+        .about-images img {
+            width: 500px;
+            height: 520px;
+            border-radius: 5%;
+            aspect-ratio: 3/2;
+            opacity: 90%;
+            box-shadow: 0 0 15px rgba(136, 136, 136, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-      .about-images img {
-        width: 500px;
-        height: 520px;
-        border-radius: 5%;
-        aspect-ratio: 3/2;
-        opacity: 90%;
-        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
-      }
+        .about-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
+        }
 
-      /* First image on about us page */
-      .about3 {
-        margin-right: 50px;
-      }
+        .about3 {
+            margin-right: 50px;
+        }
 
-      /* Second image on about us page */
-      .about4 {
-        margin-top: 50px;
-        margin-left: 25px;
-        margin-bottom: 20px;
-      }
+        .about4 {
+            margin: 50px 25px 20px;
+        }
 
-      .aboutus-body {
-        font-size: 21px;
-      }
+        .aboutus-body {
+            font-size: 21px;
+        }
 
-      .slogan {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
+        .slogan {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
 
-      /* Second part: Image right, text left */
-      .about-content-second {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        gap: 30px; /* Consistent gap for the second part */
-      }
-
-      .about-container {
-        padding: 0 40px; /* Increased padding for a more spacious layout */
-      }
-
-      /* Footer Section */
-      /* .footer {
-        background-color: #bec1c55c;
-        padding: 20px;
-        text-align: center;
-        width: 100%;
-      }
-
-      .footer-section {
-        margin-bottom: 20px;
-      }
-
-      .footer h1 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-      }
-
-      .footer-list {
-        list-style: none;
-        padding: 0;
-      }
-
-      .footer-list li {
-        margin-bottom: 10px;
-      }
-
-      .footer-list a {
-        text-decoration: none;
-        color: #333;
-      }
-
-      .socials a {
-        margin-right: 10px;
-        color: #333;
-      }
-
-      .sub input {
-        padding: 10px;
-        margin-right: 10px;
-        width: 70%;
-      }
-
-      .sub .btn {
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-
-      .sub .btn:hover {
-        background-color: #555;
-      }
+        .about-container {
+            padding: 0 40px;
+        }
+    
 
       /* Adding media Queries  */
       @media (min-width: 1980px) {
