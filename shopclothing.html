@@ -748,7 +748,7 @@
                
                 const selectedSize = Array.from(sizeFilters)
                     .filter(checkbox => checkbox.checked)
-                    .map(checkbox => parseInt(checkbox.value));
+                    .map(checkbox => (checkbox.value));
 
                 
                 const selectedRatings = Array.from(ratingFilters)
@@ -759,7 +759,8 @@
                 clothingCards.forEach(card => {
                     const brand = card.getAttribute('data-brand');
                     const price = parseFloat(card.getAttribute('data-price'));
-                    const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    // const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    const sizeRange = card.getAttribute('data-size')
                     const rating = parseFloat(card.getAttribute('data-rating'));
 
                    
@@ -772,12 +773,13 @@
                     let sizeMatch = true;
                     if (selectedSize.length) {
                         
-                        const clothingSize = [];
-                        for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
-                            clothingSize.push(size);
-                        }
+                        // const clothingSize = [];
+                        // for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
+                        //     clothingSize.push(size);
+                        // }
                         
-                        sizeMatch = selectedSize.some(size => clothingSize.includes(size));
+                        // sizeMatch = selectedSize.some(size => sizeRange.includes(size));
+                        sizeMatch = selectedSize.includes(sizeRange);
                     }
 
                    
