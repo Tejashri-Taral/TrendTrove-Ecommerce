@@ -13,118 +13,188 @@
     <!-- Link to your common CSS file -->
     <style>
       /* General Styles */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
-            color: #333;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
+      body {
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
 
-        h1, h2 {
-            color: #333;
-        }
+      h1,
+      h2 {
+        color: #333;
+      }
 
-        /* About Us Section */
-        .leftabout {
-            margin: 0 50px;
-        }
+      /* About Us Section */
+      .leftabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
 
-        .leftabout h3, .leftabout p {
-            text-align: center;
-        }
+      .leftabout h3 {
+        justify-content: center;
+        text-align: center;
+      }
 
-        .about-section {
-            width: 100%;
-            padding: 40px 0;
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+      .leftabout p {
+        text-align: center;
+      }
 
-        .about-title {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 35px;
-            font-weight: 700;
-        }
+      .about-section {
+        width: 100%;
+        padding: 40px 0;
+        background: #ffffff;
+      }
 
-        /* Second part content css */
-        #div2, #div3 {
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-            margin: 7px 22px;
-        }
+      .about-title {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 35px;
+      }
 
-        /* First part: Image left, text right */
-        .about-content-first, .about-content-second {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            gap: 30px;
-        }
+      /* Second part content css */
+      #div2 {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 7px;
+      }
 
-        .about-content-second {
-            flex-direction: row-reverse;
-        }
+      #div3 {
+        font-size:25px;
+        font-weight:900;
+        text-align: center;
+        margin-top: 7px;
+        /* margin-left:40%; */
+      }
 
-        .about-text {
-            flex: 1;
-            font-size: 1.5em;
-            line-height: 1.8;
-            margin-right: 20px;
-        }
+      /* First part: Image left, text right */
+      .about-content-first {
+        display: flex;
+        align-items: center; /* Adjusted to center the image and text */
+        justify-content: space-between;
+        margin-bottom: 50px;
+        gap: 30px; /* Added consistent gap between text and image */
+      }
 
-        .rightabout {
-            margin: 0 50px;
-        }
+      .about-text {
+        flex: 1;
+        font-size: 2em;
+        line-height: 1.8;
+        margin-right: 20px; /* Ensure a margin between text and image */
+      }
 
-        .about-images img {
-            width: 500px;
-            height: 520px;
-            border-radius: 5%;
-            aspect-ratio: 3/2;
-            opacity: 90%;
-            box-shadow: 0 0 15px rgba(136, 136, 136, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+      .rightabout {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
 
-        .about-images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
-        }
+      .about-images img {
+        width: 500px;
+        height: 520px;
+        border-radius: 5%;
+        aspect-ratio: 3/2;
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
 
-        .about3 {
-            margin-right: 50px;
-        }
+      /* First image on about us page */
+      .about3 {
+        margin-right: 50px;
+      }
 
-        .about4 {
-            margin: 50px 25px 20px;
-        }
+      /* Second image on about us page */
+      .about4 {
+        margin-top: 50px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
 
-        .aboutus-body {
-            font-size: 21px;
-        }
+      .aboutus-body {
+        font-size: 21px;
+      }
 
-        .slogan {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+      .slogan {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
 
-        .about-container {
-            padding: 0 40px;
-        }
-    
+      /* Second part: Image right, text left */
+      .about-content-second {
+        display: flex;
+        align-items: center; /* Adjusted to center the image and text */
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        gap: 30px; /* Consistent gap for the second part */
+      }
+
+      .about-container {
+        padding: 0 40px; /* Increased padding for a more spacious layout */
+      }
+
+      /* Footer Section */
+      /* .footer {
+        background-color: #bec1c55c;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .footer-section {
+        margin-bottom: 20px;
+      }
+
+      .footer h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-list li {
+        margin-bottom: 10px;
+      }
+
+      .footer-list a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .socials a {
+        margin-right: 10px;
+        color: #333;
+      }
+
+      .sub input {
+        padding: 10px;
+        margin-right: 10px;
+        width: 70%;
+      }
+
+      .sub .btn {
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      .sub .btn:hover {
+        background-color: #555;
+      }
 
       /* Adding media Queries  */
       @media (min-width: 1980px) {
@@ -188,6 +258,117 @@
           opacity: 90%;
           box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
         }
+      }
+      @media (max-width:780px) 
+      {
+
+      } 
+      @media (max-width:480px)
+      {
+      /* About Us Section */
+      .leftabout {
+        margin-left: 5px;
+        margin-right: 0px;
+      }
+
+      .leftabout h3 {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #023047;
+        /* margin-left: 600px; */
+
+      } 
+     .about-section {
+        width: 100%;
+        padding:0;
+        background: #ffffff;
+      }
+
+      .about-title {
+        margin-top: 70px;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      /* Second part content css */
+      #div2 {
+        font-size:18px;
+        font-weight:700;
+        text-align: center;
+        color: #023047;
+        margin-bottom: 50px;
+        margin-left: -165px;
+      }
+
+      #div3 {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        margin-top:35px;
+        margin-left: 22px;
+        margin-right: 22px;
+      }
+
+      /* First part: Image left, text right */
+      .about-content-first {
+        margin-bottom: 90px;
+        gap:0px; /* Added consistent gap between text and image */
+      }
+
+      .about-text {
+        flex: 1;
+        font-size: 1em;
+        line-height: 1;
+        margin-right: 5px; /* Ensure a margin between text and image */
+      }
+
+      .rightabout {
+        margin-left:2px;
+        margin-right:2px;
+      }
+
+      .about-images img {
+        width: 150px;
+        height: 170px;
+        border-radius: 5%;
+        /* aspect-ratio: 3/2; */
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+
+      /* First image on about us page */
+      .about3 {
+        margin-top: 30px;
+        margin-right:5px;
+      }
+
+      /* Second image on about us page */
+      .about4 {
+        margin-top:80px;
+        margin-left:5px;
+        margin-bottom: 20px;
+      }
+
+      .aboutus-body {
+        font-size:18px;
+      }
+
+      .slogan {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      /* Second part: Image right, text left */
+      .about-content-second {
+        gap:4px; 
+      }
+
+      .about-container {
+        padding: 0px; 
+      }
       }
     </style>
   </head>
@@ -304,10 +485,6 @@
                 fashion curve so you can step out feeling your best, whatever
                 the occasion.
               </p>
-              <p class="aboutus-body" id="div3">
-                Discover your style with TrendTrove — where fashion meets
-                confidence!
-              </p>
             </div>
           </div>
           <div class="about-images">
@@ -318,6 +495,10 @@
             />
           </div>
         </div>
+        <p class="aboutus-body" id="div3">
+          Discover your style with TrendTrove — where fashion meets
+          confidence!
+        </p>
       </div>
     </section>
 
@@ -392,17 +573,6 @@
       </div>
     </footer>
 
-
-        <div class="footer-section quick-links">
-            <h1>Quick Links</h1>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-
     <div class="footer-copyright">
       <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
     </div>
@@ -415,7 +585,6 @@
           <h2>Subscription Successful!</h2>
           <p>Thank you for subscribing.</p>
           <p>You will receive notifications & updates via email.</p>
-
         </div>
         <div class="social">
           <li class="socials">
