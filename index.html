@@ -94,10 +94,10 @@
     </header>
     <!-- Search Bar -->
     <div id="search-bar">
-        <input type="text" id="search" placeholder="Search..." />
+        <input type=" text " id=" search " placeholder=" Search..." />
         <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
     </div>
-    <script src="preloader.js"></script>
+    <script src=" preloader.js "></script>
     <style>
     /* Style for the search bar, initially hidden */
     #search-bar {
@@ -111,10 +111,17 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Css for language box */
+    .lang-box{
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     /* Styling the input box and button */
     #search-bar input {
-        padding: 5px;
-        width: 200px;
+        padding:  5px;
+        width:  200px;
         border: 1px solid #ccc;
         border-radius: 3px;
         outline: none;
@@ -585,7 +592,7 @@
             </ul>
         </div>
 
-        <div class="footer-section quick-links">
+        <div class=" footer-section quick-links ">
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
@@ -650,43 +657,8 @@
         </div>
         
     
-    <script>
-        let openbtn = document.getElementById('open-btn');
-let modalbox = document.getElementById('modalbox');
-let closebtn = document.getElementById('close-btn');
-let emailInput = document.getElementById('email-input');
-
-// Email validation function
-function isValidEmail(email) {
-        // Regular expression for validating an email
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-
-    openbtn.addEventListener('click', function () {
-        // Validate email
-        if (emailInput.value === '') {
-            alert('Please enter your email address.');
-        } else if (!isValidEmail(emailInput.value)) {
-            alert('Please enter a valid email address.');
-        } else {
-            modalbox.style.display = 'block'; // Show the modal
-        }
-    });
-
-    closebtn.addEventListener('click', function () {
-        modalbox.style.display = 'none'; // Hide the modal
-    });
-     // Close modal when clicking outside of it
-     modalbox.addEventListener('click', function(event) {
-        if (event.target === modalbox) {
-            modalbox.style.display = 'none'; // Hide modal if the background is clicked
-        }
-    });
-
-    </script>
+    <script src="./script/modal_box.js"></script>
     
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
@@ -698,7 +670,7 @@ function isValidEmail(email) {
             const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById("progress-bar").style.width = scrollPercent + "%";
+            document.getElementById(" progress-bar ").style.width = scrollPercent + "%";
         }
 
     </script>
@@ -807,31 +779,31 @@ function isValidEmail(email) {
     const cursor = document.getElementById('cursor');
     
     tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', () => {
+        tab.addEventListener(' mouseenter', () => {
             cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
             cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
             cursor.style.opacity = 1; 
         });
     
-        tab.addEventListener('mouseleave', () => {
+        tab.addEventListener(' mouseleave', () => {
             cursor.style.opacity = 0; 
         });
     });
     
   </script>
-  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <a class=" gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+  <script src=" https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 
   (function() {
       let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
+      document.getElementById(" menu").addEventListener("click", function () {
           if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
+              document.getElementById(" header").style.height = "290px";
               headerVisible = true;
           } else {
-              document.getElementById("header").style.height = "50px";
+              document.getElementById(" header").style.height = "50px";
               headerVisible = false;
           }
       });
@@ -848,6 +820,11 @@ function isValidEmail(email) {
 
   })();  // IIFE to avoid polluting global scope
 </script>
+
+<div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
 
 <script src="./script/popup.js"></script>
 
