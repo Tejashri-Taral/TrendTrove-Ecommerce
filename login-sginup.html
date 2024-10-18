@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove</title>
     <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -310,6 +311,11 @@
             height: 65px;
             width: 80px;
         }
+	#tabs-container{
+            position: fixed;
+            top: 0;
+            left: 420px;
+        }
 
     </style>
 </head>
@@ -327,8 +333,43 @@
         </div>
     </div>
 </div>
-    <div class="logo">
-        <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+    <div class="header-signup">
+        <div class="logo">
+            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+        </div>
+        <nav class="bg-neutral-100 py-20">
+            <div id="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Men</a>
+                            </li>
+                            <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <div class="card">
         <div class="card-header">
