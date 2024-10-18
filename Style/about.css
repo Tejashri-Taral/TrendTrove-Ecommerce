@@ -1,0 +1,176 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
+    color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* About Us Section */
+.leftabout {
+    margin: 0 50px;
+}
+
+.leftabout h3, .leftabout p {
+    text-align: center;
+}
+
+.about-section {
+    width: 100%;
+    padding: 40px 0;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+/* Second part content css */
+#div2, #div3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 7px 22px;
+}
+
+/* First part: Image left, text right */
+.about-content-first, .about-content-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+.about-content-second {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin-right: 20px;
+}
+
+.rightabout {
+    margin: 0 50px;
+}
+
+.about-images img {
+    width: 500px;
+    height: 520px;
+    border-radius: 5%;
+    aspect-ratio: 3/2;
+    opacity: 90%;
+    box-shadow: 0 0 15px rgba(136, 136, 136, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
+}
+
+.about3 {
+    margin-right: 50px;
+}
+
+.about4 {
+    margin: 50px 25px 20px;
+}
+
+.aboutus-body {
+    font-size: 21px;
+}
+
+.slogan {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.about-container {
+    padding: 0 40px;
+}
+
+
+/* Adding media Queries  */
+@media (min-width: 1980px) {
+.leftabout {
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.about3 {
+  margin-right: 230px;
+}
+
+.about4 {
+  margin-left: 180px;
+}
+
+.rightabout {
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.aboutus-body {
+  font-size: 25px;
+}
+
+#div2 {
+  font-size: 27px;
+}
+
+#div3 {
+  font-size: 23px;
+}
+}
+
+@media (max-width: 1200px) {
+h3 {
+  font-size: 20px;
+}
+.leftabout p {
+  font-size: 15px;
+}
+
+.rightabout p {
+  font-size: 15px;
+} */
+
+/* sorry for using id and div2 div3 but something was 
+    getting overwritten and this was easy way out */
+#div2 {
+  font-size: 16px;
+}
+
+#div3 {
+  font-size: 16px;
+}
+.about-images img {
+  width: 300px;
+  height: 320px;
+  border-radius: 5%;
+  aspect-ratio: 3/2;
+  opacity: 90%;
+  box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+}
+}
