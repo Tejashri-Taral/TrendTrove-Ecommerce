@@ -48,7 +48,8 @@ h1 {
 /* Sunglasses Image */
 .sunglasses-image img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     display: block;
     border-bottom: 1px solid #ddd;
 }
