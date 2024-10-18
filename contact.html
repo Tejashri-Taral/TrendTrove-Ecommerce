@@ -91,12 +91,16 @@
                 <p>Having any questions or feedback? We'd love to hear from you!<br>
                     Feel free to reach us using the form below.
                 </p>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Message" required></textarea>
-                <button class="btn-submit">Send Message</button>
+                <form id="feedbackForm" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <p id="feedbackMessage" style="display:none; color: green;">Feedback has been stored!</p>
             </div>
+            
 
         <div class="contact-map">
             <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
@@ -177,7 +181,19 @@
         </div>
     </footer>
     <script src="preloader.js"></script>
+    <script src="preloader.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            const feedbackMessage = document.getElementById("feedbackMessage");
+            feedbackMessage.style.display = "block"; 
 
+            document.getElementById("feedbackForm").reset();
+        }
+    </script>
+    </body>
+    </html>
+    
     
 </body>
 
