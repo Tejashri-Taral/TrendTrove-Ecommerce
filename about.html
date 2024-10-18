@@ -27,6 +27,7 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 100vh;
+            max-width:100vw;
         }
 
         h1, h2 {
@@ -188,6 +189,19 @@
           opacity: 90%;
           box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
         }
+      }
+      @media (max-width:750px) {
+           .about-content-first,
+           .about-content-second{
+            flex-direction: column;
+           }
+           .about-container{
+            padding:0 20px;
+           }
+           .footer{
+            padding:30px 20px;
+           }
+        
       }
     </style>
   </head>
@@ -393,16 +407,6 @@
     </footer>
 
 
-        <div class="footer-section quick-links">
-            <h1>Quick Links</h1>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-
     <div class="footer-copyright">
       <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
     </div>
@@ -459,6 +463,19 @@
       let closebtn = document.getElementById("close-btn");
       let emailInput = document.getElementById("email-input");
 
+      let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "280px";
+                headerVisible = true;
+            }
+            else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+
+        })
       // Email validation function
       function isValidEmail(email) {
         // Regular expression for validating an email
