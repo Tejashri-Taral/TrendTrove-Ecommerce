@@ -775,6 +775,25 @@ html {
   background-color: #14171a;
 }
 
+.quick-links .footer-list a {
+    position: relative; 
+}
+
+.quick-links .footer-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.3s ease; 
+}
+
+.quick-links .footer-list a:hover::after {
+    width: 100%;
+}
+
 .sub {
   margin-top: 2px;
   display: flex;
