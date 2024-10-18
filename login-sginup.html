@@ -21,15 +21,22 @@
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin: 10px; /* Reduced gap around card */
+            /* overflow: hidden; */
+            margin: 49px; /* Reduced gap around card */
         }
         .card-header, .card-footer {
-            padding: 16px;
             text-align: center;
             margin: 10px; /* Reduced gap around card header and footer */
+            
+        }
+        .card-header{
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            
         }
         .card-title {
+            margin-top: 40px;
             font-size: 24px;
             margin-bottom: 8px;
             font-weight: bold; /* Make title bold */
@@ -243,6 +250,11 @@
    
 
         }
+        /* .tab-container{
+            margin-top: 30px;
+        } */
+
+
         .modal {
             display: none;
             position: fixed;
@@ -280,6 +292,25 @@
         input:focus{
 	        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
         }
+        .logo {
+            width: 12%;
+            height: 70px;
+            /* background-color: yellow; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "futura";
+            font-weight: bold;
+            font-size: 25px;
+            position: absolute;
+            top: 25px;
+            left: 40px;
+        }
+        .logo img {
+            height: 65px;
+            width: 80px;
+        }
+
     </style>
 </head>
 <body>
@@ -296,6 +327,9 @@
         </div>
     </div>
 </div>
+    <div class="logo">
+        <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+    </div>
     <div class="card">
         <div class="card-header">
             <div class="card-title">Welcome to TrendTrove</div>
