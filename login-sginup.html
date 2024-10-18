@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove</title>
     <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -17,19 +17,27 @@
             margin: 10px; /* Reduced gap around body */
         }
         .card {
-            width: 400px;
+            width: 600px;
+            justify-content: center;
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin: 10px; /* Reduced gap around card */
+            /* overflow: hidden; */
+            margin: 49px; /* Reduced gap around card */
         }
         .card-header, .card-footer {
-            padding: 16px;
             text-align: center;
             margin: 10px; /* Reduced gap around card header and footer */
+            
+        }
+        .card-header{
+            padding-top: 5px;
+            padding-bottom: 30px;
+            margin-bottom: 10px;
+            
         }
         .card-title {
+            margin-top: 40px;
             font-size: 24px;
             margin-bottom: 8px;
             font-weight: bold; /* Make title bold */
@@ -243,6 +251,11 @@
    
 
         }
+        /* .tab-container{
+            margin-top: 30px;
+        } */
+
+
         .modal {
             display: none;
             position: fixed;
@@ -280,6 +293,14 @@
         input:focus{
 	        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
         }
+
+/* 
+        #tabs-container{
+            position: fixed;
+            top: 0;
+            left: 420px;
+        } */
+
     </style>
 </head>
 <body>
@@ -296,8 +317,162 @@
         </div>
     </div>
 </div>
+    <!-- ProgressBar -->
+    <div id="progress-bar"></div>
+    <!-- ProgressBar Ends -->
+
+    <!-- header section  -->
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+        </div>
+
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Men</a>
+                            </li>
+                            <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+       
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="login-sginup.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Search Bar -->
+    <div id="search-bar">
+        <input type="text" id="search" placeholder="Search..." />
+        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
+    </div>
+    <script src="preloader.js"></script>
+    <style>
+    /* Style for the search bar, initially hidden */
+    #search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust this to position the search bar just below the icon */
+        right: 20px; /* Align with the icon */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #logo1{
+        align-items: center;
+        margin-left: 132px;
+        height: 70px;
+        width: 70px;
+    }
+
+    /* Styling the input box and button */
+    #search-bar input {
+        padding: 5px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    .center{
+        position: absolute;
+        left: 418px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #search-bar button {
+        padding: 5px 10px;
+        background-color:black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #search-bar button:hover {
+        background-color:black;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon"); 
+        const searchBar = document.getElementById("search-bar");
+
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function() {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";  // Show the search bar
+                searchBar.querySelector('input').focus(); // Automatically focus on the input field
+            } else {
+                searchBar.style.display = "none";  // Hide the search bar
+            }
+        }
+
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function() {
+            var query = document.getElementById('search').value;
+            if(query) {
+                console.log("Search query:", query);
+                // Implement your search logic here, such as a redirect or an API call
+                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+                // Hide the search bar after clicking "Go"
+                searchBar.style.display = "none";
+            } else {
+                console.log("No search query entered");
+            }
+        }
+    });
+</script>
+<div class="center">
     <div class="card">
+
         <div class="card-header">
+
             <div class="card-title">Welcome to TrendTrove</div>
             <div class="card-description">Your fashion journey begins here</div>
         </div>
@@ -388,6 +563,8 @@
             </form>
         </div>
     </div>
+</div>
+
     <script src="preloader.js"></script>
     <script>
         document.querySelectorAll('.tab-link').forEach(button => {
