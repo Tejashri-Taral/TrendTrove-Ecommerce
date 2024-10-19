@@ -99,19 +99,18 @@ html {
 
 /* header css  */
 
-.header {
+/* .header {
   height: 70px;
-  width: 100%;
+  width: 100%; */
   /* background-color: red; */
-  padding: 0px 2%;
+  /* padding: 0px 2%;
   display: flex;
   justify-content: space-between;
-}
+} */
 
-.logo {
+/* .logo {
   width: 12%;
   height: 70px;
-  /* background-color: yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,8 +121,8 @@ html {
 .logo img {
   height: 65px;
   width: 80px;
-}
-
+} */
+/* 
 .border {
   position: relative;
   font-size: 0.85rem;
@@ -132,10 +131,10 @@ html {
 }
 
 .border:hover {
-  display: flex;
+  display: flex; */
   /* color: white !important; */
   /* text-decoration: underline; */
-  border-radius: 50px;
+  /* border-radius: 50px;
   transition: color 0.3s ease-in;
   text-align: center;
   height: 40px;
@@ -144,22 +143,22 @@ html {
 }
 .border > a:hover {
   color: white !important;
-}
-
+} */
+/* 
 .navigation {
   width: 45%;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-right: 20px; */
   /* background-color: blue; */
-}
+/* }
 .nav-links {
   width: 120%;
-  height: 70px;
+  height: 70px; */
   /* background-color: yellow; */
-  display: flex;
+  /* display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: space-evenly;
@@ -168,15 +167,15 @@ html {
   font-family: "futura";
   font-size: 17px;
   /* color: #1d1d1d; */
-}
+/* } */
 
-.nav-links > .nav-link {
+/* .nav-links > .nav-link {
   width: 150px;
   display: flex;
   justify-content: center;
-}
+} */
 
-.nav-links > .nav-link > a {
+/* .nav-links > .nav-link > a {
   color: #1d1d1d;
   text-decoration: none;
   font-size: 15px;
@@ -187,22 +186,21 @@ html {
   justify-content: space-evenly;
   align-items: center;
   /* width: 85px; */
-}
+/* } */
 
 /* .nav-link>a:hover{
     color: white;
 } */
 
-.nav-links > .nav-link > i {
+/* .nav-links > .nav-link > i {
   font-size: 20px;
-}
+} */
 
-.utils {
+/* .utils {
   width: 8%;
   height: 70px;
   margin-right: 45px;
-  /* background-color: purple; */
-}
+} */
 
 /* banner css  */
 
