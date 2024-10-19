@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="navbar/navbar.css">
+
     <style>
         .testimonal__card {
             padding: 10px;
@@ -71,7 +74,7 @@
 <body>
      
     <!-- header section  -->
-    <header class="header" id="header">
+    <!-- <header class="header" id="header">
           <div class="logo">
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
@@ -117,7 +120,45 @@
                 </li>
             </ul>
         </nav>
+    </header> -->
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="TrendTrove Logo"></a>
+            </div>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="child.html">Girl Section</a></li>
+
+                <li><a href="#Topwear">Top Wear</a></li>
+                <li><a href="#Bottomwear">Bottom Wear</a></li>
+                <li><a href="#Footwear">Foot Wear</a></li>
+                
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+    
+            <div class="icons">
+                <a href="login-sginup.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login-sginup.html"><i class="fas fa-user"></i></a>
+                <a href="#" class="search-icon desktop-only"><i class="fas fa-search"></i></a>
+            </div>
+    
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    
+        <script src="navbar/navbar.js"></script>
     </header>
+
      <main>
         <div class="container">
             <div class="slider">
