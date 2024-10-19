@@ -27,6 +27,7 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 100vh;
+            max-width:100vw;
         }
 
         h1, h2 {
@@ -188,6 +189,19 @@
           opacity: 90%;
           box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
         }
+      }
+      @media (max-width:750px) {
+           .about-content-first,
+           .about-content-second{
+            flex-direction: column;
+           }
+           .about-container{
+            padding:0 20px;
+           }
+           .footer{
+            padding:30px 20px;
+           }
+        
       }
     </style>
   </head>
@@ -449,6 +463,19 @@
       let closebtn = document.getElementById("close-btn");
       let emailInput = document.getElementById("email-input");
 
+      let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "280px";
+                headerVisible = true;
+            }
+            else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+
+        })
       // Email validation function
       function isValidEmail(email) {
         // Regular expression for validating an email
