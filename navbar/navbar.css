@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'futura';
+    src: url('./fonts/futura/futura\ medium\ bt.ttf');
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Futura', sans-serif;
     background-color: #f8f9fa;
 }
 
