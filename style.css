@@ -752,6 +752,25 @@
   background-color: #14171a;
 }
 
+.quick-links .footer-list a {
+    position: relative; 
+}
+
+.quick-links .footer-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black; 
+    transition: width 0.3s ease; 
+}
+
+.quick-links .footer-list a:hover::after {
+    width: 100%;
+}
+
 .sub {
   margin-top: 2px;
   display: flex;
@@ -959,12 +978,12 @@ input {
 }
 
 /* Contact Section Styles */
+
 .contact-section {
   max-width: 1700px;
-  margin: 100px;
-  gap: 50px;
-  background-color: #fff;
+  margin: 100px auto; /* Center the section horizontally */
   padding: 30px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -992,6 +1011,47 @@ input {
 .contact-email:hover {
   text-decoration: underline;
 }
+
+/* Container for Form and Map */
+.contact-form-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space evenly */
+  gap: 30px; /* Space between form and map */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Map Container */
+.contact-map {
+  flex: 1; /* Allow map to grow */
+  max-width: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 10px; /* Match the section's border radius */
+}
+
+/* Iframe Styles */
+.contact-map iframe {
+  width: 100%; /* Make iframe responsive */
+  height: 100%; /* Match the container's height */
+  border: 0; /* Remove border */
+}
+
+/* Ensure contact form and map have the same height */
+.contact-form {
+  display: flex; /* Allow flexibility */
+  flex-direction: column; /* Stack form fields vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  flex: 1; /* Allow form to grow */
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+  .contact-form-container {
+      flex-direction: column; /* Stack form and map vertically on small screens */
+      align-items: center; /* Center items */
+  }
+}
+
+
 
 /* Form Styles */
 .contact-form {
@@ -1440,8 +1500,8 @@ ul {
 
 /* Google Maps Embed */
 .contact-map {
-  width: 50%;
-  height: 400px;
+  width: 55%;
+  height: 550px;
   margin: 0 auto;
   position: relative;
 }
@@ -1451,7 +1511,7 @@ ul {
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   width: 900px;
-  height: 550px;
+  height: 650px;
   border: none;
   border-radius: 8px;
 }

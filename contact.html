@@ -93,12 +93,16 @@
                 <p>Having any questions or feedback? We'd love to hear from you!<br>
                     Feel free to reach us using the form below.
                 </p>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="text" placeholder="Subject" required>
-                <textarea placeholder="Message" required></textarea>
-                <button class="btn-submit">Send Message</button>
+                <form id="feedbackForm" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <p id="feedbackMessage" style="display:none; color: green;">Feedback has been stored!</p>
             </div>
+            
 
         <div class="contact-map">
             <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
@@ -156,7 +160,7 @@
             </ul>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-section quick-links">
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
@@ -180,25 +184,7 @@
         </div>
     </footer>
     <script src="preloader.js"></script>
-    <script>
-        const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
-          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
-    </script>
 
-<script>
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // This makes the scroll smooth
-        });
-    }
-</script>
     
 </body>
 
