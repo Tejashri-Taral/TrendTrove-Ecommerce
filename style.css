@@ -1526,10 +1526,10 @@ ul {
   width: 55%;
   height: 550px;
   margin: 0 auto;
-  position: relative;
+   
 }
 
-.contact-map iframe {
+.contact-map {
   position: relative;
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
@@ -1598,7 +1598,14 @@ ul {
 .contact-form .btn-submit:hover {
   background-color: #2d80d8;
 }
-
+@media screen and (max-width: 992px){
+  .contact-map  iframe {
+    width: 100%;
+    height: 300px; ;
+    margin-bottom: 0px;
+     
+  }
+}
 /* Responsive Adjustments */
 @media screen and (max-width: 992px) {
   .contact-info-box {
