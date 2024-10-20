@@ -1628,14 +1628,14 @@ ul {
   padding: 0;
   margin: 0;
 }
-/* Tooltip container */
+
 .tooltip {
+  display: flex;
+  align-items: center;
   position: relative;
-  display: inline-block;
-  width: 100%;
 }
 
-/* Tooltip text */
+ /* Tooltip text  */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
@@ -1645,18 +1645,21 @@ ul {
   border-radius: 5px;
   padding: 5px;
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
+  left: 60%;
   margin-left: -100px; 
+  top: 36%;
+  transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
 }
-
+  
 /* Show the tooltip on hover */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
+
 
 
