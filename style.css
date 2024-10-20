@@ -215,11 +215,12 @@ html {
 .slide {
   width: 100%;
   height: 100%;
-  background-image: url("./images/Mainpagebanner.jpg");
+  background-image: url("./images/background.jpg");
   background-size: cover;
   display: flex;
   align-items: right;
-  padding-left: 20%;
+  padding-left: 0%;
+  opacity:1;
 }
 
 .slide-details {
