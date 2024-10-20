@@ -220,7 +220,7 @@ html {
   display: flex;
   align-items: right;
   padding-left: 0%;
-  opacity:1;
+  opacity:0.8;
 }
 
 .slide-details {
