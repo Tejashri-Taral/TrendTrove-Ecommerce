@@ -69,6 +69,80 @@ color: white;
 padding:5px 0px ;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* Accessory Card Styles */
+.accessory__card {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 10px;
+}
+
+.accessory__card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+}
+
+.accessory__card img {
+    width: 100%;
+    aspect-ratio: 2/2.5;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Accessory Title */
+.accessory__title {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Accessory Description */
+.accessory__description {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Button Styles */
+.button-container {
+    margin-top: 10px;
+}
+
+.button-container button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #555;
+}
+
+.button-container .save-icon,
+.button-container .share-icon {
+    background: none;
+    color: #333;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button-container .save-icon:hover,
+.button-container .share-icon:hover {
+    color: #555;
+}
       </style>
       
       
