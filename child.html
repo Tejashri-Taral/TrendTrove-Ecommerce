@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendTrove - Ecommerce</title>
+   
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <style>
+        .testimonal__card {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            height: 450px;
+        }
+
+        .testimonal__card:hover {
+            transform: translateY(-10px);
+            background-color: #c5bebd;
+        }
+    
+         .testimonal__card img{
+            width: 100%;
+            aspect-ratio: 2/2.5;
+            object-fit: cover;
+         }
+
+
+        /* Testimonial Title */
+        .testimonal__title {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Testimonial Description */
+        .testimonal__description {
+
+            font-size: 1.2rem;
+            padding: 0.75rem 1rem;
+        }
+
+
+        .testimonal__swiper {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Cards Wrapper */
+        .cards {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .my2 {
+            background-color: black;
+            color: white;
+            padding: 5px 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+       
+    </style>
+</head>
+</head>
+<body>
+   
+    <!-- header section  -->
+    <header class="header" id="header">
+          <div class="logo">
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
+
+        <nav class="navigation">
+            <div class="pro-tabs-container">
+                <ul id="pro-tabs" class="nav-links" >
+                    <li class="nav-link border">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link border">
+                        <a href="Boy.html">Boy Section</a>
+                    </li>
+                    <li class="nav-link border">
+                        <a href="#Topwear">Topwear</a>
+                    </li>
+                    <li class="nav-link border">
+                        <a href="#Bottomwear">Bottomwear</a>
+                    </li>
+                    <li class="nav-link border">
+                        <a href="#Footwear">Footwear</a>
+                    </li>
+                    <li class="nav-link border" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                    </li> 
+                </ul>
+        </div>
+        </nav>
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="login-sginup.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <div class="container">
+            <div class="slider">
+                <a href="#Bottomwear"><img src="images/girl banner.jpg" alt="" height="450px" width="100%vw"></a>      
+            </div>
+            <h2 class="my2" id="Topwear">Topwear</h2>
+            <div class="cards">
+
+                <div class="testimonal__swiper">
+                <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/Net Sequins Embroidered.jpg"
+                              alt="" style="
+                               width: 280px;
+                                height: 300px;
+                                object-fit: cover;padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Net Sequins Embroided top</h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $24
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                      
+                </div>
+
+
+                
+                <div class="testimonal__swiper">
+                  <!-- 2 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/kids-girl-tops1.jpg"
+                             alt="" style="
+                             width: 280px;
+                              height: 300px;
+                              object-fit: cover;padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Cotton Strip top
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+  
+                   
+                <div class="testimonal__swiper">
+                    <!-- 3 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/cotton partywearkid2.webp"
+                             alt="" style="padding: 5px; 
+                                width: 280px;
+                                height: 300px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Cotton PartyWear
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $89
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                
+                <div class="testimonal__swiper">
+                    <!-- 4 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/printedpuffsleeves.webp"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Printed Puff Sleeves
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $30
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+              <div class="testimonal__swiper">
+                    <!--5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="images/rio girls tie and dye shirt.webp"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Girls Tie and dye Shirt
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $75
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                      </article>
+                    </div>
+                    
+                </div>
+            
+                <div class="testimonal__swiper">
+                    <!-- 6 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/frill.jpg"
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Frill Top
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $55
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/floralpattern.jpeg" 
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Floral Pattern Top 
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+               
+                <div class="testimonal__swiper">
+                    <!-- 8 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/bazufrill.webp"
+                            alt=""style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">White Bazu Frill Fancy Top
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $60
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+              
+                
+                
+            </div>
+            <h2 class="my2" id="Bottomwear">Bottomwear</h2>
+            <div class="cards">
+                
+                <div class="testimonal__swiper">
+                    <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/chinatrade.avif" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Kid China trade Bottomwear
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $40
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/girls track pants.jpg" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Girl Track Pant
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $69
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+        
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/kidsplazzo.webp"
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title" alt=""
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">  Kid Plazzo
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $80
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/shorts.jpg"   alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">  Shorts
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $25
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/twg.jpeg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Sports Shorts
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+               
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/butterfly.jpg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Butterfly Print
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/clothingEthnic.webp" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height:280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Clothing Ethnic Bottom Wear
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $45
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/pocketSolidShorts.webp" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">PocketSolid Shorts
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $10
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+            </div>   
+                
+            <h2 class="my2" id="Footwear">Footwear</h2>
+            <div class="cards">
+                <div class="testimonal__swiper">
+                    <!-- 1-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/girl leather.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Kid Girl leather shoes
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $50
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/pumps shoes.jpg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Girl Pump Shoes
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $37
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/high heels.jpeg"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">High Heels
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $45
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/girl sandals.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Sandel's for kid girl
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $25
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/girl shoes.webp"   alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Girl Shoes Pink
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/toddler girl sandals.jpg" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Todlar girl Sandal
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $34
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/booties.webp"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);"> Booties fancy
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $31                           </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="images/light up toddler       girl.webp" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 275px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Casual Canvas Lace Up Sneakers Shoes
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $10                         </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main> 
+    <br>
+    <footer class="footer" style="margin-top: -2%;">
+
+        <div class="footer-section">
+
+            <h1>Contact Us</h1>
+            <ul class="footer-list">
+                <li>trendtrove1004@gmail.com</li>
+                <li>
+                    2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
+                </li>
+                <li>+91 xxxxxx2020</li>
+
+                <li class="border-list">
+                </li>
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Quick Links</h1>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="return-policy.html">Return Policy</a></li>
+                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h1>Subscribe to Newsletter</h1>
+            <ul class="footer-list">
+                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+                <li>Join our fashion community today!</li>
+                <li class="sub">
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+        </div>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        
+    
+    <script>
+        let openbtn = document.getElementById('open-btn');
+let modalbox = document.getElementById('modalbox');
+let closebtn = document.getElementById('close-btn');
+let emailInput = document.getElementById('email-input');
+
+// Email validation function
+function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    openbtn.addEventListener('click', function () {
+        // Validate email
+        if (emailInput.value === '') {
+            alert('Please enter your email address.');
+        } else if (!isValidEmail(emailInput.value)) {
+            alert('Please enter a valid email address.');
+        } else {
+            modalbox.style.display = 'block'; // Show the modal
+        }
+    });
+
+    closebtn.addEventListener('click', function () {
+        modalbox.style.display = 'none'; // Hide the modal
+    });
+     // Close modal when clicking outside of it
+     modalbox.addEventListener('click', function(event) {
+        if (event.target === modalbox) {
+            modalbox.style.display = 'none'; // Hide modal if the background is clicked
+        }
+    });
+
+    </script>
+    
+
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    (function() {
+        let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+            } else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+        });
+
+        // Show "Go to Top" button after scrolling down
+        const goTopBtn = document.querySelector(".gotopbtn");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+
+    })();  // IIFE to avoid polluting global scope
+
+// Select all share buttons and share option containers
+const shareButtons = document.querySelectorAll('.share-icon');
+const shareOptions = document.querySelectorAll('.share-options');
+
+// Loop through each share button and attach event listener
+shareButtons.forEach((shareBtn, index) => {
+    shareBtn.addEventListener('click', () => {
+        console.log(`Share button ${index + 1} clicked`);
+        shareOptions[index].classList.toggle('active');
+    });
+});
+
+
+const copyBtns = document.querySelectorAll('.copy-btn'); // Get all copy buttons
+const linkTexts = document.querySelectorAll('.link'); // Get all link texts
+
+// Loop through each copy button
+copyBtns.forEach((copyBtn, index) => {
+    copyBtn.addEventListener('click', () => {
+        const textToCopy = linkTexts[index].innerText; // Get the text to copy for the current button
+
+        // Use the Clipboard API to copy the text
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                alert('Link copied to clipboard!');
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+    });
+});
+    // Select all save buttons
+const saveButtons = document.querySelectorAll('.save-icon');
+
+// Loop through each save button and attach event listener
+saveButtons.forEach((saveBtn) => {
+    saveBtn.addEventListener('click', () => {
+        saveBtn.classList.toggle('active'); // Toggle the active class
+    });
+});
+
+
+
+</script>    
+</body>
+</html>
