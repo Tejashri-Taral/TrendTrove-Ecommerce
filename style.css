@@ -386,12 +386,13 @@ html {
 
 /* featured section css  */
 
-.featured {
+section.featured {
   width: 100%;
-  padding: 10px 0px;
+  padding: 10px 10px;
   /* background-color: red; */
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .featured-box-1 {
@@ -403,7 +404,7 @@ html {
 
 .featured-box-2 {
   width: 33%;
-  height: 570px;
+  height: auto;
   /* background-color: purple; */
   display: flex;
   flex-wrap: wrap;
@@ -447,23 +448,21 @@ html {
 
 .bg-image > img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: 0.3s;
 }
 
-.featured-box-1:hover img,
-.featured-box-3:hover img {
-  transform: scale(1.2);
-}
 
 .overlay {
   width: 100%;
   height: 100%;
-  /* background-color: green; */
   position: absolute;
   display: flex;
   padding: 5%;
   align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
 }
 
 .btn-white {
@@ -472,14 +471,11 @@ html {
   color: #1d1d1d;
   box-shadow: 0 0 3px lightgray;
   z-index: 20;
-  transition: 0.3s ease;
+  text-decoration: none;
 }
 .btn-white:hover {
   background-color: black;
   color: white;
-}
-.btn-white {
-  text-decoration: none;
 }
 
 .featured-box-1:hover img,
@@ -494,24 +490,32 @@ html {
 @media (max-width: 1024px) {
   .featured-box-1,
   .featured-box-3 {
-    width: 48%; 
-    height: 450px;
+    width: 100%; 
+    height: auto;
   }
 
   .featured-box-2 {
     width: 100%;
     height: auto;
-    flex-direction: column; 
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column;  */
   }
 
-  .featured-box-2-box-1,
+  .featured-box-2-box-1{
+    width: 100%;
+    height: 300px;
+  }
+
   .featured-box-2-box-2,
   .featured-box-2-box-3 {
-    width: 100%;
+    width: 50%;
     height: 300px; 
   }
 
   .bg-image > img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
   }
 
@@ -524,6 +528,7 @@ html {
   .overlay {
     padding: 10px;
     justify-content: center; 
+    align-items: center;
   }
 }
 
@@ -535,15 +540,19 @@ html {
   .featured-box-2-box-2,
   .featured-box-2-box-3 {
     width: 100%; 
-    height: auto; 
+    height: auto;
+    min-height: 250px; 
   }
 
   .featured-box-2 {
+    width: 100%;
     flex-direction: column; 
     height: auto; 
+    align-items: center;
   }
 
   .bg-image > img {
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
@@ -996,7 +1005,7 @@ input {
   .btn {
     font-size: 10px;
   }
-
+/* 
   .featured {
     flex-direction: column;
     row-gap: 5px;
@@ -1027,7 +1036,7 @@ input {
   .featured-box-3 {
     width: 100%;
     height: 250px;
-  }
+  } */
 
   .products {
     padding: 30px 5%;
