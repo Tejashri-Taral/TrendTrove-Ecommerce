@@ -122,16 +122,59 @@ h2 {
 
 .feature h3 {
     margin-bottom: 10px;
+    
 }
+
+/* to make hover effect */
+
+  /* Target all div elements with the feature class */
+  .feature {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Define the hover effect for the feature div */
+  .feature:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    transform: scale(1.01); /* Slightly increase the size */
+  }
+
+  /* aroow code */
+
+  .feature h3 {
+    position: relative;
+    padding-right: 20px; /* Adds space for the arrow */
+    cursor: pointer;
+  }
+
+  /* Add the arrow using the pseudo-element */
+  .feature h3::after {
+    content: "\276F"; /* Unicode character for downwards arrow */
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate the arrow on hover */
+  .feature h3:hover::after {
+    transform: rotate(180deg); /* Rotates the arrow */
+  }
+
+
+
+
 
 .footer {
     width: 100%;
     padding: 30px 20%;
+    gap: 100px;
     background-color: #f6f5fa;
     font-family: 'futura';
     display: flex;
     justify-content: space-between;
     color: #1d1d1d;
+
 }
 
 .footer-section {
@@ -140,6 +183,7 @@ h2 {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    
 
 }
 
