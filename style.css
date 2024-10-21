@@ -1652,3 +1652,38 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+ /* Tooltip text  */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgb(87, 147, 236);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  left: 60%;
+  margin-left: -100px; 
+  top: 36%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+}
+  
+/* Show the tooltip on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+

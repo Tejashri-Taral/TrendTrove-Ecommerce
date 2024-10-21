@@ -92,16 +92,27 @@
                     Feel free to reach us using the form below.
                 </p>
                 <form id="feedbackForm" onsubmit="handleSubmit(event)">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea placeholder="Message" required></textarea>
+                    <div class="tooltip">
+                        <input type="text" placeholder="Your Name" required>
+                        <span class="tooltiptext">Please enter your full name here.</span>
+                    </div>
+                    <div class="tooltip">
+                        <input type="email" placeholder="Your Email" required>
+                        <span class="tooltiptext">Enter a valid email like name@example.com.</span>
+                    </div>
+                    <div class="tooltip">
+                        <input type="text" placeholder="Subject" required>
+                        <span class="tooltiptext">Mention the purpose of your message briefly.</span>
+                    </div>
+                    <div class="tooltip">
+                        <textarea placeholder="Message" required></textarea>
+                        <span class="tooltiptext">Feel free to describe your message in detail.</span>
+                    </div>
                     <button type="submit" class="btn-submit">Send Message</button>
                 </form>
                 <p id="feedbackMessage" style="display:none; color: green;">Feedback has been stored!</p>
             </div>
             
-
         <div class="contact-map">
             <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
         </div>
