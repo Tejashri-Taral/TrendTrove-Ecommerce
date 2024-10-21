@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -17,77 +16,134 @@
 
     .feedback-container {
       background-color: #fff;
-      padding: 30px;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
     }
 
-    h2 {
-      margin-bottom: 20px;
+    .feedback-container h2 {
       text-align: center;
       color: #333;
-    }
-
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 8px;
-      color: #666;
-    }
-
-    input[type="text"], input[type="email"], textarea {
-      width: 100%;
-      padding: 10px;
       margin-bottom: 20px;
+    }
+
+    .feedback-container img {
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .feedback-container label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      
+    }
+
+    .feedback-container input[type="text"],
+    .feedback-container input[type="email"],
+    .feedback-container input[type="tel"],
+    .feedback-container textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
 
-    input[type="submit"] {
-      background-color: #28a745;
+    .feedback-container .radio-group {
+      display: flex;
+      
+    }
+
+    .feedback-container input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .feedback-container .rating-group {
+      text-align: center;
+      display: flex;
+      margin: 10px 0;
+    }
+
+    .feedback-container .rating-group input[type="radio"] {
+      margin: 0 5px;
+    }
+
+    .feedback-container button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #ff4a4a;
       color: white;
-      padding: 10px 20px;
       border: none;
       border-radius: 4px;
+      font-size: 16px;
       cursor: pointer;
-      width: 100%;
-      transition: background-color 0.3s ease;
     }
 
-    input[type="submit"]:hover {
-      background-color: #218838;
-    }
-
-    @media (max-width: 600px) {
-      .feedback-container {
-        width: 100%;
-        padding: 20px;
-      }
-
-      input[type="text"], input[type="email"], textarea {
-        font-size: 16px;
-      }
+    .feedback-container button:hover {
+      background-color: #e43f3f;
     }
   </style>
 </head>
 <body>
 
-<div class="feedback-container">
-  <h2>We Value Your Feedback</h2>
-  <form action="submit_feedback.php" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  <div class="feedback-container">
+    <img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Feedback Icon" width="50">
+    <h2>Drop Us a Feedback</h2>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email-id" required>
+    <form id="feedbackForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-    <label for="message">Your Feedback:</label>
-    <textarea id="message" name="message" rows="4" placeholder="Write your feedback/review..." required></textarea>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+ 
 
-    <input type="submit" value="Submit Feedback">
-  </form>
-</div>
+      <label>Did You Find your Desired Product?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="answer" value="yes" required> Yes</label>
+        <label><input type="radio" name="answer" value="no"> No</label>
+      </div>
+
+      <label>Did you satisfy with our services?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="satisfaction" value="yes" required> Yes</label>
+        <label><input type="radio" name="satisfaction" value="no"> No</label>
+      </div>
+
+      <label>What Number You Given Us Out Of 10</label>
+      <div class="rating-group">
+        <label><input type="radio" name="rating" value="1"> 1</label>
+        <label><input type="radio" name="rating" value="2"> 2</label>
+        <label><input type="radio" name="rating" value="3"> 3</label>
+        <label><input type="radio" name="rating" value="4"> 4</label>
+        <label><input type="radio" name="rating" value="5"> 5</label>
+        <label><input type="radio" name="rating" value="6"> 6</label>
+        <label><input type="radio" name="rating" value="7"> 7</label>
+        <label><input type="radio" name="rating" value="8"> 8</label>
+        <label><input type="radio" name="rating" value="9"> 9</label>
+        <label><input type="radio" name="rating" value="10"> 10</label>
+      </div>
+
+      <label for="message">Your Message Or Suggestion</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message Or Suggestion" required></textarea>
+
+      <button type="submit">Send Feedback</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for your feedback!');
+      // You can add functionality to send the form data to a server here.
+    });
+  </script>
 
 </body>
 </html>
