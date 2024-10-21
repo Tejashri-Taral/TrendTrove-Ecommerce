@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
+    <title>Contributors Page</title>
+    <link href="contributors.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+         <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
+    <!-- ProgressBar -->
+    <div id="progress-bar"></div>
+    <!-- ProgressBar Ends -->
+
+    <!-- header section  -->
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
+
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Men</a>
+                            </li>
+                            <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+       
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="login-sginup.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Search Bar -->
+    <div id="search-bar">
+        <input type="text" id="search" placeholder="Search..." />
+        <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
+    </div>
+    <script src="preloader.js"></script>
+    <style>
+    /* Style for the search bar, initially hidden */
+    #search-bar {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust this to position the search bar just below the icon */
+        right: 20px; /* Align with the icon */
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling the input box and button */
+    #search-bar input {
+        padding: 5px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        outline: none;
+    }
+
+    #search-bar button {
+        padding: 5px 10px;
+        background-color:black;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #search-bar button:hover {
+        background-color:black;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get the search icon and search bar elements
+        const searchIcon = document.getElementById("search-icon"); 
+        const searchBar = document.getElementById("search-bar");
+
+        // Toggle the visibility of the search bar when the icon is clicked
+        searchIcon.onclick = function() {
+            if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                searchBar.style.display = "block";  // Show the search bar
+                searchBar.querySelector('input').focus(); // Automatically focus on the input field
+            } else {
+                searchBar.style.display = "none";  // Hide the search bar
+            }
+        }
+
+        // Search button functionality
+        const searchBtn = document.getElementById("search-btn");
+        searchBtn.onclick = function() {
+            var query = document.getElementById('search').value;
+            if(query) {
+                console.log("Search query:", query);
+                // Implement your search logic here, such as a redirect or an API call
+                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+                // Hide the search bar after clicking "Go"
+                searchBar.style.display = "none";
+            } else {
+                console.log("No search query entered");
+            }
+        }
+    });
+</script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="heroTitle">Our Amazing Contributors</h1>
+            <p id="heroSubtitle">Shaping the future of StationGuide, one commit at a time</p>
+            <a href="#contribute" class="cta-button">Become a Contributor</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <h2>Project Statistics</h2>
+        <div id="stats" class="stats-container">
+            <!-- Stat Cards will be inserted here -->
+        </div>
+    </section>
+
+    <!-- Contributors Grid -->
+    <section class="contributors">
+        <h2>Meet Our Contributors</h2>
+        <div id="contributors" class="contributors-container">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contribute" class="contribute">
+        <div class="contribute-content">
+            <h2>Ready to Make an Impact?</h2>
+            <p>Join our community and help shape the future of StationGuide.</p>
+            <form id="emailForm">
+                <input type="email" id="email" placeholder="Enter your email" required />
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+        <!-- footer section  -->
+        <footer class="footer">
+
+          <div class="footer-section">
+  
+              <h1>Contact Us</h1>
+              <ul class="footer-list">
+                  <li>trendtrove1004@gmail.com</li>
+                  <li>
+                      2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
+                  </li>
+                  <li>+91 xxxxxx2020</li>
+  
+                  <li class="border-list">
+                  </li>
+                  <li class="socials">
+                      <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                          <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                      <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                          <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                          <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                      <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                          <i class="fa-brands fa-instagram"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+  
+          <div class="footer-section quick-links">
+              <h1>Quick Links</h1>
+              <ul class="footer-list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contributors.html">Our Contributors</a></li>
+                  <li><a href="faq.html">FAQ's</a></li>
+                  <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                  <li><a href="return-policy.html">Return Policy</a></li>
+                  <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  
+              </ul>
+          </div>
+  
+          <div class="footer-section">
+              <h1>Subscribe to Newsletter</h1>
+              <ul class="footer-list">
+                  <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+                  <li>Join our fashion community today!</li>
+                  <li class="sub">
+                      <input type="email" placeholder="Enter your email here" id="email-input">
+                      <button class="btn" id="open-btn">Subscribe</button>
+                  </li>
+              </ul>
+          </div>
+  
+      </footer>
+
+    <script src="contributors.js"></script>
+</body>
+
+</html>
