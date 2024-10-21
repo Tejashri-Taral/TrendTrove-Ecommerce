@@ -1,491 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - TrendTrove</title>
-    <link rel="stylesheet" href="preloaderStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <!-- Link to your common CSS file -->
-    <style>
-      /* General Styles */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Roboto', Arial, sans-serif;
-            background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
-            color: #333;
-        }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - TrendTrove</title>
+  <link rel="stylesheet" href="preloaderStyle.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <!-- Link to your common CSS file -->
+  <style>
+    /* General Styles */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #f7f7f7, #e2e2e2);
+      color: #333;
+    }
 
-        h1, h2 {
-            color: #333;
-        }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
 
-        /* About Us Section */
-        .leftabout {
-            margin: 0 50px;
-        }
+    h1,
+    h2 {
+      color: #333;
+    }
 
-        .leftabout h3, .leftabout p {
-            text-align: center;
-        }
+    /* About Us Section */
+    .leftabout {
+      margin: 0 50px;
+    }
 
-        .about-section {
-            width: 100%;
-            padding: 40px 0;
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .leftabout h3,
+    .leftabout p {
+      text-align: center;
+    }
 
-        .about-title {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 35px;
-            font-weight: 700;
-        }
+    .about-section {
+      width: 100%;
+      padding: 40px 0;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Second part content css */
-        #div2, #div3 {
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-            margin: 7px 22px;
-        }
+    .about-title {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+    }
 
-        /* First part: Image left, text right */
-        .about-content-first, .about-content-second {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            gap: 30px;
-        }
+    /* Second part content css */
+    #div2,
+    #div3 {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      margin: 7px 22px;
+    }
 
-        .about-content-second {
-            flex-direction: row-reverse;
-        }
+    /* First part: Image left, text right */
+    .about-content-first,
+    .about-content-second {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      gap: 30px;
+    }
 
-        .about-text {
-            flex: 1;
-            font-size: 1.5em;
-            line-height: 1.8;
-            margin-right: 20px;
-        }
+    .about-content-second {
+      flex-direction: row-reverse;
+    }
 
-        .rightabout {
-            margin: 0 50px;
-        }
+    .about-text {
+      flex: 1;
+      font-size: 1.5em;
+      line-height: 1.8;
+      margin-right: 20px;
+    }
 
-        .about-images img {
-            width: 500px;
-            height: 520px;
-            border-radius: 5%;
-            aspect-ratio: 3/2;
-            opacity: 90%;
-            box-shadow: 0 0 15px rgba(136, 136, 136, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .rightabout {
+      margin: 0 50px;
+    }
 
-        .about-images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
-        }
+    .about-images img {
+      width: 500px;
+      height: 520px;
+      border-radius: 5%;
+      aspect-ratio: 3/2;
+      opacity: 90%;
+      box-shadow: 0 0 15px rgba(136, 136, 136, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .about3 {
-            margin-right: 50px;
-        }
+    .about-images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(136, 136, 136, 0.7);
+    }
 
-        .about4 {
-            margin: 50px 25px 20px;
-        }
+    .about3 {
+      margin-right: 50px;
+    }
 
-        .aboutus-body {
-            font-size: 21px;
-        }
+    .about4 {
+      margin: 50px 25px 20px;
+    }
 
-        .slogan {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+    .aboutus-body {
+      font-size: 21px;
+    }
 
-        .about-container {
-            padding: 0 40px;
-        }
-    
+    .slogan {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
 
-      /* Adding media Queries  */
-      @media (min-width: 1980px) {
-        .leftabout {
-          margin-left: 250px;
-          margin-right: 250px;
-        }
+    .about-container {
+      padding: 0 40px;
+    }
 
-        .about3 {
-          margin-right: 230px;
-        }
 
-        .about4 {
-          margin-left: 180px;
-        }
-
-        .rightabout {
-          margin-left: 250px;
-          margin-right: 250px;
-        }
-
-        .aboutus-body {
-          font-size: 25px;
-        }
-
-        #div2 {
-          font-size: 27px;
-        }
-
-        #div3 {
-          font-size: 23px;
-        }
+    /* Adding media Queries  */
+    @media (min-width: 1980px) {
+      .leftabout {
+        margin-left: 250px;
+        margin-right: 250px;
       }
 
-      @media (max-width: 1200px) {
-        h3 {
-          font-size: 20px;
-        }
-        .leftabout p {
-          font-size: 15px;
-        }
+      .about3 {
+        margin-right: 230px;
+      }
 
-        .rightabout p {
-          font-size: 15px;
-        } */
+      .about4 {
+        margin-left: 180px;
+      }
 
-        /* sorry for using id and div2 div3 but something was 
+      .rightabout {
+        margin-left: 250px;
+        margin-right: 250px;
+      }
+
+      .aboutus-body {
+        font-size: 25px;
+      }
+
+      #div2 {
+        font-size: 27px;
+      }
+
+      #div3 {
+        font-size: 23px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      h3 {
+        font-size: 20px;
+      }
+
+      .leftabout p {
+        font-size: 15px;
+      }
+
+      .rightabout p {
+        font-size: 15px;
+      }
+
+      */
+
+      /* sorry for using id and div2 div3 but something was 
             getting overwritten and this was easy way out */
-        #div2 {
-          font-size: 16px;
-        }
-
-        #div3 {
-          font-size: 16px;
-        }
-        .about-images img {
-          width: 300px;
-          height: 320px;
-          border-radius: 5%;
-          aspect-ratio: 3/2;
-          opacity: 90%;
-          box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
-        }
+      #div2 {
+        font-size: 16px;
       }
-    </style>
-  </head>
 
-  <body>
-       <!-- preloader -->
+      #div3 {
+        font-size: 16px;
+      }
+
+      .about-images img {
+        width: 300px;
+        height: 320px;
+        border-radius: 5%;
+        aspect-ratio: 3/2;
+        opacity: 90%;
+        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- preloader -->
   <div id="preloader">
     <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
-        </div>
+      <div class="box-wrap">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+        <div class="box five"></div>
+        <div class="box six"></div>
+      </div>
     </div>
-</div>
-    <!-- Header Section -->
-    <header class="header" id="header">
-      <div class="logo">
-        <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
-        <i class="fa-solid fa-bars menu" id="menu"></i>
-      </div>
+  </div>
+  <!-- Header Section -->
+  <header class="header" id="header">
+    <div class="logo">
+      <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
+      <i class="fa-solid fa-bars menu" id="menu"></i>
+    </div>
 
-      <nav class="bg-neutral-100 py-20">
-        <div class="tabs-container">
-          <ul id="tabs" class="tabs">
-            <li class="tab">
-              <a href="index.html">Home</a>
-              <div class="cursor"></div>
-            </li>
-            <li class="tab">
-              <a href="about.html">About</a>
-              <div class="cursor"></div>
-            </li>
-            <li class="tab">
-              <a href="features.html">Features</a>
-              <div class="cursor"></div>
-            </li>
-            <li class="dropdown tab">
-              <a class="dropdown-parent">Products</a>
-              <div class="cursor"></div>
-              <ul class="dropdown-content">
-                <li><a href="mens.html" class="priye">Men</a></li>
-                <li><a href="womens.html">Women</a></li>
-              </ul>
-            </li>
-            <li class="tab" style="margin-left: 15px">
-              <a href="contact.html">Contact Us</a>
-              <div class="cursor"></div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <nav class="utils">
-        <ul class="nav-links">
-          <li class="nav-link">
-            <i class="fa-solid fa-cart-shopping"></i>
+    <nav class="bg-neutral-100 py-20">
+      <div class="tabs-container">
+        <ul id="tabs" class="tabs">
+          <li class="tab">
+            <a href="index.html">Home</a>
+            <div class="cursor"></div>
           </li>
-          <li class="nav-link">
-            <i class="fa-solid fa-user"></i>
+          <li class="tab">
+            <a href="about.html">About</a>
+            <div class="cursor"></div>
           </li>
-          <li class="nav-link">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <li class="tab">
+            <a href="features.html">Features</a>
+            <div class="cursor"></div>
           </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- About Us Section -->
-    <section class="about-section">
-      <h2 class="about-title">About Us</h2>
-
-      <div class="about-container">
-        <!-- First part: Image left, text right -->
-        <div class="about-content-first">
-          <div class="about-text">
-            <div class="leftabout">
-              <h3>Welcome to TrendTrove</h3>
-              <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
-              <p class="aboutus-body">
-                Your Ultimate Destination for fashion-forward apparel,
-                accessories, and lifestyle products. We believe in celebrating
-                individuality and empowering every customer to express their
-                unique style with confidence. Whether you're looking for
-                everyday essentials or statement pieces, we source high-quality,
-                sustainable, and stylish items to elevate your wardrobe.
-              </p>
-            </div>
-          </div>
-          <div class="about-images">
-            <img
-              class="about3"
-              src="images/about3.jpg"
-              alt="Fashion Collection"
-            />
-          </div>
-        </div>
-
-        <!-- Second part: Image right, text left -->
-        <div class="about-content-second">
-          <div class="about-text">
-            <div class="rightabout">
-              <p class="aboutus-body" id="div2">
-                Our Mission is to empower individuals
-              </p>
-              <p class="aboutus-body">
-                At the heart of TrendTrove is a passion for style and a
-                commitment to customer satisfaction. Our mission is to offer a
-                seamless shopping experience with exceptional service, fast
-                shipping, and an easy return process. We stay ahead of the
-                fashion curve so you can step out feeling your best, whatever
-                the occasion.
-              </p>
-              <p class="aboutus-body" id="div3">
-                Discover your style with TrendTrove — where fashion meets
-                confidence!
-              </p>
-            </div>
-          </div>
-          <div class="about-images">
-            <img
-              class="about4"
-              src="images/about4.jpg"
-              alt="Accessories Collection"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-section">
-        <h1>Contact Us</h1>
-        <ul class="footer-list">
-          <li>
-            <a href="mailto:trendtrove1004@gmail.com"
-              >trendtrove1004@gmail.com</a
-            >
-          </li>
-          <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-          <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-          <li class="border-list"></li>
-          <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin"target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h1>Quick Links</h1>
-        <ul class="footer-list">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-          <li><a href="return-policy.html">Return Policy</a></li>
-          <li>
-            <a
-              href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce"
-              target="_blank"
-              >Star Us</a
-            >
-          </li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h1>Subscribe to Newsletter</h1>
-        <ul class="footer-list">
-          <li>
-            Be the first to know about exclusive deals and new arrivals straight
-            to your inbox.
-          </li>
-          <li>Join our fashion community today!</li>
-          <li class="sub">
-            <input
-              type="email"
-              placeholder="Enter your email here"
-              id="email-input"
-            />
-            <button class="btn" id="open-btn">Subscribe</button>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
-
-        <div class="footer-section quick-links">
-            <h1>Quick Links</h1>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+          <li class="dropdown tab">
+            <a class="dropdown-parent">Products</a>
+            <div class="cursor"></div>
+            <ul class="dropdown-content">
+              <li><a href="mens.html" class="priye">Men</a></li>
+              <li><a href="womens.html">Women</a></li>
             </ul>
-
-    <div class="footer-copyright">
-      <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
-
-    <div class="modal-box" id="modalbox" style="display: none">
-      <div class="modal" id="modal">
-        <div id="close-btn">&times;</div>
-        <div class="modal-content">
-          <img src="images\confirmation.png" alt="" height="100px" />
-          <h2>Subscription Successful!</h2>
-          <p>Thank you for subscribing.</p>
-          <p>You will receive notifications & updates via email.</p>
-
-        </div>
-        <div class="social">
-          <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
-              id="linkedin"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/Tejashri-Taral"
-              id="github"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
-              id="twitter"
-              target="_blank"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/your_instagram"
-              id="instagram"
-              target="_blank"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
           </li>
+          <li class="tab" style="margin-left: 15px">
+            <a href="contact.html">Contact Us</a>
+            <div class="cursor"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="utils">
+      <ul class="nav-links">
+        <li class="nav-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </li>
+        <li class="nav-link">
+          <i class="fa-solid fa-user"></i>
+        </li>
+        <li class="nav-link">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Us Section -->
+  <section class="about-section">
+    <h2 class="about-title">About Us</h2>
+
+    <div class="about-container">
+      <!-- First part: Image left, text right -->
+      <div class="about-content-first">
+        <div class="about-text">
+          <div class="leftabout">
+            <h3>Welcome to TrendTrove</h3>
+            <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
+            <p class="aboutus-body">
+              Your Ultimate Destination for fashion-forward apparel,
+              accessories, and lifestyle products. We believe in celebrating
+              individuality and empowering every customer to express their
+              unique style with confidence. Whether you're looking for
+              everyday essentials or statement pieces, we source high-quality,
+              sustainable, and stylish items to elevate your wardrobe.
+            </p>
+          </div>
+        </div>
+        <div class="about-images">
+          <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
+        </div>
+      </div>
+
+      <!-- Second part: Image right, text left -->
+      <div class="about-content-second">
+        <div class="about-text">
+          <div class="rightabout">
+            <p class="aboutus-body" id="div2">
+              Our Mission is to empower individuals
+            </p>
+            <p class="aboutus-body">
+              At the heart of TrendTrove is a passion for style and a
+              commitment to customer satisfaction. Our mission is to offer a
+              seamless shopping experience with exceptional service, fast
+              shipping, and an easy return process. We stay ahead of the
+              fashion curve so you can step out feeling your best, whatever
+              the occasion.
+            </p>
+            <p class="aboutus-body" id="div3">
+              Discover your style with TrendTrove — where fashion meets
+              confidence!
+            </p>
+          </div>
+        </div>
+        <div class="about-images">
+          <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
         </div>
       </div>
     </div>
-    <script src="preloader.js"></script>
+  </section>
 
-    <script>
-      let openbtn = document.getElementById("open-btn");
-      let modalbox = document.getElementById("modalbox");
-      let closebtn = document.getElementById("close-btn");
-      let emailInput = document.getElementById("email-input");
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h1>Contact Us</h1>
+      <ul class="footer-list">
+        <li>
+          <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>
+        </li>
+        <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
+        <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
+        <li class="border-list"></li>
+        <li class="socials">
+          <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      // Email validation function
-      function isValidEmail(email) {
-        // Regular expression for validating an email
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
+    <div class="footer-section">
+      <h1>Quick Links</h1>
+      <ul class="footer-list">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+        <li><a href="return-policy.html">Return Policy</a></li>
+        <li>
+          <a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+<div class="footer-section">
+  <h1>Subscribe to Newsletter</h1>
+  <ul class="footer-list">
+    <li>
+      Be the first to know about exclusive deals and new arrivals straight
+      to your inbox.
+    </li>
+    <li>Join our fashion community today!</li>
+    <li class="sub">
+      <input type="email" placeholder="Enter your email here" id="email-input" />
+      <button class="btn" id="open-btn">Subscribe</button>
+    </li>
+  </ul>
+</div>
+</footer>
+
+<div class="footer-copyright">
+  <div id="copyright" style="right: 500px;">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+</div>
+
+<div class="modal-box" id="modalbox" style="display: none">
+  <div class="modal" id="modal">
+    <div id="close-btn">&times;</div>
+    <div class="modal-content">
+      <img src="images/confirmation.png" alt="" height="100px" />
+      <h2>Subscription Successful!</h2>
+      <p>Thank you for subscribing.</p>
+      <p>You will receive notifications & updates via email.</p>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="social">
+        <li class="socials">
+          <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+      </div>
+    </div>
+  </div>
+  <script src="preloader.js"></script>
+
+  <script>
+    
+    let openbtn = document.getElementById("open-btn");
+    let modalbox = document.getElementById("modalbox");
+    let closebtn = document.getElementById("close-btn");
+    let emailInput = document.getElementById("email-input");
+
+    // Email validation function
+    function isValidEmail(email) {
+      // Regular expression for validating an email
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    openbtn.addEventListener("click", function () {
+      // Validate email
+      if (emailInput.value === "") {
+        alert("Please enter your email address.");
+      } else if (!isValidEmail(emailInput.value)) {
+        alert("Please enter a valid email address.");
+      } else {
+        modalbox.style.display = "block"; // Show the modal
       }
+    });
 
-      openbtn.addEventListener("click", function () {
-        // Validate email
-        if (emailInput.value === "") {
-          alert("Please enter your email address.");
-        } else if (!isValidEmail(emailInput.value)) {
-          alert("Please enter a valid email address.");
-        } else {
-          modalbox.style.display = "block"; // Show the modal
-        }
+    closebtn.addEventListener("click", function () {
+      modalbox.style.display = "none"; // Hide the modal
+    });
+    // Close modal when clicking outside of it
+    modalbox.addEventListener("click", function (event) {
+      if (event.target === modalbox) {
+        modalbox.style.display = "none"; // Hide modal if the background is clicked
+      }
+    });
+  </script>
+  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  (function() {
+      let headerVisible = false;
+      document.getElementById("menu").addEventListener("click", function () {
+          if (headerVisible === false) {
+              document.getElementById("header").style.height = "290px";
+              headerVisible = true;
+          } else {
+              document.getElementById("header").style.height = "50px";
+              headerVisible = false;
+          }
       });
 
-      closebtn.addEventListener("click", function () {
-        modalbox.style.display = "none"; // Hide the modal
+      // Show "Go to Top" button after scrolling down
+      const goTopBtn = document.querySelector(".gotopbtn");
+      window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+              goTopBtn.style.display = "block";
+          } else {
+              goTopBtn.style.display = "none";
+          }
       });
-      // Close modal when clicking outside of it
-      modalbox.addEventListener("click", function (event) {
-        if (event.target === modalbox) {
-          modalbox.style.display = "none"; // Hide modal if the background is clicked
-        }
-      });
-    </script>
-  </body>
+
+  })();
+  </script>
+</body>
+
 </html>
