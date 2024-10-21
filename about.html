@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <!-- Link to your common CSS file -->
     <style>
       /* General Styles */
       html,
+
+      
       body {
         margin: 0;
         padding: 0;
@@ -28,7 +31,7 @@
         justify-content: space-between;
         min-height: 100vh;
       }
-
+      
       h1,
       h2 {
         color: #333;
@@ -254,10 +257,7 @@
       #div2 {
         font-size: 16px;
       }
-      @media (max-width:780px) 
-      {
-
-      } 
+    }
       @media (max-width:480px)
       {
       /* About Us Section */
@@ -365,25 +365,10 @@
         padding: 0px; 
       }
       }
-    </style>
-  </head>
-
-      #div3 {
-        font-size: 16px;
-      }
-
-      .about-images img {
-        width: 300px;
-        height: 320px;
-        border-radius: 5%;
-        aspect-ratio: 3/2;
-        opacity: 90%;
-        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
-      }
-    }
   </style>
-</head>
 
+  
+<head>
 <body>
   <!-- preloader -->
   <div id="preloader">
@@ -401,28 +386,59 @@
   <!-- Header Section -->
   <header class="header" id="header">
     <div class="logo">
-      <a href="/"> <img src="images/logo.png" alt="Logo" srcset="" /> </a>
-      <i class="fa-solid fa-bars menu" id="menu"></i>
+        <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
+        <i class="fa-solid fa-bars menu" id="menu"></i>
     </div>
 
-    <nav class="bg-neutral-100 py-20">
-      <div class="tabs-container">
-        <ul id="tabs" class="tabs">
-          <li class="tab">
-            <a href="index.html">Home</a>
-            <div class="cursor"></div>
-          </li>
-          <li class="tab">
-            <a href="about.html">About</a>
-            <div class="cursor"></div>
-          </li>
-          <li class="tab">
-            <a href="features.html">Features</a>
-            <div class="cursor"></div>
-          </li>
+     <nav class="bg-neutral-100 py-20">
+        <div class="tabs-container">
+            <ul id="tabs" class="tabs">
+                <li class="tab">
+                    <a href="index.html">Home</a>
+                    <div class="cursor"></div>
+                </li>
+                <li class="tab">
+                    <a href="about.html">About</a>
+                    <div class="cursor"></div>
+                </li>
+                <li class="tab">
+                    <a href="features.html">Features</a>
+                    <div class="cursor"></div>
+                </li>
+                <li class="dropdown tab">
+                    <a href="#">Products</a>
+                    <div class="cursor"></div>
+                    <ul class="dropdown-content ">
+                        <li><a href="mens.html" class="priye">Men</a>
+                        </li>
+                        <li><a href="womens.html">Women</a></li>
+                    </ul>
+                </li>
+                <li class="tab" style="margin-left: 15px;">
+                    <a href="contact.html">Contact Us</a>
+                    <div class="cursor"></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="utils">
+        <ul class="nav-links">
+            <li class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+            <li class="nav-link">
+                <a href="login-sginup.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </li>
+            <li class="nav-link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
         </ul>
-      </nav>
-    </header>
+    </nav>
+</header>
+
 
     <!-- About Us Section -->
     <section class="about-section">
@@ -838,4 +854,4 @@
   })();
   </script>
 </body>
-</html>
+</html> 
