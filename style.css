@@ -660,6 +660,7 @@ html {
 
 .insta {
   width: 100%;
+  /* height: auto; */
   padding: 30px 20%;
   /* background-color: red; */
   display: flex;
@@ -671,14 +672,14 @@ html {
 .posts {
   width: 100%;
   padding: 20px 0px;
+  gap: 0.5rem;
   /* background-color: yellow; */
   display: flex;
   justify-content: space-between;
 }
 
 .post-image {
-  width: 16%;
-  height: 170px;
+  object-fit:cover;
   position: relative;
   /* background-color: green; */
   overflow: hidden;
@@ -688,20 +689,39 @@ html {
 
 .post-image img {
   width: 100%;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .post-image:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .post-image i {
   position: absolute;
-  font-size: 30px;
+  font-size: 25px;
+  font-weight: 500;
   margin-right: 10px;
   margin-top: 10px;
   z-index: 20;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+.post-image i:hover {
+  color: #db0a50;
+  transition: color 0.3s ease;
+}
+
+
+.feedback-container h2{
+  font-size: 1.2rem;
+}
+.feedback-container h2 span{
+  color: rgba(0, 0, 164, 0.663);
+} 
+.feedback-container h2 span:hover{
+  color: darkblue;
+} 
 
 .footer {
   width: 100%;
@@ -987,6 +1007,10 @@ input {
 
   .post-image {
     width: 49%;
+  }
+
+  .feedback-container h2{
+    font-size: 1rem;
   }
 
   .footer {
@@ -1526,10 +1550,10 @@ ul {
   width: 55%;
   height: 550px;
   margin: 0 auto;
-  position: relative;
+   
 }
 
-.contact-map iframe {
+.contact-map {
   position: relative;
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
@@ -1598,7 +1622,14 @@ ul {
 .contact-form .btn-submit:hover {
   background-color: #2d80d8;
 }
-
+@media screen and (max-width: 992px){
+  .contact-map  iframe {
+    width: 100%;
+    height: 300px; ;
+    margin-bottom: 0px;
+     
+  }
+}
 /* Responsive Adjustments */
 @media screen and (max-width: 992px) {
   .contact-info-box {
@@ -1628,3 +1659,38 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+.tooltip {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+ /* Tooltip text  */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgb(87, 147, 236);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  left: 60%;
+  margin-left: -100px; 
+  top: 36%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+}
+  
+/* Show the tooltip on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
