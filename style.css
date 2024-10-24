@@ -219,7 +219,8 @@ html {
   background-size: cover;
   display: flex;
   align-items: right;
-  padding-left: 20%;
+  padding-left: 0%;
+  opacity:0.8;
 }
 
 .slide-details {

@@ -65,6 +65,7 @@
   p {
     margin-bottom: 20px;
     color: #555;
+    font-weight:bold;
   }
   
   input[type="email"] {
