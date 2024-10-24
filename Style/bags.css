@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 40px 0;
+    color: #333;
+}
+
+/* Bags Section */
+.bags-section {
+    padding: 20px 10%;
+    background-color: #fff;
+}
+
+.bags-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Bag Card Styles */
+.bag-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bag-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Bag Image */
+.bag-image img {
+    width: 100%;
+    aspect-ratio: 2/2;
+    object-fit: cover;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.bag-card:hover .bag-image img {
+    transform: scale(1.1);
+}
+
+/* Bag Info */
+.bag-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.bag-info h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.bag-info .price {
+    font-size: 1.2rem;
+    color: #e67e22;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.bag-info .rating {
+    font-size: 1rem;
+    color: #f39c12;
+    margin-bottom: 5px;
+}
+
+.bag-info .description {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.bag-info .size {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bag-info .reviews {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* Buy Now Button */
+.buy-now {
+    padding: 10px 20px;
+    background-color: #55abe4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #2779d1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .bag-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .bag-card {
+        width: 100%;
+    }
+}

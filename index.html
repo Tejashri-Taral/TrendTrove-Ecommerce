@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
     <title>TrendTrove - Ecommerce</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./Style/popup.css">
 
 </head>
 
 <body>
-    
+     <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
     <!-- ProgressBar -->
     <div id="progress-bar"></div>
     <!-- ProgressBar Ends -->
@@ -42,12 +56,14 @@
                         <div class="cursor"></div>
                     </li>
                     <li class="dropdown tab">
-                        <a href="#">Products</a>
+                        <a class="dropdown-parent">Products</a>
                         <div class="cursor"></div>
                         <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Mens</a>
+                            <li><a href="mens.html" class="priye">Men</a>
                             </li>
-                            <li><a href="womens.html">Womens</a></li>
+                            <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -78,9 +94,10 @@
     </header>
     <!-- Search Bar -->
     <div id="search-bar">
-        <input type="text" id="search" placeholder="Search..." />
+        <input type=" text " id=" search " placeholder=" Search..." />
         <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
     </div>
+    <script src=" preloader.js "></script>
     <style>
     /* Style for the search bar, initially hidden */
     #search-bar {
@@ -94,10 +111,17 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Css for language box */
+    .lang-box{
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     /* Styling the input box and button */
     #search-bar input {
-        padding: 5px;
-        width: 200px;
+        padding:  5px;
+        width:  200px;
         border: 1px solid #ccc;
         border-radius: 3px;
         outline: none;
@@ -167,27 +191,50 @@
         </div>
     </section>
 
+    <!-- Pop up Html  -->
+         <!-- Pop-up for email registration -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/popup1.jpg" alt="Fashion Image">
+            </div>
+            <div class="popup-right">
+                <a href="#" class="no-thanks"><img class="popuplogo" src="images/logo.png" alt="Logo" srcset=""></a>
+                <h1>Join TrendTrove!</h1>
+
+                <h2 class="popuph2">Unlock Your Fashion</h2>
+                <p>Sign up now to enjoy <strong> 20% off </strong> your first order and exclusive updates on the latest trends.</p>
+                <form id="emailForm">
+                    <input type="email" id="popup-email" placeholder="Enter your email" required>
+                    <button type="submit" class="signup-btn">Continue</button>
+                </form>
+                <a href="#" class="no-thanks close-btn">No thanks, I’ll shop full price</a>
+                <p class="terms">By signing up, you agree to our <a href="terms-conditions.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+            </div>
+        </div>
+    </div>
+
 
     <!-- featured section  -->
 
     <section class="featured">
         <div class="featured-box-1">
             <div class="overlay">
-                <button class="btn btn-white">
+                <a href="./shopclothing.html" class="btn btn-white">
                     Shop Clothing
-                </button>
+                </button></a>
             </div>
             <div class="bg-image">
-                <img src="./images//shop-clothing.webp" alt="product">
+                <img src="./images/youngcouple1.jpg" alt="product">
             </div>
         </div>
 
         <div class="featured-box-2">
             <div class="featured-box-2-box-1">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <a href="./products/sunglasses.html" class="btn btn-white">
                         Shop Sunglasses
-                    </button>
+                    </a>
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-glasses.webp" alt="product">
@@ -195,9 +242,9 @@
             </div>
             <div class="featured-box-2-box-2">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <a href="./products/bags.html" class="btn btn-white">
                         Shop Bags
-                    </button>
+                    </a>
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-bags.webp" alt="product">
@@ -206,9 +253,9 @@
 
             <div class="featured-box-2-box-3">
                 <div class="overlay">
-                    <button class="btn btn-white">
+                    <a href="./products/sandals.html" class="btn btn-white">
                         Shop Sandals
-                    </button>
+                    </a>
                 </div>
                 <div class="bg-image">
                     <img src="./images/shop-sandals.webp" alt="product">
@@ -240,13 +287,13 @@
             <div class="product" data-aos="fade-up" data-aos-delay="200">
                 <div class="product-image">
                     <div class="main-image">
-                        <img src="./images/product1-effect.jpg" alt="product">
+                        <img src="./images/blackstrippedmaneffectimage.jpg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product1.webp" alt="product">
+                        <img src="./images/blackstrippedmannormal.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -254,7 +301,7 @@
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">Black Striped Top</p>
+                    <p class="product-name">Black Striped Shirt</p>
                     <p class="product-price">- $199</p> 
                 </div>
 
@@ -271,7 +318,7 @@
                         <img src="./images/product2-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -298,7 +345,7 @@
                         <img src="./images/product3.webp" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -318,13 +365,13 @@
                 <div class="product-image">
 
                     <div class="main-image">
-                        <img src="./images/product4.jpg" alt="product">
+                        <img src="./images/whitetshirtmen.jpeg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product4-effect.jpg" alt="product">
+                        <img src="./images/whitetshirtmeneffect.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -333,7 +380,7 @@
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">White Top</p>
+                    <p class="product-name">White T-shirt</p>
                     <p class="product-price">- $100</p> 
                 </div>
             </div>
@@ -395,7 +442,7 @@
                         <img src="./images/product5-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -418,7 +465,7 @@
                         <img src="./images/product6-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -435,20 +482,20 @@
 
                 <div class="product-image">
                     <div class="main-image">
-                        <img src="./images/product7.jpg" alt="product">
+                        <img src="./images/tealimageshirtmen.jpeg" alt="product">
                     </div>
                     <div class="effect-image">
-                        <img src="./images/product7-effect.jpg" alt="product">
+                        <img src="./images/tealshirtmeneffect.jpeg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
                 </div>
 
                 <div class="product-details">
-                    <p class="product-name">Light Teal Top</p>
+                    <p class="product-name">Light Teal Shirt</p>
                     <p class="product-price">- $199</p> 
                 </div>
             </div>
@@ -463,7 +510,7 @@
                         <img src="./images/product8-effect.jpg" alt="product">
                     </div>
                     <div class="overlay-image">
-                        <button class="btn btn-white" id="heart">
+                        <button class="heartbtn" id="heart">
                             &#10084;
                         </button>
                     </div>
@@ -475,7 +522,6 @@
             </div>
         </div>
     </section>
-
     <!-- shop from insta section  -->
 
     <section class="insta">
@@ -509,7 +555,7 @@
         </div>
         <div class="feedback-container">
         
-            <h2>Have a feedback? &nbsp;&nbsp;<a href="feedback.html" target="_blank">Click here to provide feedback</a></h2>
+            <h2>Have feedback?&nbsp;<a href="feedback.html" target="_blank"><span>Click here</span></a> to share your thoughts with us.</h2>
         </div>
     </section>
     
@@ -546,7 +592,7 @@
             </ul>
         </div>
 
-        <div class="footer-section">
+        <div class=" footer-section quick-links ">
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
@@ -565,20 +611,54 @@
                 <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
                 <li>Join our fashion community today!</li>
                 <li class="sub">
-                    <input type="email" placeholder="Enter your email here">
-                    <button class="btn">Subscribe</button>
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
                 </li>
             </ul>
         </div>
-       
-              
-        
 
     </footer>
-    <div class="footer-copyright">
-        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
-
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
+        </div>
+        
+        <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('year').textContent = currentYear;
+        </script>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications, updates via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        
+    
+    <script src="./script/modal_box.js"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
@@ -590,7 +670,7 @@
             const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById("progress-bar").style.width = scrollPercent + "%";
+            document.getElementById(" progress-bar ").style.width = scrollPercent + "%";
         }
 
     </script>
@@ -699,38 +779,42 @@
     const cursor = document.getElementById('cursor');
     
     tabs.forEach(tab => {
+ 
         tab.addEventListener('mouseenter', () => {
             cursor.style.width = ${tab.offsetWidth}px; // Set width to the current tab's width
             cursor.style.left = ${tab.offsetLeft}px; // Move cursor to the current tab's position
+ 
+       
+ 
             cursor.style.opacity = 1; 
         });
     
-        tab.addEventListener('mouseleave', () => {
+        tab.addEventListener(' mouseleave', () => {
             cursor.style.opacity = 0; 
         });
     });
     
   </script>
-  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <a class=" gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+  <script src=" https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 
   (function() {
       let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
+      document.getElementById(" menu").addEventListener("click", function () {
           if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
+              document.getElementById(" header").style.height = "290px";
               headerVisible = true;
           } else {
-              document.getElementById("header").style.height = "50px";
+              document.getElementById(" header").style.height = "50px";
               headerVisible = false;
           }
       });
 
       // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
+      const goTopBtn = document.querySelector(" .gotopbtn");
+      window.addEventListener(" scroll", function () {
           if (window.scrollY > 200) {  // Show the button after scrolling down 200px
               goTopBtn.style.display = "block";
           } else {
@@ -748,6 +832,13 @@ document.getElementById("cart-icon").addEventListener("click", function() {
 
   
 </script>
+
+<div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
+<script src="./script/popup.js"></script>
 
 </body>
 

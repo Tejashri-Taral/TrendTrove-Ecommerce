@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TrendTrove</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
 <body>
+       <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
     <header class="header" id="header">
-        <div class="logo">
-            <p>TrendTrove</p>
+          <div class="logo">
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
@@ -32,12 +50,12 @@
                         <div class="cursor"></div>
                     </li>
                     <li class="dropdown tab">
-                        <a href="#">Products</a>
+                        <a class="dropdown-parent">Products</a>
                         <div class="cursor"></div>
                         <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Mens</a>
+                            <li><a href="mens.html" class="priye">Men</a>
                             </li>
-                            <li><a href="womens.html">Womens</a></li>
+                            <li><a href="womens.html">Women</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -54,7 +72,9 @@
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
+                    <a href="login-sginup.html">
                     <i class="fa-solid fa-user"></i>
+                </a>
                 </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -63,40 +83,67 @@
         </nav>
     </header>
 
-    <section class="contact-section">
-        <h2 class="section-title">Contact Us</h2>
-        <p class="contact-description">Have any questions or feedback? We'd love to hear from you! Feel free to reach
-            out to us using the form below or email us at <a href="mailto:support@trendtrove.com"
-                class="contact-email">support@trendtrove.com</a>.</p>
-
-        <form class="contact-form" action="/submit-form" method="POST">
-            <div class="form-group">
-                <label for="name" class="form-label">Your Name</label>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+    <div class="contact-section">
+        <h2><b><u>Contact Us</u></b></h2>
+        <p>Get in Touch</p>
+    
+        <div class="contact-info-container">
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <p>Having any questions or feedback? We'd love to hear from you!<br>
+                    Feel free to reach us using the form below.
+                </p>
+                <form id="feedbackForm" onsubmit="handleSubmit(event)">
+                    <div class="tooltip">
+                        <input type="text" placeholder="Your Name" required>
+                        <span class="tooltiptext">Please enter your full name here.</span>
+                    </div>
+                    <div class="tooltip">
+                        <input type="email" placeholder="Your Email" required>
+                        <span class="tooltiptext">Enter a valid email like name@example.com.</span>
+                    </div>
+                    <div class="tooltip">
+                        <input type="text" placeholder="Subject" required>
+                        <span class="tooltiptext">Mention the purpose of your message briefly.</span>
+                    </div>
+                    <div class="tooltip">
+                        <textarea placeholder="Message" required></textarea>
+                        <span class="tooltiptext">Feel free to describe your message in detail.</span>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <p id="feedbackMessage" style="display:none; color: green;">Feedback has been stored!</p>
             </div>
-
-            <div class="form-group">
-                <label for="email" class="form-label">Your Email</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Enter your message" rows="6"
-                    required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-
-        <div class="contact-info">
-            <h3 class="info-title">Other Ways to Reach Us</h3>
-            <p class="info-detail">Email: <a href="mailto:support@trendtrove.com"
-                    class="contact-email">support@trendtrove.com</a></p>
-            <p class="info-detail">Phone: +1 234 567 890</p>
-            <p class="info-detail">Address: 123 TrendTrove Blvd, Fashion City, USA</p>
+            
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
         </div>
-    </section>
+        </div>
+        <div class="contact-info-container">
+            <div class="contact-info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <ul>
+                    <li><span>Head Office: 123 TrendTrove Blvd, Fashion City, USA</span></li><br>
+                    <li><span>Branch Office:2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</span></li><br>
+                    <li><span>Development Center: 789 E-Commerce Hub, Pune, MH 411001.</span></li>
+                </ul>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-phone"></i>
+                <h3>Call Us</h3>
+                <p>+1234567890<br>+91 9876543211<br>+91 9876543212</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <ul>
+                    <li><span>support@trendtrove.com</span></li><br>
+                    <li><span>trendtrove1004@gmail<br>.com</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
 
@@ -108,23 +155,23 @@
                 <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
                 <li class="border-list"></li>
                 <li class="socials">
-                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" target="_blank">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Tejashri-Taral" target="_blank">
+                    <a href="https://github.com/Tejashri-Taral" id="github"target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" target="_blank">
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter"target="_blank">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="https://www.instagram.com/your_instagram" target="_blank">
+                    <a href="https://www.instagram.com/your_instagram" id="instagram"target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-section quick-links">
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
@@ -146,12 +193,60 @@
             </ul>
         </div>
     </footer>
+
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+  AOS.init();
+
+  (function() {
+      let headerVisible = false;
+      document.getElementById("menu").addEventListener("click", function () {
+          if (headerVisible === false) {
+              document.getElementById("header").style.height = "290px";
+              headerVisible = true;
+          } else {
+              document.getElementById("header").style.height = "50px";
+              headerVisible = false;
+          }
+      });
+
+      // Show "Go to Top" button after scrolling down
+      const goTopBtn = document.querySelector(".gotopbtn");
+      window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+              goTopBtn.style.display = "block";
+          } else {
+              goTopBtn.style.display = "none";
+          }
+      });
+
+  })();
+  </script>
+    <script src="preloader.js"></script>
+    <script src="preloader.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            const feedbackMessage = document.getElementById("feedbackMessage");
+            feedbackMessage.style.display = "block"; 
+
+            document.getElementById("feedbackForm").reset();
+        }
+    </script>
+    </body>
+    </html>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
     document.getElementById("cart-icon").addEventListener("click", function() {
     window.location.href = "cart.html";
-});
-</script>
+})
+
     
 </body>
+
 
 </html>

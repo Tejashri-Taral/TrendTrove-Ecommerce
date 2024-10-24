@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
     <title>TrendTrove - Ecommerce</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
@@ -26,6 +27,19 @@
 </head>
 
 <body>
+       <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+        <div class="box-wrap">
+            <div class="box one"></div>
+            <div class="box two"></div>
+            <div class="box three"></div>
+            <div class="box four"></div>
+            <div class="box five"></div>
+            <div class="box six"></div>
+        </div>
+    </div>
+</div>
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -34,11 +48,11 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-         <nav class="bg-neutral-100 py-20">
+         <nav class=" bg-neutral-100 py-20">
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
                     <li class="tab">
-                        <a href="index.html">Home</a>
+                        <a href=" index.html">Home</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
@@ -53,9 +67,9 @@
                         <a href="#">Products</a>
                         <div class="cursor"></div>
                         <ul class="dropdown-content ">
-                            <li><a href="mens.html" class="priye">Mens</a>
+                            <li><a href="mens.html" class="priye">Men</a>
                             </li>
-                            <li><a href="womens.html">Womens</a></li>
+                            <li><a href="womens.html">Women</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -67,12 +81,12 @@
         </nav>
 
         <nav class="utils">
-            <ul class="nav-links">
+            <ul class=" nav-links ">
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
-                <li class="nav-link">
-                    <a href="login-sginup.html">
+                <li class=" nav-link ">
+                    <a href=" login-sginup.html">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>
@@ -85,14 +99,14 @@
 
     <!-- Main Content -->
     <main>
-        <section class="feature">
+        <section class=" feature ">
             <h3 onclick="toggleAnswer(0)">User-Experience</h3>
-            <p class="answer">The TrendTrove website features a clean and organized layout, ensuring users can easily navigate through various sections, including Home, About, Features, Products, and Contact Us. The top navigation bar remains accessible, allowing for quick access to essential pages.
+            <p class=" answer">The TrendTrove website features a clean and organized layout, ensuring users can easily navigate through various sections, including Home, About, Features, Products, and Contact Us. The top navigation bar remains accessible, allowing for quick access to essential pages.
 A modern and aesthetically pleasing design enhances the shopping experience. High-quality images and a consistent color scheme create a visually appealing environment that resonates with the brand identity.</p>
         </section>
-        <section class="feature">
+        <section class=" feature ">
             <h3 onclick="toggleAnswer(1)">Seamless Integration</h3>
-            <p class="answer">TrendTrove is designed to integrate effortlessly with various platforms and services, ensuring that users can access a unified shopping experience without disruption. Whether users are browsing on desktop or mobile, the transition is smooth and intuitive.
+            <p class=" answer ">TrendTrove is designed to integrate effortlessly with various platforms and services, ensuring that users can access a unified shopping experience without disruption. Whether users are browsing on desktop or mobile, the transition is smooth and intuitive.
 The website seamlessly integrates with popular social media channels, allowing users to share products, reviews, and recommendations with ease. This fosters community engagement and enhances brand visibility.</p>
         </section>
         <section class="feature">
@@ -124,7 +138,7 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
 
                 <li class="border-list">
                 </li>
-                <li class="socials">
+                <li class=" socials ">
                     <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
@@ -141,9 +155,9 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
             </ul>
         </div>
 
-        <div class="footer-section">
+        <div class="footer-section quick-links">
             <h1>Quick Links</h1>
-            <ul class="footer-list">
+            <ul class=" footer-list ">
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
@@ -158,16 +172,85 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
                 <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
                 <li>Join our fashion community today!</li>
                 <li class="sub">
-                    <input type="email" placeholder="Enter your email here">
-                    <button class="btn">Subscribe</button>
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
                 </li>
             </ul>
         </div>
+
     </footer>
+        
+        <div class="footer-copyright">
+            <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+        </div>
+        
+        <div class="modal-box" id="modalbox" style="display: none;">
+            <div class="modal" id="modal">
+                <div id="close-btn">&times;</div>
+                <div class="modal-content">
+                    <img src="images\confirmation.png" alt="" height="100px" >
+                    <h2>Subscription Successful!</h2>
+                    <p>Thank you for subscribing.</p>
+                    <p> You will receive notifications & updates via email.</p>
+                </div>
+                <div class="social">
+                    <li class="socials">
+                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <script src="preloader.js"></script>
+        
     
-    <div class="footer-copyright">
-        <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
+    <script>
+        let openbtn = document.getElementById('open-btn');
+let modalbox = document.getElementById('modalbox');
+let closebtn = document.getElementById('close-btn');
+let emailInput = document.getElementById('email-input');
+
+// Email validation function
+function isValidEmail(email) {
+        // Regular expression for validating an email
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
+    openbtn.addEventListener('click', function () {
+        // Validate email
+        if (emailInput.value === '') {
+            alert('Please enter your email address.');
+        } else if (!isValidEmail(emailInput.value)) {
+            alert('Please enter a valid email address.');
+        } else {
+            modalbox.style.display = 'block'; // Show the modal
+        }
+    });
+
+    closebtn.addEventListener('click', function () {
+        modalbox.style.display = 'none'; // Hide the modal
+    });
+     // Close modal when clicking outside of it
+     modalbox.addEventListener('click', function(event) {
+        if (event.target === modalbox) {
+            modalbox.style.display = 'none'; // Hide modal if the background is clicked
+        }
+    });
+
+    </script>
+    
+
 
     <script>
         function toggleAnswer(index) {
@@ -178,6 +261,35 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
         document.getElementById("cart-icon").addEventListener("click", function() {
     window.location.href = "cart.html";
 });
+    </script>
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  
+    (function() {
+        let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+            } else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+        });
+  
+        // Show "Go to Top" button after scrolling down
+        const goTopBtn = document.querySelector(".gotopbtn");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+  
+    })();
     </script>
 </body>
 

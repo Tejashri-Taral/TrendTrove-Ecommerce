@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clothings</title>
+    <link rel="stylesheet" href="Style/clothing.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .navigation .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigation .nav-links li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navigation .nav-links li a:hover {
+            color: #007BFF;
+        }
+
+        .utils .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .utils .nav-links li {
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .utils .nav-links li:hover {
+            color: #007BFF;
+        }
+
+        /* Main Content Styling */
+        .clothings-container {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Filters Sidebar Styling */
+        .filters {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .filters h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .filters .filter-group {
+            margin-bottom: 25px;
+        }
+
+        .filters .filter-group h4 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .filters label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .filters input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+
+        .filters .price-filter {
+            width: 100%;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* clothings Grid Styling */
+        .clothings-section {
+            flex: 1;
+        }
+
+        .clothings-section h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        .clothings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .clothing-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .clothing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+
+        .clothing-image img {
+            width: 300px;
+            height: 200px;
+            
+        }
+
+        .clothing-info {
+            padding: 15px;
+        }
+
+        .clothing-info h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .clothing-info .price {
+            font-size: 18px;
+            color: #007BFF;
+            margin-bottom: 5px;
+        }
+
+        .clothing-info .rating {
+            font-size: 14px;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .clothing-info .description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .clothing-info .size,
+        .clothing-info .reviews {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .buy-now {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-now:hover {
+            background-color: #218838;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #fff;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .filters {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .clothings-container {
+                flex-direction: column;
+            }
+            .filters {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+            .header .menu {
+                display: block;
+            }
+            .navigation .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #fff;
+                position: absolute;
+                top: 60px;
+                left: 30px;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                border-radius: 4px;
+            }
+            .navigation .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="logo">
+            <p>TrendTrove</p>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
+
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Mens</a>
+                            </li>
+                            <li><a href="womens.html">Womens</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="login-sginup.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="clothings-container">
+        <!-- Filters Sidebar -->
+        <aside class="filters">
+            <h3>Filters</h3>
+
+            <!-- Brand Filter -->
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label><input type="checkbox" class="brand-filter" value="Levi's"> Levi's</label>
+                <label><input type="checkbox" class="brand-filter" value="H&M"> H&M</label>
+                <label><input type="checkbox" class="brand-filter" value="Zara"> Zara</label>
+                <label><input type="checkbox" class="brand-filter" value="Prada"> Prada</label>
+                <label><input type="checkbox" class="brand-filter" value="Fabindia">Fabindia</label>
+                <label><input type="checkbox" class="brand-filter" value="Gucci"> Gucci</label>
+                <label><input type="checkbox" class="brand-filter" value="Raymond"> Raymond</label>
+               
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <label for="price-min">Min: $</label>
+                <input type="number" id="price-min" class="price-filter" placeholder="90">
+                <label for="price-max">Max: $</label>
+                <input type="number" id="price-max" class="price-filter" placeholder="400">
+                <button id="clear-filters" style="margin-top:10px; padding:5px 10px; background-color:#dc3545; color:#fff; border:none; border-radius:4px; cursor:pointer;">Clear Filters</button>
+            </div>
+
+            <!-- Size Filter -->
+            <div class="filter-group">
+                <h4>Size</h4>
+                <label><input type="checkbox" class="size-filter" value="S"> S</label>
+                <label><input type="checkbox" class="size-filter" value="M"> M</label>
+                <label><input type="checkbox" class="size-filter" value="L"> L</label>
+                <label><input type="checkbox" class="size-filter" value="XL"> XL</label>
+                <label><input type="checkbox" class="size-filter" value="XXL"> XXL</label>
+            </div>
+
+            <!-- Rating Filter -->
+            <div class="filter-group">
+                <h4>Rating</h4>
+                <label><input type="checkbox" class="rating-filter" value="4"> 4 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="3"> 3 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="2"> 2 stars & up</label>
+                <label><input type="checkbox" class="rating-filter" value="1"> 1 star & up</label>
+            </div>
+        </aside>
+
+        <!-- clothings Page -->
+        <section class="clothings-section">
+            <h1>Shop Clothing</h1>
+            <div class="clothings-grid" id="clothings-grid">
+                
+                <div class="clothing-card" data-brand="Levi's" data-price="220" data-size="L" data-rating="4.5">
+                    <div class="Clothing-image">
+                        <img src="images/cloth1.jpeg" alt="Levi's Shirt" height="200px" width="300px">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Levi's Shirt</h2>
+                        <p class="price">$220.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">A modern design, the Levi's Shirt offers maximum comfort and style.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 120</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Levi's" data-price="140" data-size="M" data-rating="4.0">
+                    <div class="clothing-image">
+                        <img src="images/cloth2.jpeg" alt="Levi's T-shirt">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Levi's T-shirt</h2>
+                        <p class="price">$140.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.0)</p>
+                        <p class="description">Smart and trendy, this regular fit T-shirt will complement your every outfit.</p>
+                        <p class="size">Size: M</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Zara" data-price="210" data-size="XL" data-rating="5.0">
+                    <div class="clothing-image">
+                        <img src="images/cloth3.jpeg" alt="Zara midi">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Zara Midi</h2>
+                        <p class="price">$310.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (5.0)</p>
+                        <p class="description">Our online collection of women’s midi skirts contains basic denim styles.</p>
+                        <p class="size">Size: </p>
+                        <p class="reviews">Reviews: 200</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="H&M" data-price="130" data-size="L" data-rating="4.6">
+                    <div class="clothing-image">
+                        <img src="images/cloth4.jpeg" alt="H&M">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>H&M - Frok</h2>
+                        <p class="price">$130.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">Retro style meets modern dress in the H&M.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 60</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Fabindia" data-price="160" data-size="S" data-rating="4.9">
+                    <div class="clothing-image">
+                        <img src="images/cloth5.jpeg" alt="Fabindia 990">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Fabindia One piece</h2>
+                        <p class="price">$360.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p class="description">The Fabindia is a perfect for womens brand.</p>
+                        <p class="size">Size: S</p>
+                        <p class="reviews">Reviews: 85</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Prada" data-price="90" data-size="L" data-rating="4.4">
+                    <div class="clothing-image">
+                        <img src="images/cloth6.jpeg" alt="Prada Classic">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Prada Classic</h2>
+                        <p class="price">$190.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.4)</p>
+                        <p class="description">A timeless classic, perfect for party wear.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 75</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="H&M" data-price="110" data-size="XXL" data-rating="3.0">
+                    <div class="clothing-image">
+                        <img src="images/cloth7.jpeg" alt="H&M">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>H&M partywear</h2>
+                        <p class="price">$110.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐ (3.0)</p>
+                        <p class="description">Comfort and style combined in the H&M Product.</p>
+                        <p class="size">Size: XXL</p>
+                        <p class="reviews">Reviews: 90</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="clothing-card" data-brand="Zara" data-price="280" data-size="M" data-rating="4.6">
+                    <div class="clothing-image">
+                        <img src="images/cloth8.jpeg" alt="Zara">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Zara shorts</h2>
+                        <p class="price">$280.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">The classic Zara brand that never goes out of style.</p>
+                        <p class="size">Size: M</p>
+                        <p class="reviews">Reviews: 120</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Prada" data-price="360" data-size="L" data-rating="4.5">
+                    <div class="clothing-image">
+                        <img src="images/cloth9.jpeg" alt="Prada">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Prada</h2>
+                        <p class="price">$360.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Cloud-like comfort and responsive cushioning for mens.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 180</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="clothing-card" data-brand="Fabindia" data-price="345" data-size="S" data-rating="4.8">
+                    <div class="clothing-image">
+                        <img src="images/cloth10.jpeg" alt="Fabindia blazzer">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Fabindia blazzer</h2>
+                        <p class="price">$345.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p class="description">Maximum cushioning for ultimate comfort.</p>
+                        <p class="size">Size: S</p>
+                        <p class="reviews">Reviews: 165</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="H&M" data-price="140" data-size="L" data-rating="4.9">
+                    <div class="clothing-image">
+                        <img src="images/cloth11.jpeg" alt="H&M Phantom">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>H&M Phantom</h2>
+                        <p class="price">$140.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.9)</p>
+                        <p class="description">Smart and comfort for the wear.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 50</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Raymond" data-price="180" data-size="M" data-rating="3.8">
+                    <div class="clothing-image">
+                        <img src="images/cloth12.jpeg" alt="Raymond  II">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Raymond II</h2>
+                        <p class="price">$180.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐ (3.8)</p>
+                        <p class="description">A chunky clothing that is making a comeback.</p>
+                        <p class="size">Size: M</p>
+                        <p class="reviews">Reviews: 140</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Converse" data-price="75" data-size="S" data-rating="4.2">
+                    <div class="clothing-image">
+                        <img src="images/cloth13.jpeg" alt="Raymond Taylor">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Raymond Taylor</h2>
+                        <p class="price">$75.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.2)</p>
+                        <p class="description">A timeless classic that well and Show casual outfit.</p>
+                        <p class="size">Size: S</p>
+                        <p class="reviews">Reviews: 150</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Prada" data-price="160" data-size="L" data-rating="4.8">
+                    <div class="clothing-image">
+                        <img src="images/cloth14.jpeg" alt="Prada">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Prada</h2>
+                        <p class="price">$160.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐⭐ (4.8)</p>
+                        <p class="description">Iconic western dress with an ethentic wear.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 210</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="clothing-card" data-brand="Fabindia" data-price="130" data-size="XL" data-rating="4.5">
+                    <div class="clothing-image">
+                        <img src="images/cloth15.jpeg" alt="Fabindia">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Fabindia</h2>
+                        <p class="price">$190.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Engineered for comfort and performance, perfect for daily wear.</p>
+                        <p class="size">Size: XL</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+                
+                <div class="clothing-card" data-brand="Raymond" data-price="110" data-size="S" data-rating="4.3">
+                    <div class="clothing-image">
+                        <img src="images/cloth16.jpeg" alt="Raymond Classic">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Raymond Classic</h2>
+                        <p class="price">$110.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.3)</p>
+                        <p class="description">Durable and stylish, perfect for both outdoor adventures and urban settings.</p>
+                        <p class="size">Size: S</p>
+                        <p class="reviews">Reviews: 85</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="clothing-card" data-brand="Gucci" data-price="100" data-size="M" data-rating="4.6">
+                    <div class="clothing-image">
+                        <img src="images/cloth17.jpeg" alt="Gucci party wear">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Gucci party wear</h2>
+                        <p class="price">$170.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.6)</p>
+                        <p class="description">Lightweight and responsive, ideal for both party and club.</p>
+                        <p class="size">Size: M</p>
+                        <p class="reviews">Reviews: 70</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+               
+                <div class="clothing-card" data-brand="Gucci " data-price="200" data-size="L" data-rating="4.7">
+                    <div class="clothing-image">
+                        <img src="images/cloth18.jpeg" alt="Gucci Ghost">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Gucci Ghost</h2>
+                        <p class="price">$200.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.7)</p>
+                        <p class="description">Smooth transitions and excellent cushioning for an effortless for wear.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 230</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+              
+                <div class="clothing-card" data-brand="Gucci" data-price="195" data-size="XXL" data-rating="4.4">
+                    <div class="clothing-image">
+                        <img src="images/cloth19.jpeg" alt="Gucci Turbo">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>Gucci Turbo</h2>
+                        <p class="price">$195.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.4)</p>
+                        <p class="description">Enhanced stability and support for the wear.</p>
+                        <p class="size">Size: XXL</p>
+                        <p class="reviews">Reviews: 88</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+
+              
+                <div class="clothing-card" data-brand="H&M Blazzer set" data-price="130" data-size="L" data-rating="4.5">
+                    <div class="clothing-image">
+                        <img src="images/cloth20.jpeg" alt="H&M Blazzer set">
+                    </div>
+                    <div class="clothing-info">
+                        <h2>H&M Blazzer set</h2>
+                        <p class="price">$130.00</p>
+                        <p class="rating">Rating: ⭐⭐⭐⭐ (4.5)</p>
+                        <p class="description">Designed for wedding wear, offering durability and comfort for outdoor enthusiasts.</p>
+                        <p class="size">Size: L</p>
+                        <p class="reviews">Reviews: 95</p>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 TrendTrove. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const menu = document.getElementById('menu');
+            const navLinks = document.getElementById('nav-links');
+
+            menu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+           
+            const brandFilters = document.querySelectorAll('.brand-filter');
+            const priceMin = document.getElementById('price-min');
+            const priceMax = document.getElementById('price-max');
+            const sizeFilters = document.querySelectorAll('.size-filter');
+            const ratingFilters = document.querySelectorAll('.rating-filter');
+            const clearFiltersButton = document.getElementById('clear-filters');
+
+          
+            const clothingCards = document.querySelectorAll('.clothing-card');
+
+           
+            function filterclothings() {
+                
+                const selectedBrands = Array.from(brandFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+
+                
+                const minPrice = parseFloat(priceMin.value) || 0;
+                const maxPrice = parseFloat(priceMax.value) || Infinity;
+
+               
+                const selectedSize = Array.from(sizeFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => (checkbox.value));
+
+                
+                const selectedRatings = Array.from(ratingFilters)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseFloat(checkbox.value));
+
+                
+                clothingCards.forEach(card => {
+                    const brand = card.getAttribute('data-brand');
+                    const price = parseFloat(card.getAttribute('data-price'));
+                    // const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    const sizeRange = card.getAttribute('data-size')
+                    const rating = parseFloat(card.getAttribute('data-rating'));
+
+                   
+                    const brandMatch = selectedBrands.length ? selectedBrands.includes(brand) : true;
+
+                    
+                    const priceMatch = price >= minPrice && price <= maxPrice;
+
+                   
+                    let sizeMatch = true;
+                    if (selectedSize.length) {
+                        
+                        // const clothingSize = [];
+                        // for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
+                        //     clothingSize.push(size);
+                        // }
+                        
+                        // sizeMatch = selectedSize.some(size => sizeRange.includes(size));
+                        sizeMatch = selectedSize.includes(sizeRange);
+                    }
+
+                   
+                    let ratingMatch = true;
+                    if (selectedRatings.length) {
+                        ratingMatch = selectedRatings.some(r => rating >= r);
+                    }
+
+                    
+                    if (brandMatch && priceMatch && sizeMatch && ratingMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            
+            brandFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterclothings);
+            });
+
+            priceMin.addEventListener('input', filterclothings);
+            priceMax.addEventListener('input', filterclothings);
+
+            sizeFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterclothings);
+            });
+
+            ratingFilters.forEach(checkbox => {
+                checkbox.addEventListener('change', filterclothings);
+            });
+
+          
+            clearFiltersButton.addEventListener('click', () => {
+                
+                brandFilters.forEach(cb => cb.checked = false);
+                sizeFilters.forEach(cb => cb.checked = false);
+                ratingFilters.forEach(cb => cb.checked = false);
+               
+                priceMin.value = '';
+                priceMax.value = '';   
+                filterclothings();
+            });
+        });
+    </script>
+
+</body>
+</html>
