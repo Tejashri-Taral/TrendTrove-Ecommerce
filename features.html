@@ -83,7 +83,7 @@
         <nav class="utils">
             <ul class=" nav-links ">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class=" nav-link ">
                     <a href=" login-sginup.html">
@@ -257,6 +257,10 @@ function isValidEmail(email) {
             const answers = document.querySelectorAll('.answer');
             answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
         }
+
+        document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
     </script>
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

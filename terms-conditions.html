@@ -52,7 +52,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-user"></i>
@@ -186,6 +186,12 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+    </script>
 </body>
 <div class="gtranslate_wrapper"></div>
         <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>

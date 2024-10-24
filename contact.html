@@ -69,7 +69,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -193,6 +193,7 @@
             </ul>
         </div>
     </footer>
+
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -239,6 +240,11 @@
     <div class="gtranslate_wrapper"></div>
     <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+})
+
     
 </body>
 

@@ -107,7 +107,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -1236,6 +1236,11 @@ function isValidEmail(email) {
 
     })();  // IIFE to avoid polluting global scope
 
+
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+
 // Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
 const shareOptions = document.querySelectorAll('.share-options');
@@ -1283,6 +1288,7 @@ saveButtons.forEach((saveBtn) => {
 <div class="gtranslate_wrapper"></div>
         <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>   
+
 </body>
 
 </html>

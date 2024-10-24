@@ -339,6 +339,7 @@
         margin-right:5px;
       }
 
+
       /* Second image on about us page */
       .about4 {
         margin-top:80px;
@@ -396,6 +397,10 @@
                 <li class="tab">
                     <a href="index.html">Home</a>
                     <div class="cursor"></div>
+
+                  
+                  
+            
                 </li>
                 <li class="tab">
                     <a href="about.html">About</a>
@@ -425,8 +430,9 @@
     <nav class="utils">
         <ul class="nav-links">
             <li class="nav-link">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
             </li>
+          
             <li class="nav-link">
                 <a href="login-sginup.html">
                     <i class="fa-solid fa-user"></i>
@@ -738,6 +744,8 @@
       </ul>
     </div>
 
+
+=======
     <div class="footer-section">
       <h1>Quick Links</h1>
       <ul class="footer-list">
@@ -786,7 +794,14 @@
   <script src="preloader.js"></script>
 
   <script>
-    
+
+
+  
+ 
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+ 
     let openbtn = document.getElementById("open-btn");
     let modalbox = document.getElementById("modalbox");
     let closebtn = document.getElementById("close-btn");

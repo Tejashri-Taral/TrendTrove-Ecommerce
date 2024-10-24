@@ -79,7 +79,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -180,7 +180,7 @@
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
+                <h1>Discover Tomorrow's Trends Today with TrendTrove!</h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
@@ -779,9 +779,13 @@
     const cursor = document.getElementById('cursor');
     
     tabs.forEach(tab => {
-        tab.addEventListener(' mouseenter', () => {
-            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
-            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+ 
+        tab.addEventListener('mouseenter', () => {
+            cursor.style.width = ${tab.offsetWidth}px; // Set width to the current tab's width
+            cursor.style.left = ${tab.offsetLeft}px; // Move cursor to the current tab's position
+ 
+       
+ 
             cursor.style.opacity = 1; 
         });
     
@@ -819,6 +823,14 @@
       });
 
   })();  // IIFE to avoid polluting global scope
+
+  
+        // When the cart icon is clicked, navigate to the 'cart.html' page.
+document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+
+  
 </script>
 
 <div class="gtranslate_wrapper"></div>
