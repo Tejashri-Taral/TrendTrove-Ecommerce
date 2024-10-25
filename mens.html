@@ -6,6 +6,7 @@
     <title>TrendTrove - Ecommerce</title>
     <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
@@ -63,7 +64,7 @@
 background-color: black;
 color: white;
 padding:5px 0px ;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
 .button-container {
     justify-content: center;
@@ -76,8 +77,193 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
  }
       </style>
+         <style>
+            /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      } */
+      /* body {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(29, 29, 29);
+      } */
+      .slider_container {
+        position: relative;
+        width: 100%;
+        height: 45rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+      }
+      .slider {
+        position: relative;
+        width: 400%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        animation: 30s cubic-bezier(0, 0, 1, 1) sliding infinite;
+        animation-delay: 3s;
+      }
+      .slide {
+        /* display: flex; */
+        display: contents;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-width: 100%;
+        height: 100%;
+      }
+      .slide img {
+        
+        height: 100%;
+        width: 50%;
+       /* background-size: cover; */
+      }
+      /* .slide .caption {
+        position: absolute;
+        left: 0;
+        bottom: 5%;
+        font-size: 5rem;
+        font-weight: 600;
+        color: white;
+        text-transform: capitalize;
+        background: rgba(0, 0, 0, 0.348);
+        backdrop-filter: blur(10px);
+        padding: 1rem 5rem;
+        border-radius: 0 2rem 2rem 0;
+      } */
+      /* .slide.one {
+  background: rgb(182, 19, 109);
+}
+.slide.two {
+  background: rgb(255, 64, 64);
+}
+.slide.three {
+  background: rgb(11, 173, 188);
+}
+.slide.four {
+  background: rgb(11, 188, 14);
+}
+.slide.five {
+  background: rgb(173, 11, 188); */
+      @keyframes sliding {
+        0% {
+          transform: translateX(0%);
+        }
+        25% {
+        
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-200%);
+        }
+        70% {
+          transform: translateX(-300%);
+        }
+        100% {
+          transform: translateX(-400%);
+        }
+    }
+          </style>  
+
+      <style>
       
- 
+      
+      .hero {
+        &__slider {
+          width: 800px;
+          height: 500px;
+          overflow: hidden;
+        }
+      
+        &__slides {
+          width: 500%;
+          height: auto;
+          display: flex;
+      
+          input {
+            
+            display: none;
+          }
+        }
+      
+        &__btns {
+          position: absolute;
+          width: 50rem;
+          margin-top: 460px;
+          display: flex;
+          justify-content: center;
+        }
+      
+        &__slide {
+          width: 20%;
+          transition: 1s ease;
+      
+          & img {
+            width: 800px;
+            height: 500px;
+          }
+        }
+      }
+      
+      /*css for automatic navigation*/
+      
+      .btn__auto {
+        border: solid 2px white;
+        padding: 5px;
+        border-radius: 50%;
+        transition: 1s;
+      
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+      
+      #radio1:checked ~ .hero__btns .auto-btn1 {
+                    
+        background: none;
+      }
+      
+      #radio2:checked ~ .hero__btns .auto-btn2 {
+        background: none;
+      }
+      
+      #radio3:checked ~ .hero__btns .auto-btn3 {
+        background: none;
+      }
+      
+      #radio4:checked ~ .hero__btns .auto-btn4 {
+        background: none;
+      }
+      
+      /* Provides the sliding animation -- Do not get rid off */
+      #radio1:checked ~ .slide01 {
+        margin-left: 0;
+      }
+      
+      #radio2:checked ~ .slide01 {
+        margin-left: -20%;
+      }
+      
+      #radio3:checked ~ .slide01 {
+        margin-left: -40%;
+      }
+      
+      #radio4:checked ~ .slide01 {
+        margin-left: -60%;
+      }
+      
+      </style >
+
       
 </head>
 <body>
@@ -126,7 +312,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -140,10 +326,93 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         </nav>
     </header>
      <main>
-        <div class="container">
-            <div class="slider">
-                <a href="#Bottomwear"><img src="https://i.pinimg.com/originals/b8/ce/12/b8ce12af4e594bcb26b8f55b0377dad4.jpg" alt="" height="500px" width="100%vw"></a>      
-            </div>
+        <!-- ..................................github - Mayanksaininh.......................................... -->
+        <section class="slider_container">
+            <section class="slider">
+              <div class="">
+                <a href="#Bottomwear"><img src="https://i.pinimg.com/originals/b8/ce/12/b8ce12af4e594bcb26b8f55b0377dad4.jpg" alt="" ></a>
+
+              </div>
+              <div class="slide two">
+                <img src="./images/Black Formal Shoes.webp" alt="" />
+                
+              </div>
+             
+              <div class="slide four">
+                <img src="./images/boy printed tshirt.jpg" alt="" />
+                
+              </div>
+              <div class="slide five">
+                <img src="./images/Black Denim Joggers.webp" alt="" />
+                
+              </div>
+              <div class="slide six">
+                <img src="./images/check shirt.webp" alt="" />
+                
+              </div>
+                <div class = "slide seven">
+                    <img src = "./images/cloth9.jpeg"/>
+                </div>
+                <div class = "slide eight">
+                    <img src = "./images/coupleImage.png"/>
+                </div>
+                <div class = "slide nine">
+                    <img  src = "./images/tealimageshirtmen.jpeg"/>
+                </div>
+                <div class = "slide ten">
+                    <img  src = "./images/youngcouple1.jpg"/>
+                </div>
+                <div class = "slide ten">
+                    <img  src = "./images/cloth12.jpeg"/>
+                </div>
+                <div class = "slide ten">
+                    <img  src = "./images/cloth19.jpeg"/>
+                </div>
+                <div class="slide three">
+                    <img src="./images/Boys Loafer.webp"alt="" />
+                    
+                  </div>
+                  
+              <div class="slide four">
+                <img src="./images/Stylish Shoes.jpg" alt="" />
+                
+              </div>
+            
+            </section>
+        </section>
+        <!-- .........................................github - Mayanksaininh............................................. -->
+          <!--image slider end-->
+      
+            <!-- <div class="slider slides"> -->
+                <!-- ..............................github - mayanksaininh................................. -->
+                
+            
+                    <!-- <a href="#Bottomwear"><img src="https://i.pinimg.com/originals/b8/ce/12/b8ce12af4e594bcb26b8f55b0377dad4.jpg" alt="" ></a> -->
+                    <!--   -->
+                    <!-- <div id="slider">
+                     <div class="slides"></div>
+                    <img  src="0% {
+          transform: translateX(0%);
+        }"/>
+                    </div>
+                    <div class="slides">
+                        <div class="slide slide01">
+                    <img  src = "./images/Black Denim Joggers.webp"/>
+                    </div>
+                    <div class="slides">
+                    <img  src = "./images/Black Formal Shoes.webp"/>
+                    </div> -->
+                   
+                    
+                    
+                   
+                   
+             
+                <!-- </div>
+                
+            </div> -->
+
+            
             <h2 class="my2" id="Topwear">Topwear</h2>
             <div class="cards">
                 
@@ -1196,12 +1465,12 @@ function isValidEmail(email) {
         }
     });
 
-    
+    </script>
     
 
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
- 
+<script>
     AOS.init();
 
     (function() {
@@ -1227,12 +1496,6 @@ function isValidEmail(email) {
         });
 
     })();  // IIFE to avoid polluting global scope
-
-    document.getElementById("cart-icon").addEventListener("click", function() {
-    window.location.href = "cart.html";
-});
- 
- 
 
 // Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
@@ -1276,11 +1539,20 @@ saveButtons.forEach((saveBtn) => {
 });
 
 
-<div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+</script>    
+<script>
+let counter = 1;
+setInterval(function () {
+  let slideBtn = document.getElementById("radio" + counter);
+  //   Checks the checkbox
+  slideBtn.checked = true;
+  counter++;
+  if (counter > 4) {
+    counter = 1;
+  }
+}, 2000);
+
 </script>
-
-
 </body>
 </html>
