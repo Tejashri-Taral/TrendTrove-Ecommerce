@@ -41,6 +41,10 @@
       .leftabout {
         margin-left: 50px;
         margin-right: 50px;
+        margin: 0 auto; /* Center the leftabout content */
+        padding: 0 50px; /* Adjust horizontal padding */
+        text-align: center; /* Center all text inside leftabout */
+        transition: transform 0.3s ease, 
       }
 
       .leftabout h3 {
@@ -53,8 +57,9 @@
       }
 
       .about-section {
-        width: 100%;
+        width: 80%;
         padding: 40px 0;
+        margin: 0 auto; 
         background: #ffffff;
       }
 
@@ -539,20 +544,6 @@
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
-
-
-          <li class="nav-link">
-            <a href="login-sginup.html">
-            <i class="fa-solid fa-user"></i>
-          </a>
-          </li>
-          <li class="nav-link">
-            <i class="fa-solid fa-magnifying-glass" ></i>
-
-          <li class="tab">
-            <a href="features.html">Features</a>
-            <div class="cursor"></div>
-
         </ul>
       </div>
 
@@ -716,69 +707,6 @@
     </div>
   </section>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-section">
-      <h1>Contact Us</h1>
-      <ul class="footer-list">
-        <li>
-          <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>
-        </li>
-        <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-        <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-        <li class="border-list"></li>
-        <li class="socials">
-          <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-
-=======
-    <div class="footer-section">
-      <h1>Quick Links</h1>
-      <ul class="footer-list">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-        <li><a href="return-policy.html">Return Policy</a></li>
-        <li>
-          <a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a>
-        </li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-
-<div class="footer-section">
-  <h1>Subscribe to Newsletter</h1>
-  <ul class="footer-list">
-    <li>
-      Be the first to know about exclusive deals and new arrivals straight
-      to your inbox.
-    </li>
-    <li>Join our fashion community today!</li>
-    <li class="sub">
-      <input type="email" placeholder="Enter your email here" id="email-input" />
-      <button class="btn" id="open-btn">Subscribe</button>
-    </li>
-  </ul>
-</div>
-</footer>
-
-<div class="footer-copyright">
-  <div id="copyright" style="right: 500px;">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-</div>
-
 <div class="modal-box" id="modalbox" style="display: none">
   <div class="modal" id="modal">
     <div id="close-btn">&times;</div>
@@ -794,10 +722,6 @@
   <script src="preloader.js"></script>
 
   <script>
-
-
-  
- 
     document.getElementById("cart-icon").addEventListener("click", function() {
     window.location.href = "cart.html";
 });
