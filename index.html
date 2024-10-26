@@ -13,6 +13,9 @@
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="./Style/popup.css">
 
+    <!-- Link to manifest file for enabling PWA -->
+    <link rel="manifest" href="/manifest.json">
+
 </head>
 
 <body>
@@ -840,6 +843,19 @@ document.getElementById("cart-icon").addEventListener("click", function() {
 
 
 <script src="./script/popup.js"></script>
+
+<!-- Script to detect service workers for enabling PWA -->
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch((error) => {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    });
+  }  
 
 </body>
 
