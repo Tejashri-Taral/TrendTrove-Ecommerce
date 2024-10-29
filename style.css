@@ -268,6 +268,7 @@ html {
 .button-container {
   display: flex;
   align-items: center;
+  position: relative; 
 }
 
 /* Add to Cart Button */
@@ -316,8 +317,8 @@ html {
 /* Initially hidden */
 .share-options {
   position: absolute;
-  top: 55%;
-  left: 70%;
+  top: -389%;
+  left: 60%;
   width: 110px;
   height: 145px;
   transform-origin: bottom left;
@@ -326,13 +327,14 @@ html {
   padding: 15px;
   font-family: "roboto";
   transition: 0.5s ease-in-out;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
+  border-radius: 13px;
+  border-bottom-left-radius: 0px;
   opacity: 0; /* Hide it initially */
   pointer-events: none; /* Disable interaction when invisible */
   visibility: hidden; /* Hide from view */
-  transform: scale(0); /* Optionally scale down for effect */
+  transform: scale(0.8);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 /* When active (visible) */
