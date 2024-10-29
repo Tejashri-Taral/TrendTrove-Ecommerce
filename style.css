@@ -221,6 +221,16 @@ html {
   font-size: 20px;
 }
 
+/* navbar active ----------------*/
+.tab a.active {
+  background-color: black;
+  color: white;
+  padding: 10px px; /* Add padding if needed */
+  border-radius: 30px; /* Add border-radius for rounded corners if desired */
+}
+
+
+
 .utils {
   width: 8%;
   height: 70px;
