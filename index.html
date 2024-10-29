@@ -804,13 +804,8 @@
   (function() {
       let headerVisible = false;
       document.getElementById(" menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById(" header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById(" header").style.height = "50px";
-              headerVisible = false;
-          }
+        document.getElementById("header").style.height = headerVisible ? "50px" : "280px";
+        headerVisible = !headerVisible;
       });
 
       // Show "Go to Top" button after scrolling down
