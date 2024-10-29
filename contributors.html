@@ -13,6 +13,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+        
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -29,9 +57,9 @@
         </div>
     </div>
 </div>
-    <!-- ProgressBar -->
+<div id="progress-container">
     <div id="progress-bar"></div>
-    <!-- ProgressBar Ends -->
+  </div>
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -269,6 +297,8 @@
       </footer>
 
     <script src="contributors.js"></script>
+<script src="script/progressbar.js"></script>
+
 </body>
 
 </html>
