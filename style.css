@@ -243,6 +243,8 @@ html {
   display: flex;
   align-items: right;
   padding-left: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .slide-details {
@@ -1717,3 +1719,66 @@ ul {
 
 
 
+
+@media (max-width: 768px) {
+  /* Banner for mobile style */
+
+
+  .banner {
+    height: 500px; 
+  }
+
+  .slide {
+    padding-left: 10%;
+    padding-right: 10%; 
+    align-items: center; 
+    background-position: center;
+  }
+
+  .slide-details {
+    width: 90%;
+    padding: 20px; 
+    color: black; /* Change text color for contrast */
+  }
+
+  .slide-details > h1 {
+    font-size: 28px; 
+  }
+
+  .slide-details > p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px; 
+  }
+
+
+  /* Shop from instagram mobile style */
+
+
+  .insta {
+    padding: 20px 10%; 
+  }
+
+  .posts {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .post-image {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+
+  .post-image img {
+    height: auto; 
+  }
+
+  .feedback-container h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+}
