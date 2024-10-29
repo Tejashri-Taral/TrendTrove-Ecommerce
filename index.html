@@ -29,9 +29,9 @@
         </div>
     </div>
 </div>
-    <!-- ProgressBar -->
+<div id="progress-container">
     <div id="progress-bar"></div>
-    <!-- ProgressBar Ends -->
+  </div>
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -79,7 +79,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -180,7 +180,7 @@
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
+                <h1>Discover Tomorrow's Trends Today with TrendTrove!</h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
@@ -596,6 +596,7 @@
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="contributors.html">Our Contributors</a></li>
                 <li><a href="faq.html">FAQ's</a></li>
                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
@@ -778,9 +779,13 @@
     const cursor = document.getElementById('cursor');
     
     tabs.forEach(tab => {
-        tab.addEventListener(' mouseenter', () => {
+ 
+        tab.addEventListener('mouseenter', () => {
             cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
             cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+ 
+       
+ 
             cursor.style.opacity = 1; 
         });
     
@@ -818,13 +823,29 @@
       });
 
   })();  // IIFE to avoid polluting global scope
+
+  
+        // When the cart icon is clicked, navigate to the 'cart.html' page.
+document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+
+  
 </script>
 
 <div class="gtranslate_wrapper"></div>
         <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
+<script>
 
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
 <script src="./script/popup.js"></script>
 
 </body>

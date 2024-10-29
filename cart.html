@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendTrove</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+
+
+    .container {
+      width:  90%;
+      margin: 40px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .cart-items {
+      width: 65%;
+      height:  80vh;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 0;
+    }
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .item-details {
+      width: 60%;
+    }
+    .item-details h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .item-details p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .item-quantity {
+      display: flex;
+      align-items: center;
+    }
+    .item-quantity button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .item-quantity input {
+      width: 40px;
+      text-align: center;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    .cart-summary {
+      width: 30%;
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .cart-summary h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .summary-item {
+      display:  flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .summary-item span {
+      font-size: 16px;
+    }
+    .total-price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .checkout-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .checkout-btn:hover {
+      background-color: #333;
+    }
+    .back-to-shop {
+      text-align: left;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+      text-decoration: none;
+    }
+    .back-to-shop:hover {
+      text-decoration: underline;
+    }
+    /* General styling for the cart */
+.shopping-cart {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cart-items {
+    width: 60%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-summary {
+    width: 30%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.cart-summary h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#shipping-method {
+    padding: 5px;
+    width: 100%;
+}
+
+#give-code {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.checkout-button:hover {
+    background-color: #444;
+}
+
+#total-price {
+    font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <div class="container">
+    <div class="cart-items">
+      <h2>TrendTrove Cart</h2>
+
+      <div class="cart-item">
+        <img src="images/shop-bags.webp" alt="T-shirt">
+        <div class="item-details">
+          <h4>Accessory</h4>
+          <p>Shop Bag</p>
+        </div>
+        <div class="item-quantity">
+          <button onclick="decreaseQuantity(0)">-</button>
+          <input type="number" value="1" id="quantity-0">
+          <button onclick="increaseQuantity(0)">+</button>
+        </div>
+        <p>€344.00</p>
+        <button onclick="removeItem(0)">×</button>
+      </div>
+
+      <div class="cart-item">
+        <img src="images/shop-sandals.webp" alt="T-shirt">
+        <div class="item-details">
+          <h4>Shoe Wear</h4>
+          <p>Sandals</p>
+        </div>
+        <div class="item-quantity">
+          <button onclick="decreaseQuantity(1)">-</button>
+          <input type="number" value="1" id="quantity-1">
+          <button onclick="increaseQuantity(1)">+</button>
+        </div>
+        <p>744.00</p>
+        <button onclick="removeItem(1)">×</button>
+      </div>
+   
+
+      <div class="cart-item">
+        <img src="images/insta1.webp" alt="Clothes">
+        <div class="item-details">
+          <h4>Dress</h4>
+          <p>Frock</p>
+        </div>
+        <div class="item-quantity">
+          <button onclick="decreaseQuantity(2)">-</button>
+          <input type="number" value="1" id="quantity-2">
+          <button onclick="increaseQuantity(2)">+</button>
+        </div>
+        <p>4400.00</p>
+        <button onclick="removeItem(2)">×</button>
+      </div>
+      
+
+      <div class="cart-item">
+        <img src="images/product1-effect.jpg" alt="Clothes">
+        <div class="item-details">
+          <h4>Dress</h4>
+          <p>Fashion Wear</p>
+        </div>
+        <div class="item-quantity">
+          <button onclick="decreaseQuantity(2)">-</button>
+          <input type="number" value="1" id="quantity-2">
+          <button onclick="increaseQuantity(2)">+</button>
+        </div>
+        <p>€1400.00</p>
+        <button onclick="removeItem(2)">×</button>
+      </div>
+
+      <a href="index.html" class="back-to-shop">← Back to shop</a>
+    </div>
+    
+    <div class="cart-summary">
+        <h3>Summary</h3>
+        <div class="summary-item">
+            <p>Items <span id="item-count">0</span></p>
+        </div>
+        <div class="summary-item">
+            <p>Shipping</p>
+            <select id="shipping-method" onchange="updateTotal()">
+                <option value="5">Standard Delivery - €5.00</option>
+                <option value="10">Express Delivery - €10.00</option>
+            </select>
+        </div>
+        <div class="summary-item">
+            <p>Give Code</p>
+            <input type="text" id="give-code" placeholder="Enter your code" />
+        </div>
+        <div class="summary-item">
+            <p>Total Price <span id="total-price">€0.00</span></p>
+        </div>
+        <button class="checkout-button" onclick="checkout()">CHECKOUT</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        updateSummary();
+    });
+  
+    const itemPrices = [344.00, 744.00, 4400.00, 1400.00];  
+    let quantities = [1, 1, 1, 1];  
+  
+    function updateSummary() {
+        let totalItems = 0;
+        let totalItemsPrice = 0;
+  
+        
+        for (let i = 0; i < quantities.length; i++) {
+            totalItems += quantities[i];
+            totalItemsPrice += quantities[i] * itemPrices[i];
+        }
+   
+        const shippingCost = parseFloat(document.getElementById('shipping-method').value);
+  
+     
+        const totalPrice = totalItemsPrice + shippingCost;
+        document.getElementById('item-count').textContent = totalItems;
+        document.getElementById('total-price').textContent = '€' + totalPrice.toFixed(2);
+    }
+  
+    function increaseQuantity(index) {
+        quantities[index]++;
+        document.getElementById(`quantity-${index}`).value = quantities[index];
+        updateSummary();
+    }
+  
+    function decreaseQuantity(index) {
+        if (quantities[index] > 1) {
+            quantities[index]--;
+            document.getElementById(`quantity-${index}`).value = quantities[index];
+            updateSummary();
+        }
+    }
+  
+    function removeItem(index) {
+        document.querySelectorAll('.cart-item')[index].remove();
+        itemPrices.splice(index, 1);   
+        quantities.splice(index, 1);   
+        updateSummary(); 
+    }
+  
+    function checkout() {
+        alert('Proceeding to checkout with total price: ' + document.getElementById('total-price').textContent);
+    }
+  
+ 
+    function updateTotal() {
+        updateSummary();
+    }
+  
+    updateSummary();  
+  </script>
+  
+
+</body>
+</html>

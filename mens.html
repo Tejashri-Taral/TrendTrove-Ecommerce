@@ -75,6 +75,33 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
  }
+
+ 
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+
       </style>
       
  
@@ -94,6 +121,9 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         </div>
     </div>
 </div>
+<div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
     <!-- header section  -->
     <header class="header" id="header">
           <div class="logo">
@@ -126,7 +156,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -1201,7 +1231,7 @@ function isValidEmail(email) {
 
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
+    <script>
     AOS.init();
 
     (function() {
@@ -1227,6 +1257,12 @@ function isValidEmail(email) {
         });
 
     })();  // IIFE to avoid polluting global scope
+
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+ 
+ 
 
 // Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
@@ -1268,14 +1304,15 @@ saveButtons.forEach((saveBtn) => {
         saveBtn.classList.toggle('active'); // Toggle the active class
     });
 });
-
-
-
-</script> 
+</script>
 
 <div class="gtranslate_wrapper"></div>
         <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</script>
+
+<script src="script/progressbar.js"></script>
+
 
 </body>
 </html>

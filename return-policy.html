@@ -16,6 +16,9 @@
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+          </div>
 
      
         <nav class="bg-neutral-100 py-20">
@@ -40,6 +43,8 @@
                             <li><a href="mens.html" class="priye">Mens</a>
                             </li>
                             <li><a href="womens.html">Womens</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -53,10 +58,12 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
+                    <a href="login-sginup.html">
                     <i class="fa-solid fa-user"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -177,6 +184,7 @@
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="contributors.html">Our Contributors</a></li>
                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
@@ -197,6 +205,7 @@
         </div>
 
     </footer>
+
         
         <div class="footer-copyright">
             <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
@@ -265,8 +274,15 @@ function isValidEmail(email) {
         }
     });
 
+  
+        document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
     </script>
-    
+
+<script src="script/progressbar.js"></script>
+
+
 
 </body>
 </html>
