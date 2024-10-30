@@ -1243,10 +1243,7 @@ input {
   text-align: left;
 }
 
-/* mens section styling */
-main {
-  background-color: #f0efef;
-}
+
 
 .pro-tabs-container {
   display: flex;
@@ -1495,7 +1492,6 @@ main {
 /* Contact Section*/
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f7f7f7;
   color: #333;
   margin: 0;
   padding: 0;
