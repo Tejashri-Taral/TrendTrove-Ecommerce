@@ -44,7 +44,7 @@
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
                     <li class="tab">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="active">Home</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
@@ -602,6 +602,7 @@
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
 
             </ul>
         </div>
@@ -656,42 +657,12 @@
                 </div>
             </div>
         </div>
-        
-    
     <script src="./script/modal_box.js"></script>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
-    <script>
-        window.onscroll = function () {
-            updateProgressBar();
-        };
-        function updateProgressBar() {
-            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById(" progress-bar ").style.width = scrollPercent + "%";
-        }
-
-    </script>
-    <!-- ProgressBar Functionality Ends-->
-    <script>
-        AOS.init();
-        let headerVisible = false;
-        document.getElementById("menu").addEventListener("click", function () {
-
-            if (headerVisible === false) {
-                document.getElementById("header").style.height = "280px";
-                headerVisible = true;
-            }
-            else {
-                document.getElementById("header").style.height = "50px";
-                headerVisible = false;
-            }
-
-        })
-    </script>
+    <script src="script/progressbar.js"></script>
 <script>
     gsap.from("#header", {
         duration: 1.5,
@@ -848,6 +819,8 @@ document.getElementById("cart-icon").addEventListener("click", function() {
     });
     </script>
 <script src="./script/popup.js"></script>
+<script src="active.js"></script>
+
 
 </body>
 

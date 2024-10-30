@@ -115,8 +115,19 @@ html {
 .header {
   height: 70px;
   width: 100%;
-  /* background-color: red; */
   padding: 0px 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sticky{
+  height: 70px;
+  width: 100%;
+  padding: 0px 2%;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  background-color: rgb(248,247,247);
   display: flex;
   justify-content: space-between;
 }
@@ -209,6 +220,16 @@ html {
 .nav-links > .nav-link > i {
   font-size: 20px;
 }
+
+/* navbar active ----------------*/
+.tab a.active {
+  background-color: black;
+  color: white;
+  padding: 10px px; /* Add padding if needed */
+  border-radius: 30px; /* Add border-radius for rounded corners if desired */
+}
+
+
 
 .utils {
   width: 8%;
@@ -1260,6 +1281,7 @@ main {
   position: relative;
   z-index: 10;
 }
+
 .slider {
   background: url(shoppingimage.jgp);
   margin: 12px;
@@ -1285,6 +1307,7 @@ main {
 .cardimage {
   width: 200px;
   height: 290px;
+  transition: 1s;
 }
 .lines {
   text-align: center;
@@ -1302,10 +1325,11 @@ main {
 .footwear {
   width: 230px;
   height: 250px;
+  transition: 1s;
 }
 .footwear:hover {
   width: 240px;
-  height: 300px;
+  height: 260px;
 }
 /* dropdown for products nav-item */
 /* dropdown styling  */
