@@ -173,6 +173,13 @@
             }
         }
     });
+
+    function scrollToProducts() {
+    document.querySelector('.products').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+    
 </script>
  <!-- banner area  -->
     <section class="banner">
@@ -185,7 +192,7 @@
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
                 <button class="btn">
-                    Explore More
+                    <a href="javascript:void(0);" onclick="scrollToProducts()" style="text-decoration: none; color: inherit;">Explore More</a>
                 </button>
             </div>
         </div>
