@@ -1293,6 +1293,7 @@ main {
 .cardimage {
   width: 200px;
   height: 290px;
+  transition: 1s;
 }
 .lines {
   text-align: center;
@@ -1310,10 +1311,11 @@ main {
 .footwear {
   width: 230px;
   height: 250px;
+  transition: 1s;
 }
 .footwear:hover {
   width: 240px;
-  height: 300px;
+  height: 260px;
 }
 /* dropdown for products nav-item */
 /* dropdown styling  */
