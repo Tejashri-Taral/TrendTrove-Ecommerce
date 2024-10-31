@@ -29,9 +29,9 @@
         </div>
     </div>
 </div>
-    <!-- ProgressBar -->
+<div id="progress-container">
     <div id="progress-bar"></div>
-    <!-- ProgressBar Ends -->
+  </div>
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -44,7 +44,7 @@
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
                     <li class="tab">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="active">Home</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
@@ -602,6 +602,7 @@
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
 
             </ul>
         </div>
@@ -656,42 +657,12 @@
                 </div>
             </div>
         </div>
-        
-    
     <script src="./script/modal_box.js"></script>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
-    <script>
-        window.onscroll = function () {
-            updateProgressBar();
-        };
-        function updateProgressBar() {
-            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById(" progress-bar ").style.width = scrollPercent + "%";
-        }
-
-    </script>
-    <!-- ProgressBar Functionality Ends-->
-    <script>
-        AOS.init();
-        let headerVisible = false;
-        document.getElementById("menu").addEventListener("click", function () {
-
-            if (headerVisible === false) {
-                document.getElementById("header").style.height = "280px";
-                headerVisible = true;
-            }
-            else {
-                document.getElementById("header").style.height = "50px";
-                headerVisible = false;
-            }
-
-        })
-    </script>
+    <script src="script/progressbar.js"></script>
 <script>
     gsap.from("#header", {
         duration: 1.5,
@@ -782,8 +753,8 @@
     tabs.forEach(tab => {
  
         tab.addEventListener('mouseenter', () => {
-            cursor.style.width = ${tab.offsetWidth}px; // Set width to the current tab's width
-            cursor.style.left = ${tab.offsetLeft}px; // Move cursor to the current tab's position
+            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
+            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
  
        
  
@@ -838,8 +809,18 @@ document.getElementById("cart-icon").addEventListener("click", function() {
         <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
+<script>
 
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
 <script src="./script/popup.js"></script>
+<script src="active.js"></script>
+
 
 </body>
 
