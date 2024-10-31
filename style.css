@@ -257,6 +257,14 @@ html {
   align-items: center;
 }
 
+.star{
+  margin: 10px;
+}
+.checked{
+   color: orange;
+}
+
+
 /* Add to Cart Button */
 .add-to-cart {
   background-color: black;
@@ -516,7 +524,7 @@ html {
 
 .product {
   width: 24.5%;
-  height: 420px;
+  height: 390px;
   /* background-color: green; */
   display: flex;
   flex-direction: column;
@@ -1269,7 +1277,7 @@ main {
 }
 .cardimage {
   width: 200px;
-  height: 290px;
+  height: 270px;
 }
 .lines {
   text-align: center;
