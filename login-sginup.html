@@ -163,12 +163,17 @@
             font-size: 14px;
             color: #666;
         }
+       span{
+            color: #666;
+        }
+      
 
         .not-member a {
             color: #3b56cc;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
+          
         }
 
         .not-member a:hover {
@@ -186,9 +191,93 @@
             margin: 10px 0; /* Reduced gap around buttons */
             border-radius: 50px; /* Make buttons round */
         }
-        .btn:disabled {
+
+
+      .btn:disabled {
             background-color: #aaa;
         }
+
+  .btn1{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cacacc;
+    background-color: #fff;
+    color: white;
+   
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn1:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn1:disabled {
+    background-color: #aaa;
+}
+
+.btn1 a{
+    text-decoration: none;
+    color: #232836;
+}
+
+.btn2{
+    width: 100%;
+    padding: 12px;
+    background-color: #4267b2;;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn2:hover {
+    background-color: #016dcb;
+    transform: translateY(-2px);
+}
+
+.btn2:disabled {
+    background-color: #aaa;
+}
+
+.btn2 a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.btnn3{
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0; /* Reduced gap around buttons */
+    border-radius: 50px; /* Make buttons round */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnn3:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.btnn3:disabled {
+    background-color: #aaa;
+}
+
+.btnn3 a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+
         .card-footer p {
             font-size: 12px;
             color: #666;
@@ -224,24 +313,35 @@
          text-align: center;
         margin-top: 12px;
         font-size: 14px;
-        color: #666;
+     
 
         }
         .already-have-account a {
             /* color: #3b56cc;
-            text-decoration: none;
+          
             font-size: 12px; */
+            /* text-decoration: none; */
             color: #3b56cc;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
+         
+
+        
 
         }
+       
         .already-have-account a:hover {
             text-decoration: underline;
             color: #293a9d;
    
 
+        }
+        .already-have-account span{
+          
+            color: #666;
+          
+            
         }
         .modal {
             display: none;
@@ -280,9 +380,39 @@
         input:focus{
 	        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
         }
+
+        
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+
     </style>
 </head>
 <body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
        <!-- preloader -->
   <div id="preloader">
     <div class="wrapper">
@@ -328,13 +458,23 @@
                     <div class="forgot-password">
                         <a href="#" onclick="openModal()">Forgot Password?</a>
                     </div>
+
+               
                     <button type="submit" class="btn" id="login-btn">Login</button>
-                    <div class="not-member"> 
-                        Not a member? <a href="#" id="signUpLink">Sign up</a>
-                    </div>
+                    <button type="submit" class="btn1" id="login-btn" style=" background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1527110508%3A1729760212648495&ddm=0">Login With Google</a></button>
+                    <button type="submit" class="btn2" id="login-btn"     style=" background-image: url(https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://www.facebook.com/login/">Login With Facebook</button>
+                        
+                        <button type="submit" class="btnn3" id="login-btn"     style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://x.com/i/flow/login">Login With X</button>
+                       
+
+                            <div class="not-member"> 
+                              <span class="Not">  Not a member? </span><a href="#" id="signUpLink">Sign up</a>
+                            </div>
+                  
 
                     <div class="success" id="login-success">Login successful!</div>
                 </form>
+               
             </div>
             <div class="tab-content" id="signup">
                 <form id="signup-form">
@@ -360,11 +500,14 @@
                         <div class="error" id="signup-confirm-password-error"></div>
                     </div>
                     <button type="submit" class="btn" id="signup-btn">Sign Up</button>
+                    <button type="submit" class="btn1" id="login-btn" style=" background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F&ec=GAlAwAE&hl=en_GB&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1527110508%3A1729760212648495&ddm=0">Login With Google</a></button>
+                    <button type="submit" class="btn2" id="login-btn"     style=" background-image: url(https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://www.facebook.com/login/">Login With Facebook</button>
+                        
+                        <button type="submit" class="btnn3" id="login-btn"     style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png); background-repeat: no-repeat; background-position: 20% 50%; background-size: 30px;"><a href="https://x.com/i/flow/login">Login With X</button>
                     <div class="success" id="signup-success">Signup successful!</div>
                 </form>
-                <div class="already-have-account">
-                    Already have an account?<a href="#" onclick="switchToLogin()"> Login</a>
-                </div>
+                <div class="already-have-account">   
+                   <span>Already have an account?</span><a href="#" id="signUpLink">Login</a>
             </div>
         </div>
         <div class="card-footer">
@@ -611,5 +754,7 @@
             document.getElementById('login').classList.add('active');
         }
     </script>
+<script src="script/progressbar.js"></script>
+
 </body>
 </html>
