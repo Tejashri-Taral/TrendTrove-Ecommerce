@@ -221,6 +221,16 @@ html {
   font-size: 20px;
 }
 
+/* navbar active ----------------*/
+.tab a.active {
+  background-color: black;
+  color: white;
+  padding: 10px px; /* Add padding if needed */
+  border-radius: 30px; /* Add border-radius for rounded corners if desired */
+}
+
+
+
 .utils {
   width: 8%;
   height: 70px;
@@ -279,6 +289,7 @@ html {
 .button-container {
   display: flex;
   align-items: center;
+  position: relative; 
 }
 
 /* Add to Cart Button */
@@ -327,8 +338,8 @@ html {
 /* Initially hidden */
 .share-options {
   position: absolute;
-  top: 55%;
-  left: 70%;
+  top: -389%;
+  left: 60%;
   width: 110px;
   height: 145px;
   transform-origin: bottom left;
@@ -337,13 +348,14 @@ html {
   padding: 15px;
   font-family: "roboto";
   transition: 0.5s ease-in-out;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
+  border-radius: 13px;
+  border-bottom-left-radius: 0px;
   opacity: 0; /* Hide it initially */
   pointer-events: none; /* Disable interaction when invisible */
   visibility: hidden; /* Hide from view */
-  transform: scale(0); /* Optionally scale down for effect */
+  transform: scale(0.8);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 /* When active (visible) */
@@ -493,7 +505,7 @@ html {
 .btn-white {
   font-family: futura;
   font-weight: 550;
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(82, 80, 80);
   border: 1px solid rgb(184, 183, 183);
   color:rgb(250, 241, 241);
   box-shadow: 0 0 3px rgb(201, 201, 201);
@@ -751,8 +763,7 @@ html {
 
 .footer {
   width: 100%;
-  margin-top: 60px;
-  padding: 30px 20%;
+  padding: 40px 100px;
   background-color: #f6f5fa;
   font-family: "futura";
   display: flex;
@@ -778,6 +789,10 @@ html {
 .footer-list li a {
   color: black;
   text-decoration: none;
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+
 }
 
 .border-list {
@@ -876,7 +891,7 @@ html {
 
 input {
   height: 40px;
-  width: 20%;
+  width: 60%;
   border-radius: 30px;
   border: 1px solid lightgray;
 }
@@ -1297,6 +1312,7 @@ main {
 .cardimage {
   width: 200px;
   height: 290px;
+  transition: 1s;
 }
 .lines {
   text-align: center;
@@ -1314,10 +1330,11 @@ main {
 .footwear {
   width: 230px;
   height: 250px;
+  transition: 1s;
 }
 .footwear:hover {
   width: 240px;
-  height: 300px;
+  height: 260px;
 }
 /* dropdown for products nav-item */
 /* dropdown styling  */
