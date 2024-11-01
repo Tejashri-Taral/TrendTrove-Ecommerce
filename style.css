@@ -115,8 +115,19 @@ html {
 .header {
   height: 70px;
   width: 100%;
-  /* background-color: red; */
   padding: 0px 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sticky{
+  height: 70px;
+  width: 100%;
+  padding: 0px 2%;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  background-color: rgb(248,247,247);
   display: flex;
   justify-content: space-between;
 }
@@ -278,7 +289,16 @@ html {
 .button-container {
   display: flex;
   align-items: center;
+  position: relative; 
 }
+
+.star{
+  margin: 10px;
+}
+.checked{
+   color: orange;
+}
+
 
 /* Add to Cart Button */
 .add-to-cart {
@@ -326,8 +346,8 @@ html {
 /* Initially hidden */
 .share-options {
   position: absolute;
-  top: 55%;
-  left: 70%;
+  top: -389%;
+  left: 60%;
   width: 110px;
   height: 145px;
   transform-origin: bottom left;
@@ -336,13 +356,14 @@ html {
   padding: 15px;
   font-family: "roboto";
   transition: 0.5s ease-in-out;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
+  border-radius: 13px;
+  border-bottom-left-radius: 0px;
   opacity: 0; /* Hide it initially */
   pointer-events: none; /* Disable interaction when invisible */
   visibility: hidden; /* Hide from view */
-  transform: scale(0); /* Optionally scale down for effect */
+  transform: scale(0.8);
+  z-index: 10;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 /* When active (visible) */
@@ -539,7 +560,7 @@ html {
 
 .product {
   width: 24.5%;
-  height: 420px;
+  height: 390px;
   /* background-color: green; */
   display: flex;
   flex-direction: column;
@@ -748,8 +769,7 @@ html {
 
 .footer {
   width: 100%;
-  margin-top: 60px;
-  padding: 30px 20%;
+  padding: 40px 100px;
   background-color: #f6f5fa;
   font-family: "futura";
   display: flex;
@@ -775,6 +795,10 @@ html {
 .footer-list li a {
   color: black;
   text-decoration: none;
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+
 }
 
 .border-list {
@@ -873,7 +897,7 @@ html {
 
 input {
   height: 40px;
-  width: 20%;
+  width: 60%;
   border-radius: 30px;
   border: 1px solid lightgray;
 }
@@ -1268,6 +1292,7 @@ main {
   position: relative;
   z-index: 10;
 }
+
 .slider {
   background: url(shoppingimage.jgp);
   margin: 12px;
@@ -1292,7 +1317,11 @@ main {
 }
 .cardimage {
   width: 200px;
+
+  height: 270px;
+=======
   height: 290px;
+  transition: 1s;
 }
 .lines {
   text-align: center;
@@ -1310,10 +1339,11 @@ main {
 .footwear {
   width: 230px;
   height: 250px;
+  transition: 1s;
 }
 .footwear:hover {
   width: 240px;
-  height: 300px;
+  height: 260px;
 }
 /* dropdown for products nav-item */
 /* dropdown styling  */
