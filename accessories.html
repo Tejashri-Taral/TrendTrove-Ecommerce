@@ -4,58 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrendTrove - Ecommerce</title>
-    <link rel="stylesheet" href="preloaderStyle.css">
+   
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
     <style>
-        
-/* Scroll Progress Bar*/
-#progress-container {
-  position: fixed ;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  z-index: 99990;
-  /* background: #f3f3f3; */
-}
+        .testimonal__card {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            height: 450px;
+        }
 
-#progress-bar {
-  position: fixed;
-  top: 0.3px;
-  left: 0;
-  width: 0%;
-  height: 6px;
-  width: 0;
-  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
-  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
-  transition: width 0.09s ease-in-out;
-  /* border-radius: 10px; */
-}
+        .testimonal__card:hover {
+            transform: translateY(-10px);
+            background-color: #c5bebd;
+        }
+    
+         .testimonal__card img{
+            width: 100%;
+            aspect-ratio: 2/2.5;
+            object-fit: cover;
+         }
 
 
+        /* Testimonial Title */
+        .testimonal__title {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Testimonial Description */
+        .testimonal__description {
+
+            font-size: 1.2rem;
+            padding: 0.75rem 1rem;
+        }
+
+
+        .testimonal__swiper {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Cards Wrapper */
+        .cards {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .my2 {
+            background-color: black;
+            color: white;
+            padding: 5px 0px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+       
     </style>
 </head>
 </head>
 <body>
-       <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
-        </div>
-    </div>
-</div>
-<div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
+   
     <!-- header section  -->
     <header class="header" id="header">
           <div class="logo">
@@ -106,660 +125,959 @@
             <div class="slider">
                 <a href="#Handbags"><img src="images/SALEACC.png" alt="" height="450px" width="100%vw"></a>      
             </div>
-            <h1 style="font-size: 50px" class="my2" id="Necklace">Gleam & Glam</h1>
+            <h2 class="my2" id="Necklace">Gleam & Glam</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11718581_811942.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Coretta Layered Gold Necklace</p>
-                        <p> <br/> </p>
-                        <p class="mytext">Price - $19 </p>
-                        <p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.3</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/11718581_811942.jpg?w=560&hdpi=1"
+                              alt="" style="
+                               width: 280px;
+                                height: 280px;
+                                object-fit: cover;padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">
+                                Coretta Layered Gold Necklace</h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
+                      
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11298161_942862.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Bring You Cheer Gold Layered Bar Charm Necklace</p>
-                        <p> <br/> </p>
-                        <p class="mytext">Price - $15 </p>
-                        <p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+
+                
+                <div class="testimonal__swiper">
+                  <!-- 2 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/11298161_942862.jpg?w=560&hdpi=1"
+                             alt="" style="
+                             width: 280px;
+                              height: 280px;
+                              object-fit: cover;padding: 5px;">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Gold Layered Bar Charm Necklace
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $15
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11215801_604232.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Perfectly Pretty Gold and Pearl Necklace</p>
-                        <p> <br/> </p>
-                        <p class="mytext">Price - $16</p>
-                        <p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+  
+                   
+                <div class="testimonal__swiper">
+                    <!-- 3 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img  src="https://www.lulus.com/images/product/xlarge/11215801_604232.jpg?w=560&hdpi=1"
+                             alt="" style="padding: 5px; 
+                                width: 280px;
+                                height: 280px;
+                                object-fit: cover; /* Ensures the image is resized and cropped to fit the given dimensions */
+                              ">
+                            <h2 class="testimonal__title"
+                                style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Pretty Gold and Pearl Necklace
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $16
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
-                </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/3407210_672282.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Partnership Gold Layered Choker Necklace</p><p> <br/> </p>
-                        <p class="mytext">Price - $19</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 3.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11009221_2285736.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Gold and Ivory Floral Pearl Drop Earrings</p><p> <br/> </p>
-                        <p class="mytext">Price - $19</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11944961_421262.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Alter Ego Gold Hoop Earrings</p><p> <br/> </p>
-                        <p class="mytext">Price - $12</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/4601210_877342.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Future Gold Drop Earrings</p><p> <br/> </p>
-                        <p class="mytext">Price - $15</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/4167730_835582.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Glitz Gold Rhinestone Tassel Earrings</p><p> <br/> </p>
-                        <p class="mytext">Price - $25</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 
+                <div class="testimonal__swiper">
+                    <!-- 4 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="https://www.lulus.com/images/product/xlarge/3407210_672282.jpg?w=560&hdpi=1"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Gold Layered Choker Necklace
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+              <div class="testimonal__swiper">
+                    <!--5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img src="https://www.lulus.com/images/product/xlarge/11009221_2285736.jpg?w=560&hdpi=1"
+                            alt="" style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Gold and Ivory Floral Pearl Drop Earrings
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $19
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                      </article>
+                    </div>
+                    
+                </div>
+            
+                <div class="testimonal__swiper">
+                    <!-- 6 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/11944961_421262.jpg?w=560&hdpi=1"
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Alter Ego Gold Hoop Earrings
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $12
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+
+                
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/4167730_835582.jpg?w=560&hdpi=1"
+                             alt="" style="padding: 5px;
+                              width: 280px;
+                              height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Glitz Gold Rhinestone Tassel Earrings
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $25
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+               
+                <div class="testimonal__swiper">
+                    <!-- 8 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/4601210_877342.jpg?w=560&hdpi=1" 
+                            alt=""style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Future Gold Drop Earrings
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $15
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+              
+                
+                
             </div>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <h2 style="font-size: 50px" class="my2" id="Handbags">Urban Glam Bags</h2>
+            <h2  class="my2" id="Handbags">Urban Glam Bags</h2>
             <div class="cards">
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11969041_2428911.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Pink Beaded Pearl Hard-Sided Clutch</p><p> <br/> </p>
-                        <p class="mytext">Price - $39</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 1 -->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/11969041_2428911.jpg?w=560&hdpi=1" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Pink Beaded Pearl Hard-Sided Clutch
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $39
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/12158441_2460171.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Black and Gold Crescent Metal Handbag</p><p> <br/> </p>
-                        <p class="mytext">Price - $35</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/12158441_2460171.jpg?w=560&hdpi=1" alt=""
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Black and Gold Crescent Metal Handbag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $35
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/12058961_2506791.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Gold Metallic Croc-Embossed Shoulder Bag</p><p> <br/> </p>
-                        <p class="mytext">Price - $20</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+        
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/12058961_2506791.jpg?w=560&hdpi=1" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title" alt=""
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Gold Metallic Croc-Embossed Shoulder Bag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $20
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/11770021_2421911.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Quintessential Brown Vegan Leather Tote Bag</p><p> <br/> </p>
-                        <p class="mytext">Price - $68</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/11770021_2421911.jpg?w=560&hdpi=1" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Quintessential Brown Vegan Leather Tote Bag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $68
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/10845601_751182.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Back to Business Grey Tote</p><p> <br/> </p>
-                        <p class="mytext">Price - $59</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 5.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/10845601_751182.jpg?w=560&hdpi=1" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Back to Business Grey Tote
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $59
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/6602961_1209571.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Beige Woven Straw Tote Bag</p><p> <br/> </p>
-                        <p class="mytext">Price - $39</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+               
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/6602961_1209571.jpg?w=560&hdpi=1" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Beige Woven Straw Tote Bag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $39
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/5154830_1029302.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Black and Cognac Tote Bag</p><p> <br/> </p>
-                        <p class="mytext">Price - $55</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/5154830_1029302.jpg?w=560&hdpi=1" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height:300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Black and Cognac Tote Bag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $55
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="card-items">
-                    <img src="https://www.lulus.com/images/product/xlarge/10325141_1681016.jpg?w=560&hdpi=1" alt="" class="cardimage">
-                    <div class="lines">
-                        <p class="mytext">Champagne Satin Knot Handle Clutch Bag</p><p> <br/> </p>
-                        <p class="mytext">Price - $75</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://www.lulus.com/images/product/xlarge/10325141_1681016.jpg?w=560&hdpi=1" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Champagne Satin Knot Handle Clutch Bag
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $75
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-            </div>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <p> <br/> </p>
-            <h2 style="font-size: 50px" class="my2" id="Men">Gentlemen's Gear</h2>
+            </div>   
+                
+            <h2 class="my2" id="Men">Gentlemen's Gear</h2>
             <div class="cards">
-                <div class="footwear-items">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F14%2F01%2F1401c46c54bddf379f088be300d4555ff901e0cd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">3-pack rings</p>
-                        <p> <br/> </p>
-                        <p class="mytext">Price - $29</p>
-                        <p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 1-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F14%2F01%2F1401c46c54bddf379f088be300d4555ff901e0cd.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">3-pack rings
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fd4%2F4d%2Fd44d5b8a3775f5ad28972c6c22fd472099f81eed.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_accessories_jewellery_necklaces%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">2-pack necklaces</p><p> <br/> </p>
-                        <p class="mytext">Price - $22</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.2</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 2-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fd4%2F4d%2Fd44d5b8a3775f5ad28972c6c22fd472099f81eed.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_accessories_jewellery_necklaces%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">2-pack necklaces
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $22
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F62%2F92%2F62922a9237622c611f8d037263002a5ca9eadcc6.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVEDETAIL%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Blue light glasses</p><p> <br/> </p>
-                        <p class="mytext">Price - $49</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.1</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                
+                <div class="testimonal__swiper">
+                    <!-- 3-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F62%2F92%2F62922a9237622c611f8d037263002a5ca9eadcc6.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVEDETAIL%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Blue light glasses
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $49
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzMxMzFfMDU1Yzk1YzEyZi1hMDI4NDQtNTktMS1vcmlnaW5hbC5qcGc=" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Blue & Burgundy Tie Geometric</p><p> <br/> </p>
-                        <p class="mytext">Price - $39</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.8</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 4-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzMxMzFfMDU1Yzk1YzEyZi1hMDI4NDQtNTktMS1vcmlnaW5hbC5qcGc="  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 280px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Blue & Burgundy Tie Geometric
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $39
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F43%2F63%2F436334b784517072c28e6c9fd092f0332c47b554.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_accessories_ties_bowties_handkerchiefs%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">2-pack ties</p><p> <br/> </p>
-                        <p class="mytext">Price - $29</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.0</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                <div class="testimonal__swiper">
+                    <!-- 5-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F43%2F63%2F436334b784517072c28e6c9fd092f0332c47b554.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_accessories_ties_bowties_handkerchiefs%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]"   alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">2-pack ties
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $29
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzExOTJfNGYxMmQ0NWVmNy1hMDEyMTMtMDItMS1vcmlnaW5hbC5qcGc=" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Black Lapel Pin Vigo</p><p> <br/> </p>
-                        <p class="mytext">Price - $24</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.9</p> -->
-                    </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+
+                <div class="testimonal__swiper">
+                    <!-- 6-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzExOTJfNGYxMmQ0NWVmNy1hMDEyMTMtMDItMS1vcmlnaW5hbC5qcGc=" alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Black Lapel Pin Vigo
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $24
+                            </p>
+                            <div class="button-container">
+                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-options">
+                                    <p class="title">Share</p>
+                                    <div class="quick-share" >
+                                        <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                        <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                        <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                    </div>
+                                    <div class="link-box">
+                                        <p class="link">http:example.html</p>
+                                        <button class="copy-btn">copy</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
+                        </article>
                     </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzE3MTBfNzA5ZTQ4ZTkwZi1hMDE3MjctMjItMS1vcmlnaW5hbC5qcGc=" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Red Velvet Bow Tie</p><p> <br/> </p>
-                        <p class="mytext">Price - $21</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.7</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 7-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://imgproxy.johnhenric.com/preset:sharp/resize:fit:640/gravity:nowe/quality:80/aHR0cHM6Ly9qb2huaGVucmljLmNlbnRyYWNkbi5uZXQvY2xpZW50L2R5bmFtaWMvaW1hZ2VzLzE3MTBfNzA5ZTQ4ZTkwZi1hMDE3MjctMjItMS1vcmlnaW5hbC5qcGc="  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Red Velvet Bow Tie
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $21                           </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
                     </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div class="footwear-items">
-                    <img src="https://fossil.scene7.com/is/image/FossilPartners/BQ1125_main?$sfcc_fos_large$" alt="" class="footwear">
-                    <div class="lines">
-                        <p class="mytext">Flynn Chronograph Watch</p><p> <br/> </p>
-                        <p class="mytext">Price - $96</p><p> <br/> </p>
-                        <!-- <p class="mytext">Rating : 4.5</p> -->
+
+                <div class="testimonal__swiper">
+                    <!-- 8-->
+                    <div class="cards">
+                        <article class="testimonal__card">
+                            <img
+                            src="https://fossil.scene7.com/is/image/FossilPartners/BQ1125_main?$sfcc_fos_large$"  alt="" 
+                            style="padding: 5px;
+                             width: 280px;
+                             height: 300px;">
+                            <h2 class="testimonal__title"
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Flynn Chronograph Watch
+                                </h2>
+                            <p class="testimonal__description"
+                                style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
+                                Price - $96                      </p>
+                                <div class="button-container">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="save-icon"><i class="fas fa-bookmark"></i></button>
+                                    <button class="share-icon"><i class="fas fa-share-alt"></i></button>
+                                    <div class="share-options">
+                                        <p class="title">Share</p>
+                                        <div class="quick-share" >
+                                            <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
+                                            <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
+                                            <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
+                                        </div>
+                                        <div class="link-box">
+                                            <p class="link">http:example.html</p>
+                                            <button class="copy-btn">copy</button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
                     </div>
-                    <div class="button-container">
-                        <button class="add-to-cart">Add to Cart</button>
-                        <button class="save-icon"><i class="fas fa-bookmark"></i></button>
-                        <button class="share-icon"><i class="fas fa-share-alt"></i></button>
-                        <div class="share-options">
-                            <p class="title">Share</p>
-                            <div class="quick-share" >
-                                <button class="quick-btns"><i class="fab fa-facebook facebook-icon"></i></button>
-                                <button class="quick-btns"><i class="fab fa-whatsapp whatsapp-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-x-twitter twitter-icon"></i></i></button>
-                                <button class="quick-btns"><i class="fab fa-instagram instagram-icon"></i></i></button>
-                            </div>
-                            <div class="link-box">
-                                <p class="link">http:./TrendTrove-Ecommerce-GSSoC-Extd-main/mens.html</p>
-                                <button class="copy-btn">copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </main> 
     <br>
-    <footer class="footer">
+    <footer class="footer" style="margin-top: -2%;">
 
         <div class="footer-section">
 
@@ -794,7 +1112,7 @@
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -827,7 +1145,7 @@
                     <img src="images\confirmation.png" alt="" height="100px" >
                     <h2>Subscription Successful!</h2>
                     <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
+                    <p> You will receive notifications via email.</p>
                 </div>
                 <div class="social">
                     <li class="socials">
@@ -847,7 +1165,6 @@
                 </div>
             </div>
         </div>
-        <script src="preloader.js"></script>
         
     
     <script>
@@ -916,7 +1233,7 @@ function isValidEmail(email) {
 
     })();  // IIFE to avoid polluting global scope
 
-    // Select all share buttons and share option containers
+// Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
 const shareOptions = document.querySelectorAll('.share-options');
 
@@ -958,10 +1275,7 @@ saveButtons.forEach((saveBtn) => {
 });
 
 
-</script>
 
-<script src="script/progressbar.js"></script>
-
-
+</script>    
 </body>
 </html>
