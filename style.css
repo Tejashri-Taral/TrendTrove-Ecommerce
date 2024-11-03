@@ -135,7 +135,7 @@ html {
 .logo {
   width: 12%;
   height: 70px;
-  /* background-color: yellow; */
+  background-color: rgb(249, 249, 141);
   display: flex;
   justify-content: center;
   align-items: center;

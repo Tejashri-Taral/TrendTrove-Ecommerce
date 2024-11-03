@@ -17,24 +17,7 @@
     <style>
       /* General Styles */
   /* Toggle Button Style */
-  .mode {
-            float:right;
-            position: absolute;
-            top: 100px;
-        }
-        .change {
-            cursor: pointer;
-            border: 1px solid #555; 
-             border-radius: 40%;
-            
-            text-align: center;
-            padding: 5px; 
-             margin-left: 8px;
-        }
-        .dark{
-            background-color: #222;
-            color: #e6e6e6;
-        }
+  
   /* .toggle {
     position: absolute;
     display: inline-block;
@@ -562,13 +545,7 @@
   <input type="checkbox" id="theme-toggle">
   <span class="slider"></span>
 </label> -->
-<label>
-<div class="mode">
-  Toggle:             
-  <span class="change">OFF</span>
-  <!-- <button onclick="myFunction()">OFF</button> -->
-</div>
-</label>
+
     <!-- About Us Section -->
     <section class="about-section">
       <h2 class="about-title">About Us</h2>
@@ -920,20 +897,7 @@
 
   })();
   </script>
-  <script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-      </script>
-      <script>
-      $( ".change" ).on("click", function() {
-          if( $( "body" ).hasClass( "dark" )) {
-              $( "body" ).removeClass( "dark" );
-              $( ".change" ).text( "OFF" );
-          } else {
-              $( "body" ).addClass( "dark" );
-              $( ".change" ).text( "ON" );
-          }
-      });
-  </script>
+  
 <script src="script/progressbar.js"></script>
 <script src="active.js"></script>
 
