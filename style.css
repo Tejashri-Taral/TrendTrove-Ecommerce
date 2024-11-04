@@ -511,10 +511,12 @@ html {
 }
 
 .btn-white {
-  background-color: white;
-  border: 1px solid white;
-  color: #1d1d1d;
-  box-shadow: 0 0 3px lightgray;
+  font-family: futura;
+  font-weight: 550;
+  background-color: rgb(82, 80, 80);
+  border: 1px solid rgb(184, 183, 183);
+  color:rgb(250, 241, 241);
+  box-shadow: 0 0 3px rgb(201, 201, 201);
   z-index: 20;
   transition: 0.3s ease;
 }
