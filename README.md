@@ -79,9 +79,36 @@ Feel free to fork the repository and make changes. You can also raise issues or 
 <a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce/graphs/contributors">
 <img src="https://contributors-img.web.app/image?repo=Tejashri-Taral/TrendTrove-Ecommerce"/>
 
+
 ## Show Your Support
 
 If you like this project, please consider giving it a ⭐️ on [GitHub](https://github.com/Tejashri-Taral/TrendTrove-Ecommerce).
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+## Stargazers ❤️
+
+<div align='left'>
+
+[![Stargazers repo roster for @Tejashri-Taral/TrendTrove-Ecommerce](https://reporoster.com/stars/dark/Tejashri-Taral/TrendTrove-Ecommerce)](https://github.com/Tejashri-Taral/TrendTrove-Ecommerce/stargazers)
+
+
+</div>
+
+## Forkers ❤️
+
+[![Forkers repo roster for @Tejashri-Taral/TrendTrove-Ecommerce](https://reporoster.com/forks/dark/Tejashri-Taral/TrendTrove-Ecommerce)](https://github.com/Tejashri-Taral/TrendTrove-Ecommerce/network/members)
+
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+
+
+
 
 ## Connect with Me
 

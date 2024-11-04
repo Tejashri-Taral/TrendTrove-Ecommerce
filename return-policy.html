@@ -9,6 +9,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+        /* CSS for Return Policy Section */
+        .return-policy-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .return-policy-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .return-policy-description {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .return-policy-details {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p, .card ul {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .return-policy-thanks {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .return-policy-thanks a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        .return-policy-thanks a:hover {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <header class="header" id="header">
@@ -16,6 +85,9 @@
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+          </div>
 
      
         <nav class="bg-neutral-100 py-20">
@@ -75,78 +147,94 @@
             At TrendTrove, your satisfaction is our top priority. We understand that sometimes a purchase may not meet your expectations. That's why we've created a straightforward return and refund process to ensure your shopping experience is enjoyable.
         </p>
         <div class="return-policy-details">
-            <h3>1. Return Eligibility</h3>
-            <p>
-                You can return most items within 30 days of receiving them for a full refund. To be eligible for a return, items must be unworn, unwashed, and in their original packaging with all tags still attached. 
-            </p>
-            <p>
-                We encourage you to inspect your items upon arrival and report any issues as soon as possible to ensure a smooth return process.
-            </p>
+            <div class="card">
+                <h3>1. Return Eligibility</h3>
+                <p>
+                    You can return most items within 30 days of receiving them for a full refund. To be eligible for a return, items must be unworn, unwashed, and in their original packaging with all tags still attached.
+                </p>
+                <p>
+                    We encourage you to inspect your items upon arrival and report any issues as soon as possible to ensure a smooth return process.
+                </p>
+            </div>
     
-            <h3>2. Non-Returnable Items</h3>
-            <p>
-                Certain items are non-returnable, including but not limited to:
-            </p>
-            <ul>
-                <li>Gift cards</li>
-                <li>Final sale items</li>
-                <li>Intimate apparel (for hygiene reasons)</li>
-            </ul>
-            <p>
-                Please check the product description for specific return eligibility.
-            </p>
+            <div class="card">
+                <h3>2. Non-Returnable Items</h3>
+                <p>
+                    Certain items are non-returnable, including but not limited to:
+                </p>
+                <ul>
+                    <li>Gift cards</li>
+                    <li>Final sale items</li>
+                    <li>Intimate apparel (for hygiene reasons)</li>
+                </ul>
+                <p>
+                    Please check the product description for specific return eligibility.
+                </p>
+            </div>
     
-            <h3>3. How to Initiate a Return</h3>
-            <p>
-                To start a return, please contact our customer service team at <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>. You will need to provide your order number and the reason for the return. We will send you a return authorization and a prepaid return shipping label via email.
-            </p>
-            <p>
-                Please ensure that the items are securely packaged to prevent damage during transit. You can drop off your package at the designated shipping location as instructed in the return label.
-            </p>
+            <div class="card">
+                <h3>3. How to Initiate a Return</h3>
+                <p>
+                    To start a return, please contact our customer service team at <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>. You will need to provide your order number and the reason for the return. We will send you a return authorization and a prepaid return shipping label via email.
+                </p>
+                <p>
+                    Please ensure that the items are securely packaged to prevent damage during transit. You can drop off your package at the designated shipping location as instructed in the return label.
+                </p>
+            </div>
     
-            <h3>4. Refund Process</h3>
-            <p>
-                Once we receive your returned item, our team will inspect it to ensure it meets our return criteria. We will process your refund within 5 business days. The refund will be issued to the original payment method you used for the purchase.
-            </p>
-            <p>
-                Please note that depending on your bank or payment provider, it may take an additional 5-10 business days for the refund to reflect in your account.
-            </p>
+            <div class="card">
+                <h3>4. Refund Process</h3>
+                <p>
+                    Once we receive your returned item, our team will inspect it to ensure it meets our return criteria. We will process your refund within 5 business days. The refund will be issued to the original payment method you used for the purchase.
+                </p>
+                <p>
+                    Please note that depending on your bank or payment provider, it may take an additional 5-10 business days for the refund to reflect in your account.
+                </p>
+            </div>
     
-            <h3>5. Exchanges</h3>
-            <p>
-                If you need a different size or color, please return the original item and place a new order for the desired product. Unfortunately, we do not process direct exchanges.
-            </p>
-            <p>
-                To expedite the process, consider placing a new order before returning your original item to ensure availability.
-            </p>
+            <div class="card">
+                <h3>5. Exchanges</h3>
+                <p>
+                    If you need a different size or color, please return the original item and place a new order for the desired product. Unfortunately, we do not process direct exchanges.
+                </p>
+                <p>
+                    To expedite the process, consider placing a new order before returning your original item to ensure availability.
+                </p>
+            </div>
     
-            <h3>6. Damaged or Defective Items</h3>
-            <p>
-                We strive for quality, but if you receive a damaged or defective item, please contact us within 7 days of delivery. Provide your order number and a description of the issue, along with any supporting photos.
-            </p>
-            <p>
-                We will arrange for a replacement or refund based on your preference, at no additional cost to you.
-            </p>
+            <div class="card">
+                <h3>6. Damaged or Defective Items</h3>
+                <p>
+                    We strive for quality, but if you receive a damaged or defective item, please contact us within 7 days of delivery. Provide your order number and a description of the issue, along with any supporting photos.
+                </p>
+                <p>
+                    We will arrange for a replacement or refund based on your preference, at no additional cost to you.
+                </p>
+            </div>
     
-            <h3>7. International Returns</h3>
-            <p>
-                For customers outside of India, please note that you may be responsible for return shipping costs. Additionally, any customs duties or taxes incurred on the return will not be reimbursed.
-            </p>
-            <p>
-                To initiate an international return, contact our customer service for guidance on the return process.
-            </p>
+            <div class="card">
+                <h3>7. International Returns</h3>
+                <p>
+                    For customers outside of India, please note that you may be responsible for return shipping costs. Additionally, any customs duties or taxes incurred on the return will not be reimbursed.
+                </p>
+                <p>
+                    To initiate an international return, contact our customer service for guidance on the return process.
+                </p>
+            </div>
     
-            <h3>8. Policy Updates</h3>
-            <p>
-                TrendTrove reserves the right to update or modify this Return and Refund Policy at any time. Any changes will be posted on this page, and your continued use of the site will constitute acceptance of those changes.
-            </p>
-            <p>
-                We encourage you to review this policy periodically for any updates.
-            </p>
+            <div class="card">
+                <h3>8. Policy Updates</h3>
+                <p>
+                    TrendTrove reserves the right to update or modify this Return and Refund Policy at any time. Any changes will be posted on this page, and your continued use of the site will constitute acceptance of those changes.
+                </p>
+                <p>
+                    We encourage you to review this policy periodically for any updates.
+                </p>
+            </div>
         </div>
         <div class="return-policy-thanks">
             <p>
-                Thank you for shopping with <a href="index.html" style="color: grey;">TrendTrove</a>. If you have any questions regarding our Return and Refund Policy, please don't hesitate to <a href="contact.html" style="color: grey;">Contact Us</a>. We are here to assist you!
+                Thank you for shopping with <a href="index.html">TrendTrove</a>. If you have any questions regarding our Return and Refund Policy, please don't hesitate to <a href="contact.html">Contact Us</a>. We are here to assist you!
             </p>
         </div>
     </section>
@@ -276,6 +364,9 @@ function isValidEmail(email) {
     window.location.href = "cart.html";
 });
     </script>
+
+<script src="script/progressbar.js"></script>
+
 
 
 </body>
