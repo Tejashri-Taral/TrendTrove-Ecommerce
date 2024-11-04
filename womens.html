@@ -69,12 +69,38 @@ color: white;
 padding:5px 0px ;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-      </style>
+
+
+
+        .star{
+           margin: 10px;
+        }
+        .checked{
+            color: orange;
+        }
+  
+  
+  
+</style>
+<style>
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+</style>
       
       
       
 </head>
 <body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
     <!-- header section  -->
     <header class="header" id="header">
           <div class="logo">
@@ -107,7 +133,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -147,9 +173,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $39
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Over-sized T-shirt', 39, 'https://m.media-amazon.com/images/I/715-Z-aOIhL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -190,9 +224,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $49
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Long Sleeve Tunic Tops', 49, 'https://m.media-amazon.com/images/I/71zm9RNobYL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -231,9 +273,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $59
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('One Piece Dress for Women', 59, 'https://m.media-amazon.com/images/I/71FnJpw5J2L._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -269,9 +319,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Printed Straight Cotton Short Kurti', 30, 'https://m.media-amazon.com/images/I/91nDqBfjwVL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -307,9 +365,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $45
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Layered Warm Wearable Flannel Shawl', 45, 'https://m.media-amazon.com/images/I/61moraRbZ-L._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -346,9 +412,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $50
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Womens Stylish Jacket', 50, 'https://m.media-amazon.com/images/I/71Wtnv4mdnL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -386,9 +460,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Oversized T-Shirts For Women', 20, 'https://m.media-amazon.com/images/I/61tP-UVED7L._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -425,9 +507,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $67
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Hooded Neck Hoodie for Womens', 67, 'https://m.media-amazon.com/images/I/61qn7raFTLL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -470,9 +560,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $49
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Dhoti Patiyala Salwar Harem Bottoms Pants', 49, 'https://m.media-amazon.com/images/I/61zfyvFSuBL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -509,9 +607,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $19
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Womens Cargo Pants Cotton', 19, 'https://m.media-amazon.com/images/I/61AO6cCgxGL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -549,9 +655,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Flared Solid Sharara for Women', 20, 'https://m.media-amazon.com/images/I/415l2ki6nYL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -588,9 +702,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Cotton Loose-fit Jeans For Women', 20, 'https://m.media-amazon.com/images/I/71H1e+gUMcL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -627,9 +749,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $29
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Slant Pocket Wide Leg Shorts', 29, 'https://m.media-amazon.com/images/I/71S2xGsSyiL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -666,9 +796,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $15
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Track pant for Womens', 15, 'https://m.media-amazon.com/images/I/31qvw8EzT2L._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -704,9 +842,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $10
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Regular Loose Fit Pyjama', 10, 'https://m.media-amazon.com/images/I/617l9J0WJtL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -742,9 +888,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $36
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Womens GRECIILOOKS Regular Loose Fit', 36, 'https://m.media-amazon.com/images/I/51ONEZ3ak4L._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -784,9 +938,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $19
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart(' Cross Flate womens Sandals', 19, 'https://m.media-amazon.com/images/I/31L8RnJ4lqL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -823,9 +985,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $12
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Block Heel Sandal with Ankle Strap', 12, 'https://m.media-amazon.com/images/I/61mNJeBVnhL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -862,9 +1032,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $49
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Womens Comfortable Slipper Sandals', 49, 'https://m.media-amazon.com/images/I/718UkcvvjgL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -900,9 +1078,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $23
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Sandels for Women', 23, 'https://m.media-amazon.com/images/I/61OELNIRrpL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -938,9 +1124,18 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $29
+
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Liberty Women Mico-3E Casual Shoes', 29, 'https://m.media-amazon.com/images/I/51iRi4BawTL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -977,9 +1172,17 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star  " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart('Womens Cut Slider Slipper', 30, 'https://m.media-amazon.com/images/I/61bXbbznchL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -1015,9 +1218,19 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 </h2>
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                                Price - $3                         </p>
+                                Price - $3            
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>   
+                            
+                            </p>
                                 <div class="button-container">
-                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="add-to-cart" onclick="addToCart('Sports shoe for Womens', 3, 'https://m.media-amazon.com/images/I/71y9khd5IQL._AC_UL480_FMwebp_QL65_.jpg')">Add to Cart</button>
                                     <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                     <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                     <div class="share-options">
@@ -1053,9 +1266,21 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
                                 </h2>
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                                Price - $10                         </p>
+                                Price - $10    
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>           
+                            
+                            
+                            </p>
                                 <div class="button-container">
-                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="add-to-cart" onclick="addToCart('Casual Canvas Lace Up Sneakers Shoes', 10, 'https://m.media-amazon.com/images/I/516RsrlYhOL._AC_UL480_FMwebp_QL65_.jpg')"> Add to Cart
+                                    </button>
                                     <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                     <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                     <div class="share-options">
@@ -1233,16 +1458,9 @@ function isValidEmail(email) {
 
     })();  // IIFE to avoid polluting global scope
 
-// Select all share buttons and share option containers
-const shareButtons = document.querySelectorAll('.share-icon');
-const shareOptions = document.querySelectorAll('.share-options');
 
-// Loop through each share button and attach event listener
-shareButtons.forEach((shareBtn, index) => {
-    shareBtn.addEventListener('click', () => {
-        console.log(`Share button ${index + 1} clicked`);
-        shareOptions[index].classList.toggle('active');
-    });
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
 });
 
 
@@ -1275,7 +1493,28 @@ saveButtons.forEach((saveBtn) => {
 });
 
 
+ // Add item to the cart function
+ function addToCart(name, price, image) {
+    // Retrieve cart from localStorage or initialize it as an empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Add new item to the cart array
+    cart.push({ name, price, image, quantity: 1 });
+
+    // Save updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(name + ' has been added to the cart');
+  }
+
+
+
+</script> 
+<div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>   
+<script src="script/share-button.js"></script>
+<script src="script/progressbar.js"></script>
 </script>    
 <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
     <div class="scroll-top-icon">
@@ -1425,4 +1664,5 @@ saveButtons.forEach((saveBtn) => {
     });
   </script>
 </body>
+
 </html>

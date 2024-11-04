@@ -23,6 +23,32 @@
             cursor: pointer;
             color: #35424a;
         }
+        
+    /* Scroll Progress Bar*/
+    #progress-container {
+    position: fixed ;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 99990;
+    /* background: #f3f3f3; */
+    }
+
+    #progress-bar {
+    position: fixed;
+    top: 0.3px;
+    left: 0;
+    width: 0%;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+    box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+    transition: width 0.09s ease-in-out;
+    /* border-radius: 10px; */
+    }
+
+
     </style>
 </head>
 
@@ -41,6 +67,9 @@
     </div>
 </div>
 
+<div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
     <!-- header section  -->
     <header class="header" id="header">
         <div class="logo">
@@ -48,11 +77,11 @@
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-         <nav class="bg-neutral-100 py-20">
+         <nav class=" bg-neutral-100 py-20">
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
                     <li class="tab">
-                        <a href="index.html">Home</a>
+                        <a href=" index.html">Home</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
@@ -60,7 +89,7 @@
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
-                        <a href="features.html">Features</a>
+                        <a href="features.html" class="active">Features</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="dropdown tab">
@@ -70,6 +99,8 @@
                             <li><a href="mens.html" class="priye">Men</a>
                             </li>
                             <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -81,12 +112,12 @@
         </nav>
 
         <nav class="utils">
-            <ul class="nav-links">
+            <ul class=" nav-links ">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
-                <li class="nav-link">
-                    <a href="login-sginup.html">
+                <li class=" nav-link ">
+                    <a href=" login-sginup.html">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>
@@ -99,24 +130,24 @@
 
     <!-- Main Content -->
     <main>
-        <section class="feature">
+        <section class=" feature ">
             <h3 onclick="toggleAnswer(0)">User-Experience</h3>
-            <p class="answer">The TrendTrove website features a clean and organized layout, ensuring users can easily navigate through various sections, including Home, About, Features, Products, and Contact Us. The top navigation bar remains accessible, allowing for quick access to essential pages.
+            <p class=" answer">The TrendTrove website features a clean and organized layout, ensuring users can easily navigate through various sections, including Home, About, Features, Products, and Contact Us. The top navigation bar remains accessible, allowing for quick access to essential pages.
 A modern and aesthetically pleasing design enhances the shopping experience. High-quality images and a consistent color scheme create a visually appealing environment that resonates with the brand identity.</p>
         </section>
-        <section class="feature">
+        <section class=" feature ">
             <h3 onclick="toggleAnswer(1)">Seamless Integration</h3>
-            <p class="answer">TrendTrove is designed to integrate effortlessly with various platforms and services, ensuring that users can access a unified shopping experience without disruption. Whether users are browsing on desktop or mobile, the transition is smooth and intuitive.
+            <p class=" answer ">The TrendTrove is designed to integrate effortlessly with various platforms and services, ensuring that users can access a unified shopping experience without disruption. Whether users are browsing on desktop or mobile, the transition is smooth and intuitive.
 The website seamlessly integrates with popular social media channels, allowing users to share products, reviews, and recommendations with ease. This fosters community engagement and enhances brand visibility.</p>
         </section>
         <section class="feature">
             <h3 onclick="toggleAnswer(2)">Security Measures</h3>
-            <p class="answer">TrendTrove employs industry-standard encryption protocols (SSL/TLS) to secure all sensitive data transmitted between users and the platform. This ensures that personal information, including payment details, is protected from unauthorized access.
+            <p class="answer">The TrendTrove employs industry-standard encryption protocols (SSL/TLS) to secure all sensitive data transmitted between users and the platform. This ensures that personal information, including payment details, is protected from unauthorized access.
 All payment transactions are processed through trusted third-party payment gateways that adhere to PCI DSS (Payment Card Industry Data Security Standard). This ensures that user payment information is handled securely and reduces the risk of fraud.</p>
         </section>
         <section class="feature">
             <h3 onclick="toggleAnswer(3)">Progress and Performance</h3>
-            <p class="answer"> TrendTrove provides users with access to a user-friendly analytics dashboard that offers real-time insights into their shopping habits, preferences, and engagement. This feature enables users to track their progress and make informed decisions.
+            <p class="answer">The TrendTrove provides users with access to a user-friendly analytics dashboard that offers real-time insights into their shopping habits, preferences, and engagement. This feature enables users to track their progress and make informed decisions.
 Users can view personalized metrics that highlight their purchasing patterns, favorite products, and engagement levels. This tailored information helps users understand their shopping behaviors and encourages further exploration of the platform.</p>
         </section>
         <section class="feature">
@@ -138,7 +169,7 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
 
                 <li class="border-list">
                 </li>
-                <li class="socials">
+                <li class=" socials ">
                     <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
@@ -157,7 +188,7 @@ Users can view personalized metrics that highlight their purchasing patterns, fa
 
         <div class="footer-section quick-links">
             <h1>Quick Links</h1>
-            <ul class="footer-list">
+            <ul class=" footer-list ">
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
@@ -257,6 +288,39 @@ function isValidEmail(email) {
             const answers = document.querySelectorAll('.answer');
             answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
         }
+
+        document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+    </script>
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  
+    (function() {
+        let headerVisible = false;
+        document.getElementById("menu").addEventListener("click", function () {
+            if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+            } else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+            }
+        });
+  
+        // Show "Go to Top" button after scrolling down
+        const goTopBtn = document.querySelector(".gotopbtn");
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+            } else {
+                goTopBtn.style.display = "none";
+            }
+        });
+  
+    })();
     </script>
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">

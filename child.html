@@ -20,7 +20,7 @@
             width: 300px;
             text-align: center;
             transition: transform 0.3s ease-in-out;
-            height: 450px;
+            height: 490px;
         }
 
         .testimonal__card:hover {
@@ -68,6 +68,42 @@
             padding: 5px 0px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
+        
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+
+
+        .fa-star{
+             /* margin-top: 12px; */
+             /* margin: 12px; */
+        }
+        .star{
+           margin: 10px;
+        }
+        .checked{
+            color: orange;
+        }
 
        
     </style>
@@ -81,6 +117,9 @@
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+          </div>
 
         <nav class="navigation">
             <div class="pro-tabs-container">
@@ -147,9 +186,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $24
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Net Sequins Embroided top', 24, 'images/Net Sequins Embroidered.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -190,9 +238,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $49
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Cotton Strip top', 49, 'images/kids-girl-tops1.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -231,9 +288,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $89
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Cotton PartyWear', 89, 'images/cotton partywearkid2.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -269,9 +335,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $30
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Printed Puff Sleeves', 30, 'images/printedpuffsleeves.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -307,9 +382,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $75
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Girls Tie and dye Shirt', 75, 'images/rio girls tie and dye shirt.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -346,9 +430,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $55
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Frill Top', 55, 'images/frill.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -386,9 +479,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                 <button class="add-to-cart" onclick="addToCart( 'Floral Pattern Top ', 20, 'images/floralpattern.jpeg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -425,9 +527,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $60
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'White Bazu Frill Fancy Top', 60, 'images/bazufrill.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -470,9 +581,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $40
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Kid China trade Bottomwear', 40, 'images/chinatrade.avif')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -509,9 +629,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $69
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Girl Track Pant', 69, 'images/girls track pants.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -549,9 +678,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $80
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( ' Kid Plazzo', 80, 'images/kidsplazzo.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -588,9 +726,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $25
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Shorts', 25, 'images/shorts.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -627,9 +774,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $20
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Sports Shorts', 20, 'images/twg.jpeg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -666,9 +822,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $29
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                             <button class="add-to-cart" onclick="addToCart( 'Butterfly Print', 29, 'images/butterfly.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -704,9 +869,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $45
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Clothing Ethnic Bottom Wear', 45, 'images/clothingEthnic.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -742,9 +916,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $10
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'PocketSolid Shorts', 10, 'images/pocketSolidShorts.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -779,14 +962,23 @@
                              width: 280px;
                              height: 300px;">
                             <h2 class="testimonal__title"
-                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Kid Girl leather shoes
+                                style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: hsl(203, 30%, 26%);">Kid Girl 
                                 </h2>
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $50
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Kid Girl', 50, 'images/girl leather.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -823,9 +1015,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $37
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Girl Pump Shoes', 37, 'images/pumps shoes.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -862,9 +1063,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $45
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star-half checked" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'High Heels', 45, 'images/high heels.jpeg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -900,9 +1110,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $25
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Sandels for kid girl', 25, 'images/girl sandals.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -938,9 +1157,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $49
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Girl Shoes Pink', 49, 'images/girl shoes.webp')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -977,9 +1205,18 @@
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
                                 Price - $34
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
                             </p>
                             <div class="button-container">
-                                <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Todlar girl Sandal', 34, 'images/toddler girl sandals.jpg')">Add to Cart</button>
+
                                 <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                 <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                 <div class="share-options">
@@ -1015,9 +1252,21 @@
                                 </h2>
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                                Price - $31                           </p>
+                                Price - $31   
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked " ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                  
+                                 </div>
+                            
+                            
+                            </p>
                                 <div class="button-container">
-                                    <button class="add-to-cart">Add to Cart</button>
+                                    <button class="add-to-cart" onclick="addToCart( 'Booties fancy', 31, 'images/booties.webp')">Add to Cart</button>
+
                                     <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                     <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                     <div class="share-options">
@@ -1053,9 +1302,20 @@
                                 </h2>
                             <p class="testimonal__description"
                                 style="font-family: var(--ff-poppins);color: hsl(208, 7%,46%);">
-                                Price - $10                         </p>
+                                Price - $10      
+                                <div class="star">
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star checked" ></i>
+                                    <i class="fa-solid fa-star-half checked " ></i>
+                                    <i class="fa-solid fa-star" ></i>
+                                  
+                                 </div>
+                            
+                            </p>
                                 <div class="button-container">
-                                    <button class="add-to-cart">Add to Cart</button>
+                                <button class="add-to-cart" onclick="addToCart( 'Casual Canvas Lace Up Sneakers Shoes', 10, 'images/light up toddler       girl.webp')">Add to Cart</button>
+
                                     <button class="save-icon"><i class="fas fa-bookmark"></i></button>
                                     <button class="share-icon"><i class="fas fa-share-alt"></i></button>
                                     <div class="share-options">
@@ -1233,6 +1493,10 @@ function isValidEmail(email) {
 
     })();  // IIFE to avoid polluting global scope
 
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+
 // Select all share buttons and share option containers
 const shareButtons = document.querySelectorAll('.share-icon');
 const shareOptions = document.querySelectorAll('.share-options');
@@ -1274,8 +1538,19 @@ saveButtons.forEach((saveBtn) => {
     });
 });
 
+ // Add item to the cart function
+ function addToCart(name, price, image) {
+    // Retrieve cart from localStorage or initialize it as an empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Add new item to the cart array
+    cart.push({ name, price, image, quantity: 1 });
 
+    // Save updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(name + ' has been added to the cart');
+  }
 </script>
 <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
     <div class="scroll-top-icon">

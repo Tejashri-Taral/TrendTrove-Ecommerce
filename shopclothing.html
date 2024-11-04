@@ -123,7 +123,7 @@
 
         .filters input[type="checkbox"] {
             margin-right: 10px;
-            transform: scale(1.2);
+            transform: scale(0.5);
             cursor: pointer;
         }
 
@@ -272,17 +272,68 @@
                 display: flex;
             }
         }
+        
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: #000000;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.go-top-btn:hover {
+  background-color: #000000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
     </style>
 </head>
 <body>
-
+  <!-- scroll to top button  -->
+  <button class="go-top-btn">
+    <img   width="25px" src="arrow_upper.png" alt="go top">
+</button>
     <!-- Header Section -->
     <header class="header" id="header">
         <div class="logo">
             <p>TrendTrove</p>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
-
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+          </div>
         <nav class="bg-neutral-100 py-20">
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
@@ -305,6 +356,8 @@
                             <li><a href="mens.html" class="priye">Mens</a>
                             </li>
                             <li><a href="womens.html">Womens</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
                         </ul>
                     </li>
                     <li class="tab" style="margin-left: 15px;">
@@ -321,7 +374,9 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </li>
                 <li class="nav-link">
+                    <a href="login-sginup.html">
                     <i class="fa-solid fa-user"></i>
+                </a>
                 </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -748,7 +803,7 @@
                
                 const selectedSize = Array.from(sizeFilters)
                     .filter(checkbox => checkbox.checked)
-                    .map(checkbox => parseInt(checkbox.value));
+                    .map(checkbox => (checkbox.value));
 
                 
                 const selectedRatings = Array.from(ratingFilters)
@@ -759,7 +814,8 @@
                 clothingCards.forEach(card => {
                     const brand = card.getAttribute('data-brand');
                     const price = parseFloat(card.getAttribute('data-price'));
-                    const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    // const sizeRange = card.getAttribute('data-size').split('-').map(Number);
+                    const sizeRange = card.getAttribute('data-size')
                     const rating = parseFloat(card.getAttribute('data-rating'));
 
                    
@@ -772,12 +828,13 @@
                     let sizeMatch = true;
                     if (selectedSize.length) {
                         
-                        const clothingSize = [];
-                        for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
-                            clothingSize.push(size);
-                        }
+                        // const clothingSize = [];
+                        // for (let size = sizeRange[0]; size <= sizeRange[1]; size++) {
+                        //     clothingSize.push(size);
+                        // }
                         
-                        sizeMatch = selectedSize.some(size => clothingSize.includes(size));
+                        // sizeMatch = selectedSize.some(size => sizeRange.includes(size));
+                        sizeMatch = selectedSize.includes(sizeRange);
                     }
 
                    
@@ -823,7 +880,27 @@
                 filterclothings();
             });
         });
+
+         //js for go top button
+const goTopBtn = document.querySelector('.go-top-btn');
+    window.addEventListener('scroll', checkHeight)
+    function checkHeight() {
+      if (window.scrollY > 200) {
+        goTopBtn.style.display = "flex"
+      } else {
+        goTopBtn.style.display = "none"
+      }
+    }
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
+    })
+
     </script>
+<script src="script/progressbar.js"></script>
+
 
 </body>
 </html>

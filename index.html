@@ -29,9 +29,9 @@
         </div>
     </div>
 </div>
-    <!-- ProgressBar -->
+<div id="progress-container">
     <div id="progress-bar"></div>
-    <!-- ProgressBar Ends -->
+  </div>
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -44,7 +44,7 @@
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
                     <li class="tab">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" class="active">Home</a>
                         <div class="cursor"></div>
                     </li>
                     <li class="tab">
@@ -79,7 +79,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
@@ -94,10 +94,10 @@
     </header>
     <!-- Search Bar -->
     <div id="search-bar">
-        <input type="text" id="search" placeholder="Search..." />
+        <input type=" text " id=" search " placeholder=" Search..." />
         <button type="submit" id="search-btn">Go</button> <!-- Add ID to the button -->
     </div>
-    <script src="preloader.js"></script>
+    <script src=" preloader.js "></script>
     <style>
     /* Style for the search bar, initially hidden */
     #search-bar {
@@ -111,10 +111,17 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+    /* Css for language box */
+    .lang-box{
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     /* Styling the input box and button */
     #search-bar input {
-        padding: 5px;
-        width: 200px;
+        padding:  5px;
+        width:  200px;
         border: 1px solid #ccc;
         border-radius: 3px;
         outline: none;
@@ -173,7 +180,7 @@
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow’s Trends Today with TrendTrove!</h1>
+                <h1>Discover Tomorrow's Trends Today with TrendTrove!</h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
@@ -202,7 +209,7 @@
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
                 <a href="#" class="no-thanks close-btn">No thanks, I’ll shop full price</a>
-                <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                <p class="terms">By signing up, you agree to our <a href="terms-conditions.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
@@ -210,12 +217,12 @@
 
     <!-- featured section  -->
 
-    <section class="featured">
+    <section class="featured" data-aos="fade-left" data-aos-delay="300">
         <div class="featured-box-1">
             <div class="overlay">
                 <a href="./shopclothing.html" class="btn btn-white">
                     Shop Clothing
-                </button>
+                </button></a>
             </div>
             <div class="bg-image">
                 <img src="./images/youngcouple1.jpg" alt="product">
@@ -548,7 +555,7 @@
         </div>
         <div class="feedback-container">
         
-            <h2>Have a feedback? &nbsp;&nbsp;<a href="feedback.html" target="_blank">Click here to provide feedback</a></h2>
+            <h2>Have feedback?&nbsp;<a href="feedback.html" target="_blank"><span>Click here</span></a> to share your thoughts with us.</h2>
         </div>
     </section>
     
@@ -585,15 +592,17 @@
             </ul>
         </div>
 
-        <div class="footer-section quick-links">
+        <div class=" footer-section quick-links ">
             <h1>Quick Links</h1>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="contributors.html">Our Contributors</a></li>
                 <li><a href="faq.html">FAQ's</a></li>
                 <li><a href="terms-conditions.html">Terms & Conditions</a></li>
                 <li><a href="return-policy.html">Return Policy</a></li>
                 <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
 
             </ul>
         </div>
@@ -648,77 +657,12 @@
                 </div>
             </div>
         </div>
-        
+    <script src="./script/modal_box.js"></script>
     
-    <script>
-        let openbtn = document.getElementById('open-btn');
-let modalbox = document.getElementById('modalbox');
-let closebtn = document.getElementById('close-btn');
-let emailInput = document.getElementById('email-input');
-
-// Email validation function
-function isValidEmail(email) {
-        // Regular expression for validating an email
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
-    }
-
-    openbtn.addEventListener('click', function () {
-        // Validate email
-        if (emailInput.value === '') {
-            alert('Please enter your email address.');
-        } else if (!isValidEmail(emailInput.value)) {
-            alert('Please enter a valid email address.');
-        } else {
-            modalbox.style.display = 'block'; // Show the modal
-        }
-    });
-
-    closebtn.addEventListener('click', function () {
-        modalbox.style.display = 'none'; // Hide the modal
-    });
-     // Close modal when clicking outside of it
-     modalbox.addEventListener('click', function(event) {
-        if (event.target === modalbox) {
-            modalbox.style.display = 'none'; // Hide modal if the background is clicked
-        }
-    });
-
-    </script>
-    
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
-    <script>
-        window.onscroll = function () {
-            updateProgressBar();
-        };
-        function updateProgressBar() {
-            const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPercent = (windowScroll / documentHeight) * 100;
-            document.getElementById("progress-bar").style.width = scrollPercent + "%";
-        }
-
-    </script>
-    <!-- ProgressBar Functionality Ends-->
-    <script>
-        AOS.init();
-        let headerVisible = false;
-        document.getElementById("menu").addEventListener("click", function () {
-
-            if (headerVisible === false) {
-                document.getElementById("header").style.height = "280px";
-                headerVisible = true;
-            }
-            else {
-                document.getElementById("header").style.height = "50px";
-                headerVisible = false;
-            }
-
-        })
-    </script>
+    <script src="script/progressbar.js"></script>
 <script>
     gsap.from("#header", {
         duration: 1.5,
@@ -807,13 +751,17 @@ function isValidEmail(email) {
     const cursor = document.getElementById('cursor');
     
     tabs.forEach(tab => {
+ 
         tab.addEventListener('mouseenter', () => {
             cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
             cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+ 
+       
+ 
             cursor.style.opacity = 1; 
         });
     
-        tab.addEventListener('mouseleave', () => {
+        tab.addEventListener(' mouseleave', () => {
             cursor.style.opacity = 0; 
         });
     });
@@ -825,19 +773,19 @@ function isValidEmail(email) {
 
   (function() {
       let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
+      document.getElementById(" menu").addEventListener("click", function () {
           if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
+              document.getElementById(" header").style.height = "290px";
               headerVisible = true;
           } else {
-              document.getElementById("header").style.height = "50px";
+              document.getElementById(" header").style.height = "50px";
               headerVisible = false;
           }
       });
 
       // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
+      const goTopBtn = document.querySelector(" .gotopbtn");
+      window.addEventListener(" scroll", function () {
           if (window.scrollY > 200) {  // Show the button after scrolling down 200px
               goTopBtn.style.display = "block";
           } else {
@@ -846,8 +794,29 @@ function isValidEmail(email) {
       });
 
   })();  // IIFE to avoid polluting global scope
+
+  
+        // When the cart icon is clicked, navigate to the 'cart.html' page.
+document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+
+  
 </script>
 
+<div class="gtranslate_wrapper"></div>
+        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+<script>
+
+    window.addEventListener('scroll', function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+    </script>
 <script src="./script/popup.js"></script>
 <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
     <div class="scroll-top-icon">
