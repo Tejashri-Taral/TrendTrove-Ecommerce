@@ -16,6 +16,49 @@
 </head>
 
 <body>
+    <label>
+        <div class="mode">
+          Toggle:             
+          <!-- <button class="change">OFF</button> -->
+          <button class="change">OFF</button>
+        </div>
+        </label>
+</body>
+<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+      </script>
+      <script>
+      $( ".change" ).on("click", function() {
+          if( $( "body" ).hasClass( "dark" )) {
+              $( "body" ).removeClass( "dark" );
+              $( ".change" ).text( "OFF" );
+          } else {
+              $( "body" ).addClass( "dark" );
+              $( ".change" ).text( "ON" );
+          }
+      });
+  </script>
+<style>
+    .mode {
+            float:right;
+            position: absolute;
+            top: 100px;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555; 
+             border-radius: 40%;
+            
+            text-align: center;
+            padding: 5px; 
+             margin-left: 8px;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+</style>
+<body>
      <!-- preloader -->
   <div id="preloader">
     <div class="wrapper">
@@ -112,7 +155,7 @@
         position: absolute;
         top: 60px; /* Adjust this to position the search bar just below the icon */
         right: 20px; /* Align with the icon */
-        background-color: white;
+        background-color: rgb(240, 131, 131);
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

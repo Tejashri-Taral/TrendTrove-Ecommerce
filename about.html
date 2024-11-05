@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>CSS Toggle Button</title> -->
     <title>About Us - TrendTrove</title>
     <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="style.css" />
@@ -12,11 +13,65 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <!-- Link to your common CSS file -->
+    
     <style>
       /* General Styles */
-      html,
+  /* Toggle Button Style */
+  
+  /* .toggle {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    /* position: absolute; 
+    top: 13px;
+    left: 13px;
+    right: 0;
+    bottom: 0;
+    background-color: #8e8989;
+    transition: 0.4s;
+    border-radius: 30px; ;
+  }
 
-      
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+   .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e73636;
+    transition: 0.4s;
+    border-radius: 30px;
+    border-color:rgba(255, 244, 221, 0.7) ;
+  } 
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: rgb(9, 9, 9);
+    transition: 0.4s;
+    border-radius: 50%;
+    border-color: #0e0e0e;
+  }
+
+  input:checked + .slider {
+    background-color: #4caf50;
+  } 
+
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }  */
+
+      html,
       body {
         margin: 0;
         padding: 0;
@@ -60,7 +115,7 @@
         width: 80%;
         padding: 40px 0;
         margin: 0 auto; 
-        background: #ffffff;
+        background: #eda2a2;
       }
 
       .about-title {
@@ -518,6 +573,15 @@ body.dark-mode {
     </nav>
 </header>
 
+<!-- <body class="light-theme">
+
+<h6>Toggle</h6> -->
+<!-- <p>Click the toggle to switch between light and dark themes.</p> -->
+
+<!-- <label class="toggle">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider"></span>
+</label> -->
 
     <!-- About Us Section -->
     <section class="about-section">
@@ -791,6 +855,19 @@ body.dark-mode {
   <script src="preloader.js"></script>
 
   <script>
+    
+
+
+  // // JavaScript for Theme Toggle
+  // const toggleSwitch = document.getElementById('theme-toggle');
+  // const body = document.body;
+
+  // // Toggle theme when checkbox state changes
+  // toggleSwitch.addEventListener('change', () => {
+  //   body.classList.toggle('dark-theme', toggleSwitch.checked);
+  //   body.classList.toggle('light-theme', !toggleSwitch.checked);
+  // });
+
     document.getElementById("cart-icon").addEventListener("click", function() {
     window.location.href = "cart.html";
 });
