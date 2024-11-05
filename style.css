@@ -292,6 +292,14 @@ html {
   position: relative; 
 }
 
+.star{
+  margin: 10px;
+}
+.checked{
+   color: orange;
+}
+
+
 /* Add to Cart Button */
 .add-to-cart {
   background-color: black;
@@ -503,10 +511,12 @@ html {
 }
 
 .btn-white {
-  background-color: white;
-  border: 1px solid white;
-  color: #1d1d1d;
-  box-shadow: 0 0 3px lightgray;
+  font-family: futura;
+  font-weight: 550;
+  background-color: rgb(82, 80, 80);
+  border: 1px solid rgb(184, 183, 183);
+  color:rgb(250, 241, 241);
+  box-shadow: 0 0 3px rgb(201, 201, 201);
   z-index: 20;
   transition: 0.3s ease;
 }
@@ -552,7 +562,7 @@ html {
 
 .product {
   width: 24.5%;
-  height: 420px;
+  height: 390px;
   /* background-color: green; */
   display: flex;
   flex-direction: column;
@@ -761,8 +771,7 @@ html {
 
 .footer {
   width: 100%;
-  margin-top: 60px;
-  padding: 30px 20%;
+  padding: 40px 100px;
   background-color: #f6f5fa;
   font-family: "futura";
   display: flex;
@@ -788,6 +797,10 @@ html {
 .footer-list li a {
   color: black;
   text-decoration: none;
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+
 }
 
 .border-list {
@@ -886,7 +899,7 @@ html {
 
 input {
   height: 40px;
-  width: 20%;
+  width: 60%;
   border-radius: 30px;
   border: 1px solid lightgray;
 }
@@ -1256,10 +1269,7 @@ input {
   text-align: left;
 }
 
-/* mens section styling */
-main {
-  background-color: #f0efef;
-}
+
 
 .pro-tabs-container {
   display: flex;
@@ -1306,6 +1316,9 @@ main {
 }
 .cardimage {
   width: 200px;
+
+  height: 270px;
+=======
   height: 290px;
   transition: 1s;
 }
@@ -1511,7 +1524,6 @@ main {
 /* Contact Section*/
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f7f7f7;
   color: #333;
   margin: 0;
   padding: 0;
