@@ -973,7 +973,7 @@ document.getElementById("cart-icon").addEventListener("click", function() {
     });
   </script>
 
-    // Update icons and local storage
+ <script>
     if (isDarkMode) {
         sunIcon.style.display = "none";
         moonIcon.style.display = "inline-block";
@@ -982,8 +982,7 @@ document.getElementById("cart-icon").addEventListener("click", function() {
         sunIcon.style.display = "inline-block";
         moonIcon.style.display = "none";
         localStorage.setItem("theme", "light");
-    }
-});
+    };
   </script>
 </body>
 
