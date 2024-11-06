@@ -70,14 +70,21 @@
                         <a href="contact.html">Contact Us</a>
                         <div class="cursor"></div>
                     </li>
+                    
                 </ul>
             </div>
         </nav>
         
        
-
+        
         <nav class="utils">
             <ul class="nav-links">
+                <li>
+                    <button class="mode-toggle" id="modeToggle">
+                        <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                        <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                      </button>
+                    </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
@@ -180,7 +187,7 @@
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1>Discover Tomorrow's Trends Today with TrendTrove!</h1>
+                <h1><p>Discover Tomorrow's Trends Today with TrendTrove!</p></h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
@@ -817,6 +824,7 @@ document.getElementById("cart-icon").addEventListener("click", function() {
         document.getElementById('progress-bar').style.width = scrolled + '%';
     });
     </script>
+
 <script src="./script/popup.js"></script>
 <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
     <div class="scroll-top-icon">
@@ -900,7 +908,6 @@ document.getElementById("cart-icon").addEventListener("click", function() {
         0% {
             box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
         }
-
         50% {
             box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
         }
@@ -966,6 +973,18 @@ document.getElementById("cart-icon").addEventListener("click", function() {
     });
   </script>
 
+    // Update icons and local storage
+    if (isDarkMode) {
+        sunIcon.style.display = "none";
+        moonIcon.style.display = "inline-block";
+        localStorage.setItem("theme", "dark");
+    } else {
+        sunIcon.style.display = "inline-block";
+        moonIcon.style.display = "none";
+        localStorage.setItem("theme", "light");
+    }
+});
+  </script>
 </body>
 
 </html>

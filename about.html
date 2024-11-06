@@ -417,6 +417,11 @@
   transform: translateY(-2px);
 }
 
+body.dark-mode {
+  background-color: #121212;
+  color: #080707;
+}
+
 
   </style>
 
@@ -491,6 +496,12 @@
 
     <nav class="utils">
         <ul class="nav-links">
+          <li>
+            <button class="mode-toggle" id="modeToggle">
+                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+              </button>
+            </li>
             <li class="nav-link">
                 <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
             </li>
@@ -877,7 +888,6 @@
           bottom: 15px;
           /* Ensure button is on top */
       }
-  
       .scroll-top.show {
           opacity: 1;
           visibility: visible;

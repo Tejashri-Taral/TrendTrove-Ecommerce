@@ -102,6 +102,12 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
+                    <li>
+                        <button class="mode-toggle" id="modeToggle">
+                            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                          </button>
+                        </li>
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
@@ -268,6 +274,7 @@
             document.getElementById("feedbackForm").reset();
         }
     </script>
+
     <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
         <div class="scroll-top-icon">
             <i class="fa-solid fa-arrow-up"></i>
