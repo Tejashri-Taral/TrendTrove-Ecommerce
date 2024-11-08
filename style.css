@@ -978,7 +978,11 @@ input {
 
   .slide {
     background-size: cover;
-    padding-left: 5%;
+    padding-left: 0%;
+  }
+
+  #progress-bar {
+    display: hidden;
   }
 
   .slide-details {
