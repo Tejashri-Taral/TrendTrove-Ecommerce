@@ -772,12 +772,11 @@ html {
 .footer {
   width: 100%;
   padding: 40px 100px;
+  background-color: #f6f5fa;
   font-family: "futura";
   display: flex;
   justify-content: space-between;
-  background-color: black;
-  color: white;
-  transition: background-color 0.3s, color 0.3s;
+  color: #1d1d1d;
 }
 
 .footer-section {
@@ -796,7 +795,7 @@ html {
 }
 
 .footer-list li a {
-  color: white;
+  color: black;
   text-decoration: none;
   margin-bottom: 25px;
   font-size: 22px;
@@ -806,7 +805,7 @@ html {
 
 .border-list {
   margin-top: 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid lightgray;
   width: 70%;
 }
 
@@ -819,7 +818,7 @@ html {
 
 .socials a {
   transition: all 0.38s ease;
-  color: white;
+  color: black;
 }
 
 .socials a:hover {
@@ -830,7 +829,7 @@ html {
 }
 
 #github:hover {
-  background-color: #6e6d6f;
+  background-color: #3a383c;
 }
 
 #linkedin:hover {
@@ -842,7 +841,7 @@ html {
 }
 
 #twitter:hover {
-  background-color:  #6e6d6f;
+  background-color: #14171a;
 }
 
 .quick-links .footer-list a {
@@ -856,7 +855,7 @@ html {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: white; 
+    background-color: black; 
     transition: width 0.3s ease; 
 }
 
@@ -1319,6 +1318,7 @@ input {
   width: 200px;
 
   height: 270px;
+=======
   height: 290px;
   transition: 1s;
 }
@@ -1405,7 +1405,7 @@ input {
 
 .tab a {
   text-decoration: none;
-  color: #a4a0a0;
+  color: black;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 16px;
@@ -1786,54 +1786,4 @@ body.dark-mode .navbar a:hover {
   color: #4C51BF;
   transform: translateY(-2px);
 }
-/*darkmode footer*/
-body.dark-mode .footer {
-  background-color: white;
-  color: gray;
-}
 
-body.dark-mode .footer a {
-  color: #333;
-}
-body.dark-mode .footer .quick-links .footer-list a::after {
-  background-color: black; 
-}
-body.dark-mode .section-title{
-  color: #b5aeae;
-}
-body.dark-mode .product-price {
-  color: #ccc;
-}
-body.dark-mode .product-name{
-  color: #ccc;
-}
-body.dark-mode .feedback-container h2{
-  color: #999494;
-}
-
-/* Dark Mode Styles header */
-body.dark-mode .header {
-  background-color: #333; 
-}
-
-body.dark-mode .tabs-container .tab a,
-body.dark-mode .nav-links .nav-link i,
-body.dark-mode .mode-toggle .sun-icon img,
-body.dark-mode .mode-toggle .moon-icon img {
-  color: #fff; 
-}
-
-body.dark-mode .tabs-container .tab a {
-  color: #a4a0a0; 
-}
-
-body.dark-mode .tabs-container .tab a:hover {
-  color: #fff; 
-}
-body.dark-mode .tabs-container .tab a.active{
-  color: white;
-}
-/* Dark Mode Style for Logo Icon */
-body.dark-mode .logo img {
-  filter: brightness(0) invert(1); 
-}
