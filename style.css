@@ -844,6 +844,30 @@ html {
   background-color: #14171a;
 }
 
+
+.visitor-counter {
+  position: absolute;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  top: 3618px;
+  padding: 10px 20px;
+  border-radius: 19px;
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-left: 0px;
+  z-index: 10; /* Ensure it stays on top of the border */
+}  
+
+.visitor-counter .icon {
+  margin-right: 10px;
+}
+
+
+
+
+
+
 .quick-links .footer-list a {
     position: relative; 
 }
@@ -1318,7 +1342,7 @@ input {
   width: 200px;
 
   height: 270px;
-=======
+
   height: 290px;
   transition: 1s;
 }
