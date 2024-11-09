@@ -80,10 +80,10 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li>
-                    <button class="mode-toggle" id="modeToggle">
+                    <!-- <button class="mode-toggle" id="modeToggle">
                         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
                         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                      </button>
+                      </button> -->
                     </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
@@ -98,6 +98,19 @@
                 </li>
             </ul>
         </nav>
+        <!-- <script>
+            const modeToggle = document.getElementById("modeToggle");
+            const sunIcon = document.querySelector(".sun-icon");
+            const moonIcon = document.querySelector(".moon-icon");
+    
+            modeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+    
+                // Toggle visibility of sun and moon icons
+                sunIcon.style.display = sunIcon.style.display === "none" ? "inline" : "none";
+                moonIcon.style.display = moonIcon.style.display === "none" ? "inline" : "none";
+            });
+        </script> -->
     </header>
     <!-- Search Bar -->
     <div id="search-bar">
@@ -1000,18 +1013,6 @@ document.getElementById("cart-icon").addEventListener("click", function() {
             behavior: "smooth"
         });
     });
-  </script>
-
- <script>
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-    };
   </script>
 </body>
 

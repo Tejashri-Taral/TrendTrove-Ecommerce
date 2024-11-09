@@ -849,15 +849,16 @@ html {
   position: absolute;
   background-color: #000000;
   color: rgb(255, 255, 255);
-  top: 3618px;
-  padding: 10px 20px;
-  border-radius: 19px;
+  top: 3658px; /* Adjusted value to move it down */
+  padding: 10px 10px;
+  border-radius: 18px;
   display: inline-flex;
   align-items: center;
   font-family: Arial, sans-serif;
   margin-left: 0px;
-  z-index: 10; /* Ensure it stays on top of the border */
+  z-index: 20; /* Ensure it stays on top of the border */
 }  
+ 
 
 .visitor-counter .icon {
   margin-right: 10px;
@@ -1780,7 +1781,7 @@ body {
 }
 
 body.dark-mode {
-  background-color: #121212;
+  background-color: #828593;
   color: #ffffff;
 }
 
@@ -1807,7 +1808,7 @@ header.dark-mode {
 }
 
 body.dark-mode .navbar {
-  background-color: #333;
+  background-color: #5a4343;
 }
 
 body.dark-mode .navbar a:hover {
