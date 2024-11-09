@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./Style/popup.css">
 
 </head>
-
 <body>
      <!-- preloader -->
   <div id="preloader">
@@ -29,9 +28,9 @@
         </div>
     </div>
 </div>
-<div id="progress-container">
+<!-- <div id="progress-container">
     <div id="progress-bar"></div>
-  </div>
+  </div> -->
 
     <!-- header section  -->
     <header class="header" id="header">
@@ -852,6 +851,15 @@ document.getElementById("cart-icon").addEventListener("click", function() {
         const scrolled = (winScroll / height) * 100;
         document.getElementById('progress-bar').style.width = scrolled + '%';
     });
+
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 0) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});
     </script>
 
 <script src="./script/popup.js"></script>
