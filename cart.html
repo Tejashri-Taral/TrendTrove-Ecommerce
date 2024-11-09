@@ -12,219 +12,218 @@
       padding: 0;
     }
 
-    
-/* Scroll Progress Bar*/
-#progress-container {
-  position: fixed ;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  z-index: 99990;
-  /* background: #f3f3f3; */
-}
-
-#progress-bar {
-  position: fixed;
-  top: 0.3px;
-  left: 0;
-  width: 0%;
-  height: 6px;
-  width: 0;
-  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
-  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
-  transition: width 0.09s ease-in-out;
-  /* border-radius: 10px; */
-}
-
-
+    h2 {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      color: #333;
+    }
 
     .container {
       width:  90%;
       margin: 40px auto;
       display: flex;
       justify-content: space-between;
+      gap: 20px;
     }
+
     .cart-items {
       width: 65%;
-      height:  80vh;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 20px;
+      max-height: 80vh;
+      overflow-y: auto;
     }
+
     .cart-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 15px 0;
-    }
-    .cart-item img {
-      width: 80px;
-      height: 80px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-    .item-details {
-      width: 60%;
-    }
-    .item-details h4 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .item-details p {
-      margin: 5px 0;
-      color: #555;
-    }
-    .item-quantity {
-      display: flex;
-      align-items: center;
-    }
-    .item-quantity button {
-      background-color: #000;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 15px; /* Add spacing between image and details */
+  margin-bottom: 15px;
+}
+
+
     .item-quantity input {
       width: 40px;
       text-align: center;
-      margin: 0 10px;
-      font-size: 16px;
+      font-size: 14px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
+    .cart-item:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Cart Item Image */
+.cart-item img {
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: 15px; /* Add margin to space it from details */
+}
+
+/* Item Details */
+.item-details {
+  flex-grow: 1;
+  margin-left: 60px;
+}
+
+.item-details h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.item-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Item Quantity Controls */
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-quantity button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.item-quantity button:hover {
+  background-color: #555;
+}
+
+    .remove-btn {
+      background-color: #ccc;
+      color: black;
+      border: none;
+      padding: 5px 15px;
+      margin-right: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .remove-btn:hover {
+      background-color: #f4efef;
+    }
+
     .cart-summary {
       width: 30%;
-      background: #f0f0f0;
+      background: #f9f9f9;
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .cart-summary h2 {
       font-size: 18px;
       font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
     }
+
     .summary-item {
-      display:  flex;
+      display: flex;
       justify-content: space-between;
-      margin-bottom: 15px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
     }
-    .summary-item span {
-      font-size: 16px;
-    }
+
     .total-price {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
     }
+
     .checkout-btn {
       width: 100%;
       padding: 10px;
-      background-color: #000;
+      background-color: #333;
       color: #fff;
       border: none;
       font-size: 16px;
       cursor: pointer;
-      border-radius: 5px;
+      border-radius: 4px;
       text-align: center;
+      margin-top: 20px;
+      transition: background-color 0.2s;
     }
+
     .checkout-btn:hover {
-      background-color: #333;
+      background-color: #555;
     }
+
     .back-to-shop {
       text-align: left;
-      margin-top: 20px;
       font-size: 16px;
       color: #333;
       text-decoration: none;
+      display: block;
+      margin-top: 10px;
+      text-align: center;
     }
+
     .back-to-shop:hover {
       text-decoration: underline;
     }
-    /* General styling for the cart */
-.shopping-cart {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    .notification {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: linear-gradient(90deg, #333, #555);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 1000;
+  white-space: nowrap;
 }
 
-.cart-items {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  max-height: 400px; /* Set a max height to enable scroll if there are many items */
-  overflow-y: auto;  /* Enables scrolling when content exceeds max height */
-  border: 1px solid #ddd;
-  border-radius: 5px;
+.notification.show {
+  transform: translateX(-50%) translateY(20px); /* Slide down */
+  opacity: 1;
+  visibility: visible;
 }
+/* Cart Items Container */
 
 
-.item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.cart-summary {
-    width: 30%;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-}
-
-.cart-summary h3 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.summary-item {
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#shipping-method {
-    padding: 5px;
-    width: 100%;
-}
-
-#give-code {
-    padding: 5px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.checkout-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.checkout-button:hover {
-    background-color: #444;
-}
-
-#total-price {
-    font-weight: bold;
-}
 
   </style>
 </head>
 <body>
-  <h2>Your Shopping Cart</h2>
+  <h2>&#128722; Your Shopping Cart</h2>
+  <p id="cart-count-display" style="text-align:left; font-size:1.1rem; color:#666; margin-top:-15px; margin-left:5%; padding-left:5px;">
+    Items in Cart: <span id="cart-count">0</span>
+  </p>
+  
   <div class="container">
     <div id="cart-items-container" class="cart-items"></div>
     <div class="cart-summary">
@@ -234,17 +233,19 @@
         <span id="total-price">$0.00</span>
       </div>
       <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      <a href="#" class="back-to-shop">Continue Shopping</a>
     </div>
   </div>
 
   <script>
     function loadCartItems() {
         const cartContainer = document.getElementById('cart-items-container');
+        const cartCountDisplay = document.getElementById('cart-count');
         cartContainer.innerHTML = ''; // Clear any existing content
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let totalAmount = 0; // Variable to calculate total amount
-
+        let totalItems = 0;
         if (cart.length === 0) {
             cartContainer.innerHTML = '<p>Your cart is empty</p>';
             document.getElementById('total-price').innerText = '$0.00'; // Update total price
@@ -253,11 +254,11 @@
 
         cart.forEach((item, index) => {
             totalAmount += item.price * item.quantity; // Calculate total amount
-
+            totalItems += item.quantity;
             const cartItem = document.createElement('div');
             cartItem.className = 'cart-item';
             cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" style="width: 100px; height: 120px;">
+                <img src="${item.image}" alt="${item.name}">
                 <div class="item-details">
                     <h4>${item.name}</h4>
                     <p>Price: $${item.price.toFixed(2)}</p>
@@ -266,13 +267,14 @@
                         <input type="number" value="${item.quantity}" min="1" readonly>
                         <button onclick="updateQuantity(${index}, 1)">+</button>
                     </div>
-                    <button onclick="removeItem(${index})">Remove</button>
                 </div>
+                <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
             `;
             cartContainer.appendChild(cartItem);
         });
 
         document.getElementById('total-price').innerText = `$${totalAmount.toFixed(2)}`; // Update total price
+        cartCountDisplay.innerText = totalItems;
     }
 
     function updateQuantity(index, change) {
@@ -288,11 +290,21 @@
     }
 
     function removeItem(index) {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        loadCartItems(); // Refresh the cart display
-    }
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCartItems(); // Refresh the cart display
+
+    // Show the notification
+    const notification = document.getElementById('remove-notification');
+    notification.classList.add('show');
+
+    // Hide the notification after a short delay
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 2000); // Notification visible for 2 seconds
+}
+
 
     function checkout() {
         alert('Proceeding to checkout!'); // Placeholder for checkout process
@@ -300,6 +312,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', loadCartItems);
+    
+
   </script>
+  <div id="remove-notification" class="notification">&#x2713; Item removed from cart</div>
 </body>
 </html>
