@@ -996,13 +996,17 @@ input {
   }
 
   .banner {
-    height: 250px;
+    height: 375px;
     margin-top: 50px;
   }
 
   .slide {
     background-size: cover;
-    padding-left: 5%;
+    padding-left: 0%;
+  }
+
+  #progress-bar {
+    display: hidden;
   }
 
   .slide-details {
