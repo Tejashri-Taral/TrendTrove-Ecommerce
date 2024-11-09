@@ -773,7 +773,7 @@ html {
   width: 100%;
   padding: 40px 100px;
   background-color: #f6f5fa;
-  font-family: "futura";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: space-between;
   color: #1d1d1d;
@@ -849,7 +849,7 @@ html {
   position: absolute;
   background-color: #000000;
   color: rgb(255, 255, 255);
-  top: 3618px;
+  top: 3650px;
   padding: 10px 20px;
   border-radius: 19px;
   display: inline-flex;
