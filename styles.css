@@ -399,6 +399,7 @@ input {
     }
 
     .slide-details>h1 {
+        font-size: 22px;
         transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
     color: #000; /* Initial color */
 }
