@@ -8,35 +8,35 @@
     <title>TrendTrove - Ecommerce</title>
     <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
     <link rel="stylesheet" href="./Style/popup.css">
 
 </head>
 
 <body>
-     <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
         </div>
     </div>
-</div>
-<div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
 
     <!-- header section  -->
     <header class="header" id="header">
         <div class="logo">
-            <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
@@ -70,26 +70,26 @@
                         <a href="contact.html">Contact Us</a>
                         <div class="cursor"></div>
                     </li>
-                    
+
                 </ul>
             </div>
         </nav>
-        
-       
-        
+
+
+
         <nav class="utils">
             <ul class="nav-links">
                 <li>
                     <button class="mode-toggle" id="modeToggle">
                         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
                         <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                      </button>
-                    </li>
+                    </button>
+                </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
-                    <a href="login-sginup.html">
+                    <a herf="login-sginup.html">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>
@@ -106,88 +106,92 @@
     </div>
     <script src=" preloader.js "></script>
     <style>
-    /* Style for the search bar, initially hidden */
-    #search-bar {
-        display: none;
-        position: absolute;
-        top: 60px; /* Adjust this to position the search bar just below the icon */
-        right: 20px; /* Align with the icon */
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Css for language box */
-    .lang-box{
-        align-items: center;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    /* Styling the input box and button */
-    #search-bar input {
-        padding:  5px;
-        width:  200px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        outline: none;
-    }
-
-    #search-bar button {
-        padding: 5px 10px;
-        background-color:black;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-    #search-bar button:hover {
-        background-color:black;
-    }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        // Get the search icon and search bar elements
-        const searchIcon = document.getElementById("search-icon"); 
-        const searchBar = document.getElementById("search-bar");
-
-        // Toggle the visibility of the search bar when the icon is clicked
-        searchIcon.onclick = function() {
-            if (searchBar.style.display === "none" || searchBar.style.display === "") {
-                searchBar.style.display = "block";  // Show the search bar
-                searchBar.querySelector('input').focus(); // Automatically focus on the input field
-            } else {
-                searchBar.style.display = "none";  // Hide the search bar
-            }
+        /* Style for the search bar, initially hidden */
+        #search-bar {
+            display: none;
+            position: absolute;
+            top: 60px;
+            /* Adjust this to position the search bar just below the icon */
+            right: 20px;
+            /* Align with the icon */
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        // Search button functionality
-        const searchBtn = document.getElementById("search-btn");
-        searchBtn.onclick = function() {
-            var query = document.getElementById('search').value;
-            if(query) {
-                console.log("Search query:", query);
-                // Implement your search logic here, such as a redirect or an API call
-                // window.location.href = '/search-results?q=' + encodeURIComponent(query);
-
-                // Hide the search bar after clicking "Go"
-                searchBar.style.display = "none";
-            } else {
-                console.log("No search query entered");
-            }
+        /* Css for language box */
+        .lang-box {
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
         }
-    });
-</script>
- <!-- banner area  -->
+
+        /* Styling the input box and button */
+        #search-bar input {
+            padding: 5px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        #search-bar button {
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #search-bar button:hover {
+            background-color: black;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Get the search icon and search bar elements
+            const searchIcon = document.getElementById("search-icon");
+            const searchBar = document.getElementById("search-bar");
+
+            // Toggle the visibility of the search bar when the icon is clicked
+            searchIcon.onclick = function () {
+                if (searchBar.style.display === "none" || searchBar.style.display === "") {
+                    searchBar.style.display = "block";  // Show the search bar
+                    searchBar.querySelector('input').focus(); // Automatically focus on the input field
+                } else {
+                    searchBar.style.display = "none";  // Hide the search bar
+                }
+            }
+
+            // Search button functionality
+            const searchBtn = document.getElementById("search-btn");
+            searchBtn.onclick = function () {
+                var query = document.getElementById('search').value;
+                if (query) {
+                    console.log("Search query:", query);
+                    // Implement your search logic here, such as a redirect or an API call
+                    // window.location.href = '/search-results?q=' + encodeURIComponent(query);
+
+                    // Hide the search bar after clicking "Go"
+                    searchBar.style.display = "none";
+                } else {
+                    console.log("No search query entered");
+                }
+            }
+        });
+    </script>
+    <!-- banner area  -->
     <section class="banner">
 
         <div class="slide">
 
             <div class="slide-details" data-aos="fade-up" data-aos-easing="ease-in-out">
-                <h1><p>Discover Tomorrow's Trends Today with TrendTrove!</p></h1>
+                <h1>
+                    <p>Discover Tomorrow's Trends Today with TrendTrove!</p>
+                </h1>
                 <p>
                     At TrendTrove, we bring you the most stylish and trendy fashion items, all in one place!
                 </p>
@@ -199,7 +203,7 @@
     </section>
 
     <!-- Pop up Html  -->
-         <!-- Pop-up for email registration -->
+    <!-- Pop-up for email registration -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <div class="popup-left">
@@ -210,13 +214,15 @@
                 <h1>Join TrendTrove!</h1>
 
                 <h2 class="popuph2">Unlock Your Fashion</h2>
-                <p>Sign up now to enjoy <strong> 20% off </strong> your first order and exclusive updates on the latest trends.</p>
+                <p>Sign up now to enjoy <strong> 20% off </strong> your first order and exclusive updates on the latest
+                    trends.</p>
                 <form id="emailForm">
                     <input type="email" id="popup-email" placeholder="Enter your email" required>
                     <button type="submit" class="signup-btn">Continue</button>
                 </form>
                 <a href="#" class="no-thanks close-btn">No thanks, I’ll shop full price</a>
-                <p class="terms">By signing up, you agree to our <a href="terms-conditions.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+                <p class="terms">By signing up, you agree to our <a href="terms-conditions.html">Terms of Service</a>
+                    and <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
         </div>
     </div>
@@ -229,7 +235,7 @@
             <div class="overlay">
                 <a href="./shopclothing.html" class="btn btn-white">
                     Shop Clothing
-                </button></a>
+                    </button></a>
             </div>
             <div class="bg-image">
                 <img src="./images/youngcouple1.jpg" alt="product">
@@ -275,7 +281,7 @@
                 <a href="sneaker.html" class="btn btn-white">
                     Shop Sneakers
                 </a>
-                
+
             </div>
             <div class="bg-image">
                 <img src="./images/shop-sneakers.webp" alt="product">
@@ -309,7 +315,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Striped Shirt</p>
-                    <p class="product-price">- $199</p> 
+                    <p class="product-price">- $199</p>
                 </div>
 
             </div>
@@ -335,7 +341,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $99</p> 
+                    <p class="product-price">- $99</p>
                 </div>
 
             </div>
@@ -362,7 +368,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Olive Green Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
 
             </div>
@@ -388,7 +394,7 @@
 
                 <div class="product-details">
                     <p class="product-name">White T-shirt</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
             </div>
         </div>
@@ -457,7 +463,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
             </div>
 
@@ -480,7 +486,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Red Top</p>
-                    <p class="product-price">- $100</p> 
+                    <p class="product-price">- $100</p>
                 </div>
 
             </div>
@@ -503,7 +509,7 @@
 
                 <div class="product-details">
                     <p class="product-name">Light Teal Shirt</p>
-                    <p class="product-price">- $199</p> 
+                    <p class="product-price">- $199</p>
                 </div>
             </div>
 
@@ -524,7 +530,7 @@
                 </div>
                 <div class="product-details">
                     <p class="product-name">Black Top</p>
-                    <p class="product-price">- $399</p> 
+                    <p class="product-price">- $399</p>
                 </div>
             </div>
         </div>
@@ -561,12 +567,13 @@
             </div>
         </div>
         <div class="feedback-container">
-        
-            <h2>Have feedback?&nbsp;<a href="feedback.html" target="_blank"><span>Click here</span></a> to share your thoughts with us.</h2>
+
+            <h2>Have feedback?&nbsp;<a href="feedback.html" target="_blank"><span>Click here</span></a> to share your
+                thoughts with us.</h2>
         </div>
     </section>
-    
-    
+
+
     <!-- footer section  -->
     <footer class="footer">
 
@@ -604,29 +611,29 @@
             <span id="visitorCount">Visitors Count:</span>
             <span class="website-counter">0</span>
         </div>
-    <script>
-          // Function to get the count from localStorage or initialize it
-    function getVisitorCount() {
-    return localStorage.getItem('visitorCount') || 0;
-    }
+        <script>
+            // Function to get the count from localStorage or initialize it
+            function getVisitorCount() {
+                return localStorage.getItem('visitorCount') || 0;
+            }
 
-    // Function to increment and save the count
-    function incrementVisitorCount() {
-    let count = parseInt(getVisitorCount()) + 1;
-    localStorage.setItem('visitorCount', count);
-    return count;
-    }
+            // Function to increment and save the count
+            function incrementVisitorCount() {
+                let count = parseInt(getVisitorCount()) + 1;
+                localStorage.setItem('visitorCount', count);
+                return count;
+            }
 
-    // Function to display the count
-    function displayVisitorCount() {
-    const counterElement = document.querySelector('.website-counter');
-    const count = incrementVisitorCount();
-    counterElement.textContent = count;
-    }
+            // Function to display the count
+            function displayVisitorCount() {
+                const counterElement = document.querySelector('.website-counter');
+                const count = incrementVisitorCount();
+                counterElement.textContent = count;
+            }
 
-    // Call the display function when the page loads
-    document.addEventListener('DOMContentLoaded', displayVisitorCount);
-    </script>
+            // Call the display function when the page loads
+            document.addEventListener('DOMContentLoaded', displayVisitorCount);
+        </script>
 
         <div class=" footer-section quick-links ">
             <h1>Quick Links</h1>
@@ -656,363 +663,364 @@
         </div>
 
     </footer>
-        
-        <div class="footer-copyright">
-            <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
-        </div>
-        
-        <script>
-            const currentYear = new Date().getFullYear();
-            document.getElementById('year').textContent = currentYear;
-        </script>
-        
-        <div class="modal-box" id="modalbox" style="display: none;">
-            <div class="modal" id="modal">
-                <div id="close-btn">&times;</div>
-                <div class="modal-content">
-                    <img src="images\confirmation.png" alt="" height="100px" >
-                    <h2>Subscription Successful!</h2>
-                    <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
-                </div>
-                <div class="social">
-                    <li class="socials">
-                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                </div>
+
+    <div class="footer-copyright">
+        <div id="copyright">&copy; <span id="year"></span> TrendTrove. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
+
+    <div class="modal-box" id="modalbox" style="display: none;">
+        <div class="modal" id="modal">
+            <div id="close-btn">&times;</div>
+            <div class="modal-content">
+                <img src="images\confirmation.png" alt="" height="100px">
+                <h2>Subscription Successful!</h2>
+                <p>Thank you for subscribing.</p>
+                <p> You will receive notifications, updates via email.</p>
+            </div>
+            <div class="social">
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
             </div>
         </div>
+    </div>
     <script src="./script/modal_box.js"></script>
-    
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- ProgressBar Functionality -->
     <script src="script/progressbar.js"></script>
-<script>
-    gsap.from("#header", {
-        duration: 1.5,
-        y: -100,
-        opacity: 0,
-        ease: "power4.out",
-        stagger: 1,
-    });
-
-    gsap.from(".nav-link", {
-        duration: 1,
-        opacity: 0,
-        y: 20,
-        delay: 0.5,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("h1", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 0.7,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("p", {
-        duration: 1.5,
-        opacity: 0,
-        y: 30,
-        delay: 0.9,
-        stagger: 0.3,
-        ease: "power2.out"
-    });
-
-    gsap.from(".btn", {
-        duration: 1,
-        scale: 0.8,
-        opacity: 0,
-        delay: 1.2,
-        ease: "back.out(1.7)",
-        stagger: 0.2
-    });
-
-    gsap.from("img", {
-        duration: 1.5,
-        opacity: 0,
-        scale: 0.9,
-        delay: 1.5,
-        stagger: 0.3,
-        ease: "elastic.out(1, 0.3)"
-    });
-
-    gsap.from(".overlay", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 1.7,
-        stagger: 0.3,
-        ease: "power3.out"
-    });
-
-    gsap.from(".footer-section", {
-        scrollTrigger: ".footer",
-        duration: 1.5,
-        opacity: 0,
-        y: 50,
-        ease: "power2.out",
-        stagger: 0.3,
-    });
-
-    
-    gsap.from(".socials i", {
-        scrollTrigger: ".footer",
-        duration: 1,
-        opacity: 0,
-        scale: 0.5,
-        ease: "bounce.out",
-        stagger: 0.2,
-        delay: 0.5
-    });
-</script>
-
-<script>const tabs = document.querySelectorAll('.tab');
-    const cursor = document.getElementById('cursor');
-    
-    tabs.forEach(tab => {
- 
-        tab.addEventListener('mouseenter', () => {
-            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
-            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
- 
-       
- 
-            cursor.style.opacity = 1; 
+    <script>
+        gsap.from("#header", {
+            duration: 1.5,
+            y: -100,
+            opacity: 0,
+            ease: "power4.out",
+            stagger: 1,
         });
-    
-        tab.addEventListener(' mouseleave', () => {
-            cursor.style.opacity = 0; 
+
+        gsap.from(".nav-link", {
+            duration: 1,
+            opacity: 0,
+            y: 20,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "power3.out"
         });
-    });
-    
-  </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
 
-  (function() {
-      let headerVisible = false;
-      document.getElementById(" menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById(" header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById(" header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
+        gsap.from("h1", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 0.7,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
 
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(" .gotopbtn");
-      window.addEventListener(" scroll", function () {
-          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
+        gsap.from("p", {
+            duration: 1.5,
+            opacity: 0,
+            y: 30,
+            delay: 0.9,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
 
-  })();  // IIFE to avoid polluting global scope
+        gsap.from(".btn", {
+            duration: 1,
+            scale: 0.8,
+            opacity: 0,
+            delay: 1.2,
+            ease: "back.out(1.7)",
+            stagger: 0.2
+        });
 
-  
-        // When the cart icon is clicked, navigate to the 'cart.html' page.
-document.getElementById("cart-icon").addEventListener("click", function() {
-    window.location.href = "cart.html";
-});
+        gsap.from("img", {
+            duration: 1.5,
+            opacity: 0,
+            scale: 0.9,
+            delay: 1.5,
+            stagger: 0.3,
+            ease: "elastic.out(1, 0.3)"
+        });
 
-  
-</script>
+        gsap.from(".overlay", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.7,
+            stagger: 0.3,
+            ease: "power3.out"
+        });
 
-<div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+        gsap.from(".footer-section", {
+            scrollTrigger: ".footer",
+            duration: 1.5,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out",
+            stagger: 0.3,
+        });
 
-<script>
 
-    window.addEventListener('scroll', function() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
+        gsap.from(".socials i", {
+            scrollTrigger: ".footer",
+            duration: 1,
+            opacity: 0,
+            scale: 0.5,
+            ease: "bounce.out",
+            stagger: 0.2,
+            delay: 0.5
+        });
     </script>
 
-<script src="./script/popup.js"></script>
-<button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
-    <div class="scroll-top-icon">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-    <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
-            cy="30"></circle>
-    </svg>
-</button>
-<style>
-    .scroll-top {
-        position: fixed;
-        right: 1.6%;
-        background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        overflow: visible;
-        z-index: 10;
-        bottom: 15px;
-        /* Ensure button is on top */
-    }
+    <script>const tabs = document.querySelectorAll('.tab');
+        const cursor = document.getElementById('cursor');
 
-    .scroll-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
+        tabs.forEach(tab => {
 
-    .scroll-top:hover {
-        transform: scale(1.1);
-        /* Subtle scaling instead of expanding */
-        box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
-        /* Slightly larger shadow */
-    }
+            tab.addEventListener('mouseenter', () => {
+                cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
+                cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
 
-    .scroll-top:active {
-        transform: scale(1.05);
-        /* Minor scale reduction on click */
-    }
 
-    .scroll-top-icon {
-        position: relative;
-        z-index: 2;
-        transition: transform 0.3s ease;
-    }
 
-    .scroll-top:hover .scroll-top-icon {
-        transform: translateY(-3px);
-    }
+                cursor.style.opacity = 1;
+            });
 
-    /* Progress Ring Styling */
-    .progress-ring {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: rotate(-90deg);
-        /* To start from the top */
-    }
-
-    .progress-ring__circle {
-        transition: stroke-dashoffset 0.35s;
-        transform-origin: 50% 50%;
-    }
-
-    /* Pulse Animation */
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        }
-        50% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
-        }
-
-        100% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        }
-    }
-
-    .scroll-top:hover {
-        animation: pulse 1.5s infinite;
-    }
-
-    .scroll-top.show {
-        animation: none;
-        /* No animation when showing the button */
-    }
-
-    .scroll-top.show:hover {
-        animation: pulse 1.5s infinite;
-        /* Pulse on hover */
-    }
-</style>
-<script>
-    // Get the button
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    const progressCircle = document.querySelector(".progress-ring__circle");
-    const radius = progressCircle.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-
-    // Set the circle progress properties
-    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-    progressCircle.style.strokeDashoffset = circumference;
-
-    // Function to show or hide the button based on scroll position
-    function toggleScrollButton() {
-        if (window.scrollY > 100) {
-            scrollToTopBtn.classList.add("show");
-        } else {
-            scrollToTopBtn.classList.remove("show");
-        }
-    }
-
-    // Function to set the scroll progress on the button ring
-    function setProgress(percent) {
-        const offset = circumference - (percent / 100) * circumference;
-        progressCircle.style.strokeDashoffset = offset;
-    }
-
-    // Listen for scroll events to update button visibility and progress
-    window.addEventListener("scroll", () => {
-        toggleScrollButton();
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        setProgress(scrollPercent);
-    });
-
-    // Smooth scroll to top when the button is clicked
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            tab.addEventListener(' mouseleave', () => {
+                cursor.style.opacity = 0;
+            });
         });
-    });
-  </script>
 
- <script>
-    if (isDarkMode) {
-        sunIcon.style.display = "none";
-        moonIcon.style.display = "inline-block";
-        localStorage.setItem("theme", "dark");
-    } else {
-        sunIcon.style.display = "inline-block";
-        moonIcon.style.display = "none";
-        localStorage.setItem("theme", "light");
-    };
-  </script>
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        (function () {
+            let headerVisible = false;
+            document.getElementById(" menu").addEventListener("click", function () {
+                if (headerVisible === false) {
+                    document.getElementById(" header").style.height = "290px";
+                    headerVisible = true;
+                } else {
+                    document.getElementById(" header").style.height = "50px";
+                    headerVisible = false;
+                }
+            });
+
+            // Show "Go to Top" button after scrolling down
+            const goTopBtn = document.querySelector(" .gotopbtn");
+            window.addEventListener(" scroll", function () {
+                if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+                    goTopBtn.style.display = "block";
+                } else {
+                    goTopBtn.style.display = "none";
+                }
+            });
+
+        })();  // IIFE to avoid polluting global scope
+
+
+        // When the cart icon is clicked, navigate to the 'cart.html' page.
+        document.getElementById("cart-icon").addEventListener("click", function () {
+            window.location.href = "cart.html";
+        });
+
+
+    </script>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+    <script>
+
+        window.addEventListener('scroll', function () {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+    </script>
+
+    <script src="./script/popup.js"></script>
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+        <div class="scroll-top-icon">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <svg class="progress-ring" width="60" height="60">
+            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+                cy="30"></circle>
+        </svg>
+    </button>
+    <style>
+        .scroll-top {
+            position: fixed;
+            right: 1.6%;
+            background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            overflow: visible;
+            z-index: 10;
+            bottom: 15px;
+            /* Ensure button is on top */
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.1);
+            /* Subtle scaling instead of expanding */
+            box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+            /* Slightly larger shadow */
+        }
+
+        .scroll-top:active {
+            transform: scale(1.05);
+            /* Minor scale reduction on click */
+        }
+
+        .scroll-top-icon {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-top:hover .scroll-top-icon {
+            transform: translateY(-3px);
+        }
+
+        /* Progress Ring Styling */
+        .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            /* To start from the top */
+        }
+
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform-origin: 50% 50%;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+        }
+
+        .scroll-top:hover {
+            animation: pulse 1.5s infinite;
+        }
+
+        .scroll-top.show {
+            animation: none;
+            /* No animation when showing the button */
+        }
+
+        .scroll-top.show:hover {
+            animation: pulse 1.5s infinite;
+            /* Pulse on hover */
+        }
+    </style>
+    <script>
+        // Get the button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        const progressCircle = document.querySelector(".progress-ring__circle");
+        const radius = progressCircle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+
+        // Set the circle progress properties
+        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        // Function to show or hide the button based on scroll position
+        function toggleScrollButton() {
+            if (window.scrollY > 100) {
+                scrollToTopBtn.classList.add("show");
+            } else {
+                scrollToTopBtn.classList.remove("show");
+            }
+        }
+
+        // Function to set the scroll progress on the button ring
+        function setProgress(percent) {
+            const offset = circumference - (percent / 100) * circumference;
+            progressCircle.style.strokeDashoffset = offset;
+        }
+
+        // Listen for scroll events to update button visibility and progress
+        window.addEventListener("scroll", () => {
+            toggleScrollButton();
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            setProgress(scrollPercent);
+        });
+
+        // Smooth scroll to top when the button is clicked
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <script>
+        if (isDarkMode) {
+            sunIcon.style.display = "none";
+            moonIcon.style.display = "inline-block";
+            localStorage.setItem("theme", "dark");
+        } else {
+            sunIcon.style.display = "inline-block";
+            moonIcon.style.display = "none";
+            localStorage.setItem("theme", "light");
+        };
+    </script>
 </body>
 
 </html>
