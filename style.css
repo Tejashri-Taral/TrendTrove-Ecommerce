@@ -849,7 +849,7 @@ html {
   position: absolute;
   background-color: #000000;
   color: rgb(255, 255, 255);
-  top: 3618px;
+  top: 3650px;
   padding: 10px 20px;
   border-radius: 19px;
   display: inline-flex;
@@ -1780,7 +1780,7 @@ body {
 }
 
 body.dark-mode {
-  background-color: #121212;
+  background-color: #828593;
   color: #ffffff;
 }
 
@@ -1807,7 +1807,7 @@ header.dark-mode {
 }
 
 body.dark-mode .navbar {
-  background-color: #333;
+  background-color: #5a4343;
 }
 
 body.dark-mode .navbar a:hover {

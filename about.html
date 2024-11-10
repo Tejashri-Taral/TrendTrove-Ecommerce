@@ -386,54 +386,61 @@
       .about-container {
         padding: 0px;
       }
-    }
 
-    /* Scroll Progress Bar*/
-    #progress-container {
-      position: fixed;
-      top: 1px;
-      left: 0;
-      width: 100%;
-      height: 15px;
-      z-index: 99990;
-      /* background: #f3f3f3; */
-    }
+      
+/* Scroll Progress Bar*/
+#progress-container {
+  position: fixed ;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  z-index: 99990;
+  /* background: #f3f3f3; */
+}
 
-    #progress-bar {
-      position: fixed;
-      top: 0.3px;
-      left: 0;
-      width: 0%;
-      height: 6px;
-      width: 0;
-      background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
-      box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
-      transition: width 0.09s ease-in-out;
-      /* border-radius: 10px; */
-    }
+#progress-bar {
+  position: fixed;
+  top: 0.3px;
+  left: 0;
+  width: 0%;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+  transition: width 0.09s ease-in-out;
+  /* border-radius: 10px; */
+}
+.go-top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: #000000;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.go-top-btn:hover {
+  background-color: #000000;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
 
-    .go-top-btn {
-      position: fixed;
-      bottom: 35px;
-      right: 35px;
-      cursor: pointer;
-      border-radius: 50%;
-      height: 50px;
-      width: 50px;
-      background: #000000;
-      border: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    }
+body.dark-mode {
+  background-color: #121212;
+  color: #080707;
+}
+.footer-section{
+width:500px;
+}
 
-    .go-top-btn:hover {
-      background-color: #000000;
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-      transform: translateY(-2px);
-    }
 
     body.dark-mode {
       background-color: #121212;
@@ -442,25 +449,22 @@
   </style>
 
 
-  <head>
+  
+<head>
+<body>
 
-  <body>
+ 
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="wrapper">
+      <div class="box-wrap">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box four"></div>
+        <div class="box five"></div>
+        <div class="box six"></div>
 
-    <!-- scroll to top button  -->
-    <button class="go-top-btn">
-      <img width="25px" src="arrow_upper.png" alt="go top">
-    </button>
-    <!-- preloader -->
-    <div id="preloader">
-      <div class="wrapper">
-        <div class="box-wrap">
-          <div class="box one"></div>
-          <div class="box two"></div>
-          <div class="box three"></div>
-          <div class="box four"></div>
-          <div class="box five"></div>
-          <div class="box six"></div>
-        </div>
       </div>
     </div>
     <div id="progress-container">
@@ -589,34 +593,52 @@
         </p>
       </div>
     </section>
+  </header>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-section">
-        <h1>Contact Us</h1>
-        <ul class="footer-list">
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-section">
+      <h1>Contact Us</h1>
+      <ul class="footer-list">
+          <li>trendtrove1004@gmail.com</li>
           <li>
-            <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>
+<li><a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a></li>
+<li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
+<li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
+<li class="border-list"></li>
+<li class="socials">
+  <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+    <i class="fa-brands fa-github"></i>
+  </a>
+  <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</li>
+
           </li>
-          <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-          <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-          <li class="border-list"></li>
-          <li class="socials">
-            <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+          <li class=" socials ">
+              <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
           </li>
-        </ul>
-      </div>
+      </ul>
+  </div>
+
 
       <div class="footer-section">
         <h1>Quick Links</h1>
@@ -639,157 +661,119 @@
         </ul>
       </div>
 
-      <div class="footer-section">
-        <h1>Subscribe to Newsletter</h1>
-        <ul class="footer-list">
-          <li>
-            Be the first to know about exclusive deals and new arrivals straight
-            to your inbox.
-          </li>
+
+  <div class="footer-section">
+      <h1>Subscribe to Newsletter</h1>
+      <ul class="footer-list">
+          <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
           <li>Join our fashion community today!</li>
           <li class="sub">
-            <input type="email" placeholder="Enter your email here" id="email-input" />
-            <button class="btn" id="open-btn">Subscribe</button>
-          </li>
-        </ul>
-      </div>
-    </footer>
 
-    <div class="footer-copyright">
+              <input type="email" placeholder="Enter your email here" id="email-input">
+              <button class="btn" id="open-btn">Subscribe</button>
+
+          </li>
+      </ul>
+  </div>
+
+</footer>
+  
+  <div class="footer-copyright">
       <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
-
-    <div class="modal-box" id="modalbox" style="display: none">
+  </div>
+  
+  <div class="modal-box" id="modalbox" style="display: none;">
       <div class="modal" id="modal">
-        <div id="close-btn">&times;</div>
-        <div class="modal-content">
-          <img src="images\confirmation.png" alt="" height="100px" />
-          <h2>Subscription Successful!</h2>
-          <p>Thank you for subscribing.</p>
-          <p>You will receive notifications & updates via email.</p>
-        </div>
-        <div class="social">
-          <li class="socials">
-            <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="tab" style="margin-left: 15px">
-            <a href="contact.html">Contact Us</a>
-            <div class="cursor"></div>
 
-          </li>
-          </ul>
-        </div>
-        </nav>
-
-        <nav class="utils">
-          <ul class="nav-links">
-            <li class="nav-link">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </li>
-            <li class="nav-link">
-              <i class="fa-solid fa-user"></i>
-            </li>
-            <li class="nav-link">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
-          </ul>
-        </nav>
-        </header>
-
-        <!-- About Us Section -->
-        <section class="about-section">
-          <h2 class="about-title">About Us</h2>
-
-          <div class="about-container">
-            <!-- First part: Image left, text right -->
-            <div class="about-content-first">
-              <div class="about-text">
-                <div class="leftabout">
-                  <h3>Welcome to TrendTrove</h3>
-                  <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
-                  <p class="aboutus-body">
-                    Your Ultimate Destination for fashion-forward apparel,
-                    accessories, and lifestyle products. We believe in celebrating
-                    individuality and empowering every customer to express their
-                    unique style with confidence. Whether you're looking for
-                    everyday essentials or statement pieces, we source high-quality,
-                    sustainable, and stylish items to elevate your wardrobe.
-                  </p>
-                </div>
-              </div>
-              <div class="about-images">
-                <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
-              </div>
-            </div>
-
-            <!-- Second part: Image right, text left -->
-            <div class="about-content-second">
-              <div class="about-text">
-                <div class="rightabout">
-                  <p class="aboutus-body" id="div2">
-                    Our Mission is to empower individuals
-                  </p>
-                  <p class="aboutus-body">
-                    At the heart of TrendTrove is a passion for style and a
-                    commitment to customer satisfaction. Our mission is to offer a
-                    seamless shopping experience with exceptional service, fast
-                    shipping, and an easy return process. We stay ahead of the
-                    fashion curve so you can step out feeling your best, whatever
-                    the occasion.
-                  </p>
-                  <p class="aboutus-body" id="div3">
-                    Discover your style with TrendTrove — where fashion meets
-                    confidence!
-                  </p>
-                </div>
-              </div>
-              <div class="about-images">
-                <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="modal-box" id="modalbox" style="display: none">
-          <div class="modal" id="modal">
-            <div id="close-btn">&times;</div>
-            <div class="modal-content">
-              <img src="images/confirmation.png" alt="" height="100px" />
+          <div id="close-btn">&times;</div>
+          <div class="modal-content">
+              <img src="images\confirmation.png" alt="" height="100px" >
               <h2>Subscription Successful!</h2>
               <p>Thank you for subscribing.</p>
-              <p>You will receive notifications & updates via email.</p>
-            </div>
+              <p> You will receive notifications & updates via email.</p>
           </div>
-        </div>
+          <div class="social">
+              <li class="socials">
+                  <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                      <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+              </li>
+          </div>
+      </div>
+  </div>
+  <script src="preloader.js"></script>
 
-        <script src="preloader.js"></script>
+<script>
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "cart.html";
+});
+ 
+    let openbtn = document.getElementById("open-btn");
+    let modalbox = document.getElementById("modalbox");
+    let closebtn = document.getElementById("close-btn");
+    let emailInput = document.getElementById("email-input");
 
-        <script>
-          document.getElementById("cart-icon").addEventListener("click", function () {
-            window.location.href = "cart.html";
-          });
+    // Email validation function
+    function isValidEmail(email) {
+      // Regular expression for validating an email
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
 
-          let openbtn = document.getElementById("open-btn");
-          let modalbox = document.getElementById("modalbox");
-          let closebtn = document.getElementById("close-btn");
-          let emailInput = document.getElementById("email-input");
+    openbtn.addEventListener("click", function () {
+      // Validate email
+      if (emailInput.value === "") {
+        alert("Please enter your email address.");
+      } else if (!isValidEmail(emailInput.value)) {
+        alert("Please enter a valid email address.");
+      } else {
+        modalbox.style.display = "block"; // Show the modal
+      }
+    });
 
-          // Email validation function
-          function isValidEmail(email) {
-            // Regular expression for validating an email
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(email);
+    closebtn.addEventListener("click", function () {
+      modalbox.style.display = "none"; // Hide the modal
+    });
+    // Close modal when clicking outside of it
+    modalbox.addEventListener("click", function (event) {
+      if (event.target === modalbox) {
+        modalbox.style.display = "none"; // Hide modal if the background is clicked
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  (function() {
+      let headerVisible = false;
+      document.getElementById("menu").addEventListener("click", function () {
+          if (headerVisible === false) {
+              document.getElementById("header").style.height = "290px";
+              headerVisible = true;
+          } else {
+              document.getElementById("header").style.height = "50px";
+              headerVisible = false;
+          }
+      });
+
+      // Show "Go to Top" button after scrolling down
+      const goTopBtn = document.querySelector(".gotopbtn");
+      window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+              goTopBtn.style.display = "block";
+          } else {
+              goTopBtn.style.display = "none";
+
           }
 
           openbtn.addEventListener("click", function () {
@@ -1020,3 +1004,4 @@
   </body>
 
 </html>
+
