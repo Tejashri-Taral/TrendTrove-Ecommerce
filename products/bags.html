@@ -53,7 +53,7 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="../login-sginup.html">
@@ -82,7 +82,7 @@
                 <p class="description">A spacious tote bag made from high-quality leather.</p>
                 <p class="size">Size: Large</p>
                 <p class="reviews">Reviews: 45</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Leather Tote Bag', 180, '../images/bag1.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -96,7 +96,7 @@
                 <p class="description">Durable and stylish, perfect for daily use.</p>
                 <p class="size">Size: Medium</p>
                 <p class="reviews">Reviews: 38</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Canvas Backpack', 70, '../images/bag2.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -110,7 +110,7 @@
                 <p class="description">A compact bag ideal for essentials on the go.</p>
                 <p class="size">Size: Small</p>
                 <p class="reviews">Reviews: 27</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Mini Crossbody Bag', 55, '../images/bag3.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -124,7 +124,7 @@
                 <p class="description">A chic and elegant clutch for special occasions.</p>
                 <p class="size">Size: Small</p>
                 <p class="reviews">Reviews: 60</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Designer Clutch', 120, '../images/bag4.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -138,7 +138,7 @@
                 <p class="description">Spacious and versatile for weekend getaways.</p>
                 <p class="size">Size: Large</p>
                 <p class="reviews">Reviews: 75</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Travel Duffel Bag', 140, '../images/bag5.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -152,7 +152,7 @@
                 <p class="description">Perfect for work or school, with ample storage.</p>
                 <p class="size">Size: Medium</p>
                 <p class="reviews">Reviews: 32</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Messenger Bag', 90, '../images/bag6.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -166,7 +166,7 @@
                 <p class="description">Stylish and eco-friendly, perfect for daily use.</p>
                 <p class="size">Size: Medium</p>
                 <p class="reviews">Reviews: 24</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Faux Leather Satchel', 65, '../images/bag7.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -180,7 +180,7 @@
                 <p class="description">Trendy and spacious with an adjustable strap.</p>
                 <p class="size">Size: Medium</p>
                 <p class="reviews">Reviews: 40</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Bucket Bag', 85, '../images/bag8.jpg')">Buy Now</button>
             </div>
         </div>
         <div class="bag-card">
@@ -194,10 +194,30 @@
                 <p class="description">A luxurious design with elegant detailing.</p>
                 <p class="size">Size: Small</p>
                 <p class="reviews">Reviews: 50</p>
-                <button class="buy-now">Buy Now</button>
+                <button class="buy-now" onclick="addToCart('Quilted Shoulder Bag', 110, '../images/bag9.jpg')">Buy Now</button>
             </div>
         </div>
     </div>
 </section>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    function addToCart(name, price, image) {
+    // Retrieve cart from localStorage or initialize it as an empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Add new item to the cart array
+    cart.push({ name, price, image, quantity: 1 });
+
+    // Save updated cart back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(name + ' has been added to the cart');
+
+  }
+
+    document.getElementById("cart-icon").addEventListener("click", function() {
+    window.location.href = "../cart.html";})
+</script>
 </body>
 </html>
