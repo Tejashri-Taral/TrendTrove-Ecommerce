@@ -421,7 +421,9 @@ body.dark-mode {
   background-color: #121212;
   color: #080707;
 }
-
+.footer-section{
+width:500px;
+}
 
   </style>
 
@@ -429,10 +431,7 @@ body.dark-mode {
 <head>
 <body>
 
-  <!-- scroll to top button  -->
-  <button class="go-top-btn">
-    <img   width="25px" src="arrow_upper.png" alt="go top">
-</button>
+ 
   <!-- preloader -->
   <div id="preloader">
     <div class="wrapper">
@@ -497,10 +496,10 @@ body.dark-mode {
     <nav class="utils">
         <ul class="nav-links">
           <li>
-            <!-- <button class="mode-toggle" id="modeToggle">
+            <button class="mode-toggle" id="modeToggle">
                 <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
                 <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-              </button> -->
+              </button>
             </li>
             <li class="nav-link">
                 <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
@@ -516,7 +515,6 @@ body.dark-mode {
             </li>
         </ul>
     </nav>
-    
 </header>
 
 
@@ -581,217 +579,97 @@ body.dark-mode {
         </p>
       </div>
     </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="footer-section">
-        <h1>Contact Us</h1>
-        <ul class="footer-list">
-          <li>
-            <a href="mailto:trendtrove1004@gmail.com"
-              >trendtrove1004@gmail.com</a
-            >
-          </li>
-          <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
-          <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
-          <li class="border-list"></li>
-          <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin"target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h1>Quick Links</h1>
-        <ul class="footer-list">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contributors.html">Our Contributors</a></li>
-          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-          <li><a href="return-policy.html">Return Policy</a></li>
-          <li>
-            <a
-              href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce"
-              target="_blank"
-              >Star Us</a
-            >
-
-          </li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h1>Subscribe to Newsletter</h1>
-        <ul class="footer-list">
-          <li>
-            Be the first to know about exclusive deals and new arrivals straight
-            to your inbox.
-          </li>
-          <li>Join our fashion community today!</li>
-          <li class="sub">
-            <input
-              type="email"
-              placeholder="Enter your email here"
-              id="email-input"
-            />
-            <button class="btn" id="open-btn">Subscribe</button>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
-    <div class="footer-copyright">
-      <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
-    </div>
-
-    <div class="modal-box" id="modalbox" style="display: none">
-      <div class="modal" id="modal">
-        <div id="close-btn">&times;</div>
-        <div class="modal-content">
-          <img src="images\confirmation.png" alt="" height="100px" />
-          <h2>Subscription Successful!</h2>
-          <p>Thank you for subscribing.</p>
-          <p>You will receive notifications & updates via email.</p>
-        </div>
-        <div class="social">
-          <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
-              id="linkedin"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/Tejashri-Taral"
-              id="github"
-              target="_blank"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
-              id="twitter"
-              target="_blank"
-            >
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/your_instagram"
-              id="instagram"
-              target="_blank"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li class="tab" style="margin-left: 15px">
-            <a href="contact.html">Contact Us</a>
-            <div class="cursor"></div>
-
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <nav class="utils">
-      <ul class="nav-links">
-        <li class="nav-link">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-user"></i>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- About Us Section -->
-  <section class="about-section">
-    <h2 class="about-title">About Us</h2>
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="footer-section">
+      <h1>Contact Us</h1>
+      <ul class="footer-list">
+          <li>trendtrove1004@gmail.com</li>
+          <li>
+              2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
+          </li>
+          <li>+91 xxxxxx2020</li>
 
-    <div class="about-container">
-      <!-- First part: Image left, text right -->
-      <div class="about-content-first">
-        <div class="about-text">
-          <div class="leftabout">
-            <h3>Welcome to TrendTrove</h3>
-            <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
-            <p class="aboutus-body">
-              Your Ultimate Destination for fashion-forward apparel,
-              accessories, and lifestyle products. We believe in celebrating
-              individuality and empowering every customer to express their
-              unique style with confidence. Whether you're looking for
-              everyday essentials or statement pieces, we source high-quality,
-              sustainable, and stylish items to elevate your wardrobe.
-            </p>
-          </div>
-        </div>
-        <div class="about-images">
-          <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
-        </div>
-      </div>
-
-      <!-- Second part: Image right, text left -->
-      <div class="about-content-second">
-        <div class="about-text">
-          <div class="rightabout">
-            <p class="aboutus-body" id="div2">
-              Our Mission is to empower individuals
-            </p>
-            <p class="aboutus-body">
-              At the heart of TrendTrove is a passion for style and a
-              commitment to customer satisfaction. Our mission is to offer a
-              seamless shopping experience with exceptional service, fast
-              shipping, and an easy return process. We stay ahead of the
-              fashion curve so you can step out feeling your best, whatever
-              the occasion.
-            </p>
-            <p class="aboutus-body" id="div3">
-              Discover your style with TrendTrove — where fashion meets
-              confidence!
-            </p>
-          </div>
-        </div>
-        <div class="about-images">
-          <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-<div class="modal-box" id="modalbox" style="display: none">
-  <div class="modal" id="modal">
-    <div id="close-btn">&times;</div>
-    <div class="modal-content">
-      <img src="images/confirmation.png" alt="" height="100px" />
-      <h2>Subscription Successful!</h2>
-      <p>Thank you for subscribing.</p>
-      <p>You will receive notifications & updates via email.</p>
-    </div>
+          <li class="border-list">
+          </li>
+          <li class=" socials ">
+              <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                  <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+          </li>
+      </ul>
   </div>
-</div>
 
+  <div class="footer-section quick-links">
+      <h1>Quick Links</h1>
+      <ul class=" footer-list ">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li><a href="return-policy.html">Return Policy</a></li>
+          <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+  </div>
+
+  <div class="footer-section">
+      <h1>Subscribe to Newsletter</h1>
+      <ul class="footer-list">
+          <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+          <li>Join our fashion community today!</li>
+          <li class="sub">
+              <input type="email" placeholder="Enter your email here" id="email-input">
+              <button class="btn" id="open-btn">Subscribe</button>
+          </li>
+      </ul>
+  </div>
+
+</footer>
+  
+  <div class="footer-copyright">
+      <div id="copyright">&copy; 2024 TrendTrove. All Rights Reserved.</div>
+  </div>
+  
+  <div class="modal-box" id="modalbox" style="display: none;">
+      <div class="modal" id="modal">
+          <div id="close-btn">&times;</div>
+          <div class="modal-content">
+              <img src="images\confirmation.png" alt="" height="100px" >
+              <h2>Subscription Successful!</h2>
+              <p>Thank you for subscribing.</p>
+              <p> You will receive notifications & updates via email.</p>
+          </div>
+          <div class="social">
+              <li class="socials">
+                  <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                      <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+              </li>
+          </div>
+      </div>
+  </div>
   <script src="preloader.js"></script>
 
-  <script>
+<script>
     document.getElementById("cart-icon").addEventListener("click", function() {
     window.location.href = "cart.html";
 });
@@ -829,16 +707,6 @@ body.dark-mode {
       }
     });
   </script>
-  <script>
-
-    window.addEventListener('scroll', function() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
-    </script>
-  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
@@ -865,163 +733,176 @@ body.dark-mode {
           }
       });
     </script>
-    <script>
-
-window.addEventListener('scroll', function() {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    document.getElementById('progress-bar').style.width = scrolled + '%';
-});
-</script>
-    
-    <script src="./script/popup.js"></script>
-<button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
-    <div class="scroll-top-icon">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div>
-    <svg class="progress-ring" width="60" height="60">
-        <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
-            cy="30"></circle>
-    </svg>
-</button>
-<style>
-    .scroll-top {
-        position: fixed;
-        right: 1.6%;
-        background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
-        color: white;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        overflow: visible;
-        z-index: 10;
-        bottom: 15px;
-        /* Ensure button is on top */
-    }
-
-    .scroll-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .scroll-top:hover {
-        transform: scale(1.1);
-        /* Subtle scaling instead of expanding */
-        box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
-        /* Slightly larger shadow */
-    }
-
-    .scroll-top:active {
-        transform: scale(1.05);
-        /* Minor scale reduction on click */
-    }
-
-    .scroll-top-icon {
-        position: relative;
-        z-index: 2;
-        transition: transform 0.3s ease;
-    }
-
-    .scroll-top:hover .scroll-top-icon {
-        transform: translateY(-3px);
-    }
-
-    /* Progress Ring Styling */
-    .progress-ring {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: rotate(-90deg);
-        /* To start from the top */
-    }
-
-    .progress-ring__circle {
-        transition: stroke-dashoffset 0.35s;
-        transform-origin: 50% 50%;
-    }
-
-    /* Pulse Animation */
-    @keyframes pulse {
-        0% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        }
-        50% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
-        }
-
-        100% {
-            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-        }
-    }
-
-    .scroll-top:hover {
-        animation: pulse 1.5s infinite;
-    }
-
-    .scroll-top.show {
-        animation: none;
-        /* No animation when showing the button */
-    }
-
-    .scroll-top.show:hover {
-        animation: pulse 1.5s infinite;
-        /* Pulse on hover */
-    }
-</style>
-<script>
-    // Get the button
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-    const progressCircle = document.querySelector(".progress-ring__circle");
-    const radius = progressCircle.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-
-    // Set the circle progress properties
-    progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-    progressCircle.style.strokeDashoffset = circumference;
-
-    // Function to show or hide the button based on scroll position
-    function toggleScrollButton() {
-        if (window.scrollY > 100) {
-            scrollToTopBtn.classList.add("show");
-        } else {
-            scrollToTopBtn.classList.remove("show");
-        }
-    }
-
-    // Function to set the scroll progress on the button ring
-    function setProgress(percent) {
-        const offset = circumference - (percent / 100) * circumference;
-        progressCircle.style.strokeDashoffset = offset;
-    }
-
-    // Listen for scroll events to update button visibility and progress
-    window.addEventListener("scroll", () => {
-        toggleScrollButton();
-        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-        setProgress(scrollPercent);
-    });
-
-    // Smooth scroll to top when the button is clicked
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-  })
-  </script>
+    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+      <div class="scroll-top-icon">
+          <i class="fa-solid fa-arrow-up"></i>
+      </div>
+      <svg class="progress-ring" width="60" height="60">
+          <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+              cy="30"></circle>
+      </svg>
+  </button>
+  <style>
+      .scroll-top {
+          position: fixed;
+          right: 1.6%;
+          background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
+          color: white;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+          overflow: visible;
+          z-index: 10;
+          bottom: 15px;
+          /* Ensure button is on top */
+      }
+      .scroll-top.show {
+          opacity: 1;
+          visibility: visible;
+      }
+  
+      .scroll-top:hover {
+          transform: scale(1.1);
+          /* Subtle scaling instead of expanding */
+          box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+          /* Slightly larger shadow */
+      }
+  
+      .scroll-top:active {
+          transform: scale(1.05);
+          /* Minor scale reduction on click */
+      }
+  
+      .scroll-top-icon {
+          position: relative;
+          z-index: 2;
+          transition: transform 0.3s ease;
+      }
+  
+      .scroll-top:hover .scroll-top-icon {
+          transform: translateY(-3px);
+      }
+  
+      /* Progress Ring Styling */
+      .progress-ring {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: rotate(-90deg);
+          /* To start from the top */
+      }
+  
+      .progress-ring__circle {
+          transition: stroke-dashoffset 0.35s;
+          transform-origin: 50% 50%;
+      }
+  
+      /* Pulse Animation */
+      @keyframes pulse {
+          0% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+          }
+  
+          50% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+          }
+  
+          100% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+          }
+      }
+  
+      .scroll-top:hover {
+          animation: pulse 1.5s infinite;
+      }
+  
+      .scroll-top.show {
+          animation: none;
+          /* No animation when showing the button */
+      }
+  
+      .scroll-top.show:hover {
+          animation: pulse 1.5s infinite;
+          /* Pulse on hover */
+      }
+      @media (max-width: 768px) {
+          .about-content-first {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            margin-bottom: 0;
+          }
+          .about-content-second {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            text-align: center;
+          }
+          #div2{
+            margin-left: 0;
+            margin-bottom: 12px;
+          }
+          #div3{
+            margin-bottom: 15px;
+          }
+          .about-images img {
+            height: 320px;
+            width: 320px;
+          }
+          }
+  </style>
+  <script>
+      // Get the button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      const progressCircle = document.querySelector(".progress-ring__circle");
+      const radius = progressCircle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+  
+      // Set the circle progress properties
+      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+      progressCircle.style.strokeDashoffset = circumference;
+  
+      // Function to show or hide the button based on scroll position
+      function toggleScrollButton() {
+          if (window.scrollY > 100) {
+              scrollToTopBtn.classList.add("show");
+          } else {
+              scrollToTopBtn.classList.remove("show");
+          }
+      }
+  
+      // Function to set the scroll progress on the button ring
+      function setProgress(percent) {
+          const offset = circumference - (percent / 100) * circumference;
+          progressCircle.style.strokeDashoffset = offset;
+      }
+  
+      // Listen for scroll events to update button visibility and progress
+      window.addEventListener("scroll", () => {
+          toggleScrollButton();
+          const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+          setProgress(scrollPercent);
+      });
+  
+      // Smooth scroll to top when the button is clicked
+      scrollToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          });
+      });
+    </script>
   </body>
 </html>
