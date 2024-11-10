@@ -12,7 +12,28 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="./Style/popup.css">
+   <style>
+/* Base styling for .slide-details */
+.slide-details {
+    padding: 20px;
+    border-radius: 10px;
+}
 
+/* Base styling for text */
+.slide-details h1 p,
+.slide-details p {
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect for text within .slide-details */
+.slide-details h1 p:hover,
+.slide-details p:hover {
+    transform: perspective(800px) scale(1.1);
+    color: black;
+    text-shadow: 0px 0px 10px rgba(169, 169, 169, 0.8);
+}
+    </style>
 </head>
 
 <body>
