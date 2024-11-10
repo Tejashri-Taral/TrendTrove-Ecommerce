@@ -850,15 +850,14 @@ html {
   background-color: #000000;
   color: rgb(255, 255, 255);
   top: 3658px;
-  padding: 10px 10px;
-  border-radius: 18px;
+  padding: 10px 20px;
+  border-radius: 19px;
   display: inline-flex;
   align-items: center;
   font-family: Arial, sans-serif;
   margin-left: 0px;
-  z-index: 20; 
+  z-index: 10; /* Ensure it stays on top of the border */
 }  
- 
 
 .visitor-counter .icon {
   margin-right: 10px;
