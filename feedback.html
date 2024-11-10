@@ -1,313 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
-  <title>Feedback Form</title>
-  <link rel="stylesheet" href="preloaderStyle.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-  <link rel="stylesheet" href="./Style/popup.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="preloaderStyle.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./Style/popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-      body {
-          background-color: #f8f9fa;
-      }
-      .feedback-container {
-          max-width: 600px;
-          margin: 50px auto;
-          padding: 30px;
-          background: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-          transition: border-color 0.3s, box-shadow 0.3s;
-          border: 2px solid transparent;
-      }
-      .feedback-container:hover {
-          border-color: #007bff;
-          box-shadow: 0 8px 30px rgba(0, 123, 255, 0.2);
-      }
-      .form-control:focus {
-          border-color: #007bff;
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-      }
-      .star-rating {
-          display: flex;
-          margin: 10px 0;
-      }
-      .star-rating input {
-          display: none;
-      }
-      .star-rating label {
-          cursor: pointer;
-          font-size: 2em;
-          color: lightgray;
-          transition: color 0.3s;
-      }
-      .star-rating input:checked ~ label,
-      .star-rating label:hover,
-      .star-rating label:hover ~ label {
-          color: #f39c12;
-      }
-      label {
-          font-size: 1.2em; /* Increased font size */
-      }
-      .form-check-input {
-          width: 1.2em; /* Smaller radio buttons */
-          height: 1.2em;
-          margin-top: 0.3em; /* Align with text */
-      }
-      h2 {  
-          color: #007bff; /* Color for the header */
-      }
-      .radio-group label:hover {
-          color: #007bff; /* Color change on hover */
-          transition: color 0.3s;
-      }
-      .btn-primary {
-          transition: transform 0.3s, background-color 0.3s;
-      }
-      .btn-primary:hover {
-          transform: scale(1.05);
-          background-color: #0056b3; /* Darker shade on hover */
-      }
-  </style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .feedback-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .feedback-container:hover {
+            border-color: #007bff;
+            box-shadow: 0 8px 30px rgba(0, 123, 255, 0.2);
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .star-rating {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            cursor: pointer;
+            font-size: 2em;
+            color: lightgray;
+            transition: color 0.3s;
+        }
+
+        .star-rating input:checked~label,
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #f39c12;
+        }
+
+        label {
+            font-size: 1.2em;
+            /* Increased font size */
+        }
+
+        .form-check-input {
+            width: 1.2em;
+            /* Smaller radio buttons */
+            height: 1.2em;
+            margin-top: 0.3em;
+            /* Align with text */
+        }
+
+        h2 {
+            color: #007bff;
+            /* Color for the header */
+        }
+
+        .radio-group label:hover {
+            color: #007bff;
+            /* Color change on hover */
+            transition: color 0.3s;
+        }
+
+        .btn-primary {
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+            /* Darker shade on hover */
+        }
+    </style>
 
 </head>
+
 <body>
-  <!-- header section  -->
-  <header class="header" id="header">
-    <div class="logo">
-        <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
-        <i class="fa-solid fa-bars menu" id="menu"></i>
+    <!-- header section  -->
+    <header class="header" id="header">
+        <div class="logo">
+            <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
+            <i class="fa-solid fa-bars menu" id="menu"></i>
+        </div>
+
+        <nav class="bg-neutral-100 py-20">
+            <div class="tabs-container">
+                <ul id="tabs" class="tabs">
+                    <li class="tab">
+                        <a href="index.html">Home</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="about.html">About</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="tab">
+                        <a href="features.html">Features</a>
+                        <div class="cursor"></div>
+                    </li>
+                    <li class="dropdown tab">
+                        <a class="dropdown-parent">Products</a>
+                        <div class="cursor"></div>
+                        <ul class="dropdown-content ">
+                            <li><a href="mens.html" class="priye">Men</a>
+                            </li>
+                            <li><a href="womens.html">Women</a></li>
+                            <li><a href="child.html">Kid Section</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li class="tab" style="margin-left: 15px;">
+                        <a href="contact.html">Contact Us</a>
+                        <div class="cursor"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <nav class="utils">
+            <ul class="nav-links">
+                <li class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </li>
+                <li class="nav-link">
+                    <a href="login-sginup.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form -->
+    <div class="feedback-container">
+        <img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Feedback Icon" width="50">
+        <h2 class="text-center" style="font-size: 30px; font-style:bold;">Drop Us a Feedback</h2>
+
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <br>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required
+                    style="width: 100%; border: 1px solid black; border-radius: 5px; padding-left: 10px; font-size: 18px;">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required
+                    style="font-size: 18px;">
+            </div>
+
+            <div class="form-group">
+                <label>Did You Find Your Desired Product?</label>
+                <div class="radio-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="answer" value="yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="answer" value="no">
+                        <label class="form-check-label">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Did You Satisfy With Our Services?</label>
+                <div class="radio-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="satisfaction" value="yes" required>
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="satisfaction" value="no">
+                        <label class="form-check-label">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Rate Our Service</label>
+                <div class="star-rating">
+                    <input type="radio" name="rating" value="5" id="star5" required>
+                    <label for="star5" class="fas fa-star"></label>
+                    <input type="radio" name="rating" value="4" id="star4">
+                    <label for="star4" class="fas fa-star"></label>
+                    <input type="radio" name="rating" value="3" id="star3">
+                    <label for="star3" class="fas fa-star"></label>
+                    <input type="radio" name="rating" value="2" id="star2">
+                    <label for="star2" class="fas fa-star"></label>
+                    <input type="radio" name="rating" value="1" id="star1">
+                    <label for="star1" class="fas fa-star"></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message Or Suggestion</label>
+                <br>
+                <br>
+                <textarea id="message" name="message" class="form-control" rows="6"
+                    placeholder="Your Message Or Suggestion" required
+                    style="width: 100%; font-size: 18px; padding-left: 10px; padding-top: 10px;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block"
+                style="align-items: center; justify-content: center; justify-items: center; width: 100%; background-color: #0056b3;">Send
+                Feedback</button>
+        </form>
     </div>
 
-    <nav class="bg-neutral-100 py-20">
-        <div class="tabs-container">
-            <ul id="tabs" class="tabs">
-                <li class="tab">
-                    <a href="index.html">Home</a>
-                    <div class="cursor"></div>
+
+    <!-- footer -->
+    <footer class="footer">
+
+        <div class="footer-section">
+
+            <h1>Contact Us</h1>
+            <ul class="footer-list">
+                <li>trendtrove1004@gmail.com</li>
+                <li>
+                    2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
                 </li>
-                <li class="tab">
-                    <a href="about.html">About</a>
-                    <div class="cursor"></div>
+                <li>+91 xxxxxx2020</li>
+
+                <li class="border-list">
                 </li>
-                <li class="tab">
-                    <a href="features.html">Features</a>
-                    <div class="cursor"></div>
-                </li>
-                <li class="dropdown tab">
-                    <a class="dropdown-parent">Products</a>
-                    <div class="cursor"></div>
-                    <ul class="dropdown-content ">
-                        <li><a href="mens.html" class="priye">Men</a>
-                        </li>
-                        <li><a href="womens.html">Women</a></li>
-                        <li><a href="child.html">Kid Section</a></li>
-                        <li><a href="accessories.html">Accessories</a></li>
-                    </ul>
-                </li>
-                <li class="tab" style="margin-left: 15px;">
-                    <a href="contact.html">Contact Us</a>
-                    <div class="cursor"></div>
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&amp;s=08" id="twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
                 </li>
             </ul>
         </div>
-    </nav>
-    
-   
 
-    <nav class="utils">
-        <ul class="nav-links">
-            <li class="nav-link">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </li>
-            <li class="nav-link">
-                <a href="login-sginup.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-            </li>
-            <li class="nav-link">
-                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-            </li>
-        </ul>
-    </nav>
-</header>
+        <div class=" footer-section quick-links ">
+            <h1>Quick Links</h1>
+            <ul class="footer-list">
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ's</a></li>
+                <li><a href="terms-conditions.html"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                <li><a href="return-policy.html"><i class="fas fa-undo-alt"></i> Return Policy</a></li>
+                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank"><i
+                            class="fab fa-github"></i> Star Us</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="feedback.html"><i class="fas fa-comment-alt"></i> Feedback</a></li>
 
-    <!-- Form -->
-<div class="feedback-container">
-  <img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Feedback Icon" width="50">
-  <h2 class="text-center" style="font-size: 30px; font-style:bold;">Drop Us a Feedback</h2>
-
-  <form id="feedbackForm">
-      <div class="form-group">
-          <label for="name">Your Name</label>
-          <br>
-          <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required style="width: 100%; border: 1px solid black; border-radius: 5px; padding-left: 10px; font-size: 18px;">
-      </div>
-
-      <div class="form-group">
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required style="font-size: 18px;">
-      </div>
-
-      <div class="form-group">
-          <label>Did You Find Your Desired Product?</label>
-          <div class="radio-group">
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="answer" value="yes" required>
-                  <label class="form-check-label">Yes</label>
-              </div>
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="answer" value="no">
-                  <label class="form-check-label">No</label>
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label>Did You Satisfy With Our Services?</label>
-          <div class="radio-group">
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="satisfaction" value="yes" required>
-                  <label class="form-check-label">Yes</label>
-              </div>
-              <div class="form-check">
-                  <input class="form-check-input" type="radio" name="satisfaction" value="no">
-                  <label class="form-check-label">No</label>
-              </div>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label>Rate Our Service</label>
-          <div class="star-rating">
-              <input type="radio" name="rating" value="5" id="star5" required>
-              <label for="star5" class="fas fa-star"></label>
-              <input type="radio" name="rating" value="4" id="star4">
-              <label for="star4" class="fas fa-star"></label>
-              <input type="radio" name="rating" value="3" id="star3">
-              <label for="star3" class="fas fa-star"></label>
-              <input type="radio" name="rating" value="2" id="star2">
-              <label for="star2" class="fas fa-star"></label>
-              <input type="radio" name="rating" value="1" id="star1">
-              <label for="star1" class="fas fa-star"></label>
-          </div>
-      </div>
-
-      <div class="form-group">
-          <label for="message">Your Message Or Suggestion</label>
-          <br>
-          <br>
-          <textarea id="message" name="message" class="form-control" rows="6" placeholder="Your Message Or Suggestion" required style="width: 100%; font-size: 18px; padding-left: 10px; padding-top: 10px;"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary btn-block" style="align-items: center; justify-content: center; justify-items: center; width: 100%; background-color: #0056b3;">Send Feedback</button>
-  </form>
-</div>
-
-
-          <!-- footer -->
-          <footer class="footer">
-
-            <div class="footer-section">
-    
-                <h1>Contact Us</h1>
-                <ul class="footer-list">
-                    <li>trendtrove1004@gmail.com</li>
-                    <li>
-                        2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India
-                    </li>
-                    <li>+91 xxxxxx2020</li>
-    
-                    <li class="border-list">
-                    </li>
-                    <li class="socials">
-                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&amp;s=08" id="twitter" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    
-            <div class=" footer-section quick-links ">
-                <h1>Quick Links</h1>
-                <ul class="footer-list">
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faq.html">FAQ's</a></li>
-                    <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
-                    <li><a href="return-policy.html">Return Policy</a></li>
-                    <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-    
-                </ul>
-            </div>
-    
-            <div class="footer-section">
-                <h1>Subscribe to Newsletter</h1>
-                <ul class="footer-list">
-                    <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
-                    <li>Join our fashion community today!</li>
-                    <li class="sub">
-                        <input type="email" placeholder="Enter your email here" id="email-input">
-                        <button class="btn" id="open-btn">Subscribe</button>
-                    </li>
-                </ul>
-            </div>
-    
-        </footer>
-        <div class="footer-copyright">
-            <div id="copyright">© <span id="year">2024</span> TrendTrove. All Rights Reserved.</div>
+            </ul>
         </div>
 
-        <script>
-            const currentYear = new Date().getFullYear();
-            document.getElementById('year').textContent = currentYear;
-        </script>
-        
-        <div class="modal-box" id="modalbox" style="display: none;">
-            <div class="modal" id="modal">
-                <div id="close-btn">&times;</div>
-                <div class="modal-content">
-                    <img src="images\confirmation.png" alt="" height="100px" >
-                    <h2>Subscription Successful!</h2>
-                    <p>Thank you for subscribing.</p>
-                    <p> You will receive notifications, updates via email.</p>
-                </div>
-                <div class="social">
-                    <li class="socials">
-                        <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                </div>
+        <div class="footer-section">
+            <h1>Subscribe to Newsletter</h1>
+            <ul class="footer-list">
+                <li>Be the first to know about exclusive deals and new arrivals straight to your inbox.</li>
+                <li>Join our fashion community today!</li>
+                <li class="sub">
+                    <input type="email" placeholder="Enter your email here" id="email-input">
+                    <button class="btn" id="open-btn">Subscribe</button>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+    <div class="footer-copyright">
+        <div id="copyright">© <span id="year">2024</span> TrendTrove. All Rights Reserved.</div>
+    </div>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+    </script>
+
+    <div class="modal-box" id="modalbox" style="display: none;">
+        <div class="modal" id="modal">
+            <div id="close-btn">&times;</div>
+            <div class="modal-content">
+                <img src="images\confirmation.png" alt="" height="100px">
+                <h2>Subscription Successful!</h2>
+                <p>Thank you for subscribing.</p>
+                <p> You will receive notifications, updates via email.</p>
+            </div>
+            <div class="social">
+                <li class="socials">
+                    <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
             </div>
         </div>
+    </div>
     <script src="./script/modal_box.js"></script>
-    
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- ProgressBar Functionality -->
     <script>
@@ -339,159 +369,160 @@
 
         })
     </script>
-<script>
-    gsap.from("#header", {
-        duration: 1.5,
-        y: -100,
-        opacity: 0,
-        ease: "power4.out",
-        stagger: 1,
-    });
-
-    gsap.from(".nav-link", {
-        duration: 1,
-        opacity: 0,
-        y: 20,
-        delay: 0.5,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("h1", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 0.7,
-        stagger: 0.2,
-        ease: "power3.out"
-    });
-
-    gsap.from("p", {
-        duration: 1.5,
-        opacity: 0,
-        y: 30,
-        delay: 0.9,
-        stagger: 0.3,
-        ease: "power2.out"
-    });
-
-    gsap.from(".btn", {
-        duration: 1,
-        scale: 0.8,
-        opacity: 0,
-        delay: 1.2,
-        ease: "back.out(1.7)",
-        stagger: 0.2
-    });
-
-    gsap.from("img", {
-        duration: 1.5,
-        opacity: 0,
-        scale: 0.9,
-        delay: 1.5,
-        stagger: 0.3,
-        ease: "elastic.out(1, 0.3)"
-    });
-
-    gsap.from(".overlay", {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-        delay: 1.7,
-        stagger: 0.3,
-        ease: "power3.out"
-    });
-
-    gsap.from(".footer-section", {
-        scrollTrigger: ".footer",
-        duration: 1.5,
-        opacity: 0,
-        y: 50,
-        ease: "power2.out",
-        stagger: 0.3,
-    });
-
-    
-    gsap.from(".socials i", {
-        scrollTrigger: ".footer",
-        duration: 1,
-        opacity: 0,
-        scale: 0.5,
-        ease: "bounce.out",
-        stagger: 0.2,
-        delay: 0.5
-    });
-</script>
-
-<script>const tabs = document.querySelectorAll('.tab');
-    const cursor = document.getElementById('cursor');
-    
-    tabs.forEach(tab => {
-        tab.addEventListener(' mouseenter', () => {
-            cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
-            cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
-            cursor.style.opacity = 1; 
+    <script>
+        gsap.from("#header", {
+            duration: 1.5,
+            y: -100,
+            opacity: 0,
+            ease: "power4.out",
+            stagger: 1,
         });
-    
-        tab.addEventListener(' mouseleave', () => {
-            cursor.style.opacity = 0; 
+
+        gsap.from(".nav-link", {
+            duration: 1,
+            opacity: 0,
+            y: 20,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "power3.out"
         });
-    });
-    
-  </script>
-  <a class=" gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src=" https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
 
-  (function() {
-      let headerVisible = false;
-      document.getElementById(" menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById(" header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById(" header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
+        gsap.from("h1", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 0.7,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
 
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(" .gotopbtn");
-      window.addEventListener(" scroll", function () {
-          if (window.scrollY > 200) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
+        gsap.from("p", {
+            duration: 1.5,
+            opacity: 0,
+            y: 30,
+            delay: 0.9,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
 
-  })();  // IIFE to avoid polluting global scope
-</script>
+        gsap.from(".btn", {
+            duration: 1,
+            scale: 0.8,
+            opacity: 0,
+            delay: 1.2,
+            ease: "back.out(1.7)",
+            stagger: 0.2
+        });
 
-<div class="gtranslate_wrapper"></div>
-        <script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+        gsap.from("img", {
+            duration: 1.5,
+            opacity: 0,
+            scale: 0.9,
+            delay: 1.5,
+            stagger: 0.3,
+            ease: "elastic.out(1, 0.3)"
+        });
+
+        gsap.from(".overlay", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            delay: 1.7,
+            stagger: 0.3,
+            ease: "power3.out"
+        });
+
+        gsap.from(".footer-section", {
+            scrollTrigger: ".footer",
+            duration: 1.5,
+            opacity: 0,
+            y: 50,
+            ease: "power2.out",
+            stagger: 0.3,
+        });
 
 
-<script src="./script/popup.js"></script>
+        gsap.from(".socials i", {
+            scrollTrigger: ".footer",
+            duration: 1,
+            opacity: 0,
+            scale: 0.5,
+            ease: "bounce.out",
+            stagger: 0.2,
+            delay: 0.5
+        });
+    </script>
 
-  <script>
-    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Thank you for your feedback!');
-      // You can add functionality to send the form data to a server here.
-    });
-  </script>
+    <script>const tabs = document.querySelectorAll('.tab');
+        const cursor = document.getElementById('cursor');
 
-<div class="gtranslate_wrapper"></div>
+        tabs.forEach(tab => {
+            tab.addEventListener(' mouseenter', () => {
+                cursor.style.width = `${tab.offsetWidth}px`; // Set width to the current tab's width
+                cursor.style.left = `${tab.offsetLeft}px`; // Move cursor to the current tab's position
+                cursor.style.opacity = 1;
+            });
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            tab.addEventListener(' mouseleave', () => {
+                cursor.style.opacity = 0;
+            });
+        });
 
-<script>window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+    </script>
+    <a class=" gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+    <script src=" https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        (function () {
+            let headerVisible = false;
+            document.getElementById(" menu").addEventListener("click", function () {
+                if (headerVisible === false) {
+                    document.getElementById(" header").style.height = "290px";
+                    headerVisible = true;
+                } else {
+                    document.getElementById(" header").style.height = "50px";
+                    headerVisible = false;
+                }
+            });
+
+            // Show "Go to Top" button after scrolling down
+            const goTopBtn = document.querySelector(" .gotopbtn");
+            window.addEventListener(" scroll", function () {
+                if (window.scrollY > 200) {  // Show the button after scrolling down 200px
+                    goTopBtn.style.display = "block";
+                } else {
+                    goTopBtn.style.display = "none";
+                }
+            });
+
+        })();  // IIFE to avoid polluting global scope
+    </script>
+
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
+    <script src="./script/popup.js"></script>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your feedback!');
+            // You can add functionality to send the form data to a server here.
+        });
+    </script>
+
+    <div class="gtranslate_wrapper"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>window.gtranslateSettings = { "default_language": "en", "detect_browser_language": true, "wrapper_selector": ".gtranslate_wrapper" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 </body>
+
 </html>

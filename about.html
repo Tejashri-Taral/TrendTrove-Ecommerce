@@ -1,157 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - TrendTrove</title>
-    <link rel="stylesheet" href="preloaderStyle.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <!-- Link to your common CSS file -->
-    <style>
-      /* General Styles */
-      html,
 
-      
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: Arial, sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - TrendTrove</title>
+  <link rel="stylesheet" href="preloaderStyle.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <!-- Link to your common CSS file -->
+  <style>
+    /* General Styles */
+    html,
 
-      body {
-        background-color: #f7f7f7;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-      }
-      
-      h1,
-      h2 {
-        color: #333;
-      }
 
-      /* About Us Section */
-      .leftabout {
-        margin-left: 50px;
-        margin-right: 50px;
-        margin: 0 auto; /* Center the leftabout content */
-        padding: 0 50px; /* Adjust horizontal padding */
-        text-align: center; /* Center all text inside leftabout */
-        transition: transform 0.3s ease, 
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
 
-      .leftabout h3 {
-        justify-content: center;
-        text-align: center;
-      }
+    body {
+      background-color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
 
-      .leftabout p {
-        text-align: center;
-      }
+    h1,
+    h2 {
+      color: #333;
+    }
 
-      .about-section {
-        width: 80%;
-        padding: 40px 0;
-        margin: 0 auto; 
-        background: #ffffff;
-      }
+    /* About Us Section */
+    .leftabout {
+      margin-left: 50px;
+      margin-right: 50px;
+      margin: 0 auto;
+      /* Center the leftabout content */
+      padding: 0 50px;
+      /* Adjust horizontal padding */
+      text-align: center;
+      /* Center all text inside leftabout */
+      transition: transform 0.3s ease,
+    }
 
-      .about-title {
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 35px;
-      }
+    .leftabout h3 {
+      justify-content: center;
+      text-align: center;
+    }
 
-      /* Second part content css */
-      #div2 {
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 7px;
-      }
+    .leftabout p {
+      text-align: center;
+    }
 
-      #div3 {
-        font-size:25px;
-        font-weight:900;
-        text-align: center;
-        margin-top: 7px;
-        /* margin-left:40%; */
-      }
+    .about-section {
+      width: 80%;
+      padding: 40px 0;
+      margin: 0 auto;
+      background: #ffffff;
+    }
 
-      /* First part: Image left, text right */
-      .about-content-first {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        margin-bottom: 50px;
-        gap: 30px; /* Added consistent gap between text and image */
-      }
+    .about-title {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 35px;
+    }
 
-      .about-text {
-        flex: 1;
-        font-size: 2em;
-        line-height: 1.8;
-        margin-right: 20px; /* Ensure a margin between text and image */
-      }
+    /* Second part content css */
+    #div2 {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 7px;
+    }
 
-      .rightabout {
-        margin-left: 50px;
-        margin-right: 50px;
-      }
+    #div3 {
+      font-size: 25px;
+      font-weight: 900;
+      text-align: center;
+      margin-top: 7px;
+      /* margin-left:40%; */
+    }
 
-      .about-images img {
-        width: 500px;
-        height: 520px;
-        border-radius: 5%;
-        aspect-ratio: 3/2;
-        opacity: 90%;
-        box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
-      }
+    /* First part: Image left, text right */
+    .about-content-first {
+      display: flex;
+      align-items: center;
+      /* Adjusted to center the image and text */
+      justify-content: space-between;
+      margin-bottom: 50px;
+      gap: 30px;
+      /* Added consistent gap between text and image */
+    }
 
-      /* First image on about us page */
-      .about3 {
-        margin-right: 50px;
-      }
+    .about-text {
+      flex: 1;
+      font-size: 2em;
+      line-height: 1.8;
+      margin-right: 20px;
+      /* Ensure a margin between text and image */
+    }
 
-      /* Second image on about us page */
-      .about4 {
-        margin-top: 50px;
-        margin-left: 25px;
-        margin-bottom: 20px;
-      }
+    .rightabout {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
 
-      .aboutus-body {
-        font-size: 21px;
-      }
+    .about-images img {
+      width: 500px;
+      height: 520px;
+      border-radius: 5%;
+      aspect-ratio: 3/2;
+      opacity: 90%;
+      box-shadow: 0 0 15px 15px rgba(136, 136, 136, 0.5);
+    }
 
-      .slogan {
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
+    /* First image on about us page */
+    .about3 {
+      margin-right: 50px;
+    }
 
-      /* Second part: Image right, text left */
-      .about-content-second {
-        display: flex;
-        align-items: center; /* Adjusted to center the image and text */
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        gap: 30px; /* Consistent gap for the second part */
-      }
+    /* Second image on about us page */
+    .about4 {
+      margin-top: 50px;
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
 
-      .about-container {
-        padding: 0 40px; /* Increased padding for a more spacious layout */
-      }
+    .aboutus-body {
+      font-size: 21px;
+    }
 
-      /* Footer Section */
-      /* .footer {
+    .slogan {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    /* Second part: Image right, text left */
+    .about-content-second {
+      display: flex;
+      align-items: center;
+      /* Adjusted to center the image and text */
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      gap: 30px;
+      /* Consistent gap for the second part */
+    }
+
+    .about-container {
+      padding: 0 40px;
+      /* Increased padding for a more spacious layout */
+    }
+
+    /* Footer Section */
+    /* .footer {
         background-color: #bec1c55c;
         padding: 20px;
         text-align: center;
@@ -263,8 +275,9 @@
         font-size: 16px;
       }
     }
-      @media (max-width:480px)
-      {
+
+    @media (max-width:480px) {
+
       /* About Us Section */
       .leftabout {
         margin-left: 5px;
@@ -278,10 +291,11 @@
         color: #023047;
         /* margin-left: 600px; */
 
-      } 
-     .about-section {
+      }
+
+      .about-section {
         width: 100%;
-        padding:0;
+        padding: 0;
         background: #ffffff;
       }
 
@@ -294,8 +308,8 @@
 
       /* Second part content css */
       #div2 {
-        font-size:18px;
-        font-weight:700;
+        font-size: 18px;
+        font-weight: 700;
         text-align: center;
         color: #023047;
         margin-bottom: 50px;
@@ -306,7 +320,7 @@
         font-size: 19px;
         font-weight: bold;
         text-align: center;
-        margin-top:35px;
+        margin-top: 35px;
         margin-left: 22px;
         margin-right: 22px;
       }
@@ -314,19 +328,21 @@
       /* First part: Image left, text right */
       .about-content-first {
         margin-bottom: 90px;
-        gap:0px; /* Added consistent gap between text and image */
+        gap: 0px;
+        /* Added consistent gap between text and image */
       }
 
       .about-text {
         flex: 1;
         font-size: 1em;
         line-height: 1;
-        margin-right: 5px; /* Ensure a margin between text and image */
+        margin-right: 5px;
+        /* Ensure a margin between text and image */
       }
 
       .rightabout {
-        margin-left:2px;
-        margin-right:2px;
+        margin-left: 2px;
+        margin-right: 2px;
       }
 
       .about-images img {
@@ -341,19 +357,19 @@
       /* First image on about us page */
       .about3 {
         margin-top: 30px;
-        margin-right:5px;
+        margin-right: 5px;
       }
 
 
       /* Second image on about us page */
       .about4 {
-        margin-top:80px;
-        margin-left:5px;
+        margin-top: 80px;
+        margin-left: 5px;
         margin-bottom: 20px;
       }
 
       .aboutus-body {
-        font-size:18px;
+        font-size: 18px;
       }
 
       .slogan {
@@ -364,159 +380,160 @@
 
       /* Second part: Image right, text left */
       .about-content-second {
-        gap:4px; 
+        gap: 4px;
       }
 
       .about-container {
-        padding: 0px; 
+        padding: 0px;
       }
-      }
-      
-/* Scroll Progress Bar*/
-#progress-container {
-  position: fixed ;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  z-index: 99990;
-  /* background: #f3f3f3; */
-}
+    }
 
-#progress-bar {
-  position: fixed;
-  top: 0.3px;
-  left: 0;
-  width: 0%;
-  height: 6px;
-  width: 0;
-  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
-  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
-  transition: width 0.09s ease-in-out;
-  /* border-radius: 10px; */
-}
-.go-top-btn {
-  position: fixed;
-  bottom: 35px;
-  right: 35px;
-  cursor: pointer;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  background: #000000;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-.go-top-btn:hover {
-  background-color: #000000;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
-}
+    /* Scroll Progress Bar*/
+    #progress-container {
+      position: fixed;
+      top: 1px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      z-index: 99990;
+      /* background: #f3f3f3; */
+    }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #080707;
-}
+    #progress-bar {
+      position: fixed;
+      top: 0.3px;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      width: 0;
+      background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+      box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+      transition: width 0.09s ease-in-out;
+      /* border-radius: 10px; */
+    }
 
+    .go-top-btn {
+      position: fixed;
+      bottom: 35px;
+      right: 35px;
+      cursor: pointer;
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      background: #000000;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
 
+    .go-top-btn:hover {
+      background-color: #000000;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #080707;
+    }
   </style>
 
-  
-<head>
-<body>
 
-  <!-- scroll to top button  -->
-  <button class="go-top-btn">
-    <img   width="25px" src="arrow_upper.png" alt="go top">
-</button>
-  <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-      <div class="box-wrap">
-        <div class="box one"></div>
-        <div class="box two"></div>
-        <div class="box three"></div>
-        <div class="box four"></div>
-        <div class="box five"></div>
-        <div class="box six"></div>
+  <head>
+
+  <body>
+
+    <!-- scroll to top button  -->
+    <button class="go-top-btn">
+      <img width="25px" src="arrow_upper.png" alt="go top">
+    </button>
+    <!-- preloader -->
+    <div id="preloader">
+      <div class="wrapper">
+        <div class="box-wrap">
+          <div class="box one"></div>
+          <div class="box two"></div>
+          <div class="box three"></div>
+          <div class="box four"></div>
+          <div class="box five"></div>
+          <div class="box six"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
-  <!-- Header Section -->
-  <header class="header" id="header">
-    <div class="logo">
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <!-- Header Section -->
+    <header class="header" id="header">
+      <div class="logo">
         <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
         <i class="fa-solid fa-bars menu" id="menu"></i>
-    </div>
+      </div>
 
-     <nav class="bg-neutral-100 py-20">
+      <nav class="bg-neutral-100 py-20">
         <div class="tabs-container">
-            <ul id="tabs" class="tabs">
-                <li class="tab">
-                    <a href="index.html">Home</a>
-                    <div class="cursor"></div>
+          <ul id="tabs" class="tabs">
+            <li class="tab">
+              <a href="index.html">Home</a>
+              <div class="cursor"></div>
 
-                  
-                  
-            
+
+
+
+            </li>
+            <li class="tab">
+              <a href="about.html" class="active">About</a>
+              <div class="cursor"></div>
+            </li>
+            <li class="tab">
+              <a href="features.html">Features</a>
+              <div class="cursor"></div>
+            </li>
+            <li class="dropdown tab">
+              <a href="#">Products</a>
+              <div class="cursor"></div>
+              <ul class="dropdown-content ">
+                <li><a href="mens.html" class="priye">Men</a>
                 </li>
-                <li class="tab">
-                    <a href="about.html" class="active">About</a>
-                    <div class="cursor"></div>
-                </li>
-                <li class="tab">
-                    <a href="features.html">Features</a>
-                    <div class="cursor"></div>
-                </li>
-                <li class="dropdown tab">
-                    <a href="#">Products</a>
-                    <div class="cursor"></div>
-                    <ul class="dropdown-content ">
-                        <li><a href="mens.html" class="priye">Men</a>
-                        </li>
-                        <li><a href="womens.html">Women</a></li>
-                        <li><a href="child.html">Kid Section</a></li>
-                        <li><a href="accessories.html">Accessories</a></li>
-                    </ul>
-                </li>
-                <li class="tab" style="margin-left: 15px;">
-                    <a href="contact.html">Contact Us</a>
-                    <div class="cursor"></div>
-                </li>
-            </ul>
+                <li><a href="womens.html">Women</a></li>
+                <li><a href="child.html">Kid Section</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+              </ul>
+            </li>
+            <li class="tab" style="margin-left: 15px;">
+              <a href="contact.html">Contact Us</a>
+              <div class="cursor"></div>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <nav class="utils">
+      <nav class="utils">
         <ul class="nav-links">
           <li>
             <button class="mode-toggle" id="modeToggle">
-                <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-              </button>
-            </li>
-            <li class="nav-link">
-                <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
-            </li>
-          
-            <li class="nav-link">
-                <a href="login-sginup.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-            </li>
-            <li class="nav-link">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </li>
+              <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+              <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+            </button>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
+          </li>
+
+          <li class="nav-link">
+            <a href="login-sginup.html">
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
+          <li class="nav-link">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
 
     <!-- About Us Section -->
@@ -541,11 +558,7 @@ body.dark-mode {
             </div>
           </div>
           <div class="about-images">
-            <img
-              class="about3"
-              src="images/about3.jpg"
-              alt="Fashion Collection"
-            />
+            <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
           </div>
         </div>
 
@@ -567,11 +580,7 @@ body.dark-mode {
             </div>
           </div>
           <div class="about-images">
-            <img
-              class="about4"
-              src="images/about4.jpg"
-              alt="Accessories Collection"
-            />
+            <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
           </div>
         </div>
         <p class="aboutus-body" id="div3">
@@ -587,25 +596,19 @@ body.dark-mode {
         <h1>Contact Us</h1>
         <ul class="footer-list">
           <li>
-            <a href="mailto:trendtrove1004@gmail.com"
-              >trendtrove1004@gmail.com</a
-            >
+            <a href="mailto:trendtrove1004@gmail.com">trendtrove1004@gmail.com</a>
           </li>
           <li>2nd Floor, Bandra West, Mumbai, Maharashtra 400050, India</li>
           <li><a href="tel:+91xxxxxxxx2020">+91 xxxxxx2020</a></li>
           <li class="border-list"></li>
           <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin"target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
               <i class="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank"
-            >
+            <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
@@ -618,19 +621,21 @@ body.dark-mode {
       <div class="footer-section">
         <h1>Quick Links</h1>
         <ul class="footer-list">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contributors.html">Our Contributors</a></li>
-          <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-          <li><a href="return-policy.html">Return Policy</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+          <li><a href="contributors.html"><i class="fas fa-users"></i> Our Contributors</a></li>
+          <li><a href="terms-conditions.html"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+          <li><a href="return-policy.html"><i class="fas fa-undo"></i> Return Policy</a></li>
           <li>
-            <a
-              href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce"
-              target="_blank"
-              >Star Us</a
-            >
-
+            <a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">
+              <i class="fab fa-github"></i> Star Us
+            </a>
           </li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a href="contact.html">
+              <i class="fas fa-envelope"></i> Contact Us
+            </a>
+          </li>
+
         </ul>
       </div>
 
@@ -643,11 +648,7 @@ body.dark-mode {
           </li>
           <li>Join our fashion community today!</li>
           <li class="sub">
-            <input
-              type="email"
-              placeholder="Enter your email here"
-              id="email-input"
-            />
+            <input type="email" placeholder="Enter your email here" id="email-input" />
             <button class="btn" id="open-btn">Subscribe</button>
           </li>
         </ul>
@@ -669,32 +670,16 @@ body.dark-mode {
         </div>
         <div class="social">
           <li class="socials">
-            <a
-              href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/"
-              id="linkedin"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
               <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a
-              href="https://github.com/Tejashri-Taral"
-              id="github"
-              target="_blank"
-            >
+            <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a
-              href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08"
-              id="twitter"
-              target="_blank"
-            >
+            <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a
-              href="https://www.instagram.com/your_instagram"
-              id="instagram"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
@@ -703,329 +688,335 @@ body.dark-mode {
             <div class="cursor"></div>
 
           </li>
-        </ul>
-      </div>
-    </nav>
+          </ul>
+        </div>
+        </nav>
 
-    <nav class="utils">
-      <ul class="nav-links">
-        <li class="nav-link">
-          <i class="fa-solid fa-cart-shopping"></i>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-user"></i>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </li>
-      </ul>
-    </nav>
-  </header>
+        <nav class="utils">
+          <ul class="nav-links">
+            <li class="nav-link">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+            <li class="nav-link">
+              <i class="fa-solid fa-user"></i>
+            </li>
+            <li class="nav-link">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+          </ul>
+        </nav>
+        </header>
 
-  <!-- About Us Section -->
-  <section class="about-section">
-    <h2 class="about-title">About Us</h2>
+        <!-- About Us Section -->
+        <section class="about-section">
+          <h2 class="about-title">About Us</h2>
 
-    <div class="about-container">
-      <!-- First part: Image left, text right -->
-      <div class="about-content-first">
-        <div class="about-text">
-          <div class="leftabout">
-            <h3>Welcome to TrendTrove</h3>
-            <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
-            <p class="aboutus-body">
-              Your Ultimate Destination for fashion-forward apparel,
-              accessories, and lifestyle products. We believe in celebrating
-              individuality and empowering every customer to express their
-              unique style with confidence. Whether you're looking for
-              everyday essentials or statement pieces, we source high-quality,
-              sustainable, and stylish items to elevate your wardrobe.
-            </p>
+          <div class="about-container">
+            <!-- First part: Image left, text right -->
+            <div class="about-content-first">
+              <div class="about-text">
+                <div class="leftabout">
+                  <h3>Welcome to TrendTrove</h3>
+                  <p class="slogan">Elevate Your Style, Embrace Your Confidence!</p>
+                  <p class="aboutus-body">
+                    Your Ultimate Destination for fashion-forward apparel,
+                    accessories, and lifestyle products. We believe in celebrating
+                    individuality and empowering every customer to express their
+                    unique style with confidence. Whether you're looking for
+                    everyday essentials or statement pieces, we source high-quality,
+                    sustainable, and stylish items to elevate your wardrobe.
+                  </p>
+                </div>
+              </div>
+              <div class="about-images">
+                <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
+              </div>
+            </div>
+
+            <!-- Second part: Image right, text left -->
+            <div class="about-content-second">
+              <div class="about-text">
+                <div class="rightabout">
+                  <p class="aboutus-body" id="div2">
+                    Our Mission is to empower individuals
+                  </p>
+                  <p class="aboutus-body">
+                    At the heart of TrendTrove is a passion for style and a
+                    commitment to customer satisfaction. Our mission is to offer a
+                    seamless shopping experience with exceptional service, fast
+                    shipping, and an easy return process. We stay ahead of the
+                    fashion curve so you can step out feeling your best, whatever
+                    the occasion.
+                  </p>
+                  <p class="aboutus-body" id="div3">
+                    Discover your style with TrendTrove — where fashion meets
+                    confidence!
+                  </p>
+                </div>
+              </div>
+              <div class="about-images">
+                <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="modal-box" id="modalbox" style="display: none">
+          <div class="modal" id="modal">
+            <div id="close-btn">&times;</div>
+            <div class="modal-content">
+              <img src="images/confirmation.png" alt="" height="100px" />
+              <h2>Subscription Successful!</h2>
+              <p>Thank you for subscribing.</p>
+              <p>You will receive notifications & updates via email.</p>
+            </div>
           </div>
         </div>
-        <div class="about-images">
-          <img class="about3" src="images/about3.jpg" alt="Fashion Collection" />
-        </div>
-      </div>
 
-      <!-- Second part: Image right, text left -->
-      <div class="about-content-second">
-        <div class="about-text">
-          <div class="rightabout">
-            <p class="aboutus-body" id="div2">
-              Our Mission is to empower individuals
-            </p>
-            <p class="aboutus-body">
-              At the heart of TrendTrove is a passion for style and a
-              commitment to customer satisfaction. Our mission is to offer a
-              seamless shopping experience with exceptional service, fast
-              shipping, and an easy return process. We stay ahead of the
-              fashion curve so you can step out feeling your best, whatever
-              the occasion.
-            </p>
-            <p class="aboutus-body" id="div3">
-              Discover your style with TrendTrove — where fashion meets
-              confidence!
-            </p>
-          </div>
-        </div>
-        <div class="about-images">
-          <img class="about4" src="images/about4.jpg" alt="Accessories Collection" />
-        </div>
-      </div>
-    </div>
-  </section>
+        <script src="preloader.js"></script>
 
-<div class="modal-box" id="modalbox" style="display: none">
-  <div class="modal" id="modal">
-    <div id="close-btn">&times;</div>
-    <div class="modal-content">
-      <img src="images/confirmation.png" alt="" height="100px" />
-      <h2>Subscription Successful!</h2>
-      <p>Thank you for subscribing.</p>
-      <p>You will receive notifications & updates via email.</p>
-    </div>
-  </div>
-</div>
-
-  <script src="preloader.js"></script>
-
-  <script>
-    document.getElementById("cart-icon").addEventListener("click", function() {
-    window.location.href = "cart.html";
-});
- 
-    let openbtn = document.getElementById("open-btn");
-    let modalbox = document.getElementById("modalbox");
-    let closebtn = document.getElementById("close-btn");
-    let emailInput = document.getElementById("email-input");
-
-    // Email validation function
-    function isValidEmail(email) {
-      // Regular expression for validating an email
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
-    }
-
-    openbtn.addEventListener("click", function () {
-      // Validate email
-      if (emailInput.value === "") {
-        alert("Please enter your email address.");
-      } else if (!isValidEmail(emailInput.value)) {
-        alert("Please enter a valid email address.");
-      } else {
-        modalbox.style.display = "block"; // Show the modal
-      }
-    });
-
-    closebtn.addEventListener("click", function () {
-      modalbox.style.display = "none"; // Hide the modal
-    });
-    // Close modal when clicking outside of it
-    modalbox.addEventListener("click", function (event) {
-      if (event.target === modalbox) {
-        modalbox.style.display = "none"; // Hide modal if the background is clicked
-      }
-    });
-  </script>
-  <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-  (function() {
-      let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById("header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
-
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
-    </script>
-    <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
-      <div class="scroll-top-icon">
-          <i class="fa-solid fa-arrow-up"></i>
-      </div>
-      <svg class="progress-ring" width="60" height="60">
-          <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
-              cy="30"></circle>
-      </svg>
-  </button>
-  <style>
-      .scroll-top {
-          position: fixed;
-          right: 1.6%;
-          background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
-          color: white;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 24px;
-          opacity: 0;
-          visibility: hidden;
-          transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-          overflow: visible;
-          z-index: 10;
-          bottom: 15px;
-          /* Ensure button is on top */
-      }
-      .scroll-top.show {
-          opacity: 1;
-          visibility: visible;
-      }
-  
-      .scroll-top:hover {
-          transform: scale(1.1);
-          /* Subtle scaling instead of expanding */
-          box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
-          /* Slightly larger shadow */
-      }
-  
-      .scroll-top:active {
-          transform: scale(1.05);
-          /* Minor scale reduction on click */
-      }
-  
-      .scroll-top-icon {
-          position: relative;
-          z-index: 2;
-          transition: transform 0.3s ease;
-      }
-  
-      .scroll-top:hover .scroll-top-icon {
-          transform: translateY(-3px);
-      }
-  
-      /* Progress Ring Styling */
-      .progress-ring {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transform: rotate(-90deg);
-          /* To start from the top */
-      }
-  
-      .progress-ring__circle {
-          transition: stroke-dashoffset 0.35s;
-          transform-origin: 50% 50%;
-      }
-  
-      /* Pulse Animation */
-      @keyframes pulse {
-          0% {
-              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-          }
-  
-          50% {
-              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
-          }
-  
-          100% {
-              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
-          }
-      }
-  
-      .scroll-top:hover {
-          animation: pulse 1.5s infinite;
-      }
-  
-      .scroll-top.show {
-          animation: none;
-          /* No animation when showing the button */
-      }
-  
-      .scroll-top.show:hover {
-          animation: pulse 1.5s infinite;
-          /* Pulse on hover */
-      }
-      @media (max-width: 768px) {
-          .about-content-first {
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 20px;
-            margin-bottom: 0;
-          }
-          .about-content-second {
-            display: flex;
-            flex-direction: column-reverse;
-            gap: 20px;
-            text-align: center;
-          }
-          #div2{
-            margin-left: 0;
-            margin-bottom: 12px;
-          }
-          #div3{
-            margin-bottom: 15px;
-          }
-          .about-images img {
-            height: 320px;
-            width: 320px;
-          }
-          }
-  </style>
-  <script>
-      // Get the button
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      const progressCircle = document.querySelector(".progress-ring__circle");
-      const radius = progressCircle.r.baseVal.value;
-      const circumference = 2 * Math.PI * radius;
-  
-      // Set the circle progress properties
-      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-      progressCircle.style.strokeDashoffset = circumference;
-  
-      // Function to show or hide the button based on scroll position
-      function toggleScrollButton() {
-          if (window.scrollY > 100) {
-              scrollToTopBtn.classList.add("show");
-          } else {
-              scrollToTopBtn.classList.remove("show");
-          }
-      }
-  
-      // Function to set the scroll progress on the button ring
-      function setProgress(percent) {
-          const offset = circumference - (percent / 100) * circumference;
-          progressCircle.style.strokeDashoffset = offset;
-      }
-  
-      // Listen for scroll events to update button visibility and progress
-      window.addEventListener("scroll", () => {
-          toggleScrollButton();
-          const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-          setProgress(scrollPercent);
-      });
-  
-      // Smooth scroll to top when the button is clicked
-      scrollToTopBtn.addEventListener("click", () => {
-          window.scrollTo({
-              top: 0,
-              behavior: "smooth"
+        <script>
+          document.getElementById("cart-icon").addEventListener("click", function () {
+            window.location.href = "cart.html";
           });
-      });
-    </script>
-  </body>
-</html>
 
+          let openbtn = document.getElementById("open-btn");
+          let modalbox = document.getElementById("modalbox");
+          let closebtn = document.getElementById("close-btn");
+          let emailInput = document.getElementById("email-input");
+
+          // Email validation function
+          function isValidEmail(email) {
+            // Regular expression for validating an email
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+          }
+
+          openbtn.addEventListener("click", function () {
+            // Validate email
+            if (emailInput.value === "") {
+              alert("Please enter your email address.");
+            } else if (!isValidEmail(emailInput.value)) {
+              alert("Please enter a valid email address.");
+            } else {
+              modalbox.style.display = "block"; // Show the modal
+            }
+          });
+
+          closebtn.addEventListener("click", function () {
+            modalbox.style.display = "none"; // Hide the modal
+          });
+          // Close modal when clicking outside of it
+          modalbox.addEventListener("click", function (event) {
+            if (event.target === modalbox) {
+              modalbox.style.display = "none"; // Hide modal if the background is clicked
+            }
+          });
+        </script>
+        <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+
+          (function () {
+            let headerVisible = false;
+            document.getElementById("menu").addEventListener("click", function () {
+              if (headerVisible === false) {
+                document.getElementById("header").style.height = "290px";
+                headerVisible = true;
+              } else {
+                document.getElementById("header").style.height = "50px";
+                headerVisible = false;
+              }
+            });
+
+            // Show "Go to Top" button after scrolling down
+            const goTopBtn = document.querySelector(".gotopbtn");
+            window.addEventListener("scroll", function () {
+              if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+                goTopBtn.style.display = "block";
+              } else {
+                goTopBtn.style.display = "none";
+              }
+            });
+        </script>
+        <button id="scrollToTopBtn" class="scroll-top" aria-label="Scroll to top">
+          <div class="scroll-top-icon">
+            <i class="fa-solid fa-arrow-up"></i>
+          </div>
+          <svg class="progress-ring" width="60" height="60">
+            <circle class="progress-ring__circle" stroke="#ffffff" stroke-width="4" fill="transparent" r="28" cx="30"
+              cy="30"></circle>
+          </svg>
+        </button>
+        <style>
+          .scroll-top {
+            position: fixed;
+            right: 1.6%;
+            background: linear-gradient(100deg, #1ca6f0, #3c7aff, #05deff);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            overflow: visible;
+            z-index: 10;
+            bottom: 15px;
+            /* Ensure button is on top */
+          }
+
+          .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .scroll-top:hover {
+            transform: scale(1.1);
+            /* Subtle scaling instead of expanding */
+            box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
+            /* Slightly larger shadow */
+          }
+
+          .scroll-top:active {
+            transform: scale(1.05);
+            /* Minor scale reduction on click */
+          }
+
+          .scroll-top-icon {
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+          }
+
+          .scroll-top:hover .scroll-top-icon {
+            transform: translateY(-3px);
+          }
+
+          /* Progress Ring Styling */
+          .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+            /* To start from the top */
+          }
+
+          .progress-ring__circle {
+            transition: stroke-dashoffset 0.35s;
+            transform-origin: 50% 50%;
+          }
+
+          /* Pulse Animation */
+          @keyframes pulse {
+            0% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+
+            50% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
+            }
+
+            100% {
+              box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
+            }
+          }
+
+          .scroll-top:hover {
+            animation: pulse 1.5s infinite;
+          }
+
+          .scroll-top.show {
+            animation: none;
+            /* No animation when showing the button */
+          }
+
+          .scroll-top.show:hover {
+            animation: pulse 1.5s infinite;
+            /* Pulse on hover */
+          }
+
+          @media (max-width: 768px) {
+            .about-content-first {
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 20px;
+              margin-bottom: 0;
+            }
+
+            .about-content-second {
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 20px;
+              text-align: center;
+            }
+
+            #div2 {
+              margin-left: 0;
+              margin-bottom: 12px;
+            }
+
+            #div3 {
+              margin-bottom: 15px;
+            }
+
+            .about-images img {
+              height: 320px;
+              width: 320px;
+            }
+          }
+        </style>
+        <script>
+            // Get the button
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            const progressCircle = document.querySelector(".progress-ring__circle");
+            const radius = progressCircle.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+
+            // Set the circle progress properties
+            progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+            progressCircle.style.strokeDashoffset = circumference;
+
+            // Function to show or hide the button based on scroll position
+            function toggleScrollButton() {
+              if (window.scrollY > 100) {
+                scrollToTopBtn.classList.add("show");
+              } else {
+                scrollToTopBtn.classList.remove("show");
+              }
+            }
+
+            // Function to set the scroll progress on the button ring
+            function setProgress(percent) {
+              const offset = circumference - (percent / 100) * circumference;
+              progressCircle.style.strokeDashoffset = offset;
+            }
+
+            // Listen for scroll events to update button visibility and progress
+            window.addEventListener("scroll", () => {
+              toggleScrollButton();
+              const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+              setProgress(scrollPercent);
+            });
+
+            // Smooth scroll to top when the button is clicked
+            scrollToTopBtn.addEventListener("click", () => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+            });
+        </script>
+  </body>
+
+</html>

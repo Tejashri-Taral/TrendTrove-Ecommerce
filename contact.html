@@ -8,63 +8,62 @@
     <link rel="stylesheet" href="preloaderStyle.css">
     <link rel="stylesheet" href="style.css"> <!-- Link to your common CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" herf="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <style>
-        
-/* Scroll Progress Bar*/
-#progress-container {
-  position: fixed ;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  z-index: 99990;
-  /* background: #f3f3f3; */
-}
+        /* Scroll Progress Bar*/
+        #progress-container {
+            position: fixed;
+            top: 1px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            z-index: 99990;
+            /* background: #f3f3f3; */
+        }
 
-#progress-bar {
-  position: fixed;
-  top: 0.3px;
-  left: 0;
-  width: 0%;
-  height: 6px;
-  width: 0;
-  background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
-  box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
-  transition: width 0.09s ease-in-out;
-  /* border-radius: 10px; */
-}
-
-
+        #progress-bar {
+            position: fixed;
+            top: 0.3px;
+            left: 0;
+            width: 0%;
+            height: 6px;
+            width: 0;
+            background: linear-gradient(90deg, rgba(27, 27, 27, 0.762) 0%, rgb(61, 61, 61) 50%, rgba(38, 38, 38, 0.679) 100%);
+            box-shadow: 0 0 4px rgba(255, 244, 221, 0.7), 0 0 10px rgba(255, 255, 255, 0.496);
+            transition: width 0.09s ease-in-out;
+            /* border-radius: 10px; */
+        }
     </style>
 </head>
 
 <body>
-       <!-- preloader -->
-  <div id="preloader">
-    <div class="wrapper">
-        <div class="box-wrap">
-            <div class="box one"></div>
-            <div class="box two"></div>
-            <div class="box three"></div>
-            <div class="box four"></div>
-            <div class="box five"></div>
-            <div class="box six"></div>
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
         </div>
     </div>
-</div>
-<div id="progress-container">
-    <div id="progress-bar"></div>
-  </div>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
     <header class="header" id="header">
-          <div class="logo">
+        <div class="logo">
             <a href="/"> <img src="images/logo.png" alt="Logo" srcset=""> </a>
             <i class="fa-solid fa-bars menu" id="menu"></i>
         </div>
 
-        
+
         <nav class="bg-neutral-100 py-20">
             <div class="tabs-container">
                 <ul id="tabs" class="tabs">
@@ -102,18 +101,18 @@
         <nav class="utils">
             <ul class="nav-links">
                 <li class="nav-link">
-                    <li>
-                        <button class="mode-toggle" id="modeToggle">
-                            <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                            <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                          </button>
-                        </li>
-                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                <li>
+                    <button class="mode-toggle" id="modeToggle">
+                        <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
+                        <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
+                    </button>
+                </li>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
-                    <i class="fa-solid fa-user"></i>
-                </a>
+                        <i class="fa-solid fa-user"></i>
+                    </a>
                 </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -125,7 +124,7 @@
     <div class="contact-section">
         <h2><b><u>Contact Us</u></b></h2>
         <p>Get in Touch</p>
-    
+
         <div class="contact-info-container">
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
@@ -153,10 +152,10 @@
                 </form>
                 <p id="feedbackMessage" style="display:none; color: green;">Feedback has been stored!</p>
             </div>
-            
-        <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
-        </div>
+
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+            </div>
         </div>
         <div class="contact-info-container">
             <div class="contact-info-box">
@@ -197,13 +196,13 @@
                     <a href="https://www.linkedin.com/in/tejashri-taral-5006a82a0/" id="linkedin" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Tejashri-Taral" id="github"target="_blank">
+                    <a href="https://github.com/Tejashri-Taral" id="github" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter"target="_blank">
+                    <a href="https://x.com/Tejashri_10?t=SWxALwKxy-nVrTcbYTFUcA&s=08" id="twitter" target="_blank">
                         <i class="fa-brands fa-x-twitter"></i>
                     </a>
-                    <a href="https://www.instagram.com/your_instagram" id="instagram"target="_blank">
+                    <a href="https://www.instagram.com/your_instagram" id="instagram" target="_blank">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
@@ -213,12 +212,13 @@
         <div class="footer-section quick-links">
             <h1>Quick Links</h1>
             <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contributors.html">Our Contributors</a></li>
-                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                <li><a href="return-policy.html">Return Policy</a></li>
-                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank">Star Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="contributors.html"><i class="fas fa-users"></i> Our Contributors</a></li>
+                <li><a href="terms-conditions.html"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                <li><a href="return-policy.html"><i class="fas fa-undo-alt"></i> Return Policy</a></li>
+                <li><a href="https://github.com/Tejashri-Taral/TrendTrove-Ecommerce" target="_blank"><i
+                            class="fab fa-github"></i> Star Us</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
             </ul>
         </div>
 
@@ -235,41 +235,41 @@
     </footer>
 
     <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
 
-  (function() {
-      let headerVisible = false;
-      document.getElementById("menu").addEventListener("click", function () {
-          if (headerVisible === false) {
-              document.getElementById("header").style.height = "290px";
-              headerVisible = true;
-          } else {
-              document.getElementById("header").style.height = "50px";
-              headerVisible = false;
-          }
-      });
+        (function () {
+            let headerVisible = false;
+            document.getElementById("menu").addEventListener("click", function () {
+                if (headerVisible === false) {
+                    document.getElementById("header").style.height = "290px";
+                    headerVisible = true;
+                } else {
+                    document.getElementById("header").style.height = "50px";
+                    headerVisible = false;
+                }
+            });
 
-      // Show "Go to Top" button after scrolling down
-      const goTopBtn = document.querySelector(".gotopbtn");
-      window.addEventListener("scroll", function () {
-          if (window.scrollY > 300) {  // Show the button after scrolling down 200px
-              goTopBtn.style.display = "block";
-          } else {
-              goTopBtn.style.display = "none";
-          }
-      });
+            // Show "Go to Top" button after scrolling down
+            const goTopBtn = document.querySelector(".gotopbtn");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 300) {  // Show the button after scrolling down 200px
+                    goTopBtn.style.display = "block";
+                } else {
+                    goTopBtn.style.display = "none";
+                }
+            });
 
-  })();
-  </script>
+        })();
+    </script>
     <script src="preloader.js"></script>
     <script src="preloader.js"></script>
     <script>
         function handleSubmit(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             const feedbackMessage = document.getElementById("feedbackMessage");
-            feedbackMessage.style.display = "block"; 
+            feedbackMessage.style.display = "block";
 
             document.getElementById("feedbackForm").reset();
         }
@@ -308,34 +308,34 @@
             bottom: 15px;
             /* Ensure button is on top */
         }
-    
+
         .scroll-top.show {
             opacity: 1;
             visibility: visible;
         }
-    
+
         .scroll-top:hover {
             transform: scale(1.1);
             /* Subtle scaling instead of expanding */
             box-shadow: 0 8px 20px rgba(255, 69, 159, 0.6);
             /* Slightly larger shadow */
         }
-    
+
         .scroll-top:active {
             transform: scale(1.05);
             /* Minor scale reduction on click */
         }
-    
+
         .scroll-top-icon {
             position: relative;
             z-index: 2;
             transition: transform 0.3s ease;
         }
-    
+
         .scroll-top:hover .scroll-top-icon {
             transform: translateY(-3px);
         }
-    
+
         /* Progress Ring Styling */
         .progress-ring {
             position: absolute;
@@ -346,36 +346,36 @@
             transform: rotate(-90deg);
             /* To start from the top */
         }
-    
+
         .progress-ring__circle {
             transition: stroke-dashoffset 0.35s;
             transform-origin: 50% 50%;
         }
-    
+
         /* Pulse Animation */
         @keyframes pulse {
             0% {
                 box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
             }
-    
+
             50% {
                 box-shadow: 0 5px 15px rgba(255, 69, 159, 0.7);
             }
-    
+
             100% {
                 box-shadow: 0 5px 15px rgba(255, 69, 159, 0.4);
             }
         }
-    
+
         .scroll-top:hover {
             animation: pulse 1.5s infinite;
         }
-    
+
         .scroll-top.show {
             animation: none;
             /* No animation when showing the button */
         }
-    
+
         .scroll-top.show:hover {
             animation: pulse 1.5s infinite;
             /* Pulse on hover */
@@ -387,11 +387,11 @@
         const progressCircle = document.querySelector(".progress-ring__circle");
         const radius = progressCircle.r.baseVal.value;
         const circumference = 2 * Math.PI * radius;
-    
+
         // Set the circle progress properties
         progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
         progressCircle.style.strokeDashoffset = circumference;
-    
+
         // Function to show or hide the button based on scroll position
         function toggleScrollButton() {
             if (window.scrollY > 100) {
@@ -400,20 +400,20 @@
                 scrollToTopBtn.classList.remove("show");
             }
         }
-    
+
         // Function to set the scroll progress on the button ring
         function setProgress(percent) {
             const offset = circumference - (percent / 100) * circumference;
             progressCircle.style.strokeDashoffset = offset;
         }
-    
+
         // Listen for scroll events to update button visibility and progress
         window.addEventListener("scroll", () => {
             toggleScrollButton();
             const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             setProgress(scrollPercent);
         });
-    
+
         // Smooth scroll to top when the button is clicked
         scrollToTopBtn.addEventListener("click", () => {
             window.scrollTo({
@@ -421,7 +421,7 @@
                 behavior: "smooth"
             });
         });
-      </script>
+    </script>
 </body>
 
 
