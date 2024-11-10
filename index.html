@@ -58,7 +58,7 @@
     <header class="header" id="header">
         <div class="logo">
             <a href="/"> <img  src="images/logo.png" alt="Logo" srcset=""> </a>
-            <i class="fa-solid fa-bars menu" id="menu"></i>
+            <i class="fa-solid fa-bars menu theme-icon" id="menu"></i>
         </div>
 
         <nav class="bg-neutral-100 py-20">
@@ -103,15 +103,15 @@
                 <li>
                     <button class="mode-toggle" id="modeToggle">                                                                                                                                                                                 
                         <span class="sun-icon glow"><img src="day-mode.png" alt="Light mode"></span>
-                        <span class="moon-icon glow" style="display: none;"><img src="moon.png" alt="Dark mode"></span>
-                      </button>
-                    </li>
+                        <span class="moon-icon glow hidden"><img src="moon.png" alt="Dark mode"></span>
+                    </button>
+                </li>
                 <li class="nav-link">
                     <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
                 </li>
                 <li class="nav-link">
                     <a href="login-sginup.html">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user theme-icon"></i>
                     </a>
                 </li>
                 <li class="nav-link">
@@ -138,12 +138,35 @@
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+    
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }  
+    .dark-theme {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    } 
+    
 
     /* Css for language box */
     .lang-box{
         align-items: center;
         margin-top: auto;
         margin-bottom: auto;
+    }
+    .hidden{
+        display: none;
+    }
+    
+    /* Default (Light Mode) */
+    .theme-icon {
+        color: #000000; /* Light mode icon color */
+    }
+
+    /* Dark Mode */
+    .dark-theme .theme-icon {
+        color: #ffffff; /* Dark mode icon color */
     }
 
     /* Styling the input box and button */
@@ -199,6 +222,16 @@
             } else {
                 console.log("No search query entered");
             }
+        }
+        const toggleBtn = document.getElementById("modeToggle")
+        toggleBtn.onclick = () => {
+            const sun = document.querySelector(".sun-icon")
+            const moon = document.querySelector(".moon-icon")
+            //moon.style.display = "grid";
+            sun.classList.toggle("hidden");
+            moon.classList.toggle("hidden");
+
+            document.body.classList.toggle("dark-theme");
         }
     });
 </script>
