@@ -110,32 +110,26 @@ html {
   }
 }
 
-/* header css  */
-
-.header {
+/* Header */
+.header, .sticky {
   height: 70px;
   width: 100%;
-  padding: 0px 2%;
+  padding: 0 2%;
   display: flex;
   justify-content: space-between;
 }
 
-.sticky{
-  height: 70px;
-  width: 100%;
-  padding: 0px 2%;
+.sticky {
   position: fixed;
-  top: 0px;
+  top: 0;
   z-index: 1000;
-  background-color: rgb(248,247,247);
-  display: flex;
-  justify-content: space-between;
+  background-color: rgb(248, 247, 247);
 }
 
+/* Logo */
 .logo {
   width: 12%;
   height: 70px;
-  /* background-color: yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,33 +137,13 @@ html {
   font-weight: bold;
   font-size: 25px;
 }
+
 .logo img {
   height: 65px;
   width: 80px;
 }
 
-.border {
-  position: relative;
-  font-size: 0.85rem;
-  color: black;
-  border-radius: 50px;
-}
-
-.border:hover {
-  display: flex;
-  /* color: white !important; */
-  /* text-decoration: underline; */
-  border-radius: 50px;
-  transition: color 0.3s ease-in;
-  text-align: center;
-  height: 40px;
-  background-color: #14171a;
-  font-weight: 500;
-}
-.border > a:hover {
-  color: white !important;
-}
-
+/* Navigation */
 .navigation {
   width: 45%;
   height: 70px;
@@ -177,12 +151,11 @@ html {
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-  /* background-color: blue; */
 }
+
 .nav-links {
   width: 120%;
   height: 70px;
-  /* background-color: yellow; */
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -191,13 +164,21 @@ html {
   padding: 20px;
   font-family: "futura";
   font-size: 17px;
-  /* color: #1d1d1d; */
 }
 
 .nav-links > .nav-link {
-  width: 150px;
+  width: 150px; /* Consistent width for hover background */
   display: flex;
   justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.nav-links > .nav-link:hover {
+  background-color: #14171a; /* Hover background */
 }
 
 .nav-links > .nav-link > a {
@@ -206,29 +187,53 @@ html {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 500;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* width: 85px; */
+  transition: color 0.3s ease;
 }
 
-/* .nav-link>a:hover{
-    color: white;
-} */
+.nav-links > .nav-link:hover > a {
+  color: white; /* Hover text color */
+}
 
 .nav-links > .nav-link > i {
   font-size: 20px;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-/* navbar active ----------------*/
+.nav-links > .nav-link:hover > i,
+.nav-links > .nav-link:hover > a > i {
+  color: white; /* Hover icon color */
+}
+
+/* Border Hover Effect */
+.border {
+  position: relative;
+  font-size: 0.85rem;
+  color: black;
+  border-radius: 50px;
+}
+
+.border:hover {
+  background-color: #14171a;
+  font-weight: 500;
+  height: 40px;
+  transition: color 0.3s ease-in;
+}
+
+.border > a:hover {
+  color: white !important;
+}
+
+/* Active Tab Styling */
 .tab a.active {
   background-color: black;
   color: white;
-  padding: 10px px; /* Add padding if needed */
-  border-radius: 30px; /* Add border-radius for rounded corners if desired */
+  padding: 10px; /* Consistent padding */
+  border-radius: 30px; /* Rounded corners */
 }
-
 
 
 .utils {
